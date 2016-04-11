@@ -9,12 +9,27 @@ hibernate {
     cache.use_query_cache = false
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
+grails {
+    mongo {
+        host = "192.168.0.3"
+        username = "root"
+        password = ""
+    }
+}
 // environment specific settings
 environments {
     development {
-        dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+//        dataSource {
+//            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+//            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+//        }
+        grails {
+            mongo {
+                host = "192.168.0.3"
+                username = "root"
+                password = ""
+                databaseName = "agahisaz"
+            }
         }
     }
     test {
