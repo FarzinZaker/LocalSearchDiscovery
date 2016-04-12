@@ -1,4 +1,4 @@
-<bootstrap:modal title="${message(code: 'user.register.title')}" id="loginModal">
+<bootstrap:modal id="loginModal">
     LOGIN FORM
     <bootstrap:modalFooter>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -1,7 +1,7 @@
-<bootstrap:modal title="${message(code: 'user.register.title')}" id="registerModal">
+<bootstrap:modal id="registerModal">
     REGISTER FORM
-    <bootstrap:modalFooter>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-    </bootstrap:modalFooter>
+    %{--<bootstrap:modalFooter>--}%
+        %{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}%
+        %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+    %{--</bootstrap:modalFooter>--}%
 </bootstrap:modal>
