@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-green {
-  background-color: #1fbda5;
+  background-color: #41cab7;
 
   .navbar-brand{
     font-size:28px;
@@ -89,6 +89,31 @@ body {
   padding:10px;
   color:white;
   margin-top:57px;
+
+  ul{
+    margin:0;
+    padding:0;
+    li{
+      display: inline-block;
+      margin-left:8px;
+      a{
+        display: block;
+        background-color: #41cab7;
+        color:white;
+        padding-top:4px;
+        padding-bottom:4px;
+        padding-right:10px;
+        padding-left:10px;
+        border-radius: 3px;
+        font-size:16px;
+        &:hover, &:focus{
+          background-color: #1fbda5;
+          color:white;
+          text-decoration: none ;
+        }
+      }
+    }
+  }
 }
 
 .modal-content{

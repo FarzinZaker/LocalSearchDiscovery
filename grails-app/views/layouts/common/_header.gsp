@@ -33,6 +33,13 @@
 
 <div class="tagBar">
     <div class="container">
-        Tags
+        <ul>
+            <li><a href="#">Top Picks</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">فست فود</a></li>
+            <li><a href="#">کافی شاپ</a></li>
+            <li><a href="#">تفریح</a></li>
+            <li><a href="#">فروشگاه</a></li>
+        </ul>
     </div>
 </div>
