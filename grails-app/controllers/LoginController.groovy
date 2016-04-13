@@ -1,4 +1,5 @@
 import grails.converters.JSON
+import utils.CaptchaHelper
 
 import javax.servlet.http.HttpServletResponse
 
@@ -124,5 +125,11 @@ class LoginController {
      */
     def ajaxDenied = {
         render([error: 'access denied'] as JSON)
+    }
+
+    def captcha = {
+        def captchaResult = CaptchaHelper.randomCaptcha()
+        session["captcha"] = captchaResult[1]
+        response.outputStream << captchaResult[0]
     }
 }

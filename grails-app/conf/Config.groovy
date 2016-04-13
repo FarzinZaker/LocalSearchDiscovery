@@ -61,6 +61,8 @@ grails.hibernate.cache.queries = false
 
 environments {
     development {
+        grails.serverURL = "http://localhost:8080"
+        grails.app.context = "/"
         grails.logging.jul.usebridge = true
         grails.resources.processing.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
