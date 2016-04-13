@@ -10,11 +10,10 @@
     <title><g:layoutTitle default="Agahisaz"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon"/>
+    <r:require module="application"/>
     <g:layoutHead/>
-    <g:javascript library="jquery" plugin="jquery"/>
-    <link rel="stylesheet" type="text/css" href="${resource(dir: 'bootstrap/css', file:'bootstrap.min.css')}"/>
+    <r:layoutResources/>
     <asset:stylesheet src="common.less"/>
-    <script language="javascript" type="text/javascript" src="${resource(dir: 'bootstrap/js', file:'bootstrap.min.js')}"></script>
 </head>
 
 <body>
@@ -22,5 +21,6 @@
 <g:layoutBody/>
 <g:render template="/user/register"/>
 <g:render template="/user/login"/>
+<r:layoutResources/>
 </body>
 </html>

@@ -62,12 +62,26 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.resources.processing.enabled = true
+//        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.resources.processing.enabled = true
+        grails.plugin.console.enabled=true
+//        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
     }
 }
+//environments {
+//    development {
+//        grails.logging.jul.usebridge = true
+//    }
+//    production {
+//        grails.logging.jul.usebridge = false
+//        // TODO: grails.serverURL = "http://www.changeme.com"
+//    }
+//}
 
 // log4j configuration
 log4j = {

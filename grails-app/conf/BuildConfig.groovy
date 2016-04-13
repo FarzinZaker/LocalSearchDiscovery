@@ -30,7 +30,7 @@ grails.project.dependency.resolution = {
 
         mavenLocal()
         mavenCentral()
-
+        mavenRepo "https://repo.grails.org/grails/plugins/"
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://snapshots.repository.codehaus.org"
         //mavenRepo "http://repository.codehaus.org"
@@ -48,12 +48,15 @@ grails.project.dependency.resolution = {
         compile ':mongodb:1.3.3'
 //        runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.11.1"
-//        runtime ":resources:1.2"
+        runtime ":resources:1.2"
+        compile ":lesscss-resources:1.3.3"
+//        runtime ":zipped-resources:1.0"
+//        runtime ":cached-resources:1.0"
+//        runtime ":cache-headers:1.0.4"
 
 
-
-        compile ":asset-pipeline:1.8.11"
-        compile ":less-asset-pipeline:1.7.0"
+//        compile ":asset-pipeline:1.8.11"
+//        compile ":less-asset-pipeline:1.7.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
