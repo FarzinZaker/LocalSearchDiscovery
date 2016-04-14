@@ -4,7 +4,7 @@
 $.formUtils.addValidator({
     name: 'emptyEmail',
     validatorFunction: function (email) {
-        if(!email || email=='')
+        if (!email || email == '')
             return true;
         var emailParts = email.toLowerCase().split('@'),
             localPart = emailParts[0],
@@ -12,25 +12,38 @@ $.formUtils.addValidator({
 
         if (localPart && domain) {
 
-            if( localPart.indexOf('"') === 0 ) {
+            if (localPart.indexOf('"') === 0) {
                 var len = localPart.length;
                 localPart = localPart.replace(/\"/g, '');
-                if( localPart.length !== (len-2) ) {
+                if (localPart.length !== (len - 2)) {
                     return false; // It was not allowed to have more than two apostrophes
                 }
             }
 
             return $.formUtils.validators.validate_domain.validatorFunction(emailParts[1]) &&
                 localPart.indexOf('.') !== 0 &&
-                localPart.substring(localPart.length-1, localPart.length) !== '.' &&
-                localPart.indexOf('..') === -1 &&
-                !(/[^\w\+\.\-\#\-\_\~\!\$\&\'\(\)\*\+\,\;\=\:]/.test(localPart));
+                localPart.substring(localPart.length - 1, localPart.length) !== '.' &&
+                localPart.indexOf('..') === -1 && !(/[^\w\+\.\-\#\-\_\~\!\$\&\'\(\)\*\+\,\;\=\:]/.test(localPart));
         }
 
         return false;
     },
     errorMessage: '',
     errorMessageKey: 'badEmail'
+});
+$.formUtils.addValidator({
+    name: 'serverResponseError',
+    validatorFunction: function (value, $el, config, language, $form) {
+        if (serverError && serverError.field && serverError.field == $el.attr('name')) {
+            return false;
+        }
+        return true;
+    },
+    errorMessage: function (config) {
+        if (serverError && serverError.error)
+            return serverError.error;
+        return '';
+    }
 });
 $.formUtils.addValidator({
     name: 'mobile',

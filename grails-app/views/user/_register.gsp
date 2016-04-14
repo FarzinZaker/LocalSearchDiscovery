@@ -14,7 +14,7 @@
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
                         <input type="email" name="email" class="form-control text-left"
-                               data-validation="oneOfTwo emptyEmail" data-validation-other="mobile"
+                               data-validation="oneOfTwo emptyEmail serverResponseError" data-validation-other="mobile"
                                placeholder="${message(code: 'email')}">
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
                         <input type="text" name="mobile" class="form-control  text-left"
-                               data-validation="oneOfTwo mobile" data-validation-other="email"
+                               data-validation="oneOfTwo mobile serverResponseError" data-validation-other="email"
                                placeholder="${message(code: 'mobile')}">
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                         <input type="text" name="captcha" class="form-control text-center"
-                               data-validation="required" placeholder="${message(code: 'captcha')}">
+                               data-validation="required serverResponseError" placeholder="${message(code: 'captcha')}">
                         <span class="input-group-addon">
                             <img src="${createLink(controller: 'login', action: 'captcha', id: new Date().time)}" id="registerCaptchaImage"/>
                         </span>

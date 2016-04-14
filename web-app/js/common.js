@@ -1,13 +1,13 @@
 /**
  * Created by Farzin on 4/13/2016.
  */
-
+var serverError = {};
 
 function hideLoading(id) {
     var loading = $('#' + id);
     if (loading.parent().hasClass('modal-footer')) {
         loading.stop().fadeOut(200, function () {
-            loading.parent().find('.btn').stop().fadeIn(200, function(){
+            loading.parent().find('.btn').stop().fadeIn(200, function () {
                 $(this).css('opacity', '1');
             });
         });
@@ -29,6 +29,7 @@ function showLoading(id) {
 
 function register(sender) {
     var form = $('#registerForm');
+    serverError = {};
     if (form.isValid()) {
         $(sender).attr('disabled', 'disabled');
         showLoading('registerLoading');
@@ -39,9 +40,29 @@ function register(sender) {
         }).done(function (response) {
             hideLoading('registerLoading');
             $(sender).removeAttr('disabled');
+            if (response.error) {
+                serverError = response;
+                form.isValid();
+            }
+            else {
+                $('#registerModal').modal('hide');
+                $('#registerLoginModal').modal('show');
+                var username = form.find('[name=mobile]').val();
+                if (!username)
+                    username = form.find('[name=email]').val();
+                $('#registerLoginForm [name=j_username]').val(username);
+            }
         }).error(function () {
             $(sender).removeAttr('disabled');
             hideLoading('registerLoading');
         });
+    }
+}
+function registerLogin(sender) {
+    var form = $('#registerLoginForm');
+    if (form.isValid()) {
+        $(sender).attr('disabled', 'disabled');
+        showLoading('registerLoginLoading');
+        form.submit();
     }
 }

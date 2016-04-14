@@ -19,12 +19,17 @@
 
             <div class="col-sm-3">
                 <div class="navbar-left">
-                    <input type="button" class="btn btn-transparent navbar-btn"
-                           value="${message(code: 'user.login.button.label')}" data-toggle="modal"
-                           data-target="#loginModal"/>
-                    <input type="button" class="btn btn-warning navbar-btn"
-                           value="${message(code: 'user.register.button.label')}" data-toggle="modal"
-                           data-target="#registerModal"/>
+                    <sec:ifNotLoggedIn>
+                        <input type="button" class="btn btn-transparent navbar-btn"
+                               value="${message(code: 'user.login.button.label')}" data-toggle="modal"
+                               data-target="#loginModal"/>
+                        <input type="button" class="btn btn-warning navbar-btn"
+                               value="${message(code: 'user.register.button.label')}" data-toggle="modal"
+                               data-target="#registerModal"/>
+                    </sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn>
+                        <g:link controller="logout"  class="btn btn-transparent navbar-btn"><g:message code="user.logout.button.label" /></g:link>
+                    </sec:ifLoggedIn>
                 </div>
             </div>
         </div>

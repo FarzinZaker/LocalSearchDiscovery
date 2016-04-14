@@ -13,14 +13,16 @@
     <r:require module="application"/>
     <g:layoutHead/>
     <r:layoutResources/>
-    <asset:stylesheet src="common.less"/>
 </head>
 
 <body>
 <g:render template="/layouts/common/header"/>
 <g:layoutBody/>
-<g:render template="/user/register"/>
-<g:render template="/user/login"/>
+<sec:ifNotLoggedIn>
+    <g:render template="/user/register"/>
+    <g:render template="/user/registerLogin"/>
+    <g:render template="/user/login"/>
+</sec:ifNotLoggedIn>
 <r:layoutResources/>
 </body>
 </html>

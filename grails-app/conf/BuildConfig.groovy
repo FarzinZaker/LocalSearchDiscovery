@@ -42,6 +42,16 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+        compile 'org.apache.axis:axis:1.4'
+        compile 'javax.xml:jaxrpc-api:1.1'
+        compile 'commons-discovery:commons-discovery:0.4'
+        compile 'org.ccil.cowan.tagsoup:tagsoup:1.2'
+        build 'joda-time:joda-time:2.3'
+        build 'joda-time:joda-time-hibernate:1.3'
+        compile 'commons-httpclient:commons-httpclient:3.1'
+        compile 'org.jsoup:jsoup:1.8.1'
+        compile 'wsdl4j:wsdl4j:1.6.2'
+
     }
 
     plugins {
