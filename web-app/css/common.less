@@ -30,7 +30,7 @@ body {
   display: table-cell;
 }
 
-.align-top{
+.align-top {
   vertical-align: top;
 }
 
@@ -175,7 +175,8 @@ body {
 }
 
 .subtitle {
-  font-size: 16px;
+  color: gray;
+  font-size: 14px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -190,13 +191,13 @@ body {
   }
 }
 
-a{
-  cursor:pointer;
+a {
+  cursor: pointer;
 }
 
-.separator{
-  margin-right:5px;
-  margin-left:5px;
+.separator {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .loading {
@@ -237,7 +238,7 @@ a{
   }
 }
 
-.form-error{
+.form-error {
 
   font-size: 13px;
   width: 99%;
@@ -246,10 +247,10 @@ a{
   border-radius: 5px;
   padding: 8px 0;
   position: relative;
-  margin-top:-10px;
+  margin-top: -10px;
   text-align: center;
 
-  &:before{
+  &:before {
     bottom: 100%;
     content: " ";
     height: 0;
@@ -262,7 +263,7 @@ a{
     right: 5%;
   }
 
-  &:after{
+  &:after {
     bottom: 100%;
     content: " ";
     height: 0;
@@ -282,13 +283,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
 }
 
-h2{
+.modal {
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+  }
+}
+
+h2 {
   font-size: 21px;
   font-weight: 500;
   line-height: 22px;
 }
 
-.floatingPanel{
+.floatingPanel {
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #c7cdcf;
@@ -300,7 +308,75 @@ h2{
   position: relative;
   width: 440px;
   z-index: 2;
-  h2{
-    margin-bottom:20px;
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &.floatingPanel-lg {
+    width: 580px;
   }
 }
+
+.silverPanel {
+  background: #fcfcfc;
+}
+
+.whitePanel {
+  background: white;
+}
+
+.btn-upload {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  input[type="file"] {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.profileImage {
+  padding: 15px;
+  img {
+    margin-bottom: 15px;
+  }
+}
+
+.fieldSet-title {
+  border-bottom: 1px solid #dddddd;
+}
+
+label {
+  .glyphicon {
+    margin-left: 5px;
+  }
+}
+
+.btn-toolbar {
+  padding-bottom: 15px;
+  text-align: right;
+}
+
+.float-left {
+  display: block;
+  float: left !important;
+}
+
+.float-right {
+  display: block;
+  float: right !important;
+}
+
+.header-button{
+  float:left;
+  margin-top:-30px;
+}
+
+.btn{
+  box-shadow: none !important;
+}
+

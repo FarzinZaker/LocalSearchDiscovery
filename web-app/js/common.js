@@ -1,6 +1,11 @@
 /**
  * Created by Farzin on 4/13/2016.
  */
+
+$(document).ready(function () {
+    $("img").unveil();
+});
+
 var serverError = {};
 
 function hideLoading(id) {
@@ -65,4 +70,15 @@ function registerLogin(sender) {
         showLoading('registerLoginLoading');
         form.submit();
     }
+}
+
+function loginOnEnter(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        login();
+    }
+}
+
+function login() {
+    $('#loginFormModal').submit();
 }

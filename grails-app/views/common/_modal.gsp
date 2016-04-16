@@ -1,8 +1,8 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="${id}">
-    <div class="modal-dialog">
+    <div class="modal-dialog ${size ? "modal-${size}" : ''}">
         <div class="modal-content">
             %{--<div class="modal-header">--}%
-                %{--<h4 class="modal-title">${title}</h4>--}%
+            %{--<h4 class="modal-title">${title}</h4>--}%
             %{--</div>--}%
 
             <div class="modal-body">

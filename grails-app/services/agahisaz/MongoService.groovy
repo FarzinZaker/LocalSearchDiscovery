@@ -8,8 +8,8 @@ class MongoService {
         db_ = mongo.getDB("agahisaz")
     }
 
-    def query(String collectionName, criteria) {
-        db.getCollection(collectionName).find(criteria)
+    def query(String collectionName, criteria, projection= null) {
+        db.getCollection(collectionName).find(criteria, projection)
     }
 
     def count(String collectionName, criteria) {

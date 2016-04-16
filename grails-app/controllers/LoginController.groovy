@@ -1,8 +1,5 @@
 import grails.converters.JSON
-import utils.CaptchaHelper
-
-import javax.servlet.http.HttpServletResponse
-
+import security.CaptchaHelper
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 import org.springframework.security.authentication.AccountExpiredException
@@ -41,6 +38,8 @@ class LoginController {
      */
     def auth = {
 
+
+        def loginErrorsCount = session["loginErrorsCount"] ?: 0
         def config = SpringSecurityUtils.securityConfig
 
         if (springSecurityService.isLoggedIn()) {
@@ -51,16 +50,17 @@ class LoginController {
         String view = 'auth'
         String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
         render view: view, model: [postUrl            : postUrl,
-                                   rememberMeParameter: config.rememberMe.parameter]
+                                   rememberMeParameter: config.rememberMe.parameter,
+                                   loginErrorsCount   : loginErrorsCount]
     }
 
     /**
      * The redirect action for Ajax requests.
      */
-    def authAjax = {
-        response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
-        response.sendError HttpServletResponse.SC_UNAUTHORIZED
-    }
+//    def authAjax = {
+//        response.setHeader 'Location', SpringSecurityUtils.securityConfig.auth.ajaxLoginFormUrl
+//        response.sendError HttpServletResponse.SC_UNAUTHORIZED
+//    }
 
     /**
      * Show denied page.
@@ -87,7 +87,6 @@ class LoginController {
      * Callback after a failed login. Redirects to the auth page with a warning message.
      */
     def authfail = {
-
         def username = session[UsernamePasswordAuthenticationFilter.SPRING_SECURITY_LAST_USERNAME_KEY]
         String msg = ''
         def exception = session[WebAttributes.AUTHENTICATION_EXCEPTION]
@@ -116,20 +115,20 @@ class LoginController {
     /**
      * The Ajax success redirect url.
      */
-    def ajaxSuccess = {
-        render([success: true, username: springSecurityService.authentication.name] as JSON)
-    }
+//    def ajaxSuccess = {
+//        render([success: true, username: springSecurityService.authentication.name] as JSON)
+//    }
 
     /**
      * The Ajax denied redirect url.
      */
-    def ajaxDenied = {
-        render([error: 'access denied'] as JSON)
-    }
+//    def ajaxDenied = {
+//        render([error: 'access denied'] as JSON)
+//    }
 
     def captcha = {
         def captchaResult = CaptchaHelper.randomCaptcha()
-        session["captcha"] = captchaResult[1]
+        session["${params.type ?: ''}Captcha"] = captchaResult[1]
         response.outputStream << captchaResult[0]
     }
 }

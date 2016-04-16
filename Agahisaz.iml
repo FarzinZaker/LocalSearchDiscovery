@@ -62,13 +62,23 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails/grails-datastore-core/jars/grails-datastore-core-1.1.9.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.data/spring-data-commons-core/jars/spring-data-commons-core-1.4.1.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.mongodb/mongo-java-driver/jars/mongo-java-driver-2.11.3.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-2.5.0.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.json/json/jars/json-20090211.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.3.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.antlr/antlr-runtime/jars/antlr-runtime-3.4.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/com.github.sommeri/less4j/jars/less4j-1.3.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.mozilla/rhino/jars/rhino-1.7R4.jar!/" />
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.4.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.lesscss/lesscss/jars/lesscss-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/wsdl4j/wsdl4j/jars/wsdl4j-1.6.2.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.jsoup/jsoup/jars/jsoup-1.8.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.ccil.cowan.tagsoup/tagsoup/jars/tagsoup-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-discovery/commons-discovery/jars/commons-discovery-0.4.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.xml/jaxrpc-api/jars/jaxrpc-api-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.axis/axis/jars/axis-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/joda-time/joda-time-hibernate/jars/joda-time-hibernate-1.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/joda-time/joda-time/jars/joda-time-2.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/com.sun.mail/javax.mail/jars/javax.mail-1.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.activation/activation/jars/activation-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.mail/javax.mail-api/jars/javax.mail-api-1.5.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -1,5 +1,5 @@
 <%@ page import="org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils" %>
-<bootstrap:modal id="registerLoginModal">
+<bootstrap:modal id="registerLoginModal" size="sm">
     <h3 class="text-center">
         <g:message code="user.register.activate.header"/>
     </h3>
@@ -8,15 +8,15 @@
         <g:message code="register.success"/>
     </p>
 
-    <form id="registerLoginForm" action="${request.contextPath}${ org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils.securityConfig.apf.filterProcessesUrl}" method="POST" autocomplete='off'>
+    <form id="registerLoginForm" action="${request.contextPath}${ SpringSecurityUtils.securityConfig.apf.filterProcessesUrl}" method="POST" autocomplete='off'>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        <input type="hidden" name="j_username" value=""/>
+                        <input type="hidden" name="j_username" value="" autocomplete="off"/>
                         <input type="password" name="j_password" class="form-control text-left"
-                               data-validation="required"
+                               data-validation="required" value="" autocomplete="off"
                                placeholder="${message(code: 'user.password')}">
                     </div>
                 </div>

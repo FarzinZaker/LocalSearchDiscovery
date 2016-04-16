@@ -1,6 +1,4 @@
-package utils
-
-import org.codehaus.groovy.grails.commons.ApplicationHolder
+package security
 
 import javax.imageio.ImageIO
 import java.awt.Color
@@ -37,7 +35,7 @@ class CaptchaHelper {
         g.setFont(getFont())
         g.setColor(new Color(244, 244, 244))
         g.fillRect(0, 0, 600, 100)
-        g.setColor(new Color(249, 46, 65))
+        g.setColor(new Color(0, 179, 155))
         def width = g.getFontMetrics().stringWidth(str)
         g.drawString(str, ((600 - width)/2).toInteger(), 62)
         img = resize(img, 150, 25)

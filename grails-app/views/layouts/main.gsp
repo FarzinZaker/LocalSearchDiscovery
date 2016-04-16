@@ -23,6 +23,9 @@
     <g:render template="/user/registerLogin"/>
     <g:render template="/user/login"/>
 </sec:ifNotLoggedIn>
+<g:javascript>
+    $.validate();
+</g:javascript>
 <r:layoutResources/>
 </body>
 </html>

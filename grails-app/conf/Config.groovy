@@ -110,3 +110,25 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.pars.agahisaz.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.pars.agahisaz.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.pars.agahisaz.Role'
+
+grails.mail.default.from = "Agahisaz <no-reply@agahisaz.com>"
+grails {
+    mail {
+        ssl = "off"
+        host = "mx.agah-it.com"
+        from = "no-reply@agahisaz.com"
+        port = 25
+        ssl = "off"
+        username = "no-reply@agahisaz.com"
+        password = 'agah!#($'
+        props = [
+                "mail.debug"             : "false",
+                "mail.transport.protocol": "smtp",
+                "mail.smtp.host"         : "mx.agah-it.com",
+                "mail.smtp.port"         : "25",
+                "mail.smtp.auth"         : "true"
+        ]
+
+    }
+}
+

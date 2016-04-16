@@ -7,7 +7,7 @@
         <g:message code="user.register.description"/>
     </p>
 
-    <form id="registerForm">
+    <form id="registerForm" autocomplete="off">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
@@ -63,23 +63,7 @@
             <div class="row">
 
                 <div class="col-sm-12">
-                    <div class="input-group">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        <input type="text" name="captcha" class="form-control text-center"
-                               data-validation="required serverResponseError" placeholder="${message(code: 'captcha')}">
-                        <span class="input-group-addon">
-                            <img src="${createLink(controller: 'login', action: 'captcha', id: new Date().time)}" id="registerCaptchaImage"/>
-                        </span>
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"
-                                    onclick="$('#registerCaptchaImage').attr('src', '${createLink(controller: 'login', action: 'captcha')}/' + new Date().getTime());">
-                                <span class="glyphicon glyphicon-refresh"></span>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="col-sm-1">
+                    <bootstrap:captcha name="captcha" id="registerCaptcha" type="register"/>
                 </div>
             </div>
         </div>
@@ -91,6 +75,3 @@
         <bootstrap:loading size="48" id="registerLoading"/>
     </bootstrap:modalFooter>
 </bootstrap:modal>
-<g:javascript>
-    $.validate();
-</g:javascript>

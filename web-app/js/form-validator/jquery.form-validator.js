@@ -1704,7 +1704,7 @@
       lengthBadEnd: ' characters',
       lengthTooLongStart: 'The input value is longer than ',
       lengthTooShortStart: 'The input value is shorter than ',
-      notConfirmed: 'Input values could not be confirmed',
+      notConfirmed: 'رمز های عبور وارد شده مطابقت ندارند.',
       badDomain: 'Incorrect domain value',
       badUrl: 'The input value is not a correct URL',
       badCustomVal: 'The input value is incorrect',

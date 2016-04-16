@@ -3,21 +3,27 @@ body {
   font-family: eYekan, tahoma, serif;
 }
 
+.modal {
 
-.modal-content {
-  button.close {
-    position: absolute;
-    top: 5px;
-    left: 10px;
+  &.modal-small {
+
   }
 
-  .modal-footer {
-    background: #f4f4f4;
-    border-radius: 0 0 8px 8px;
-    text-align: center;
-    .btn + .btn {
-      margin-right: 5px;
-      margin-left: 0;
+  .modal-content {
+    button.close {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+    }
+
+    .modal-footer {
+      background: #f4f4f4;
+      border-radius: 0 0 8px 8px;
+      text-align: center;
+      .btn + .btn {
+        margin-right: 5px;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -29,17 +35,17 @@ body {
 .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
   float: right;
 }
-.navbar-header{
-  float:right;
+
+.navbar-header {
+  float: right;
 }
 
-.input-group-addon:first-child{
+.input-group-addon:first-child {
   border-left: 0 none;
   border-right: 1px solid #cccccc;
 }
 
-.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle)
-{
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
   border-radius: 0 4px 4px 0;
 }
 
@@ -47,50 +53,109 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.input-group{
+.input-group {
   background: #f4f4f4;
-  margin-bottom:20px;
+  margin-bottom: 20px;
+  width: 100%;
   * {
     border-width: 0 !important;
   }
-  .input-group-addon{
+  .input-group-addon {
     background: #f4f4f4;
   }
-  .form-control{
-    float:right;
+  .form-control {
+    float: right;
     line-height: 20px;
-    height:40px;
-    padding:10px;
+    height: 40px;
+    padding: 10px;
     background: transparent;
     box-shadow: none !important;
-    & + .form-control{
+    & + .form-control {
       border-right-width: 0;
     }
   }
 
-  .input-group-btn{
-    button{
+  .input-group-btn {
+    button {
       background: transparent;
       box-shadow: none !important;
-      &:hover{
+      &:hover {
         background: transparent;
-        color:#3266be;
+        color: #3266be;
       }
     }
   }
 
-  label{
-    margin-top:10px;
-    margin-bottom:10px;
+  label {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  input[type=checkbox]{
-    margin-top:3px;
+  input[type=checkbox] {
+    margin-top: 3px;
   }
 
-  & + .fieldComment{
-    margin-top:-15px;
-    margin-bottom:15px;
+  & + .fieldComment {
+    margin-top: -15px;
+    margin-bottom: 15px;
   }
+}
+
+.btn {
+  .caret {
+    margin-right: 5px;
+  }
+  .glyphicon {
+    display: block;
+    float: right;
+    margin-left: 7px;
+    margin-top: 2px;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.tabs-left, .tabs-right {
+  padding: 20px 0;
+  background: #FCFCFC;
+}
+
+.tabs-left {
+  margin-left: -15px;
+  border-right-width: 0;
+  & > li {
+    margin: 0;
+    & > a {
+      background-color: #F5F5F5;
+    }
+  }
+  & > li.active > a, & > li.active > a:focus, & > li.active > a:hover, & > li > a {
+    border-left-width: 0;
+    border-radius: 0;
+  }
+
+  & > li.active > a, & > li.active > a:focus, & > li.active > a:hover {
+    margin-right: -1px;
+  }
+}
+
+.tab-content {
+  &.tab-content-left {
+    border-left: 1px solid #dddddd;
+    margin-left: -30px;
+    margin-right: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  float: right;
+}
+
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+  float: right;
 }
 
