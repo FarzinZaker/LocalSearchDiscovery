@@ -16,7 +16,13 @@ modules = {
         resource url: 'bootstrap/css/bootstrap-toggle.min.css'
         resource url: 'bootstrap/css/bootstrap.vertical-tabs.min.css'
         resource url: 'cropie/croppie.css'
-        resource url: 'css/common.less',attrs:[rel: "stylesheet/less", type:'css']
         resource url: 'css/bootstrap-rtl.less',attrs:[rel: "stylesheet/less", type:'css']
+        resource url: 'css/common.less',attrs:[rel: "stylesheet/less", type:'css']
+
+    }
+    maps {
+        resource url: 'open-layers/ol.css'
+//        resource url: 'open-layers/ol.js'
+        resource url: 'open-layers/ol-debug.js'
     }
 }
