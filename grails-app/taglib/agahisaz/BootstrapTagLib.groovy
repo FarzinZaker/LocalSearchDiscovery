@@ -32,4 +32,51 @@ class BootstrapTagLib {
             throw new IncompleteArgumentException('name')
         out << render(template: '/common/cropie', model: [name: attrs.name, cssClass: attrs.cssClass, src: attrs.src])
     }
+
+    def verticalTabStrip = { attrs, body ->
+
+        pageScope.tabPageHeaders = []
+        pageScope.tabPageContents = []
+        body()
+
+        out << """
+
+        <div class="row">
+            <div class="col-xs-9">
+                <div class="tab-content tab-content-left whitePanel ${attrs.cssClass}">
+"""
+        pageScope.tabPageContents.each {
+            out << it
+        }
+        out << """
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <ul class="nav nav-tabs tabs-left">
+"""
+        pageScope.tabPageHeaders.each {
+            out << it
+        }
+        out << """
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+            </div>
+"""
+    }
+
+    def tabPage = { attrs, body ->
+        def currentTab = pageScope.currentTab
+        pageScope.tabPageHeaders << """
+                    <li class="${currentTab == attrs.id ? 'active' : ''}"><a href="#${attrs.id}" data-toggle="tab">${
+            attrs.title
+        }</a></li>
+"""
+        pageScope.tabPageContents << """
+                    <div class="tab-pane ${currentTab == attrs.id ? 'active' : ''}" id="${attrs.id}">
+                        ${body()}
+                    </div>
+"""
+    }
 }

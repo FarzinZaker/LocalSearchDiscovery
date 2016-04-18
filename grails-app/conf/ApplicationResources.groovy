@@ -22,7 +22,7 @@ modules = {
     }
     maps {
         resource url: 'open-layers/ol.css'
-//        resource url: 'open-layers/ol.js'
-        resource url: 'open-layers/ol-debug.js'
+        resource url: 'open-layers/ol.js'
+//        resource url: 'open-layers/ol-debug.js'
     }
 }

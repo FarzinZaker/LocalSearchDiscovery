@@ -16,7 +16,6 @@
 <body>
 <map:locationPicker
         name="location"
-        center="${[32.6546, 51.6680]}"
         visitorLocation="1"
         width="800" height="600"
         style="margin: 50px auto auto;border: 5px solid #dddddd;border-radius: 3px;background-color: white"/>
