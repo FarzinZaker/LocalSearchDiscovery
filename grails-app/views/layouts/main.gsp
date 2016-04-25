@@ -24,7 +24,9 @@
     <g:render template="/user/login"/>
 </sec:ifNotLoggedIn>
 <g:javascript>
-    $.validate();
+    $.validate({
+        validateHiddenInputs: true
+    });
 </g:javascript>
 <r:layoutResources/>
 </body>

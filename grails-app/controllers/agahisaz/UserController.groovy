@@ -2,6 +2,8 @@ package agahisaz
 
 import com.pars.agahisaz.User
 import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
+import security.Roles
 
 class UserController {
     def userService
@@ -53,6 +55,7 @@ class UserController {
         }
     }
 
+    @Secured([Roles.ADMIN, Roles.USER])
     def profile() {
         render view: 'settings', model: [
                 currentTab: 'profile',
@@ -60,6 +63,7 @@ class UserController {
         ]
     }
 
+    @Secured([Roles.ADMIN, Roles.USER])
     def saveBasicInfo() {
         def res = userService.updateBasicInfo(params.profileImage, params.mobile, params.email, params.firstName, params.lastName, params.male ? true : false)
         if (res.error) {

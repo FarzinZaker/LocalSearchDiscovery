@@ -69,7 +69,7 @@ grails.project.dependency.resolution = {
 //        compile ":less-asset-pipeline:1.7.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
-        runtime ":zipped-resources:1.0"
+//        runtime ":zipped-resources:1.0"
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.5"
 
@@ -78,7 +78,6 @@ grails.project.dependency.resolution = {
 //        runtime ":database-migration:1.3.2"
         compile ":spring-security-core:1.2.7.3"
         compile ':cache:1.0.1'
-
 
         compile ":mail:1.0.6"
     }

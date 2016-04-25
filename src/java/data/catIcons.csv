@@ -1,0 +1,845 @@
+Arts & Entertainment,arts_entertainment/default_
+Amphitheater,arts_entertainment/default_
+Aquarium,arts_entertainment/aquarium_
+Arcade,arts_entertainment/arcade_
+Art Gallery,arts_entertainment/artgallery_
+Bowling Alley,arts_entertainment/bowling_
+Casino,arts_entertainment/casino_
+Circus,arts_entertainment/default_
+Comedy Club,arts_entertainment/comedyclub_
+Concert Hall,arts_entertainment/musicvenue_
+Country Dance Club,arts_entertainment/performingarts_dancestudio_
+Disc Golf,arts_entertainment/default_
+Exhibit,arts_entertainment/default_
+General Entertainment,arts_entertainment/default_
+Go Kart Track,arts_entertainment/racetrack_
+Historic Site,arts_entertainment/historicsite_
+Laser Tag,arts_entertainment/default_
+Memorial Site,arts_entertainment/historicsite_
+Mini Golf,parks_outdoors/golfcourse_
+Movie Theater,arts_entertainment/movietheater_
+Drive-in Theater,arts_entertainment/movietheater_
+Indie Movie Theater,arts_entertainment/movietheater_
+Multiplex,arts_entertainment/movietheater_
+Museum,arts_entertainment/museum_
+Art Museum,arts_entertainment/museum_art_
+Erotic Museum,nightlife/stripclub_
+History Museum,arts_entertainment/museum_history_
+Planetarium,arts_entertainment/museum_planetarium_
+Science Museum,arts_entertainment/museum_science_
+Music Venue,arts_entertainment/musicvenue_
+Jazz Club,arts_entertainment/musicvenue_jazzclub_
+Piano Bar,arts_entertainment/musicvenue_pianobar_
+Rock Club,arts_entertainment/musicvenue_rockclub_
+Performing Arts Venue,arts_entertainment/performingarts_
+Dance Studio,arts_entertainment/performingarts_dancestudio_
+Indie Theater,arts_entertainment/performingarts_indieoffbroadway_
+Opera House,arts_entertainment/performingarts_operahouse_
+Theater,arts_entertainment/performingarts_theater_
+Pool Hall,arts_entertainment/billiards_
+Public Art,arts_entertainment/default_
+Outdoor Sculpture,parks_outdoors/sculpture_
+Street Art,arts_entertainment/default_
+Racecourse,arts_entertainment/stadium_track_
+Racetrack,arts_entertainment/racetrack_
+Roller Rink,arts_entertainment/default_
+Salsa Club,arts_entertainment/performingarts_dancestudio_
+Samba School,arts_entertainment/performingarts_dancestudio_
+Stadium,arts_entertainment/stadium_
+Baseball Stadium,arts_entertainment/stadium_baseball_
+Basketball Stadium,arts_entertainment/stadium_basketball_
+Cricket Ground,arts_entertainment/stadium_cricket_
+Football Stadium,arts_entertainment/stadium_football_
+Hockey Arena,arts_entertainment/stadium_hockey_
+Rugby Stadium,arts_entertainment/stadium_football_
+Soccer Stadium,arts_entertainment/stadium_soccer_
+Tennis Stadium,arts_entertainment/stadium_tennis_
+Track Stadium,arts_entertainment/stadium_track_
+Theme Park,arts_entertainment/themepark_
+Theme Park Ride / Attraction,arts_entertainment/themepark_
+Tour Provider,arts_entertainment/default_
+Water Park,arts_entertainment/waterpark_
+Zoo,arts_entertainment/zoo_
+College & University,education/default_
+College Academic Building,education/academicbuilding_
+College Arts Building,arts_entertainment/default_
+College Communications Building,education/collegeacademicbuildings_communications_
+College Engineering Building,education/collegeacademicbuildings_engineering_
+College History Building,education/collegeacademicbuildings_history_
+College Math Building,education/collegeacademicbuildings_math_
+College Science Building,education/collegeacademicbuildings_science_
+College Technology Building,education/collegeacademicbuildings_technology_
+College Administrative Building,education/administrativebuilding_
+College Auditorium,building/auditorium_
+College Bookstore,shops/bookstore_
+College Cafeteria,education/cafeteria_
+College Classroom,education/classroom_
+College Gym,building/gym_
+College Lab,education/lab_
+College Library,building/library_
+College Quad,education/quad_
+College Rec Center,education/reccenter_
+College Residence Hall,education/residencehall_
+College Stadium,arts_entertainment/stadium_
+College Baseball Diamond,arts_entertainment/stadium_baseball_
+College Basketball Court,arts_entertainment/stadium_basketball_
+College Cricket Pitch,arts_entertainment/stadium_cricket_
+College Football Field,arts_entertainment/stadium_football_
+College Hockey Rink,arts_entertainment/stadium_hockey_
+College Soccer Field,arts_entertainment/stadium_soccer_
+College Tennis Court,arts_entertainment/stadium_tennis_
+College Track,arts_entertainment/stadium_track_
+College Theater,arts_entertainment/performingarts_theater_
+Community College,education/communitycollege_
+Fraternity House,education/frathouse_
+General College & University,education/other_
+Law School,education/lawschool_
+Medical School,building/medical_
+Sorority House,education/frathouse_
+Student Center,education/studentcenter_
+Trade School,education/tradeschool_
+University,education/default_
+Event,event/default_
+Christmas Market,shops/default_
+Conference,event/default_
+Convention,event/default_
+Festival,event/default_
+Music Festival,arts_entertainment/musicvenue_rockclub_
+Other Event,event/default_
+Parade,event/default_
+Stoop Sale,shops/fleamarket_
+Street Fair,event/default_
+Food,food/default_
+Afghan Restaurant,food/afghan_
+African Restaurant,food/african_
+Ethiopian Restaurant,food/ethiopian_
+American Restaurant,food/default_
+New American Restaurant,food/newamerican_
+Asian Restaurant,food/asian_
+Burmese Restaurant,food/asian_
+Cambodian Restaurant,food/default_
+Chinese Restaurant,food/asian_
+Anhui Restaurant,food/asian_
+Beijing Restaurant,food/asian_
+Cantonese Restaurant,food/asian_
+Chinese Aristocrat Restaurant,food/asian_
+Chinese Breakfast Place,food/asian_
+Dim Sum Restaurant,food/dimsum_
+Dongbei Restaurant,food/asian_
+Fujian Restaurant,food/asian_
+Guizhou Restaurant,food/asian_
+Hainan Restaurant,food/asian_
+Hakka Restaurant,food/asian_
+Henan Restaurant,food/asian_
+Hong Kong Restaurant,food/asian_
+Huaiyang Restaurant,food/asian_
+Hubei Restaurant,food/asian_
+Hunan Restaurant,food/asian_
+Imperial Restaurant,food/asian_
+Jiangsu Restaurant,food/asian_
+Jiangxi Restaurant,food/asian_
+Macanese Restaurant,food/asian_
+Manchu Restaurant,food/asian_
+Peking Duck Restaurant,food/asian_
+Shaanxi Restaurant,food/asian_
+Shandong Restaurant,food/asian_
+Shanghai Restaurant,food/asian_
+Shanxi Restaurant,food/asian_
+Szechuan Restaurant,food/asian_
+Taiwanese Restaurant,food/asian_
+Tianjin Restaurant,food/asian_
+Xinjiang Restaurant,food/asian_
+Yunnan Restaurant,food/asian_
+Zhejiang Restaurant,food/asian_
+Filipino Restaurant,food/filipino_
+Himalayan Restaurant,food/default_
+Hotpot Restaurant,food/asian_
+Indonesian Restaurant,food/indonesian_
+Acehnese Restaurant,food/indonesian_
+Balinese Restaurant,food/indonesian_
+Betawinese Restaurant,food/indonesian_
+Indonesian Meatball Place,food/indonesian_
+Javanese Restaurant,food/indonesian_
+Manadonese Restaurant,food/indonesian_
+Padangnese Restaurant,food/indonesian_
+Sundanese Restaurant,food/indonesian_
+Japanese Restaurant,food/japanese_
+Donburi Restaurant,food/japanese_
+Japanese Curry Restaurant,food/default_
+Kaiseki Restaurant,food/japanese_
+Kushikatsu Restaurant,food/japanese_
+Monjayaki Restaurant,food/japanese_
+Nabe Restaurant,food/japanese_
+Okonomiyaki Restaurant,food/japanese_
+Ramen Restaurant,food/ramen_
+Shabu-Shabu Restaurant,food/japanese_
+Soba Restaurant,food/ramen_
+Sukiyaki Restaurant,food/japanese_
+Sushi Restaurant,food/sushi_
+Takoyaki Place,food/japanese_
+Tempura Restaurant,food/japanese_
+Tonkatsu Restaurant,food/japanese_
+Udon Restaurant,food/ramen_
+Unagi Restaurant,food/japanese_
+Wagashi Place,food/dessert_
+Yakitori Restaurant,food/japanese_
+Yoshoku Restaurant,food/default_
+Korean Restaurant,food/korean_
+Bossam/Jokbal Restaurant,food/korean_
+Bunsik Restaurant,food/korean_
+Gukbap Restaurant,food/korean_
+Janguh Restaurant,food/korean_
+Samgyetang Restaurant,food/korean_
+Malaysian Restaurant,food/malaysian_
+Mongolian Restaurant,food/mongolian_
+Noodle House,food/ramen_
+Satay Restaurant,food/asian_
+Thai Restaurant,food/thai_
+Som Tum Restaurant,food/thai_
+Tibetan Restaurant,food/tibetan_
+Vietnamese Restaurant,food/vietnamese_
+Australian Restaurant,food/australian_
+Austrian Restaurant,food/austrian_
+BBQ Joint,food/bbqalt_
+Bagel Shop,food/bagels_
+Bakery,food/bakery_
+Belgian Restaurant,food/default_
+Bistro,food/default_
+Brazilian Restaurant,food/argentinian_
+Acai House,food/argentinian_
+Baiano Restaurant,food/argentinian_
+Central Brazilian Restaurant,food/argentinian_
+Churrascaria,food/argentinian_
+Empada House,food/argentinian_
+Goiano Restaurant,food/argentinian_
+Mineiro Restaurant,food/argentinian_
+Northeastern Brazilian Restaurant,food/argentinian_
+Northern Brazilian Restaurant,food/argentinian_
+Pastelaria,food/argentinian_
+Southeastern Brazilian Restaurant,food/argentinian_
+Southern Brazilian Restaurant,food/argentinian_
+Tapiocaria,food/argentinian_
+Breakfast Spot,food/breakfast_
+Bubble Tea Shop,food/bubble_
+Buffet,food/default_
+Burger Joint,food/burger_
+Cafeteria,education/cafeteria_
+Café,food/cafe_
+Cajun / Creole Restaurant,food/cajun_
+Caribbean Restaurant,food/caribbean_
+Caucasian Restaurant,food/caucasian_
+Coffee Shop,food/coffeeshop_
+Comfort Food Restaurant,food/default_
+Creperie,food/creperie_
+Czech Restaurant,food/default_
+Deli / Bodega,food/deli_
+Dessert Shop,food/dessert_
+Cupcake Shop,food/cupcakes_
+Frozen Yogurt,food/frozenyogurt_
+Ice Cream Shop,food/icecream_
+Pie Shop,food/pieshop_
+Diner,food/diner_
+Donut Shop,food/donuts_
+Dumpling Restaurant,food/dumplings_
+Eastern European Restaurant,food/default_
+Belarusian Restaurant,food/default_
+Bulgarian Restaurant,food/default_
+Romanian Restaurant,food/default_
+Tatar Restaurant,food/default_
+English Restaurant,food/default_
+Falafel Restaurant,food/falafel_
+Fast Food Restaurant,food/fastfood_
+Fish & Chips Shop,food/fishandchips_
+Fondue Restaurant,food/default_
+Food Court,shops/food_foodcourt_
+Food Stand,travel/movingtarget_
+Food Truck,food/streetfood_
+French Restaurant,food/french_
+Fried Chicken Joint,food/friedchicken_
+Friterie,food/fastfood_
+Gastropub,food/gastropub_
+German Restaurant,food/german_
+Apple Wine Pub,food/german_
+Bavarian Restaurant,food/german_
+Bratwurst Joint,food/bbqalt_
+Currywurst Joint,food/bbqalt_
+Franconian Restaurant,food/german_
+German Pop-Up Restaurant,food/german_
+Palatine Restaurant,food/german_
+Rhenisch Restaurant,food/german_
+Schnitzel Restaurant,food/german_
+Silesian Restaurant,food/german_
+Swabian Restaurant,food/german_
+Gluten-free Restaurant,food/glutenfree_
+Greek Restaurant,food/greek_
+Bougatsa Shop,food/snacks_
+Cretan Restaurant,food/greek_
+Fish Taverna,shops/food_fishmarket_
+Grilled Meat Restaurant,food/greek_
+Kafenio,food/coffeeshop_
+Magirio,food/diner_
+Meze Restaurant,food/greek_
+Modern Greek Restaurant,food/greek_
+Ouzeri,food/greek_
+Patsa Restaurant,food/soup_
+Souvlaki Shop,food/souvlaki_
+Taverna,food/greek_
+Tsipouro Restaurant,food/greek_
+Halal Restaurant,food/halal_
+Hawaiian Restaurant,food/default_
+Hot Dog Joint,food/hotdog_
+Hungarian Restaurant,food/default_
+Indian Restaurant,food/indian_
+Andhra Restaurant,food/default_
+Awadhi Restaurant,food/default_
+Bengali Restaurant,food/default_
+Chaat Place,food/default_
+Chettinad Restaurant,food/default_
+Dhaba,food/default_
+Dosa Place,food/default_
+Goan Restaurant,food/default_
+Gujarati Restaurant,food/default_
+Hyderabadi Restaurant,food/default_
+Indian Chinese Restaurant,food/default_
+Indian Sweet Shop,food/default_
+Irani Cafe,food/default_
+Jain Restaurant,food/default_
+Karnataka Restaurant,food/default_
+Kerala Restaurant,food/default_
+Maharashtrian Restaurant,food/default_
+Mughlai Restaurant,food/default_
+Multicuisine Indian Restaurant,food/default_
+North Indian Restaurant,food/default_
+Northeast Indian Restaurant,food/default_
+Parsi Restaurant,food/default_
+Punjabi Restaurant,food/default_
+Rajasthani Restaurant,food/default_
+South Indian Restaurant,food/default_
+Udupi Restaurant,food/default_
+Irish Pub,nightlife/pub_
+Italian Restaurant,food/italian_
+Abruzzo Restaurant,food/italian_
+Agriturismo,food/italian_
+Aosta Restaurant,food/italian_
+Basilicata Restaurant,food/italian_
+Calabria Restaurant,food/italian_
+Campanian Restaurant,food/italian_
+Emilia Restaurant,food/italian_
+Friuli Restaurant,food/italian_
+Ligurian Restaurant,food/italian_
+Lombard Restaurant,food/italian_
+Malga,food/italian_
+Marche Restaurant,food/italian_
+Molise Restaurant,food/italian_
+Piadineria,food/taco_
+Piedmontese Restaurant,food/italian_
+Puglia Restaurant,food/italian_
+Rifugio di Montagna,food/italian_
+Romagna Restaurant,food/italian_
+Roman Restaurant,food/italian_
+Sardinian Restaurant,food/italian_
+Sicilian Restaurant,food/italian_
+South Tyrolean Restaurant,food/italian_
+Trattoria/Osteria,food/italian_
+Trentino Restaurant,food/italian_
+Tuscan Restaurant,food/italian_
+Umbrian Restaurant,food/italian_
+Veneto Restaurant,food/italian_
+Jewish Restaurant,food/default_
+Kosher Restaurant,food/default_
+Juice Bar,food/juicebar_
+Latin American Restaurant,food/latinamerican_
+Arepa Restaurant,food/arepas_
+Cuban Restaurant,food/cuban_
+Empanada Restaurant,food/latinamerican_
+Mac & Cheese Joint,food/macandcheese_
+Mediterranean Restaurant,food/mediterranean_
+Moroccan Restaurant,food/moroccan_
+Mexican Restaurant,food/mexican_
+Burrito Place,food/burrito_
+Taco Place,food/taco_
+Tex-Mex Restaurant,food/mexican_
+Middle Eastern Restaurant,food/middleeastern_
+Israeli Restaurant,food/falafel_
+Persian Restaurant,food/middleeastern_
+Modern European Restaurant,food/default_
+Molecular Gastronomy Restaurant,food/moleculargastronomy_
+Pakistani Restaurant,food/default_
+Pet Café,parks_outdoors/dogrun_
+Pizza Place,food/pizza_
+Polish Restaurant,food/default_
+Portuguese Restaurant,food/portuguese_
+Poutine Place,food/fastfood_
+Restaurant,food/default_
+Russian Restaurant,food/russian_
+Blini House,food/default_
+Pelmeni House,food/default_
+Salad Place,food/salad_
+Sandwich Place,food/deli_
+Scandinavian Restaurant,food/scandinavian_
+Seafood Restaurant,food/seafood_
+Slovak Restaurant,food/default_
+Snack Place,food/snacks_
+Soup Place,food/soup_
+South American Restaurant,food/argentinian_
+Argentinian Restaurant,food/argentinian_
+Peruvian Restaurant,food/peruvian_
+Venezuelan Restaurant,food/argentinian_
+Southern / Soul Food Restaurant,food/southern_
+Spanish Restaurant,food/spanish_
+Paella Restaurant,food/paella_
+Tapas Restaurant,food/tapas_
+Sri Lankan Restaurant,food/default_
+Steakhouse,food/steakhouse_
+Swiss Restaurant,food/swiss_
+Tea Room,food/tearoom_
+Theme Restaurant,food/default_
+Turkish Restaurant,food/turkish_
+Borek Place,food/turkish_
+Cigkofte Place,food/turkish_
+Doner Restaurant,food/turkish_
+Gozleme Place,food/turkish_
+Kebab Restaurant,food/middleeastern_
+Kofte Place,food/turkish_
+Kokoreç Restaurant,food/turkish_
+Kumpir Restaurant,food/turkish_
+Kumru Restaurant,food/turkish_
+Manti Place,food/turkish_
+Meyhane,food/turkish_
+Pide Place,food/turkish_
+Tantuni Restaurant,food/turkish_
+Turkish Coffeehouse,food/turkish_
+Turkish Home Cooking Restaurant,food/turkish_
+Ukrainian Restaurant,food/default_
+Varenyky restaurant,food/default_
+West-Ukrainian Restaurant,food/default_
+Vegetarian / Vegan Restaurant,food/vegetarian_
+Wings Joint,food/wings_
+Nightlife Spot,nightlife/default_
+Bar,nightlife/pub_
+Beach Bar,nightlife/default_
+Beer Bar,nightlife/pub_
+Beer Garden,nightlife/beergarden_
+Champagne Bar,food/winery_
+Cocktail Bar,nightlife/cocktails_
+Dive Bar,nightlife/divebar_
+Gay Bar,nightlife/gaybar_
+Hookah Bar,nightlife/hookahbar_
+Hotel Bar,travel/hotel_bar_
+Karaoke Bar,nightlife/karaoke_
+Pub,nightlife/pub_
+Sake Bar,nightlife/sake_
+Sports Bar,nightlife/sportsbar_
+Tiki Bar,nightlife/cocktails_
+Whisky Bar,nightlife/whiskey_
+Wine Bar,food/winery_
+Brewery,food/brewery_
+Lounge,nightlife/default_
+Night Market,shops/fleamarket_
+Nightclub,nightlife/nightclub_
+Other Nightlife,nightlife/default_
+Speakeasy,nightlife/secretbar_
+Strip Club,nightlife/stripclub_
+Outdoors & Recreation,parks_outdoors/default_
+Athletics & Sports,shops/sports_outdoors_
+Badminton Court,arts_entertainment/stadium_tennis_
+Baseball Field,parks_outdoors/baseballfield_
+Basketball Court,parks_outdoors/basketballcourt_
+Bowling Green,arts_entertainment/bowling_
+Curling Ice,parks_outdoors/skatingrink_
+Golf Course,parks_outdoors/golfcourse_
+Gym / Fitness Center,building/gym_
+Boxing Gym,building/gym_
+Climbing Gym,building/gym_
+Cycle Studio,shops/bikeshop_
+Gym Pool,parks_outdoors/pool_
+Gymnastics Gym,building/gym_
+Gym,building/gym_
+Martial Arts Dojo,shops/gym_martialarts_
+Track,arts_entertainment/stadium_track_
+Yoga Studio,shops/gym_yogastudio_
+Hockey Field,arts_entertainment/stadium_hockey_
+Hockey Rink,arts_entertainment/stadium_hockey_
+Paintball Field,parks_outdoors/default_
+Rugby Pitch,arts_entertainment/stadium_football_
+Skate Park,parks_outdoors/skate_park_
+Skating Rink,parks_outdoors/skatingrink_
+Soccer Field,arts_entertainment/stadium_soccer_
+Sports Club,shops/sports_outdoors_
+Squash Court,arts_entertainment/stadium_tennis_
+Tennis Court,arts_entertainment/stadium_tennis_
+Volleyball Court,parks_outdoors/volleyballcourt_
+Bath House,parks_outdoors/default_
+Bathing Area,parks_outdoors/default_
+Bay,parks_outdoors/harbor_
+Beach,parks_outdoors/beach_
+Nudist Beach,parks_outdoors/beach_
+Surf Spot,parks_outdoors/surfspot_
+Bike Trail,parks_outdoors/hikingtrail_
+Botanical Garden,parks_outdoors/botanicalgarden_
+Bridge,parks_outdoors/bridge_
+Campground,parks_outdoors/campground_
+Canal Lock,parks_outdoors/bridge_
+Canal,parks_outdoors/river_
+Castle,parks_outdoors/beach_
+Cave,parks_outdoors/default_
+Cemetery,parks_outdoors/cemetery_
+Dive Spot,parks_outdoors/divespot_
+Dog Run,parks_outdoors/dogrun_
+Farm,parks_outdoors/farm_
+Field,parks_outdoors/field_
+Fishing Spot,shops/food_fishmarket_
+Forest,parks_outdoors/default_
+Fountain,parks_outdoors/plaza_
+Garden,parks_outdoors/garden_
+Gun Range,parks_outdoors/gun_
+Harbor / Marina,parks_outdoors/harbor_
+Hot Spring,parks_outdoors/hotspring_
+Island,parks_outdoors/neighborhood_
+Lake,parks_outdoors/lake_
+Lighthouse,parks_outdoors/lighthouse_
+Mountain,parks_outdoors/mountain_
+National Park,parks_outdoors/hikingtrail_
+Nature Preserve,parks_outdoors/naturepreserve_
+Other Great Outdoors,parks_outdoors/outdoors_
+Palace,parks_outdoors/default_
+Park,parks_outdoors/park_
+Pedestrian Plaza,parks_outdoors/default_
+Playground,parks_outdoors/playground_
+Plaza,parks_outdoors/plaza_
+Pool,parks_outdoors/pool_
+Rafting,parks_outdoors/rafting_
+Recreation Center,shops/sports_outdoors_
+Reservoir,parks_outdoors/lake_
+River,parks_outdoors/river_
+Rock Climbing Spot,parks_outdoors/rockclimbing_
+Scenic Lookout,parks_outdoors/sceniclookout_
+Sculpture Garden,parks_outdoors/sculpture_
+Ski Area,parks_outdoors/ski_snowboard_
+Apres Ski Bar,parks_outdoors/ski_apresskibar_
+Ski Chairlift,parks_outdoors/ski_chairlift_
+Ski Chalet,parks_outdoors/ski_chalet_
+Ski Lodge,parks_outdoors/ski_lodge_
+Ski Trail,parks_outdoors/ski_trail_
+Stables,parks_outdoors/stable_
+States & Municipalities,parks_outdoors/neighborhood_
+City,parks_outdoors/neighborhood_
+County,parks_outdoors/neighborhood_
+Country,parks_outdoors/neighborhood_
+Neighborhood,parks_outdoors/neighborhood_
+State,parks_outdoors/neighborhood_
+Town,parks_outdoors/neighborhood_
+Village,parks_outdoors/neighborhood_
+Summer Camp,parks_outdoors/campground_
+Trail,parks_outdoors/hikingtrail_
+Tree,parks_outdoors/default_
+Vineyard,parks_outdoors/vineyard_
+Volcano,parks_outdoors/mountain_
+Waterfall,parks_outdoors/default_
+Waterfront,parks_outdoors/river_
+Well,parks_outdoors/well_
+Professional & Other Places,building/default_
+Animal Shelter,building/animalshelter_
+Auditorium,building/auditorium_
+Ballroom,building/default_
+Building,building/default_
+Business Center,building/default_
+Club House,building/default_
+Community Center,building/default_
+Convention Center,building/conventioncenter_
+Meeting Room,building/conventioncenter_meetingroom_
+Cultural Center,building/default_
+Distillery,food/brewery_
+Distribution Center,building/default_
+Event Space,building/eventspace_
+Outdoor Event Space,building/eventspace_
+Factory,building/factory_
+Fair,building/fair_
+Funeral Home,building/funeralhome_
+Government Building,building/government_
+Capitol Building,building/government_capitolbuilding_
+City Hall,building/cityhall_
+Courthouse,building/government_courthouse_
+Embassy / Consulate,travel/embassy_
+Fire Station,building/government_firestation_
+Monument / Landmark,building/government_monument_
+Police Station,building/government_policestation_
+Town Hall,building/cityhall_
+Industrial Estate,building/default_
+Library,building/library_
+Medical Center,building/medical_
+Acupuncturist,building/medical_doctorsoffice_
+Alternative Healer,building/medical_doctorsoffice_
+Chiropractor,building/medical_doctorsoffice_
+Dentist's Office,building/medical_dentist_
+Doctor's Office,building/medical_doctorsoffice_
+Emergency Room,building/medical_ems_
+Eye Doctor,building/medical_opticalshop_
+Hospital,building/medical_
+Laboratory,education/lab_
+Maternity Clinic,building/medical_
+Mental Health Office,building/medical_doctorsoffice_
+Rehab Center,building/medical_
+Urgent Care Center,building/medical_
+Veterinarian,building/medical_veterinarian_
+Military Base,building/militarybase_
+Non-Profit,building/default_
+Office,building/default_
+Advertising Agency,building/default_
+Campaign Office,building/default_
+Conference Room,building/office_conferenceroom_
+Corporate Amenity,building/default_
+Corporate Cafeteria,education/cafeteria_
+Corporate Coffee Shop,food/coffeeshop_
+Coworking Space,building/office_coworkingspace_
+Tech Startup,shops/technology_
+Parking,building/parking_
+Post Office,building/postoffice_
+Prison,building/default_
+Radio Station,building/default_
+Recruiting Agency,building/default_
+School,building/school_
+Adult Education Center,building/school_
+Circus School,building/default_
+Driving School,shops/automotive_
+Elementary School,building/school_
+Flight School,travel/airport_
+High School,building/school_
+Language School,education/default_
+Middle School,building/school_
+Music School,building/school_music_
+Nursery School,building/school_
+Preschool,building/school_
+Private School,education/default_
+Religious School,education/default_
+Swim School,parks_outdoors/pool_
+Social Club,building/default_
+Spiritual Center,building/religious_
+Buddhist Temple,building/religious_
+Church,building/religious_church_
+Confucian Temple,building/religious_
+Hindu Temple,building/religious_
+Monastery,building/religious_
+Mosque,building/religious_mosque_
+Prayer Room,building/religious_
+Shrine,building/religious_shrine_
+Synagogue,building/religious_synagogue_
+Temple,building/religious_temple_
+Terreiro,building/religious_
+TV Station,building/default_
+Voting Booth,building/votingbooth_
+Warehouse,building/default_
+Wedding Hall,shops/bridal_
+Winery,food/winery_
+Residence,building/home_
+Assisted Living,building/apartment_
+Home (private),building/home_
+Housing Development,building/housingdevelopment_
+Residential Building (Apartment / Condo),building/apartment_
+Trailer Park,building/home_
+Shop & Service,shops/default_
+ATM,shops/financial_
+Adult Boutique,nightlife/stripclub_
+Antique Shop,shops/antique_
+Arts & Crafts Store,shops/artstore_
+Astrologer,shops/default_
+Auto Garage,shops/automotive_
+Auto Workshop,shops/automotive_
+Automotive Shop,shops/automotive_
+Baby Store,shops/apparel_kids_
+Bank,shops/financial_
+Batik Shop,shops/default_
+Betting Shop,shops/financial_
+Big Box Store,shops/default_
+Bike Shop,shops/bikeshop_
+Board Shop,parks_outdoors/surfspot_
+Bookstore,shops/bookstore_
+Bridal Shop,shops/bridal_
+Business Service,building/default_
+Camera Store,shops/camerastore_
+Candy Store,shops/candystore_
+Car Dealership,shops/automotive_
+Car Wash,shops/carwash_
+Carpet Store,shops/default_
+Check Cashing Service,shops/financial_
+Chocolate Shop,shops/candystore_
+Clothing Store,shops/apparel_
+Accessories Store,shops/apparel_accessories_
+Boutique,shops/apparel_boutique_
+Kids Store,shops/apparel_kids_
+Lingerie Store,shops/apparel_lingerie_
+Men's Store,shops/apparel_men_
+Shoe Store,shops/apparel_shoestore_
+Women's Store,shops/apparel_women_
+Comic Shop,shops/comic_
+Construction & Landscaping,shops/realestate_
+Convenience Store,shops/conveniencestore_
+Cosmetics Shop,shops/beauty_cosmetic_
+Costume Shop,shops/default_
+Credit Union,shops/financial_
+Daycare,shops/daycare_
+Department Store,shops/departmentstore_
+Design Studio,shops/design_
+Discount Store,shops/discountstore_
+Dive Shop,parks_outdoors/divespot_
+Drugstore / Pharmacy,shops/pharmacy_
+Dry Cleaner,shops/drycleaner_
+EV Charging Station,shops/automotive_
+Electronics Store,shops/technology_
+Entertainment Service,arts_entertainment/default_
+Event Service,event/default_
+Fabric Shop,shops/default_
+Film Studio,arts_entertainment/movietheater_
+Financial or Legal Service,shops/financial_
+Fireworks Store,shops/default_
+Fishing Store,shops/food_fishmarket_
+Flea Market,shops/fleamarket_
+Floating Market,shops/default_
+Flower Shop,shops/flowershop_
+Food & Drink Shop,shops/foodanddrink_
+Beer Store,nightlife/beergarden_
+Butcher,shops/food_butcher_
+Cheese Shop,shops/food_cheese_
+Farmers Market,shops/food_farmersmarket_
+Fish Market,shops/food_fishmarket_
+Food Service,shops/foodanddrink_
+Gourmet Shop,shops/food_gourmet_
+Grocery Store,shops/food_grocery_
+Health Food Store,shops/food_grocery_
+Liquor Store,shops/food_liquor_
+Organic Grocery,shops/food_grocery_
+Sausage Shop,food/bbqalt_
+Street Food Gathering,food/streetfood_
+Supermarket,shops/food_grocery_
+Wine Shop,shops/food_wineshop_
+Frame Store,arts_entertainment/artgallery_
+Fruit & Vegetable Store,shops/food_grocery_
+Furniture / Home Store,shops/furniture_
+Lighting Store,shops/default_
+Gaming Cafe,shops/gamingcafe_
+Garden Center,parks_outdoors/gardencenter_
+Gas Station,shops/gas_
+Gift Shop,shops/giftshop_
+Gun Shop,parks_outdoors/gun_
+Hardware Store,shops/hardware_
+Health & Beauty Service,shops/salon_barber_
+Herbs & Spices Store,shops/default_
+Hobby Shop,shops/hobbyshop_
+Home Service,shops/hardware_
+Hunting Supply,shops/default_
+IT Services,shops/technology_
+Internet Cafe,shops/internetcafe_
+Jewelry Store,shops/jewelry_
+Knitting Store,shops/default_
+Laundromat,shops/laundry_
+Laundry Service,shops/laundry_
+Lawyer,education/lawschool_
+Leather Goods Store,shops/default_
+Locksmith,shops/default_
+Lottery Retailer,shops/financial_
+Luggage Store,travel/default_
+Marijuana Dispensary,shops/dispensary_
+Market,shops/market_
+Massage Studio,shops/spa_
+Mattress Store,shops/default_
+Miscellaneous Shop,shops/default_
+Mobile Phone Shop,shops/mobilephoneshop_
+Mobility Store,shops/default_
+Motorcycle Shop,shops/motorcycle_
+Music Store,shops/music_instruments_
+Nail Salon,shops/nailsalon_
+Newsstand,shops/newsstand_
+Optical Shop,building/medical_opticalshop_
+Other Repair Shop,shops/default_
+Outdoor Supply Store,shops/default_
+Outlet Store,shops/default_
+Paper / Office Supplies Store,shops/papergoods_
+Pawn Shop,shops/default_
+Perfume Shop,shops/default_
+Pet Service,shops/pet_store_
+Pet Store,shops/pet_store_
+Photography Lab,shops/photographylab_
+Photography Studio,shops/camerastore_
+Piercing Parlor,shops/piercing_
+Pop-Up Shop,shops/default_
+Print Shop,shops/default_
+Real Estate Office,shops/realestate_
+Record Shop,shops/record_shop_
+Recording Studio,building/school_music_
+Recycling Facility,shops/recycling_
+Rental Service,shops/default_
+Salon / Barbershop,shops/salon_barber_
+Shipping Store,shops/default_
+Shoe Repair,shops/apparel_shoestore_
+Shopping Mall,shops/mall_
+Ski Shop,parks_outdoors/ski_snowboard_
+Smoke Shop,shops/tobacco_
+Smoothie Shop,food/juicebar_
+Souvenir Shop,shops/default_
+Spa,shops/spa_
+Sporting Goods Shop,shops/sports_outdoors_
+Stationery Store,shops/default_
+Storage Facility,shops/storage_
+Tailor Shop,shops/apparel_
+Tanning Salon,shops/tanning_salon_
+Tattoo Parlor,shops/tattoos_
+Thrift / Vintage Store,shops/default_
+Toy / Game Store,shops/toys_
+Travel Agency,travel/travelagency_
+Used Bookstore,shops/bookstore_
+Vape Store,shops/tobacco_
+Video Game Store,shops/videogames_
+Video Store,shops/video_
+Warehouse Store,shops/default_
+Watch Shop,shops/default_
+Travel & Transport,travel/default_
+Airport,travel/airport_
+Airport Food Court,travel/airport_
+Airport Gate,travel/airport_gate_
+Airport Lounge,nightlife/default_
+Airport Service,travel/airport_
+Airport Terminal,travel/airport_gate_
+Airport Tram,travel/airport_tram_
+Plane,travel/airport_
+Bike Rental / Bike Share,shops/bikeshop_
+Boat or Ferry,travel/boat_
+Border Crossing,travel/default_
+Bus Station,travel/busstation_
+Bus Line,travel/busstation_
+Bus Stop,travel/busstation_
+Cable Car,travel/trainstation_
+Cruise,travel/boat_
+General Travel,travel/default_
+Heliport,travel/default_
+Hotel,travel/hotel_
+Bed & Breakfast,travel/bedandbreakfast_
+Boarding House,travel/hotel_
+Hostel,travel/hostel_
+Hotel Pool,parks_outdoors/pool_
+Motel,travel/hotel_
+Resort,travel/resort_
+Roof Deck,travel/hotel_roofdeck_
+Vacation Rental,travel/hostel_
+Intersection,travel/default_
+Light Rail Station,travel/lightrail_
+Metro Station,travel/subway_
+Moving Target,travel/movingtarget_
+Pier,travel/ferry_pier_
+Port,travel/boat_
+RV Park,parks_outdoors/default_
+Rental Car Location,shops/airport_rentalcar_
+Rest Area,travel/restarea_
+Road,travel/highway_
+Street,travel/highway_
+Taxi Stand,travel/taxi_
+Taxi,travel/taxi_
+Toll Booth,travel/default_
+Toll Plaza,travel/default_
+Tourist Information Center,travel/touristinformation_
+Train Station,travel/trainstation_
+Platform,travel/trainstation_
+Train,travel/trainstation_
+Tram Station,travel/trainstation_
+Transportation Service,travel/taxi_
+Travel Lounge,nightlife/default_
+Tunnel,travel/default_

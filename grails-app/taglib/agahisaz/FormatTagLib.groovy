@@ -26,5 +26,9 @@ class FormatTagLib {
     def html = { attrs, body ->
         out << attrs.value
     }
+
+    def phoneNumber = { attrs, body ->
+        out << render(template: '/common/phoneNumber', model: [id: attrs.id, value: attrs.value])
+    }
 }
 

@@ -141,8 +141,10 @@ body {
   }
 }
 
-.tab-content {
-  &.tab-content-left {
+.silverPanel {
+  border-radius: 3px;
+  margin-top:15px;
+  .whitePanel {
     border-left: 1px solid #dddddd;
     margin-left: -30px;
     margin-right: -15px;
@@ -157,5 +159,42 @@ body {
 
 .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
   float: right;
+}
+
+.input-group {
+  position: relative;
+  .selectize-dropdown, .selectize-dropdown.form-control {
+    background: #ffffff !important;
+    border-radius: 4px;
+    height: auto;
+    padding: 0;
+    top:38px !important;
+    left: -10px !important;
+    position: absolute;
+    right:0 !important;
+  }
+
+  .selectize-dropdown{
+    border:2px solid #f4f4f4 !important;
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  .selectize-input{
+    &.full, &.focus{
+      background: transparent !important;
+      box-shadow: none;
+    }
+  }
+}
+
+.input-group input.form-control{
+  z-index: auto;
+}
+
+.has-error .selectize-input{
+  box-shadow: none !important;
 }
 

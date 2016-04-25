@@ -41,28 +41,30 @@ class BootstrapTagLib {
 
         out << """
 
-        <div class="row">
-            <div class="col-xs-9">
-                <div class="tab-content tab-content-left whitePanel ${attrs.cssClass}">
+        <div class="container silverPanel ${attrs.cssClass}">
+            <div class="row">
+                <div class="col-xs-9">
+                    <div class="tab-content tab-content-left whitePanel">
 """
         pageScope.tabPageContents.each {
             out << it
         }
         out << """
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-3">
-                <ul class="nav nav-tabs tabs-left">
+                <div class="col-xs-3">
+                    <ul class="nav nav-tabs tabs-left">
 """
         pageScope.tabPageHeaders.each {
             out << it
         }
         out << """
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
-            <div class="clearfix"></div>
+                <div class="clearfix"></div>
             </div>
+        </div>
 """
     }
 
@@ -79,4 +81,38 @@ class BootstrapTagLib {
                     </div>
 """
     }
+
+
+    def helpedPanel = { attrs, body ->
+
+        pageScope.help = ''
+        body()
+
+        out << """
+
+        <div class="container silverPanel helpedPanel ${attrs.cssClass}">
+            <div class="row">
+                <div class="col-xs-9">
+                    <div class="whitePanel">
+"""
+        out << body()
+        out << """
+                    </div>
+                </div>
+                <div class="col-xs-3 helpPanel">
+"""
+        out << pageScope.help
+        out << """
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+"""
+    }
+
+    def help = { attrs, body ->
+        pageScope.help = body()
+    }
+
 }

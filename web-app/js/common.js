@@ -3,6 +3,7 @@
  */
 
 $(document).ready(function () {
+
     $("img").unveil();
 });
 
@@ -81,4 +82,13 @@ function loginOnEnter(event) {
 
 function login() {
     $('#loginFormModal').submit();
+}
+
+
+function moveMap(id, latitude, longitude) {
+    var map = eval("map_" + id);
+    map.setView(new ol.View({
+        center: ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'),
+        zoom: 12
+    }));
 }
