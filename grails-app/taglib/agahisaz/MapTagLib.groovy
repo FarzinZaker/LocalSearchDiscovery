@@ -16,4 +16,13 @@ class MapTagLib {
         out << render(template: '/common/map/directionLink', model: [place: attrs.place as Place])
     }
 
+    def explore = { attrs, body ->
+        def places = attrs.places
+        def maxLatitude = places.max { it.location[0] }?.location[0] ?: 0
+        def minLatitude = places.min { it.location[0] }?.location[0] ?: 0
+        def maxLongitude = places.max { it.location[1] }?.location[1] ?: 0
+        def minLongitude = places.min { it.location[1] }?.location[1] ?: 0
+        out << render(template: '/common/map/exploreMap', model: [center: [(minLatitude + maxLatitude) / 2, (minLongitude + maxLongitude) / 2], visitorLocation: attrs.visitorLocation == '1', places: places])
+    }
+
 }

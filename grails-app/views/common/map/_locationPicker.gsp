@@ -5,7 +5,7 @@
     <div class="mapHeader"><g:message code="locationPicker.title"/></div>
 
     <div id="map_${id}" style="width:${width ? width + 'px' : 'auto'};height:${height}px;"></div>
-    <input type="hidden" name="${name}" id="${id}" data-validation="${validation}" value=""/>
+    <input type="hidden" name="${name}" id="${id}" data-validation="${validation}" value="${center? "${center[0]},${center[1]}" : ''}"/>
 </div>
 <script type="text/javascript">
 

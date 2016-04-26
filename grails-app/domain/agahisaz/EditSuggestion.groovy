@@ -2,10 +2,11 @@ package agahisaz
 
 import com.pars.agahisaz.User
 
-class Place {
+class EditSuggestion {
 
     static mapWith = "mongo"
 
+    //basic info
     String name
     String city
     String province
@@ -15,19 +16,20 @@ class Place {
     Category category
     List location
     List tags
+
+    //report fields
+    String reportType
+    String reportComment
+
+    Place place
     User creator
-    EditSuggestion editSuggestion
 
     static constraints = {
         name blank: false
         address nullable: true
         phone nullable: true
         postalCode nullable: true
-        editSuggestion nullable: true
-    }
-
-    static mapping = {
-        location geoIndex: true
-        index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
+        reportType nullable: true
+        reportComment nullable: true
     }
 }

@@ -5,7 +5,7 @@
 
             <div>
                 <div class="validatedHiddenFieldContainer">
-                    <input type="text" name="reportReason" id="reportReason" data-validation="required" value=""/>
+                    <input type="text" name="reportReason" id="reportReason" value=""/>
                 </div>
             </div>
         </div>

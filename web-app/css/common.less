@@ -107,15 +107,19 @@ body {
   }
 }
 
+.skipHeader {
+  margin-top: 57px;
+}
+
 .tagBar {
   background: #00B39B;
   padding: 10px;
   color: white;
-  margin-top: 57px;
 
   ul {
     margin: 0;
     padding: 0;
+    float: right;
     li {
       display: inline-block;
       margin-left: 8px;
@@ -662,24 +666,24 @@ a {
   }
   &.multi {
     .selectize-input {
-      padding-top:5px !important;
-      padding-bottom:3px !important;
+      padding-top: 5px !important;
+      padding-bottom: 3px !important;
       & > input {
         padding: 3px 10px 5px !important;
-        height:28px !important;
+        height: 28px !important;
         line-height: 20px !important;
-        margin-bottom: 3px !important;
+        margin-bottom: 2px !important;
       }
       & > div {
         background: #428bca;
         padding: 3px 10px 5px;
         border-radius: 0;
         color: white;
-        margin-bottom: 0 !important;
+        margin-bottom: 2px !important;
         &.active {
           background: #41cab7;
         }
-        & + input{
+        & + input {
           margin-top: 0 !important;
         }
       }
@@ -687,8 +691,122 @@ a {
   }
 }
 
-.selectize-dropdown.multi{
+.selectize-dropdown.multi {
   box-shadow: none !important;
-  margin-top:0px !important;
+  margin-top: 0px !important;
+}
+
+.selectize-dropdown .active {
+  background: #41CAB7;
+  color: white;
+}
+
+.modal .modal-content button.close {
+  display: none;
+}
+
+.softHidden {
+  display: none;
+}
+
+.editSuggestionsCount {
+  //background-color: #41cab7;
+  border-radius: 3px;
+  color: white;
+  display: block;
+  padding: 4px 10px;
+  float: left;
+  font-size: 12px;
+  margin-top: 3px;
+  &:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .badge {
+    background-color: #e32d33;
+  }
+}
+
+.byPassHorizontalMargins {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.explorePlaceListContainer{
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.exploreList{
+  margin:0;
+  padding:0;
+  *{
+    cursor: default;
+  }
+  li{
+    list-style:none;
+    margin-top:10px;
+    padding-bottom:10px;
+    .number{
+      float:right;
+      color:grey;
+      width: 5%;
+      margin-left:2%;
+      margin-right:3%;
+      text-align: left;
+      line-height:28px;
+    }
+    .body {
+      float:right;
+      max-width:70%;
+      .name {
+        font-size:22px;
+        color:#2d5be3;
+        cursor: pointer;
+        &:hover{
+          color:#f92e41;
+        }
+      }
+      .address {
+        font-size:14px;
+        color:grey;
+        margin-bottom:5px;
+      }
+      .phone {
+        font-size:14px;
+        color:grey;
+      }
+      .category {
+        font-size:14px;
+        color:#2d5be3;
+        cursor: pointer;
+      }
+    }
+    .categoryIcon{
+      float:left;
+      width:15%;
+      margin: 0 2% 0 3%;
+      margin-top:10px;
+    }
+
+    .glyphicon{
+      margin-left:2px;
+      color:rgba(255, 193, 82, 0.5);
+    }
+
+    &:hover{
+      background: #F4F9FC;
+
+      .glyphicon{
+        color:rgba(255, 193, 82, 1);
+      }
+
+      .categoryIcon{
+        background: #fa5161;
+      }
+    }
+  }
 }
 

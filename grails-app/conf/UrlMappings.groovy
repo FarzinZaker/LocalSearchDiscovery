@@ -4,7 +4,7 @@ class UrlMappings {
 
         "/$controller/$action\\.json" {}
         "/image/$type?/$id?"(controller: "image", action: "index")
-        "/$controller/$action?/$id?/$name" {
+        "/$controller/$action?/$id?/$name?" {
             constraints {
                 // apply constraints here
             }

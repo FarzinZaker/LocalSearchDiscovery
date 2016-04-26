@@ -1,12 +1,13 @@
+
 <div class="row">
     <div class="col-sm-12">
         <label for="tags">
-            <span class="glyphicon glyphicon-road"></span>
+            <span class="glyphicon glyphicon-tags"></span>
             <g:message code="place.tags.label"/>
         </label>
 
         <div class="input-group">
-            <select id="tags"></select>
+            <input type="text" id="tags" name="tags" value="${tags?.join(',')}"/>
         </div>
     </div>
 </div>

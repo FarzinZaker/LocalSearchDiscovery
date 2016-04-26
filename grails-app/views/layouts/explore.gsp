@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<g:render template="/layouts/common/header"/>
+<g:render template="/layouts/common/exploreHeader"/>
 <g:layoutBody/>
 <sec:ifNotLoggedIn>
     <g:render template="/user/register"/>

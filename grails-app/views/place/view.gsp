@@ -16,6 +16,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 whitePanel spaceFromTop placeInfoSection">
+            <div class="alert alert-info softHidden" id="placeMessage"></div>
             <span class="categoryIcon">
                 <img src="${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.iconFile}88.png")}"/>
             </span>

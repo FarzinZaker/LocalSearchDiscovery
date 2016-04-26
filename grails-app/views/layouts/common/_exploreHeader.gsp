@@ -1,13 +1,10 @@
 <nav class="navbar navbar-green navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-8">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="${createLink(uri: '/')}"><g:message code="site.title"/></a>
                 </div>
-            </div>
-
-            <div class="col-sm-6" role="search">
                 <div class="navbar-form">
                     <div class="form-group">
                         <input type="text" class="form-control"/>
@@ -17,7 +14,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <div class="navbar-left">
                     <sec:ifNotLoggedIn>
                         <g:if test="${controllerName != 'login'}">
@@ -64,20 +61,3 @@
         </div>
     </div>
 </nav>
-
-<div class="tagBar skipHeader">
-    <div class="container">
-        <ul>
-            <li><a href="#">Top Picks</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">فست فود</a></li>
-            <li><a href="#">کافی شاپ</a></li>
-            <li><a href="#">تفریح</a></li>
-            <li><a href="#">فروشگاه</a></li>
-        </ul>
-        <sec:ifLoggedIn>
-            <place:waitingEditSuggestions/>
-        </sec:ifLoggedIn>
-
-    </div>
-</div>

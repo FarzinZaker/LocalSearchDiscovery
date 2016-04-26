@@ -35,23 +35,29 @@
 
     function saveEditSuggestion(sender){
         $(sender).attr('disabled', 'disabled');
+        $('#editSuggestionError').slideUp();
         showLoading('registerLoading');
-        var baseInfoForm = $('#baseInfoForm');
-        var categoriesForm = $('#categoriesForm');
-        var reportForm = $('#reportForm');
-        if(baseInfoForm.isValid() && categoriesForm.isValid() && reportForm.isValid()){
+        var editSuggestionForm = $('#editSuggestionForm');
+        if(editSuggestionForm.isValid()){
             $.ajax({
                 type: "POST",
                 url: '${createLink(controller: 'place', action: 'saveEditSuggestion')}',
-                data: {
-                    baseInfo: baseInfoForm.serialize(),
-                    categories: categoriesForm.serialize(),
-                    report: reportForm.serialize()
-                }
+                data: editSuggestionForm.serialize()
             }).done(function (response) {
+                if(response == 1){
+                    $('#suggestEditModal').modal('hide');
+                    $('#placeMessage').html('${message(code: 'editSuggestion.save.succeed')}').slideDown();
+                    setTimeout(function(){
+                        $('#placeMessage').slideUp();
+                    }, 10000);
+                }
+                else{
+                    $('#editSuggestionError').html('${message(code: 'editSuggestion.save.error')}').slideDown();
+                }
                 $(sender).removeAttr('disabled');
                 hideLoading('suggestEditLoading');
             }).error(function () {
+                $('#editSuggestionError').html('${message(code: 'editSuggestion.save.error')}').slideDown();
                 $(sender).removeAttr('disabled');
                 hideLoading('suggestEditLoading');
             });

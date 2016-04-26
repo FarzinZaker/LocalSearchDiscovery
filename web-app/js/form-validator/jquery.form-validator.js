@@ -1092,7 +1092,7 @@
         decimalSeparator: '.',
         inputParentClassOnError: 'has-error', // twitter-bootstrap default class name
         inputParentClassOnSuccess: 'has-success', // twitter-bootstrap default class name
-        validateHiddenInputs: false, // whether or not hidden inputs should be validated
+        validateHiddenInputs: true, // whether or not hidden inputs should be validated
         inlineErrorMessageCallback: false,
         submitErrorMessageCallback: false
       };
