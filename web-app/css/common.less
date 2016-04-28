@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #efeff4;
+  background: #fafafa;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 }
 
 .navbar-green {
-  background-color: #41cab7;
+  background-color: #96C950;
 
   .navbar-brand {
     font-size: 28px;
@@ -72,6 +72,7 @@ body {
         line-height: 20px;
         height: 40px;
         border-radius: 3px;
+        border: 3px solid #b0d77c;
       }
     }
 
@@ -89,11 +90,11 @@ body {
 }
 
 .btn-warning {
-  background: #ffb32a;
-  border: #ffb32a;
+  background: #ee5921;
+  border: #ee5921;
   &:hover, &:focus {
-    background: #ffa420;
-    border-color: #ffa420;
+    background: #ee5921;
+    border-color: #ee5921;
   }
 }
 
@@ -112,7 +113,7 @@ body {
 }
 
 .tagBar {
-  background: #00B39B;
+  background: #484848;
   padding: 10px;
   color: white;
 
@@ -125,13 +126,13 @@ body {
       margin-left: 8px;
       a {
         display: block;
-        background-color: #41cab7;
-        color: white;
+        background-color: #3D82AB;
+        color: #ffffff;
         padding: 4px 10px;
         border-radius: 3px;
         font-size: 16px;
         &:hover, &:focus {
-          background-color: #1fbda5;
+          background-color: #5C9DC0;
           color: white;
           text-decoration: none;
         }
@@ -191,7 +192,7 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   &.btn-primary {
-    background: #3266be;
+    background: #3186AD;
   }
 }
 
@@ -356,7 +357,7 @@ h2 {
 }
 
 .silverPanel {
-  background: #fcfcfc;
+  background: #eaeff9;
 }
 
 .whitePanel {
@@ -387,12 +388,14 @@ h2 {
 }
 
 .fieldSet-title {
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 5px;
+  border-bottom: 2px solid #A1C4D8;
+  padding-bottom: 8px;
   margin-bottom: 20px;
+  color:#484848;
 }
 
 label {
+  color:#484848;
   .glyphicon {
     margin-left: 5px;
   }
@@ -428,7 +431,7 @@ label {
 
 .mapContainer {
   position: relative;
-  border: 3px solid #3266be;
+  border: 3px solid #3186AD;
   border-radius: 3px;
   background: white;
   margin-bottom: 15px;
@@ -436,7 +439,7 @@ label {
     text-align: center;
     line-height: 20px;
     color: white;
-    background: #3266be;
+    background: #3186AD;
     padding-top: 5px;
     padding-bottom: 7px;
   }
@@ -453,11 +456,67 @@ label {
 .mapTip {
   display: none;
   position: absolute;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background: white;
-  border: 3px solid #e32d33;
+  border: 2px solid #96C950;
   border-radius: 3px;
-  max-width: 70%;
+  max-width: 300px;
+
+  &:after{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #96C950 rgba(255, 137, 137, 0) rgba(255, 137, 137, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    content: " ";
+    height: 0;
+    margin-bottom: -6px;
+    margin-left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 140px;
+    top: 100%;
+    width: 0;
+  }
+
+  .tipIcon{
+    float:right;
+    margin-left:10px;
+    .categoryIcon{
+      border-radius: 4px 4px 0 0;
+      float:none;
+      margin:0;
+    }
+
+    i{
+      display: block;
+      background: #5C9DC0;
+      border-radius: 0 0 4px 4px;
+      text-align:center;
+      font-size:12px;
+      font-weight: bold;
+      color:white;
+      font-style: normal;
+    }
+  }
+
+  .tipText{
+    float:right;
+    max-width:200px;
+
+    b{
+      font-size:16px;
+    }
+
+    span{
+      font-size:12px;
+      text-align: justify;
+      display: block;
+    }
+  }
 }
 
 .helpedPanel {
@@ -475,7 +534,7 @@ label {
 
 .categoryIcon {
   border-radius: 5px;
-  background: #C4C3BC;
+  background: #EAEFF9;
   display: block;
   float: right;
   margin-left: 15px;
@@ -503,7 +562,7 @@ a {
 .placeInfoSection {
   line-height: 24px;
   .placeBaseInfo {
-    float: right;
+    margin-right:100px;
     h1 {
       margin-bottom: 0;
     }
@@ -559,7 +618,7 @@ a {
       }
 
       &[aria-expanded=true] {
-        background: #00b39b;
+        background: #96C950;
         color: white;
       }
     }
@@ -600,7 +659,7 @@ a {
           font-weight: normal;
         }
         .image {
-          background: #33d7e8 url("../images/flag-sprites.png") no-repeat scroll 0 0;
+          background: #5C9DC0 url("../images/flag-sprites.png") no-repeat scroll 0 0;
           border-radius: 3px;
           height: 100px;
           width: 100px;
@@ -608,7 +667,7 @@ a {
 
         &.selected {
           .image {
-            background-color: #D9DED9;
+            background-color: #EE5921;
           }
         }
 
@@ -681,7 +740,7 @@ a {
         color: white;
         margin-bottom: 2px !important;
         &.active {
-          background: #41cab7;
+          background: #EE5921;
         }
         & + input {
           margin-top: 0 !important;
@@ -697,7 +756,7 @@ a {
 }
 
 .selectize-dropdown .active {
-  background: #41CAB7;
+  background: #EE5921;
   color: white;
 }
 
@@ -710,7 +769,7 @@ a {
 }
 
 .editSuggestionsCount {
-  //background-color: #41cab7;
+  //background-color: #3D82AB;
   border-radius: 3px;
   color: white;
   display: block;
@@ -763,25 +822,26 @@ a {
       max-width:70%;
       .name {
         font-size:22px;
-        color:#2d5be3;
+        color:#3186AD;
         cursor: pointer;
         &:hover{
-          color:#f92e41;
+          color:#EE5921;
         }
       }
       .address {
         font-size:14px;
-        color:grey;
+        color:#484848;
         margin-bottom:5px;
       }
       .phone {
         font-size:14px;
-        color:grey;
+        color:#484848;
       }
       .category {
         font-size:14px;
-        color:#2d5be3;
+        color:#3186AD;
         cursor: pointer;
+        display: block;
       }
     }
     .categoryIcon{
@@ -793,18 +853,18 @@ a {
 
     .glyphicon{
       margin-left:2px;
-      color:rgba(255, 193, 82, 0.5);
+      color:#96C950;
     }
 
-    &:hover{
-      background: #F4F9FC;
+    &.active{
+      background: #EAEFF9;
 
       .glyphicon{
-        color:rgba(255, 193, 82, 1);
+        color:#EE5921;
       }
 
       .categoryIcon{
-        background: #fa5161;
+        background: #96C950;
       }
     }
   }

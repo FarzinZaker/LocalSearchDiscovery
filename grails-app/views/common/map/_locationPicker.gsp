@@ -65,7 +65,7 @@
         });
         var iconStyle = new ol.style.Style({
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                anchor: [0.5, 41],
+                anchor: [0.5, 66],
                 anchorXUnits: 'fraction',
                 anchorYUnits: 'pixels',
                 opacity: 0.9,
@@ -105,7 +105,7 @@
 
             var iconStyle = new ol.style.Style({
                 image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                    anchor: [0.5, 41],
+                    anchor: [0.5, 66],
                     anchorXUnits: 'fraction',
                     anchorYUnits: 'pixels',
                     opacity: 0.9,

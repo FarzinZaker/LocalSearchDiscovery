@@ -31,8 +31,8 @@
         var iconFeature = new ol.Feature({
             geometry: new ol.geom.Point(center),
             type: 'flag',
-            name: '${place.name}',
-            address: '${place.address}'
+            name: '${place?.name}',
+            address: '${place?.address?.replace('\n', '')}'
         });
         iconFeatures.push(iconFeature);
         var vectorSource = new ol.source.Vector({
@@ -40,11 +40,11 @@
         });
         var iconStyle = new ol.style.Style({
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                anchor: [0.5, 52],
+                anchor: [0.5, 66],
                 anchorXUnits: 'fraction',
                 anchorYUnits: 'pixels',
                 opacity: 0.9,
-                src: '${resource(dir:'images', file: 'pin.png')}'
+                src: '${resource(dir:'images', file: 'ping-single.png')}'
             }))
         });
         var pinLayer = new ol.layer.Vector({
@@ -58,8 +58,8 @@
         iconFeature = new ol.Feature({
             geometry: new ol.geom.Point(center),
             type: 'icon',
-            name: '${place.name}',
-            address: '${place.address}'
+            name: '${place?.name}',
+            address: '${place?.address?.replace('\n', '')}'
         });
         iconFeatures.push(iconFeature);
         vectorSource = new ol.source.Vector({
@@ -67,7 +67,7 @@
         });
         iconStyle = new ol.style.Style({
             image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                anchor: [17, 46],
+                anchor: [17, 62],
                 anchorXUnits: 'pixels',
                 anchorYUnits: 'pixels',
                 opacity: 1,
