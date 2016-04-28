@@ -391,11 +391,11 @@ h2 {
   border-bottom: 2px solid #A1C4D8;
   padding-bottom: 8px;
   margin-bottom: 20px;
-  color:#484848;
+  color: #484848;
 }
 
 label {
-  color:#484848;
+  color: #484848;
   .glyphicon {
     margin-left: 5px;
   }
@@ -460,9 +460,9 @@ label {
   background: white;
   border: 2px solid #96C950;
   border-radius: 3px;
-  max-width: 300px;
+  width: 300px;
 
-  &:after{
+  &.top:after {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -477,42 +477,74 @@ label {
     margin-left: 0;
     pointer-events: none;
     position: absolute;
-    right: 140px;
+    right: 137px;
+    left: auto;
     top: 100%;
     width: 0;
   }
 
-  .tipIcon{
-    float:right;
-    margin-left:10px;
-    .categoryIcon{
+  &.bottom:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(255, 137, 137, 0) rgba(255, 137, 137, 0) #96C950;
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    content: " ";
+    height: 0;
+    margin-top: -16px;
+    margin-left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 137px;
+    left: auto;
+    top: 0;
+    width: 0;
+  }
+
+  &.left:after {
+    right: auto !important;
+    left: 11px !important;
+  }
+
+  &.right:after {
+    left: auto !important;
+    right: 9px !important;
+  }
+
+  .tipIcon {
+    float: right;
+    margin-left: 10px;
+    .categoryIcon {
       border-radius: 4px 4px 0 0;
-      float:none;
-      margin:0;
+      float: none;
+      margin: 0;
     }
 
-    i{
+    i {
       display: block;
       background: #5C9DC0;
       border-radius: 0 0 4px 4px;
-      text-align:center;
-      font-size:12px;
+      text-align: center;
+      font-size: 12px;
       font-weight: bold;
-      color:white;
+      color: white;
       font-style: normal;
     }
   }
 
-  .tipText{
-    float:right;
-    max-width:200px;
+  .tipText {
+    float: right;
+    max-width: 200px;
 
-    b{
-      font-size:16px;
+    b {
+      font-size: 16px;
     }
 
-    span{
-      font-size:12px;
+    span {
+      font-size: 12px;
       text-align: justify;
       display: block;
     }
@@ -562,7 +594,7 @@ a {
 .placeInfoSection {
   line-height: 24px;
   .placeBaseInfo {
-    margin-right:100px;
+    margin-right: 100px;
     h1 {
       margin-bottom: 0;
     }
@@ -791,79 +823,79 @@ a {
   margin-left: -15px;
 }
 
-.explorePlaceListContainer{
+.explorePlaceListContainer {
   background: white;
   overflow-x: hidden;
   overflow-y: auto;
 
 }
 
-.exploreList{
-  margin:0;
-  padding:0;
-  *{
+.exploreList {
+  margin: 0;
+  padding: 0;
+  * {
     cursor: default;
   }
-  li{
-    list-style:none;
-    margin-top:10px;
-    padding-bottom:10px;
-    .number{
-      float:right;
-      color:grey;
+  li {
+    list-style: none;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    .number {
+      float: right;
+      color: grey;
       width: 5%;
-      margin-left:2%;
-      margin-right:3%;
+      margin-left: 2%;
+      margin-right: 3%;
       text-align: left;
-      line-height:28px;
+      line-height: 28px;
     }
     .body {
-      float:right;
-      max-width:70%;
+      float: right;
+      max-width: 70%;
       .name {
-        font-size:22px;
-        color:#3186AD;
+        font-size: 22px;
+        color: #3186AD;
         cursor: pointer;
-        &:hover{
-          color:#EE5921;
+        &:hover {
+          color: #EE5921;
         }
       }
       .address {
-        font-size:14px;
-        color:#484848;
-        margin-bottom:5px;
+        font-size: 14px;
+        color: #484848;
+        margin-bottom: 5px;
       }
       .phone {
-        font-size:14px;
-        color:#484848;
+        font-size: 14px;
+        color: #484848;
       }
       .category {
-        font-size:14px;
-        color:#3186AD;
+        font-size: 14px;
+        color: #3186AD;
         cursor: pointer;
         display: block;
       }
     }
-    .categoryIcon{
-      float:left;
-      width:15%;
+    .categoryIcon {
+      float: left;
+      width: 15%;
       margin: 0 2% 0 3%;
-      margin-top:10px;
+      margin-top: 10px;
     }
 
-    .glyphicon{
-      margin-left:2px;
-      color:#96C950;
+    .glyphicon {
+      margin-left: 2px;
+      color: #96C950;
     }
 
-    &.active{
+    &.active {
       background: #EAEFF9;
 
-      .glyphicon{
-        color:#EE5921;
+      .glyphicon {
+        color: #EE5921;
       }
 
-      .categoryIcon{
+      .categoryIcon {
         background: #96C950;
       }
     }

@@ -9,15 +9,6 @@
 
     function hideFeatureOnMap(id) {
         deselectAllFeatures();
-//        var features = pinLayer.getSource().getFeatures();
-//        var feature = null;
-//        var i = 0;
-//        while (i++ < features.length && !feature)
-//            if (features[i].get('id') == id)
-//                feature = features[i];
-//        if (feature)
-//            feature.setStyle(iconStyle(feature));
-//        $("#mapTip_explore").hide()
     }
 
     function showFeatureOnMap(id) {
@@ -82,7 +73,7 @@
         var placeLocation = ol.proj.transform([${place?.location[1]}, ${place?.location[0]}], 'EPSG:4326', 'EPSG:3857');
         var pinFeature = new ol.Feature({
             geometry: new ol.geom.Point([placeLocation[0], mapTop[1]]),
-            speed : ${Math.ceil((i + 1) / 4D)},// Math.round(Math.random() * (17 - 3) + 3),
+            speed: ${Math.ceil((i + 1) / 4D)},// Math.round(Math.random() * (17 - 3) + 3),
             location: placeLocation,
             type: 'flag',
             index: '${i + 1}',
@@ -196,13 +187,13 @@
         var initialLoading = true;
         var totalTilesCount = 0;
         var loadedTilesCount = 0;
-        mapLayer.getSource().on("tileloadstart", function() {
+        mapLayer.getSource().on("tileloadstart", function () {
             totalTilesCount++;
         });
 
-        mapLayer.getSource().on("tileloadend", function() {
+        mapLayer.getSource().on("tileloadend", function () {
             loadedTilesCount++;
-            if(initialLoading && loadedTilesCount == totalTilesCount){
+            if (initialLoading && loadedTilesCount == totalTilesCount) {
                 initialLoading = true;
 
                 //add features
@@ -216,18 +207,41 @@
     function selectFeature(feature, scroll) {
         deselectAllFeatures();
         lastSelectedFeature = feature;
-        var geometry = feature.getGeometry();
-        var coordinate = geometry.getCoordinates();
-        var pixel = map_explore.getPixelFromCoordinate(coordinate);
-        var tip = $('#mapTip_explore').html("<div class='tipIcon'><img src='" + feature.get('icon') + "' class='categoryIcon'><i>" + feature.get('index') + "</i></div><div class='tipText'><b>" + feature.get('name') + "</b><br/><span>" + feature.get('address') + "</span></div><div class='clearfix'></div>");
-        tip.css('left', Math.round(pixel[0] - tip.width() / 2 - 2) + 'px').css('top', Math.round(pixel[1] - tip.height() - 97) + 'px').show();
         feature.setStyle(highlightedIconStyle(feature));
-
+        showTip(feature);
         var list = $('#placeList');
         var item = list.find('[data-id=' + feature.get('id') + ']').addClass('active');
         if (scroll)
             list.stop().scrollTo('[data-id=' + feature.get('id') + ']', 400, {offset: -(list.height() - item.height()) / 2 + item.height()});
 
+    }
+
+    function showTip(feature) {
+        var geometry = feature.getGeometry();
+        var coordinate = geometry.getCoordinates();
+        var pixel = map_explore.getPixelFromCoordinate(coordinate);
+        var tip = $('#mapTip_explore').html("<div class='tipIcon'><img src='" + feature.get('icon') + "' class='categoryIcon'><i>" + feature.get('index') + "</i></div><div class='tipText'><b><a href='/place/view/" + feature.get('id') + "/" + feature.get('name') + "'>" + feature.get('name') + "</a></b><br/><span>" + feature.get('address') + "</span></div><div class='clearfix'></div>");
+        var tipWidth = 302;
+        var tipHeight = tip.height();
+        var mapWidth = $('#map_explore').width();
+        var left = Math.round(pixel[0] - (tipWidth / 2) - 2);
+        var top = Math.round(pixel[1] - tipHeight - 97);
+        tip.removeClass('top').removeClass('bottom').removeClass('left').removeClass('right');
+        if (left < 20) {
+            left = pixel[0] - 21;
+            tip.addClass('left');
+        } else if(left + tipWidth + 20 > mapWidth) {
+            left = pixel[0] - tipWidth + 21;
+            tip.addClass('right');
+        }
+        if(top < 20) {
+            top = pixel[1] + 8;
+            tip.addClass('bottom');
+        }
+        else
+            tip.addClass('top');
+        tip.css('left', left + 'px').css('top', top + 'px');
+        tip.stop().fadeIn();
     }
 
     function deselectAllFeatures() {
@@ -236,6 +250,6 @@
             lastSelectedFeature.setStyle(iconStyle(lastSelectedFeature));
             lastSelectedFeature = null;
         }
-        $("#mapTip_explore").hide()
+        $("#mapTip_explore").stop().fadeOut()
     }
 </script>

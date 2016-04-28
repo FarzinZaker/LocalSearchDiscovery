@@ -54,7 +54,9 @@
     function resizeExploreLayout() {
         var navbarHeight = $('.navbar-fixed-top').height() + $('.tagBar').height() + 21;
         $('#placeList').height($(window).height() - navbarHeight);
-        $('#map_explore').height($(window).height() - navbarHeight);
+        var mapContainer = $('#map_explore');
+        mapContainer.height($(window).height() - navbarHeight);
+        mapContainer.css('width', '100%');
         map_explore.updateSize();
     }
 
