@@ -5,6 +5,7 @@ import com.pars.agahisaz.User
 import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
 import security.Roles
+import cache.CategoryCache
 
 class PlaceController {
 
@@ -102,6 +103,51 @@ class PlaceController {
     }
 
     def explore() {
-        [places: mongoService.query("place", [$text: [$search: params.id]]).limit(50).findAll().each { place -> place.category = Category.get(place.category) }]
+        def sort = [:]
+        def query = [:]
+        def projection = null
+        if (params.province && params.city)
+            query << [province: params.province]
+        if (params.city)
+            query << [city: params.city]
+
+        def queryString = params.id?.toString()?.trim() ?: ''
+        request.setAttribute("query", queryString)
+        def category = Category.findByName(queryString)
+        if (category) {
+            request.setAttribute("queryIcon", category.iconPath)
+            queryString = ''
+            query << [category: [$in: CategoryCache.findCategory(category.id).childIdList + [category.id]]]
+        }
+        if (queryString != '') {
+            request.setAttribute("queryIcon", "no-image.png")
+            //search using geoWithin
+            query << [$text: [$search: params.id]]
+            projection = [score: [$meta: "textScore"]]
+            sort << ['score': ['$meta': 'textScore']]
+            if (params.near) {
+                def nearParams = params.near?.toString()?.split(',')
+                if (nearParams.size() == 2) {
+                    def latitude = nearParams[0]?.toDouble()
+                    def longitude = nearParams[1]?.toDouble()
+                    query << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
+                }
+            }
+        } else {
+            //search using geoNear
+            if (params.near) {
+                def nearParams = params.near?.toString()?.split(',')
+                if (nearParams.size() == 2) {
+                    def latitude = nearParams[0]?.toDouble()
+                    def longitude = nearParams[1]?.toDouble()
+                    query << [location: [
+                            $near       : [latitude, longitude],
+                            $maxDistance: 0.03D
+                    ]
+                    ]
+                }
+            }
+        }
+        [places: mongoService.query("place", query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = Category.get(place.category) } ?: []]
     }
 }

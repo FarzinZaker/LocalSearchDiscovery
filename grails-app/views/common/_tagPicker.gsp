@@ -15,6 +15,7 @@
 <script>
     $(document).ready(function () {
         $('#tags').selectize({
+            plugins: ['remove_button'],
             valueField: 'name',
             labelField: 'name',
             searchField: 'name',

@@ -27,6 +27,7 @@
     }
 
     var map_explore;
+    var extent_explore;
     var pinLayer;
     var highlightedIconStyle;
     var iconStyle;
@@ -45,10 +46,15 @@
                 </g:if>
                 <g:else>
                 center: ol.proj.transform([${center[1]}, ${center[0]}], 'EPSG:4326', 'EPSG:3857'),
-                zoom: 11
+                zoom: 14
                 </g:else>
             })
         });
+
+        <g:if test="${extent}">
+        extent_explore = ol.extent.applyTransform([${extent[1]}, ${extent[0]}, ${extent[3]}, ${extent[2] + 0.0023}], ol.proj.getTransform("EPSG:4326", "EPSG:3857"));
+        map_explore.getView().fit(extent_explore, map_explore.getSize());
+        </g:if>
 
         <g:if test="${!center && visitorLocation}">
         //show visitor position
@@ -68,19 +74,18 @@
         var pinFeatures = [];
         var mapTop = ol.proj.transform([180, 90], 'EPSG:4326', 'EPSG:3857');
         var extent = map_explore.getView().calculateExtent(map_explore.getSize());
-        var topCenter = [(extent[0] + extent[2]) / 2, extent[3]];
         <g:each in="${places}" var="place" status="i">
         var placeLocation = ol.proj.transform([${place?.location[1]}, ${place?.location[0]}], 'EPSG:4326', 'EPSG:3857');
         var pinFeature = new ol.Feature({
             geometry: new ol.geom.Point([placeLocation[0], mapTop[1]]),
-            speed: ${Math.ceil((i + 1) / 4D)},// Math.round(Math.random() * (17 - 3) + 3),
+            speed: ${Math.ceil((i + 1) / 6D)},// Math.round(Math.random() * (17 - 3) + 3),
             location: placeLocation,
             type: 'flag',
             index: '${i + 1}',
-            id: '${place._id}',
-            name: '${place.name}',
-            address: '${place.address.replace('\n', ' ')}',
-            icon: '${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.iconFile}44.png")}'
+            id: '${place?._id}',
+            name: '${place?.name}',
+            address: '${place?.address?.replace('\n', ' ')}',
+            icon: '${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.getIconFile('44')}")}'
         });
         pinFeatures.push(pinFeature);
         </g:each>

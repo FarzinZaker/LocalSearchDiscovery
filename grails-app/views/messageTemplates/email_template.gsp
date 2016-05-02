@@ -32,7 +32,7 @@
 
 <p align="center" class="footer" style="direction: rtl;font-family: Tahoma,Arial,serif;font-size: 11px;margin-bottom: 5px;margin-top: 30px;color:grey;">
     اگر مایل به دریافت نامه از
-    <a href="http://${domain}">آگهی ساز</a>
+    <a href="http://${domain}">آگاهی ساز</a>
     نیستید روی لینک
     <a href="http://${domain}/subscription/remove?email=${URLEncoder.encode(email)}&source=${source}&token=${Encoding.md5("unsubscribe ${email} from ${source} of agahisaz")}">درخواست عدم دریافت نامه</a>
     کلیک کنید.

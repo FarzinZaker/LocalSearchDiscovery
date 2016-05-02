@@ -11,13 +11,22 @@ class Category {
     String iconPath
     Category parent
 
-    public transient String getIconDirectory(){
-        iconPath?.split('/')?.first()
+    public String getIconDirectory() {
+        iconPath?.split('/')?.first() ?: ''
     }
 
-    public transient String getIconFile(){
-        iconPath?.split('/')?.last()
+    public String getIconFile(String size) {
+        def path = iconPath?.split('/')?.last()
+        if (path)
+            path + size + ".png"
+        else
+            'no-image.png'
     }
+
+    List<Long> parentIdList = []
+    List<Long> childIdList = []
+
+    static transients = ['iconDirectory', 'parentIdList', 'childIdList']
 
     static constraints = {
         name blank: false

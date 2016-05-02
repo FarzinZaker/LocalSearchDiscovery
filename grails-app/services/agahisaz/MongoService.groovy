@@ -1,5 +1,7 @@
 package agahisaz
 
+import com.mongodb.DBObject
+
 class MongoService {
     private def db_
     def mongo
@@ -8,7 +10,11 @@ class MongoService {
         db_ = mongo.getDB("agahisaz")
     }
 
-    def query(String collectionName, criteria, projection = null) {
+    def getCollection(String collectionName){
+        db.getCollection(collectionName)
+    }
+
+    def query(String collectionName, Map criteria, projection = null) {
         db.getCollection(collectionName).find(criteria, projection)
     }
 

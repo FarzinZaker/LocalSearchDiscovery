@@ -28,7 +28,7 @@
     </div>
 
     <img class="categoryIcon"
-         src="${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.iconFile}88.png")}"/>
+         src="${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.getIconFile('88')}")}"/>
 
     <div class="clearfix"></div>
 </li>

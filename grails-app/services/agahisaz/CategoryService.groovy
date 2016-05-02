@@ -1,9 +1,9 @@
 package agahisaz
 
-import org.codehaus.groovy.util.StringUtil
 import utils.StringHelper
 
 class CategoryService {
+
     def getAllData() {
         def categories = Category.list().collect {
             it.map = [

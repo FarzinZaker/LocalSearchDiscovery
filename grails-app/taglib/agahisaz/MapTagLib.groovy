@@ -18,11 +18,15 @@ class MapTagLib {
 
     def explore = { attrs, body ->
         def places = attrs.places
-        def maxLatitude = places.max { it.location[0] }?.location[0] ?: 0
-        def minLatitude = places.min { it.location[0] }?.location[0] ?: 0
-        def maxLongitude = places.max { it.location[1] }?.location[1] ?: 0
-        def minLongitude = places.min { it.location[1] }?.location[1] ?: 0
-        out << render(template: '/common/map/exploreMap', model: [center: [(minLatitude + maxLatitude) / 2, (minLongitude + maxLongitude) / 2], visitorLocation: attrs.visitorLocation == '1', places: places])
+        def center = attrs.center
+        def maxLatitude = places.collect { it.location[0] }.max() ?: 0
+        def minLatitude = places.collect { it.location[0] }.min() ?: 0
+        def maxLongitude = places.collect { it.location[1] }.max() ?: 0
+        def minLongitude = places.collect { it.location[1] }.min() ?: 0
+        if (!center) {
+            center = [(minLatitude + maxLatitude) / 2, (minLongitude + maxLongitude) / 2]
+        }
+        out << render(template: '/common/map/exploreMap', model: [center: center, extent: [minLatitude, minLongitude, maxLatitude, maxLongitude], visitorLocation: attrs.visitorLocation == '1', places: places])
     }
 
 }

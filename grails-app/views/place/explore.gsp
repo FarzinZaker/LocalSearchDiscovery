@@ -35,6 +35,16 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="byPassHorizontalMargins explorePlaceListContainer" id="placeList">
+                <div class="searchResultHeader">
+                    <g:if test="${request["query"]}">
+                        <g:message code="place.search.result.heading"
+                                   args="${[request["query"], params.city ?: message(code: 'search.location.nearMe')]}"/>
+                    </g:if>
+                    <g:else>
+                        <g:message code="place.search.result.noQueryHeading"
+                                   args="${[params.city ?: message(code: 'search.location.nearMe')]}"/>
+                    </g:else>
+                </div>
                 <ul class="exploreList">
                     <g:each in="${places}" var="place" status="index">
                         <g:render template="explore/item" model="${[place: place, index: index]}"/>
@@ -45,7 +55,8 @@
 
         <div class="col-sm-8">
             <div class="byPassHorizontalMargins" id="placeListMap">
-                <map:explore visitorLocation="0" places="${places}"/>
+                <map:explore visitorLocation="0" places="${places}"
+                             center="${params.near ? params.near?.split(',')?.collect { it?.toDouble() } : null}"/>
             </div>
         </div>
     </div>
@@ -53,11 +64,15 @@
 <g:javascript>
     function resizeExploreLayout() {
         var navbarHeight = $('.navbar-fixed-top').height() + $('.tagBar').height() + 21;
+        navbarHeight = 108;
+        //console.log(navbarHeight);
+        //console.log($(window).height());
         $('#placeList').height($(window).height() - navbarHeight);
         var mapContainer = $('#map_explore');
         mapContainer.height($(window).height() - navbarHeight);
         mapContainer.css('width', '100%');
         map_explore.updateSize();
+        map_explore.getView().fit(extent_explore, map_explore.getSize());
     }
 
     $(document).ready(function () {

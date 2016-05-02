@@ -27,7 +27,7 @@ class Place {
     }
 
     static mapping = {
-        location geoIndex: true
+        location geoIndex:true
         index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
     }
 }
