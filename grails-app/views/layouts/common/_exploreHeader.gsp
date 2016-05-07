@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="${createLink(uri: '/')}"><g:message code="site.title"/></a>
+                    <a class="navbar-brand" href="${createLink(uri: '/')}" alt="${message(code:'site.title')}">
+                        <img src="${resource(dir:'images', file: 'logo.png')}"/>
+                    </a>
                 </div>
                 <place:searchBox/>
             </div>

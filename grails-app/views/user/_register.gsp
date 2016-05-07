@@ -1,6 +1,7 @@
 <bootstrap:modal id="registerModal">
     <h3 class="text-center">
-        <g:message code="user.register.header"/>
+        <img src="${resource(dir: 'images', file: 'logo-lg.png')}"/>
+        %{--<div><g:message code="user.register.header"/></div>--}%
     </h3>
 
     <p class="text-center subtitle">

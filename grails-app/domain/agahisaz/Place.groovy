@@ -17,6 +17,10 @@ class Place {
     List tags
     User creator
     EditSuggestion editSuggestion
+    List comments
+    List rates
+    Double averageRate
+    Integer ratesCount
 
     static constraints = {
         name blank: false
@@ -24,6 +28,8 @@ class Place {
         phone nullable: true
         postalCode nullable: true
         editSuggestion nullable: true
+        averageRate nullable: true
+        ratesCount nullable: true
     }
 
     static mapping = {

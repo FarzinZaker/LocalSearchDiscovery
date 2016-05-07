@@ -55,7 +55,7 @@ class UserController {
         }
     }
 
-    @Secured([Roles.ADMIN, Roles.USER])
+    @Secured([Roles.AUTHENTICATED])
     def profile() {
         render view: 'settings', model: [
                 currentTab: 'profile',
@@ -63,7 +63,7 @@ class UserController {
         ]
     }
 
-    @Secured([Roles.ADMIN, Roles.USER])
+    @Secured([Roles.AUTHENTICATED])
     def saveBasicInfo() {
         def res = userService.updateBasicInfo(params.profileImage, params.mobile, params.email, params.firstName, params.lastName, params.male ? true : false)
         if (res.error) {

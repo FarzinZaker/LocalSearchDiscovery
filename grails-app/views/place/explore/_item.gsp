@@ -7,24 +7,30 @@
             ${place?.name}
         </a>
 
-        <g:if test="${place?.phone}">
-            <div class="address">
-                ${place?.address}
-            </div>
-        </g:if>
+        <div>
+            <place:aggregateRatingFlag place="${place}"/>
 
-        <g:if test="${place?.phone}">
-            <div class="phone">
-                <span class="glyphicon glyphicon-phone-alt"></span>
-                ${place?.phone}
-            </div>
-        </g:if>
+            <div class="contactInfo">
+                <g:if test="${place?.phone}">
+                    <div class="address">
+                        ${place?.address}
+                    </div>
+                </g:if>
 
-        <a class="category"
-           href="${createLink(controller: 'place', action: 'explore', params: [category: place?.category?.name])}">
-            <span class="glyphicon glyphicon-folder-open"></span>
-            ${place?.category?.name}
-        </a>
+                <g:if test="${place?.phone}">
+                    <div class="phone">
+                        ${place?.phone}
+                    </div>
+                </g:if>
+                <div class="clearfix"></div>
+                <a class="category"
+                   href="${createLink(controller: 'place', action: 'explore', params: [category: place?.category?.name])}">
+                    %{--<span class="glyphicon glyphicon-folder-open"></span>--}%
+                    ${place?.category?.name}
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <img class="categoryIcon"

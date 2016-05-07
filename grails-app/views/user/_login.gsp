@@ -1,7 +1,8 @@
 <%@ page import="org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils" %>
 <bootstrap:modal id="loginModal" size="sm">
     <h3 class="text-center">
-        <g:message code="user.login.header"/>
+        <img src="${resource(dir: 'images', file: 'logo-lg.png')}"/>
+        %{--<g:message code="user.login.header"/>--}%
     </h3>
 
     <p class="text-center subtitle">

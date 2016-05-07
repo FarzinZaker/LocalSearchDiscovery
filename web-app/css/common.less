@@ -35,13 +35,15 @@ body {
 }
 
 .navbar-green {
-  background-color: #96C950;
+  background-color: #ffffff;
 
   .navbar-brand {
     font-size: 28px;
     font-weight: bold;
-    padding-right: 0;
     color: white;
+    padding-top:9px;
+    padding-bottom:9px;
+    padding-right:10px;
     &:hover, &:focus {
       color: white;
     }
@@ -67,7 +69,7 @@ body {
       width: auto;
       margin: 0;
       .selectize-control {
-        background: white;
+        background: #FAFAFA;
         box-shadow: none;
         width: 180px;
         margin-left: 7px;
@@ -84,7 +86,7 @@ body {
       }
 
       .glyphicon-search {
-        color: white;
+        color: #96C950;
         display: block;
         float: left;
         font-size: 24px;
@@ -92,6 +94,10 @@ body {
         margin-right: 10px;
         margin-top: 7px;
         cursor: pointer;
+        &:hover{
+          color:#5C9DC0;
+
+        }
       }
     }
   }
@@ -107,12 +113,12 @@ body {
 }
 
 .btn-transparent {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  color: white;
+  background: #fafafa;
+  border: 2px solid #f4f4f4;
+  color: #484848;
   &:hover {
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    color: white;
+    border: 2px solid #f4f4f4;
+    color: #484848;
   }
 }
 
@@ -121,7 +127,7 @@ body {
 }
 
 .tagBar {
-  background: #484848;
+  background: #3186AD;
   padding: 10px;
   color: white;
 
@@ -134,13 +140,13 @@ body {
       margin-left: 8px;
       a {
         display: block;
-        background-color: #3D82AB;
+        background-color: #5C9DC0;
         color: #ffffff;
         padding: 4px 10px;
         border-radius: 3px;
         font-size: 16px;
         &:hover, &:focus {
-          background-color: #5C9DC0;
+          background-color: #484848;
           color: white;
           text-decoration: none;
         }
@@ -602,6 +608,10 @@ a {
 
 .placeInfoSection {
   line-height: 24px;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-right: 15px;
+  padding-left: 15px;
   .placeBaseInfo {
     margin-right: 100px;
     h1 {
@@ -789,10 +799,10 @@ a {
       }
     }
   }
-  &.plugin-remove_button [data-value] .remove{
-    padding-top:3px;
+  &.plugin-remove_button [data-value] .remove {
+    padding-top: 3px;
     background: #5C9DC0;
-    &:hover{
+    &:hover {
       background: #EE5921;
     }
   }
@@ -897,20 +907,23 @@ a {
           color: #EE5921;
         }
       }
-      .address {
-        font-size: 14px;
-        color: #484848;
-        margin-bottom: 5px;
-      }
-      .phone {
-        font-size: 14px;
-        color: #484848;
-      }
-      .category {
-        font-size: 14px;
-        color: #3186AD;
-        cursor: pointer;
-        display: block;
+      .contactInfo {
+        margin-right: 43px;
+        .address {
+          font-size: 14px;
+          color: #484848;
+        }
+        .phone {
+          font-size: 14px;
+          color: #484848;
+        }
+        .category {
+          font-size: 14px;
+          color: #3186AD;
+          cursor: pointer;
+          display: block;
+          //margin-top: 8px;
+        }
       }
     }
     .categoryIcon {
@@ -950,8 +963,8 @@ a {
       #searchLocation + .selectize-control {
         width: 40%;
       }
-      #btnSearch{
-        float:right;
+      #btnSearch {
+        float: right;
       }
     }
   }
@@ -959,7 +972,7 @@ a {
 
 .container-fluid {
   .navbar-form {
-    width: 80%;
+    width: 78%;
     max-width: 800px;
 
     .input-group {
@@ -970,30 +983,529 @@ a {
       #searchLocation + .selectize-control {
         width: 35%;
       }
-      #btnSearch{
-        float:right;
+      #btnSearch {
+        float: right;
       }
     }
   }
 }
 
-.navbar-form{
-  .selectize-dropdown-content{
-    div{
-      border-top:1px solid #f4f4f4 !important;
-      padding-top:8px;
-      padding-bottom:8px;
+.navbar-form {
+  .selectize-dropdown-content {
+    div {
+      border-top: 1px solid #f4f4f4 !important;
+      padding-top: 8px;
+      padding-bottom: 8px;
       line-height: 32px;
     }
   }
 }
 
-.searchResultHeader{
-  padding:20px;
-  font-size:16px;
-  border-bottom:1px solid #f4f4f4;
-  b{
+.searchResultHeader {
+  padding: 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #f4f4f4;
+  background: #fafafa;
+  b {
     color: #EE5921;
   }
 }
+
+.placeActions {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: medium none;
+  border-radius: 0 0 3px 3px;
+  //padding: 15px 20px;
+}
+
+.likeDislikeControls.comboRatingButton {
+  overflow: visible;
+}
+
+#actionBar .link, #actionBar .comboRatingButton, #actionBar .greenButton, #actionBar .greyButton, #actionBar .orangeButton, #actionBar .blueButton {
+  float: right;
+  //left: 50%;
+  margin-left: 15px;
+  max-width: 250px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#actionBar .link:first-child, #actionBar .comboRatingButton:first-child, #actionBar .greenButton:first-child, #actionBar .greyButton:first-child, #actionBar .orangeButton:first-child, #actionBar .blueButton:first-child {
+  margin-left: 0;
+}
+
+.placeActions .likeDislikeControls, .placeActions .saveButton {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.placeActions .likeDislikeControls {
+  margin-left: 20px;
+  overflow: visible;
+}
+
+.placeActions .likeDislikeControls, .placeActions .link, .placeActions .greyButton {
+  float: none;
+  left: 0;
+  position: static;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike, .likeDislikeControls.comboRatingButton .comboRatingButtonOk, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike {
+  background: #FAFAFA none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #4e595d;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font: 14px/28px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  height: 30px;
+  letter-spacing: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+  width: 34px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike, .likeDislikeControls.comboRatingButton .comboRatingButtonLike:hover, .likeDislikeControls.comboRatingButton .comboRatingButtonOk, .likeDislikeControls.comboRatingButton .comboRatingButtonOk:hover {
+  border-right: 1px solid rgba(199, 205, 207, 0.5);
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike, .likeDislikeControls.comboRatingButton .comboRatingButtonLike.active {
+  border-radius: 3px 0 0 3px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike:active, .likeDislikeControls.comboRatingButton .comboRatingButtonOk:active, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike:active, .likeDislikeControls.comboRatingButton .comboRatingButtonLike.active, .likeDislikeControls.comboRatingButton .comboRatingButtonOk.active, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active {
+  background: #d7d7dc none repeat scroll 0 0;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike.active, .likeDislikeControls.comboRatingButton .comboRatingButtonOk.active, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active {
+  background: #c7cdcf none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #4e595d;
+  cursor: pointer;
+  display: block;
+  font: 14px/28px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  height: 30px;
+  letter-spacing: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonDislike, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active {
+  border-radius: 3px 0 0 3px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike.active:active, .likeDislikeControls.comboRatingButton .comboRatingButtonOk.active:active, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active:active, .likeDislikeControls.comboRatingButton .comboRatingButtonLike.active.active, .likeDislikeControls.comboRatingButton .comboRatingButtonOk.active.active, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active.active {
+  background: #A1C4D8;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike .icon, .likeDislikeControls.comboRatingButton .comboRatingButtonOk .icon, .likeDislikeControls.comboRatingButton .comboRatingButtonDislike .icon {
+  background-image: url("../images/action-sprite.png");
+  display: block;
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike .icon {
+  background-position: -32px 0;
+  left: 1px;
+  top: -1px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike.active .icon {
+  background-position: -32px -64px !important;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonOk .icon {
+  background-position: -128px 0;
+  left: 1px;
+  top: -1px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonOk.active .icon {
+  background-position: -128px -96px !important;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonDislike .icon {
+  background-position: -64px 0;
+  left: 1px;
+  top: -1px;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonDislike.active .icon {
+  background-position: -64px -64px !important;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonOk, .likeDislikeControls.comboRatingButton .comboRatingButtonOk.active {
+  border-radius: 0;
+}
+
+.likeDislikeControls.comboRatingButton .comboRatingButtonLike, .likeDislikeControls.comboRatingButton .comboRatingButtonLike.active {
+  border-radius: 0 3px 3px 0;
+}
+
+.likeDislikeControls.comboRatingButton.loading .comboRatingButtonLike, .likeDislikeControls.comboRatingButton.loading .comboRatingButtonOk, .likeDislikeControls.comboRatingButton.loading .comboRatingButtonDislike {
+  background: #e5e5e5 url("../images/button-loading.gif") repeat scroll 0 0;
+}
+
+.likeDislikeControls.comboRatingButton {
+  .comboRatingButtonLike:hover {
+    background-color: #EAEFF9;
+    .icon {
+      background-position: -32px -32px;
+    }
+  }
+  .comboRatingButtonOk:hover {
+    background-color: #EAEFF9;
+    .icon {
+      background-position: -128px -32px;
+    }
+  }
+  .comboRatingButtonDislike:hover {
+    background-color: #EAEFF9;
+    .icon {
+      background-position: -64px -32px;
+    }
+  }
+}
+
+.attrBar {
+  background: #eaeff9;
+  line-height: 16px;
+  margin: 15px -15px;
+  overflow: hidden;
+  padding: 7px 0;
+}
+
+.leftColumn, .rightColumn {
+  float: right;
+  line-height: 16px;
+  vertical-align: top;
+  width: 290px;
+}
+
+.placeScore {
+  border-radius: 3px;
+  color: #fff;
+  cursor: default;
+  display: inline-block;
+  float: right;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-left: 23px;
+  padding: 0 10px;
+  text-align: center;
+  direction: ltr;
+  margin-top: 2px;
+  background: #878787;
+
+  &.flag {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-size: 13px;
+    margin-left: 0 !important;
+    margin-top: 5px !important;
+
+    &.noRate {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #BEBEBE;
+      background: transparent !important;
+    }
+  }
+}
+
+.placeScore.like {
+  background: #72A435;
+}
+
+.placeScore.dislike {
+  background: #EE5921;
+}
+
+.placeScore sup {
+  font-size: 11px;
+  position: relative;
+  top: -3px;
+}
+
+.ratingJustification {
+  display: table-cell;
+  font-size: 13px;
+  font-weight: normal;
+  height: 32px;
+  line-height: 16px;
+  vertical-align: middle;
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
+
+.tipsSections {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 15px;
+}
+
+.tipsSections .addTipsSection {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(78, 89, 93, 0.25);
+  margin-bottom: 20px;
+  padding: 0;
+  position: relative;
+}
+
+.tipsSections .addTipsSection .addTipCarat {
+  bottom: -10px;
+  right: 26px;
+  position: absolute;
+}
+
+.addTipBlock {
+  background: #f0f4f5 none repeat scroll 0 0;
+  border-bottom: 1px solid #dae4e6;
+  border-top: 1px solid #dae4e6;
+  margin: 0 0 20px -20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.tipsSections .addTipsSection .addTipBlock {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border-bottom: medium none;
+  border-top: medium none;
+  margin: 0;
+  overflow: hidden;
+  padding: 20px 20px 15px;
+  position: relative;
+}
+
+.tipsSections .addTipsSection .addTipBlock a.userImage,
+.tipsSections .addTipsSection .addTipBlock .addTipArea,
+.tipsSections .addTipsSection .addTipBlock .shareTipButton,
+.tipsSections .addTipsSection .addTipBlock .photoUploadForm,
+.tipsSections .addTipsSection .addTipBlock .addLink {
+  float: right;
+}
+
+.tipsSections .addTipsSection .addTipBlock a.userImage {
+  height: 32px;
+  position: absolute;
+  right: 20px;
+}
+
+.tipsSections .addTipsSection .addTipBlock a.userImage img {
+  border-radius: 3px;
+}
+
+.addItemArea {
+  position: relative;
+  width: 100%;
+}
+
+.tipsSections .addTipsSection .addTipBlock .addTipArea {
+}
+
+.addItemArea .input-holder {
+  display: block;
+  overflow: hidden;
+  position: static;
+  margin-left: 57px;
+  margin-right: 40px;
+}
+
+.formStyle {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #c7cdcf;
+  border-radius: 3px;
+  color: #4e595d;
+  letter-spacing: 0;
+  outline: medium none;
+  padding: 6px;
+  transition-duration: 0.33s;
+  transition-property: background, border, color, opacity, box-shadow;
+}
+
+textarea.formStyle {
+  padding: 10px;
+  resize: vertical;
+}
+
+.addItemArea textarea {
+  //float: left;
+  height: 32px;
+  line-height: 16px;
+  margin: 0;
+  padding: 6px 10px 6px 60px;
+  resize: none;
+  transition: height 0.5s ease 0s, background 1s ease 0s, background 1s ease 0s;
+  width: 100%;
+}
+
+.tipsSections .addTipsSection .addTipBlock .addTipArea textarea {
+}
+
+.input-default {
+  color: #959b9e;
+  font-size: 12px;
+  left: 9px;
+  position: absolute;
+  top: -1px;
+}
+
+.addItemArea .input-default {
+  font-size: 13px;
+  right: 13px;
+  top: 7px;
+}
+
+body .charCount {
+  color: #959b9e;
+  font: 14px/140% "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+}
+
+.addItemArea .charCount {
+  position: absolute;
+  left: 15px;
+  top: 90px;
+}
+
+.addItemArea p.inputError {
+  color: #f00;
+  font-size: 11px;
+  margin: 5px 0 0;
+}
+
+.addItemArea .photoLinkButtons {
+  left: 65px;
+  position: absolute;
+  top: 4px;
+}
+
+.addItemArea .photoLinkButtons .photoUploadForm, .addItemArea .photoLinkButtons .addLink {
+  margin-left: -10px;
+  position: relative;
+}
+
+.addItemArea .photoLinkButtons .photoUploadForm {
+  top: 5px;
+}
+
+.photoAddButtonHolder {
+  -moz-user-select: none;
+  cursor: pointer;
+  height: 22px;
+  margin: 2px 0 0;
+  overflow: hidden;
+  position: relative;
+  width: 26px;
+}
+
+.photoAddButtonHolder .icon {
+  background: rgba(0, 0, 0, 0) url("../images/icon-grey-photos.png") no-repeat scroll left top;
+  cursor: pointer;
+  height: 22px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 26px;
+}
+
+.photoAddButtonHolder input {
+  cursor: pointer;
+  font-size: 50px;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.tipsSections .addTipsSection .addTipBlock .buttonArea {
+  position: absolute;
+  left: 20px;
+}
+
+body .greenButton, body a.greenButton {
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  letter-spacing: 0;
+  padding: 0 10px;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+  height: 32px;
+  line-height: 32px;
+}
+
+.tipsSections .addTipsSection .addTipBlock #tipLink {
+  display: none;
+  margin: 10px 0 0 42px;
+}
+
+.tipsSections .addTipsSection .addTipBlock #tipLink .formStyle {
+  width: 214px;
+}
+
+.tipsSections .addTipsSection .addTipBlock .photoPreview {
+  margin: 10px 0 0 42px;
+  clear: both;
+
+  .addTipImage {
+    float: right;
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    width: 150px;
+    img {
+      border-radius: 3px;
+    }
+    span {
+      display: inline-block;
+      margin-top: 10px;
+      color: #3186AD;
+      cursor: pointer;
+      background: url('../images/icons/remove.png') center right no-repeat;
+      padding-right:20px;
+      &:hover {
+        color: #EE5921;
+      }
+    }
+    &:hover {
+    }
+  }
+}
+
+.addItemArea textarea:focus {
+  height: 90px;
+  padding-bottom: 17px;
+}
+
+
+
+
 

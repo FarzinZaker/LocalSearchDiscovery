@@ -33,7 +33,7 @@ class CaptchaHelper {
         def img = new BufferedImage(600, 100, BufferedImage.TYPE_INT_ARGB)
         def g = img.createGraphics()
         g.setFont(getFont())
-        g.setColor(new Color(244, 244, 244))
+        g.setColor(new Color(234,239,249))
         g.fillRect(0, 0, 600, 100)
         g.setColor(new Color(0, 179, 155))
         def width = g.getFontMetrics().stringWidth(str)
