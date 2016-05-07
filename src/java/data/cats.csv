@@ -1,499 +1,205 @@
-﻿parent,title,jam,farsi,farsi jam
-,Arts & Entertainment,Arts & Entertainment,هنر و سرگرمی,هنر و سرگرمی
-Arts & Entertainment,Amphitheater,Amphitheaters,امفي تئاتر,سالنهای آمفی تئاتر
-Arts & Entertainment,Aquarium,Aquariums,آکواریوم,آکواریوم
-Arts & Entertainment,Arcade,Arcades,گذرگاه طاقدار,بازی های آرکید
-Arts & Entertainment,Art Gallery,Art Galleries,گالری هنر,گالری های هنری
-Arts & Entertainment,Bowling Alley,Bowling Alleys,سالن بولینگ,بولینگ کوچه
-Arts & Entertainment,Casino,Casinos,کازینو,کازینو
-Arts & Entertainment,Circus,Circuses,سیرک,سیرک
-Arts & Entertainment,Comedy Club,Comedy Clubs,باشگاه کمدی,باشگاه های کمدی
-Arts & Entertainment,Concert Hall,Concert Halls,سالن کنسرت,سالن های کنسرت
-Arts & Entertainment,Country Dance Club,Country Dance Clubs,کشور رقص باشگاه,باشگاه های ورزشی کشور
-Arts & Entertainment,Disc Golf,Disc Golf Courses,دیسک گلف,دوره های گلف دیسک
-Arts & Entertainment,Exhibit,Exhibits,نمایشگاه,نمایشگاه ها
-Arts & Entertainment,General Entertainment,General Entertainment,سرگرمی عمومی,سرگرمی عمومی
-Arts & Entertainment,Go Kart Track,Go Kart Tracks,برو توالت آهنگ,برو توالت آهنگ
-Arts & Entertainment,Historic Site,Historic Sites,محوطه تاریخی,مکان های تاریخی
-Arts & Entertainment,Laser Tag,Laser Tag Places,برچسب لیزر,برچسب لیزر اماکن
-Arts & Entertainment,Memorial Site,Memorial Sites,سایت یادبود,سایت های یادبود
+﻿,Travel & Transport,Travel & Transport,سفر و حمل و نقل,سفر و حمل و نقل
+,Shop & Service,Shops & Services,فروشگاه و خدمات,مغازه ها و خدمات
+,Art & Entertainment,Arts & Entertainment,هنر و سرگرمی,هنر و سرگرمی‎ها
+,Outdoors & Recreation,Outdoors & Recreation,تفریح خارج از منزل,تفریحات خارج از منزل
+,Event,Events,مناسبت,مناسبت ها
+,Food,Foods,غذا,رستورانها
+,College & University,Colleges & Universities,دانشگاه و موسسه,دانشگاه ها و موسسات
+Airports,Airport Food Court,Airport Food Courts,فود کرت فرودگاه,فود کرت فرودگاه ها
+Airports,Airport Terminal,Airport Terminals,ترمینال فرودگاه,ترمینال های فرودگاه
+Airports,Airport Service,Airport Services,خدمت فرودگاه,خدمت فرودگاه
+Arts & Entertainment,Historic Site,Historic Sites,مکان تاریخی,مکان های تاریخی
+Arts & Entertainment,Memorial Site,Memorial Sites,مکان های به یاد ماندنی,مکان های به یاد ماندنی
 Arts & Entertainment,Mini Golf,Mini Golf Courses,مینی گلف,دوره های مینی گلف
 Arts & Entertainment,Movie Theater,Movie Theaters,سینما,سینما ها
-Movie Theaters,Drive-in Theater,Drive-in Theaters,درایو در تئاتر,درایو در تئاتر
-Movie Theaters,Indie Movie Theater,Indie Movie Theaters,سینمای مستقل,تئاتر مستقل فیلم
-Movie Theaters,Multiplex,Multiplexes,متعدد,Multiplexes
 Arts & Entertainment,Museum,Museums,موزه,موزه ها
-Museums,Art Museum,Art Museums,موزه هنر,موزه های هنری
-Museums,Erotic Museum,Erotic Museums,موزه وابسته به عشق شهوانی,موزه ها وابسته به عشق شهوانی
-Museums,History Museum,History Museums,موزه تاریخ,موزه تاریخ
-Museums,Planetarium,Planetariums,افلاک نما,پلنتریومس
-Museums,Science Museum,Science Museums,موزه علوم,موزه های علمی
-Arts & Entertainment,Music Venue,Music Venues,محل برگزاری موسیقی,سالن های موسیقی
-Music Venues,Jazz Club,Jazz Clubs,باشگاه جاز,باشگاه های جاز
-Music Venues,Piano Bar,Piano Bars,نوار پیانو,میله پیانو
-Music Venues,Rock Club,Rock Clubs,راک باشگاه,راک باشگاه
-Arts & Entertainment,Performing Arts Venue,Performing Arts Venues,هنرهای نمایشی محل برگزاری,هنرهای نمایشی سالن
-Performing Arts Venues,Dance Studio,Dance Studios,استودیو رقص,استودیو رقص
-Performing Arts Venues,Indie Theater,Indie Theaters,تئاتر مستقل,تئاتر مستقل
-Performing Arts Venues,Opera House,Opera Houses,اپرا,خانه اپرا
-Performing Arts Venues,Theater,Theaters,تئاتر,تئاتر
-Arts & Entertainment,Pool Hall,Pool Halls,سالن استخر,استخر سالن
-Arts & Entertainment,Public Art,Public Art,هنر عمومی,هنر عمومی
-Public Art,Outdoor Sculpture,Outdoor Sculptures,مجسمه سازی در فضای باز,مجسمه های اشیاء بی در فضای باز
-Public Art,Street Art,Street Art Installations,هنر خیابانی,تاسیسات خیابان هنر
-Arts & Entertainment,Racecourse,Racecourses,دور مسابقه,Racecourses
-Arts & Entertainment,Racetrack,Racetracks,مسیر مسابقه,آهنگ های مسابقه
-Arts & Entertainment,Roller Rink,Roller Rinks,یخ بازی کردن غلتک,پیستهای غلتک
-Arts & Entertainment,Salsa Club,Salsa Clubs,سالسا باشگاه,سالسا باشگاه
-Arts & Entertainment,Samba School,Samba Schools,مدرسه سامبا,سامبا مدارس
+Arts & Entertainment,Performing Arts Venue,Performing Arts Venues,محل برگزاری هنرهای نمایشی,محل های برگزاری هنرهای نمایشی
+Arts & Entertainment,Aquarium,Aquariums,آکواریوم,آکواریوم‎ها
+Arts & Entertainment,Outdoor Sculpture,Outdoor Sculptures,مجسمه سازی در فضای باز,مجسمه های فضای باز
+Arts & Entertainment,Street Art,Street Art Installations,هنر خیابانی,آثار هنری خیابانی
+Arts & Entertainment,Racetrack,Racetracks,پیست مسابقه,پیست های مسابقه
+Arts & Entertainment,Roller Rink,Roller Rinks,اسکیت رولر رینک,اسکیت‎ رولر رینک
 Arts & Entertainment,Stadium,Stadiums,ورزشگاه,استادیوم ها
-Stadiums,Baseball Stadium,Baseball Stadiums,ورزشگاه بیس بال,استادیوم های بیسبال
-Stadiums,Basketball Stadium,Basketball Stadiums,ورزشگاه بسکتبال,استادیوم بسکتبال
-Stadiums,Cricket Ground,Cricket Grounds,زمین کریکت,زمینه کریکت
-Stadiums,Football Stadium,Football Stadiums,استادیوم فوتبال,استادیوم فوتبال
-Stadiums,Hockey Arena,Hockey Arenas,هاکی آرنا,عرصه های هاکی
-Stadiums,Rugby Stadium,Rugby Stadiums,راگبی ورزشگاه,راگبی استادیوم
-Stadiums,Soccer Stadium,Soccer Stadiums,ورزشگاه فوتبال,استادیوم های فوتبال
-Stadiums,Tennis Stadium,Tennis Stadiums,استادیوم تنیس,تنیس استادیوم
-Stadiums,Track Stadium,Track Stadiums,آهنگ ورزشگاه,آهنگ استادیوم
-Arts & Entertainment,Theme Park,Theme Parks,پارک,پارک
-Theme Parks,Theme Park Ride / Attraction,Theme Park Rides/Attractions,پارک سوار / جاذبه,پارک سواری / جاذبه های
-Arts & Entertainment,Tour Provider,Tour Providers,ارائه دهنده تور,ارائه دهندگان تور
+Arts & Entertainment,Concert Hall,Concert Halls,سالن کنسرت,سالن های کنسرت
+Arts & Entertainment,Theme Park,Theme Parks,شهربازی,شهربازی ها
+Arts & Entertainment,Tour Provider,Tour Providers,تور و گشت,تورهای گشت
 Arts & Entertainment,Water Park,Water Parks,پارک آبی,پارک های آب
 Arts & Entertainment,Zoo,Zoos,باغ وحش,باغ وحش ها
-,College & University,Colleges & Universities,کالج و دانشگاه,کالج ها و دانشگاه
-Colleges & Universities,College Academic Building,College Academic Buildings,کالج ساختمان دانشگاهی,ساختمان کالج علمی
-College Academic Buildings,College Arts Building,College Arts Buildings,کالج هنر ساختمان,کالج هنر ساختمان
-College Academic Buildings,College Communications Building,College Communications Buildings,کالج ارتباطات ساختمان,ساختمان کالج ارتباطات
-College Academic Buildings,College Engineering Building,College Engineering Buildings,مهندسی ساختمان کالج,ساختمان و تأسیسات کالج
-College Academic Buildings,College History Building,College History Buildings,کالج تاریخچه ساختمان,تاریخچه کالج ساختمان
-College Academic Buildings,College Math Building,College Math Buildings,کالج ساختمان ریاضی,ساختمان کالج ریاضی
-College Academic Buildings,College Science Building,College Science Buildings,کالج علوم ساختمان,ساختمان علوم کالج
-College Academic Buildings,College Technology Building,College Technology Buildings,کالج ساختمان فناوری,ساختمان دانشکده صنعت
-Colleges & Universities,College Administrative Building,College Administrative Buildings,کالج ساختمان اداری,کالج ساختمان های اداری
-Colleges & Universities,College Auditorium,College Auditoriums,کالج سالن,سالن کالج
-Colleges & Universities,College Bookstore,College Bookstores,کالج کتابفروشی,کتاب فروشی دانشگاه
-Colleges & Universities,College Cafeteria,College Cafeterias,کافه تریا کالج,کالج سالن های غذاخوری
-Colleges & Universities,College Classroom,College Classrooms,کالج کلاس درس,کلاس های کالج
-Colleges & Universities,College Gym,College Gyms,کالج بدنسازی,دستگاه کالج
-Colleges & Universities,College Lab,College Labs,آزمایشگاه کالج,آزمایشگاه کالج
-Colleges & Universities,College Library,College Libraries,کتابخانه کالج,کتابخانه کالج
-Colleges & Universities,College Quad,College Quads,کالج چهار,قدس کالج
-Colleges & Universities,College Rec Center,College Rec Centers,مرکز ضبط کالج,کالج مراکز ضبط
-Colleges & Universities,College Residence Hall,College Residence Halls,کالج اقامت تالار,کالج اقامت سالن
-Colleges & Universities,College Stadium,College Stadiums,ورزشگاه کالج,استادیوم کالج
-College Stadiums,College Baseball Diamond,College Baseball Diamonds,کالج بیس بال الماس,کالج بیس بال الماس
-College Stadiums,College Basketball Court,College Basketball Courts,زمین بسکتبال کالج,کالج بسکتبال
-College Stadiums,College Cricket Pitch,College Cricket Pitches,کالج کریکت پیچ,رزین کالج کریکت
-College Stadiums,College Football Field,College Football Fields,کالج فوتبال درست,کالج زمین فوتبال
-College Stadiums,College Hockey Rink,College Hockey Rinks,کالج هاکی یخ بازی کردن,کالج هاکی پیستهای
-College Stadiums,College Soccer Field,College Soccer Fields,کالج فوتبال درست,کالج فوتبال
-College Stadiums,College Tennis Court,College Tennis Courts,زمین تنیس کالج,کالج زمین تنیس
-College Stadiums,College Track,College Tracks,کالج آهنگ,آهنگ کالج
-Colleges & Universities,College Theater,College Theaters,تئاتر کالج,تئاتر کالج
-Colleges & Universities,Community College,Community Colleges,کالج,کالج
-Colleges & Universities,Fraternity House,Fraternity Houses,برادری خانه,خانه برادری
-Colleges & Universities,General College & University,General Colleges & Universities,کالج عمومی و دانشگاه,عمومی کالج ها و دانشگاه
-Colleges & Universities,Law School,Law Schools,دانشکده حقوق,حقوق دانشکده
-Colleges & Universities,Medical School,Medical Schools,دانشکده پزشکی,دانشکده ها پزشکی
-Colleges & Universities,Sorority House,Sorority Houses,خواهری خانه,خانه خواهری
-Colleges & Universities,Student Center,Student Centers,مرکز دانشجویی,مراکز دانشجویی
-Colleges & Universities,Trade School,Trade Schools,مدرسه حرفهای,تجارت دانشکده
-Colleges & Universities,University,Universities,دانشگاه,دانشگاه ها
-,Event,Events,واقعه,مناسبت ها
-Events,Christmas Market,Christmas Markets,بازار کریسمس,بازار کریسمس
-Events,Conference,Conferences,کنفرانس,همایش ها
-Events,Convention,Conventions,قرارداد,کنوانسیون
-Events,Festival,Festivals,جشنواره,جشنواره
-Events,Music Festival,Music Festivals,جشنواره موسیقی,جشنواره های موسیقی
-Events,Other Event,Other Events,دیگر رویداد,سایر رویدادهای
-Events,Parade,Parades,رژه,رژه
-Events,Stoop Sale,Stoop Sales,خم شدن فروش,خم شدن فروش
-Events,Street Fair,Street Fairs,نمایشگاه خیابان,خیابان نمایشگاه
-,Food,Food,غذا,غذا
-Food,Afghan Restaurant,Afghan Restaurants,رستوران افغانستان,رستوران افغانستان
-Food,African Restaurant,African Restaurants,رستوران غذاهای آفریقای,رستوران آفریقایی
-African Restaurants,Ethiopian Restaurant,Ethiopian Restaurants,رستوران اتیوپیایی,رستوران اتیوپی
-Food,American Restaurant,American Restaurants,رستوران آمریکایی,رستورانهای آمریکایی
-American Restaurants,New American Restaurant,New American Restaurants,رستوران جدید آمریکا,جدید رستورانهای آمریکایی
-Food,Asian Restaurant,Asian Restaurants,رستوران آسیایی,رستوران های آسیایی
-Asian Restaurants,Burmese Restaurant,Burmese Restaurants,رستوران برمه,رستوران برمه
-Asian Restaurants,Cambodian Restaurant,Cambodian Restaurants,رستوران کامبوجی,رستوران کامبوج
-Asian Restaurants,Chinese Restaurant,Chinese Restaurants,رستوران چینی,رستوران های چینی
-Chinese Restaurants,Anhui Restaurant,Anhui Restaurants,رستوران آنهویی,رستوران آنهویی
-Chinese Restaurants,Beijing Restaurant,Beijing Restaurants,رستوران پکن,رستورانهای پکن
-Chinese Restaurants,Cantonese Restaurant,Cantonese Restaurants,رستوران کانتونی,رستوران کانتونی
-Chinese Restaurants,Chinese Aristocrat Restaurant,Chinese Aristocrat Restaurants,چینی رستوران اشراف زاده,رستوران های اشراف زاده چینی
-Chinese Restaurants,Chinese Breakfast Place,Chinese Breakfast Places,محل صبحانه چینی,چینی صبحانه اماکن
-Chinese Restaurants,Dim Sum Restaurant,Dim Sum Restaurants,تار مجموع رستوران,تار رستوران مجموع
-Chinese Restaurants,Dongbei Restaurant,Dongbei Restaurants,رستوران دانگبی,رستوران دانگبی
-Chinese Restaurants,Fujian Restaurant,Fujian Restaurants,رستوران فوجیان,رستوران فوجیان
-Chinese Restaurants,Guizhou Restaurant,Guizhou Restaurants,رستوران گوئیژو,رستوران گوئیژو
-Chinese Restaurants,Hainan Restaurant,Hainan Restaurants,رستوران هاینان,رستوران هاینان
-Chinese Restaurants,Hakka Restaurant,Hakka Restaurants,رستوران هاکا,هاکا رستوران
-Chinese Restaurants,Henan Restaurant,Henan Restaurants,رستوران هنان,رستوران هنان
-Chinese Restaurants,Hong Kong Restaurant,Hong Kong Restaurants,رستوران هنگ کنگ,رستوران هنگ کنگ
-Chinese Restaurants,Huaiyang Restaurant,Huaiyang Restaurants,رستوران Huaiyang,رستوران Huaiyang
-Chinese Restaurants,Hubei Restaurant,Hubei Restaurants,رستوران هوبئی,رستوران هوبئی
-Chinese Restaurants,Hunan Restaurant,Hunan Restaurants,رستوران هونان,رستوران هونان
-Chinese Restaurants,Imperial Restaurant,Imperial Restaurants,رستوران امپریال,رستوران امپریال
-Chinese Restaurants,Jiangsu Restaurant,Jiangsu Restaurants,رستوران جیانگ سو,رستوران جیانگ سو
-Chinese Restaurants,Jiangxi Restaurant,Jiangxi Restaurants,رستوران جیانگشی,رستوران جیانگشی
-Chinese Restaurants,Macanese Restaurant,Macanese Restaurants,رستوران Macanese,رستوران Macanese
-Chinese Restaurants,Manchu Restaurant,Manchu Restaurants,رستوران مانچو,رستوران مانچو
-Chinese Restaurants,Peking Duck Restaurant,Peking Duck Restaurants,پکن رستوران اردک,پکن رستوران اردک
-Chinese Restaurants,Shaanxi Restaurant,Shaanxi Restaurants,رستوران ابزاری,رستوران ابزاری
-Chinese Restaurants,Shandong Restaurant,Shandong Restaurants,رستوران شاندونگ,رستوران شاندونگ
-Chinese Restaurants,Shanghai Restaurant,Shanghai Restaurants,رستوران شانگهای,رستورانهای شانگهای
-Chinese Restaurants,Shanxi Restaurant,Shanxi Restaurants,رستوران شانشی,رستوران شانشی
-Chinese Restaurants,Szechuan Restaurant,Szechuan Restaurants,رستوران سیچوان,رستوران سیچوان
-Chinese Restaurants,Taiwanese Restaurant,Taiwanese Restaurants,رستوران تایوانی,رستوران تایوانی
-Chinese Restaurants,Tianjin Restaurant,Tianjin Restaurants,رستوران تیانجین,رستوران تیانجین
-Chinese Restaurants,Xinjiang Restaurant,Xinjiang Restaurants,رستوران سین کیانگ,رستوران سین کیانگ
-Chinese Restaurants,Yunnan Restaurant,Yunnan Restaurants,رستوران یوننان,رستوران یوننان
-Chinese Restaurants,Zhejiang Restaurant,Zhejiang Restaurants,رستوران ژجیانگ,رستوران ژجیانگ
-Asian Restaurants,Filipino Restaurant,Filipino Restaurants,رستوران فیلیپینی,رستوران فیلیپینی
-Asian Restaurants,Himalayan Restaurant,Himalayan Restaurants,رستوران هیمالیا,رستوران هیمالیا
-Asian Restaurants,Hotpot Restaurant,Hotpot Restaurants,رستوران های Hotpot,رستوران های Hotpot
-Asian Restaurants,Indonesian Restaurant,Indonesian Restaurants,رستوران اندونزیایی,رستوران اندونزی
-Indonesian Restaurants,Acehnese Restaurant,Acehnese Restaurants,رستوران آچه,رستوران آچه
-Indonesian Restaurants,Balinese Restaurant,Balinese Restaurants,رستوران بالیایی,رستوران بالیایی
-Indonesian Restaurants,Betawinese Restaurant,Betawinese Restaurants,رستوران Betawinese,رستوران Betawinese
-Indonesian Restaurants,Indonesian Meatball Place,Indonesian Meatball Places,اندونزی محل کوفته,کوفته اماکن اندونزی
-Indonesian Restaurants,Javanese Restaurant,Javanese Restaurants,رستوران جاوه,رستوران جاوه
-Indonesian Restaurants,Manadonese Restaurant,Manadonese Restaurants,رستوران Manadonese,رستوران Manadonese
-Indonesian Restaurants,Padangnese Restaurant,Padangnese Restaurants,رستوران Padangnese,رستوران Padangnese
-Indonesian Restaurants,Sundanese Restaurant,Sundanese Restaurants,رستوران ساندانس,رستوران ساندانس
-Asian Restaurants,Japanese Restaurant,Japanese Restaurants,رستوران ژاپنی,رستوران های ژاپنی
-Japanese Restaurants,Donburi Restaurant,Donburi Restaurants,رستوران دنبوری میروید,رستوران دنبوری میروید
-Japanese Restaurants,Japanese Curry Restaurant,Japanese Curry Restaurants,رستوران کاری ژاپنی,رستورانهای کاری ژاپنی
-Japanese Restaurants,Kaiseki Restaurant,Kaiseki Restaurants,رستوران ژاپنی کایسکی,رستوران ژاپنی کایسکی
-Japanese Restaurants,Kushikatsu Restaurant,Kushikatsu Restaurants,رستوران Kushikatsu,رستوران Kushikatsu
-Japanese Restaurants,Monjayaki Restaurant,Monjayaki Restaurants,رستوران Monjayaki,رستوران Monjayaki
-Japanese Restaurants,Nabe Restaurant,Nabe Restaurants,رستوران NABE,رستوران NABE
-Japanese Restaurants,Okonomiyaki Restaurant,Okonomiyaki Restaurants,رستوران اوکونومیاکی,رستوران اوکونومیاکی
-Japanese Restaurants,Ramen Restaurant,Ramen Restaurants,رستوران رامش,رستوران رامش
-Japanese Restaurants,Shabu-Shabu Restaurant,Shabu-Shabu Restaurants,شابوشابو رستوران,رستوران شابوشابو
-Japanese Restaurants,Soba Restaurant,Soba Restaurants,رستوران SOBA,رستوران SOBA
-Japanese Restaurants,Sukiyaki Restaurant,Sukiyaki Restaurants,رستوران سوکییاکی,رستوران سوکییاکی
-Japanese Restaurants,Sushi Restaurant,Sushi Restaurants,رستوران سوشی,رستورانهای سوشی
-Japanese Restaurants,Takoyaki Place,Takoyaki Places,تاکویاکی محل,تاکویاکی اماکن
-Japanese Restaurants,Tempura Restaurant,Tempura Restaurants,رستوران تمپورا,رستورانهای تمپورا
-Japanese Restaurants,Tonkatsu Restaurant,Tonkatsu Restaurants,رستوران ژاپنی تونکاتسو,رستورانهای تونکاتسو
-Japanese Restaurants,Udon Restaurant,Udon Restaurants,رستوران اودون,رستوران اودون
-Japanese Restaurants,Unagi Restaurant,Unagi Restaurants,رستوران یوناگی,رستوران یوناگی
-Japanese Restaurants,Wagashi Place,Wagashi Places,واگاشی محل,واگاشی اماکن
-Japanese Restaurants,Yakitori Restaurant,Yakitori Restaurants,رستوران یاکیتوری,رستوران یاکیتوری
-Japanese Restaurants,Yoshoku Restaurant,Yoshoku Restaurants,رستوران یوشوکو,رستوران یوشوکو
-Asian Restaurants,Korean Restaurant,Korean Restaurants,رستوران کره ای,رستوران های کره ای
-Korean Restaurants,Bossam/Jokbal Restaurant,Bossam/Jokbal Restaurants,Bossam / رستوران Jokbal,Bossam / رستوران ها Jokbal
-Korean Restaurants,Bunsik Restaurant,Bunsik Restaurants,رستوران Bunsik,رستوران Bunsik
-Korean Restaurants,Gukbap Restaurant,Gukbap Restaurants,رستوران Gukbap,رستوران Gukbap
-Korean Restaurants,Janguh Restaurant,Janguh Restaurants,رستوران Janguh,رستوران Janguh
-Korean Restaurants,Samgyetang Restaurant,Samgyetang Restaurants,رستوران Samgyetang,رستوران Samgyetang
-Asian Restaurants,Malaysian Restaurant,Malaysian Restaurants,رستوران مالزی,رستوران مالزی
-Asian Restaurants,Mongolian Restaurant,Mongolian Restaurants,رستوران مغولی,رستوران مغولی
-Asian Restaurants,Noodle House,Noodle Houses,رشته فرنگی خانه,خانه رشته فرنگی
-Asian Restaurants,Satay Restaurant,Satay Restaurants,رستوران ساتی,رستوران ساتی
+Arts & Entertainment,Circus,Circuses,سیرک,سیرک‎ها
+Arts & Entertainment,Art Gallery,Art Galleries,گالری هنر,گالری های هنری
+Arts & Entertainment,karting,Go Kart Tracks,کارتینگ,کارتینگ
+Arts & Entertainment,General Entertainment,General Entertainments,سرگرمی عمومی,سرگرمی‎های عمومی
+Arts & Entertainment,Amphitheater,Amphitheaters,امفي تئاتر,سالنهای آمفی تئاتر
+Arts & Entertainment,Pool Hall,Pool Halls,استخر سرپوشیده,استخرهای سرپوشیده
 Asian Restaurants,Thai Restaurant,Thai Restaurants,رستوران تایلندی,رستورانهای تایلندی
-Thai Restaurants,Som Tum Restaurant,Som Tum Restaurants,سام رستوران تام,سام تام رستوران
-Asian Restaurants,Tibetan Restaurant,Tibetan Restaurants,رستوران تبت,رستوران تبت
-Asian Restaurants,Vietnamese Restaurant,Vietnamese Restaurants,رستوران ویتنامی,رستورانهای ویتنامی
-Food,Australian Restaurant,Australian Restaurants,رستوران استرالیا,رستوران استرالیا
-Food,Austrian Restaurant,Austrian Restaurants,رستوران اتریشی,رستوران اتریش
-Food,BBQ Joint,BBQ Joints,BBQ مشترک,اتصالات BBQ
-Food,Bagel Shop,Bagel Shops,نان شیرینی حلقوی فروشگاه,نان شیرینی حلقوی مغازه ها
-Food,Bakery,Bakeries,نانوایی,نانوایی
-Food,Belgian Restaurant,Belgian Restaurants,رستوران بلژیکی,رستوران بلژیکی
-Food,Bistro,Bistros,اغذیه فروشی و مشروب,بیسترو
-Food,Brazilian Restaurant,Brazilian Restaurants,رستوران برزیلی,رستوران برزیل
-Brazilian Restaurants,Acai House,Acai Houses,Acai با خانه,Acai با خانه
-Brazilian Restaurants,Baiano Restaurant,Baiano Restaurants,رستوران بایانو,رستوران بایانو
-Brazilian Restaurants,Central Brazilian Restaurant,Central Brazilian Restaurants,رستوران مرکزی برزیل,رستوران برزیل مرکزی
-Brazilian Restaurants,Churrascaria,Churrascarias,Churrascaria,Churrascarias
-Brazilian Restaurants,Empada House,Empada Houses,Empada خانه,Empada خانه
-Brazilian Restaurants,Goiano Restaurant,Goiano Restaurants,رستوران Goiano,رستوران Goiano
-Brazilian Restaurants,Mineiro Restaurant,Mineiro Restaurants,رستوران مینیرو,رستوران مینیرو
-Brazilian Restaurants,Northeastern Brazilian Restaurant,Northeastern Brazilian Restaurants,رستوران شمال شرقی برزیل,رستوران برزیل شمال شرقی
-Brazilian Restaurants,Northern Brazilian Restaurant,Northern Brazilian Restaurants,رستوران شمال برزیل,رستوران برزیل شمالی
-Brazilian Restaurants,Pastelaria,Pastelarias,Pastelaria,Pastelarias
-Brazilian Restaurants,Southeastern Brazilian Restaurant,Southeastern Brazilian Restaurants,رستوران جنوب شرقی برزیل,رستوران برزیل جنوب شرقی
-Brazilian Restaurants,Southern Brazilian Restaurant,Southern Brazilian Restaurants,رستوران برزیلی جنوبی,رستوران برزیل جنوبی
-Brazilian Restaurants,Tapiocaria,Tapiocarias,Tapiocaria,Tapiocarias
-Food,Breakfast Spot,Breakfast Spots,صبحانه نقطه,لکه های صبحانه
-Food,Bubble Tea Shop,Bubble Tea Shops,حباب چای فروشگاه,مغازه ها حباب چای
-Food,Buffet,Buffets,بوفه,بوفه
-Food,Burger Joint,Burger Joints,برگر مشترک,مفاصل برگر
-Food,Cafeteria,Cafeterias,کافه تریا,سالن های غذاخوری
-Food,Café,Cafés,کافه,کافی نت ها
-Food,Cajun / Creole Restaurant,Cajun / Creole Restaurants,کاخون / رستوران کریول,رستورانهای کیجن / کریول
-Food,Caribbean Restaurant,Caribbean Restaurants,رستوران کارائیب,رستوران کارائیب
-Food,Caucasian Restaurant,Caucasian Restaurants,رستوران قفقازی,رستوران قفقازی
-Food,Coffee Shop,Coffee Shops,کافی شاپ,قهوه خانه ها
-Food,Comfort Food Restaurant,Comfort Food Restaurants,آسایش رستوران مواد غذایی,رستوران راحت غذا
-Food,Creperie,Creperies,رستوران کرپ,Creperies
-Food,Czech Restaurant,Czech Restaurants,رستوران چک,رستوران چک
-Food,Deli / Bodega,Delis / Bodegas,آماده / ها Bodega,غذای آماده / ها Bodegas
-Food,Dessert Shop,Dessert Shops,فروشگاه دسر,مغازه دسر
-Dessert Shops,Cupcake Shop,Cupcake Shops,فروشگاه نوعی کیک کوچک,مغازه ها نوعی کیک کوچک
-Dessert Shops,Frozen Yogurt,Frozen Yogurt,ماست منجمد,ماست منجمد
-Dessert Shops,Ice Cream Shop,Ice Cream Shops,بستنی فروشی,مغازه بستنی
-Dessert Shops,Pie Shop,Pie Shops,پای فروشگاه,مغازه ها پای
-Food,Diner,Diners,کسی که شام ​​میخورد,شام
-Food,Donut Shop,Donut Shops,دونات فروشگاه,دونات فروشگاه
-Food,Dumpling Restaurant,Dumpling Restaurants,رستوران دامپلینگ,رستوران پیراشکی
-Food,Eastern European Restaurant,Eastern European Restaurants,رستوران غذاهای اروپای شرقی,رستوران اروپای شرقی
-Eastern European Restaurants,Belarusian Restaurant,Belarusian Restaurants,رستوران بلاروس,رستوران بلاروس
-Eastern European Restaurants,Bulgarian Restaurant,Bulgarian Restaurants,رستوران بلغاری,رستوران بلغاری
-Eastern European Restaurants,Romanian Restaurant,Romanian Restaurants,رستوران رومانیایی,رومانیایی رستوران
-Eastern European Restaurants,Tatar Restaurant,Tatar Restaurants,رستوران تاتار,تاتار رستوران
-Food,English Restaurant,English Restaurants,رستوران انگلیسی,انگلیسی رستوران
-Food,Falafel Restaurant,Falafel Restaurants,رستوران فلافل,رستوران فلافل
-Food,Fast Food Restaurant,Fast Food Restaurants,رستوران فست فود,رستوران و فست فود
-Food,Fish & Chips Shop,Fish & Chips Shops,ماهی و چیپس فروشگاه,ماهی و چیپس مغازه ها
-Food,Fondue Restaurant,Fondue Restaurants,رستوران فوندو,رستوران فند
-Food,Food Court,Food Courts,دادگاه مواد غذایی,دادگاه های مواد غذایی
-Food,Food Stand,Food Stands,غرفه مواد غذایی,قفسه مواد غذایی
-Food,Food Truck,Food Trucks,کامیون مواد غذایی,کامیون های مواد غذایی
-Food,French Restaurant,French Restaurants,رستوران فرانسوی,رستوران فرانسوی
-Food,Fried Chicken Joint,Fried Chicken Joints,مرغ سرخ شده مشترک,اتصالات مرغ سرخ شده
-Food,Friterie,Friteries,Friterie,Friteries
-Food,Gastropub,Gastropubs,گاستروپاب,Gastropubs
-Food,German Restaurant,German Restaurants,رستوران آلمانی,رستوران آلمان
-German Restaurants,Apple Wine Pub,Apple Wine Pubs,میخانه اپل شراب,اپل شراب بارها
-German Restaurants,Bavarian Restaurant,Bavarian Restaurants,رستوران باواریا,رستوران باواریا
-German Restaurants,Bratwurst Joint,Bratwurst Joints,Bratwurst مشترک,اتصالات Bratwurst
-German Restaurants,Currywurst Joint,Currywurst Joints,سوسیس کاری مشترک,اتصالات سوسیس کاری
-German Restaurants,Franconian Restaurant,Franconian Restaurants,رستوران فرانکونی,رستوران فرانکونی
-German Restaurants,German Pop-Up Restaurant,German Pop-Up Restaurants,پاپ آپ آلمانی رستوران,آلمانی رستوران پاپ آپ
-German Restaurants,Palatine Restaurant,Palatine Restaurants,رستوران کامی,رستوران کامی
-German Restaurants,Rhenisch Restaurant,Rhenisch Restaurants,رستوران Rhenisch,رستوران Rhenisch
-German Restaurants,Schnitzel Restaurant,Schnitzel Restaurants,رستوران کتلت گوشت گوساله,رستوران کتلت گوشت گوساله
-German Restaurants,Silesian Restaurant,Silesian Restaurants,رستوران سیلسیا,رستوران سیلسیا
-German Restaurants,Swabian Restaurant,Swabian Restaurants,رستوران سوابی,رستوران سوابی
-Food,Gluten-free Restaurant,Gluten-free Restaurants,رستوران فاقد گلوتن,رستوران فاقد گلوتن
-Food,Greek Restaurant,Greek Restaurants,رستوران یونانی,رستورانهای یونانی
-Greek Restaurants,Bougatsa Shop,Bougatsa Shops,Bougatsa فروشگاه,Bougatsa مغازه ها
-Greek Restaurants,Cretan Restaurant,Cretan Restaurants,رستوران کرتی,رستوران کرتی
-Greek Restaurants,Fish Taverna,Fish Tavernas,ماهی Taverna را,رستوران های ماهی
-Greek Restaurants,Grilled Meat Restaurant,Grilled Meat Restaurants,کبابی گوشت رستوران,رستوران گوشت کبابی
-Greek Restaurants,Kafenio,Kafenia,Kafenio,Kafenia
-Greek Restaurants,Magirio,Magirio,Magirio,Magirio
-Greek Restaurants,Meze Restaurant,Meze Restaurants,رستوران مزه,رستوران مزه
-Greek Restaurants,Modern Greek Restaurant,Modern Greek Restaurants,رستوران یونانی مدرن,رستورانهای یونانی مدرن
-Greek Restaurants,Ouzeri,Ouzeries,Ouzeri,Ouzeries
-Greek Restaurants,Patsa Restaurant,Patsa Restaurants,رستوران PATSA,رستوران PATSA
-Greek Restaurants,Souvlaki Shop,Souvlaki Shops,سوولاکی فروشگاه,مغازه ها سوولاکی
-Greek Restaurants,Taverna,Tavernas,Taverna را,رستوران
-Greek Restaurants,Tsipouro Restaurant,Tsipouro Restaurants,رستوران Tsipouro,رستوران Tsipouro
-Food,Halal Restaurant,Halal Restaurants,رستوران حلال,رستوران های حلال
-Food,Hawaiian Restaurant,Hawaiian Restaurants,رستوران هاوایی,رستوران هاوایی
-Food,Hot Dog Joint,Hot Dog Joints,هات داگ مشترک,اتصالات سگ داغ
-Food,Hungarian Restaurant,Hungarian Restaurants,رستوران مجارستانی,رستوران مجارستان
-Food,Indian Restaurant,Indian Restaurants,رستوران هندی,رستوران های هندی
-Indian Restaurants,Andhra Restaurant,Andhra Restaurants,رستوران آندرا,رستوران آندرا
-Indian Restaurants,Awadhi Restaurant,Awadhi Restaurants,رستوران AWADHI,رستوران AWADHI
-Indian Restaurants,Bengali Restaurant,Bengali Restaurants,رستوران بنگالی,بنگالی رستوران
-Indian Restaurants,Chaat Place,Chaat Places,چات محل,چات اماکن
-Indian Restaurants,Chettinad Restaurant,Chettinad Restaurants,رستوران CHETTINAD,رستوران CHETTINAD
-Indian Restaurants,Dhaba,Dhabas,از Dhaba,Dhabas از
-Indian Restaurants,Dosa Place,Dosa Places,دوسا محل,دوسا اماکن
-Indian Restaurants,Goan Restaurant,Goan Restaurants,رستوران Goan,رستوران Goan
-Indian Restaurants,Gujarati Restaurant,Gujarati Restaurants,رستوران گجراتی,رستوران گجراتی
-Indian Restaurants,Hyderabadi Restaurant,Hyderabadi Restaurants,رستوران Hyderabadi,رستوران Hyderabadi
-Indian Restaurants,Indian Chinese Restaurant,Indian Chinese Restaurants,رستوران چینی هندی,رستوران چینی هندی
-Indian Restaurants,Indian Sweet Shop,Indian Sweet Shops,هند فروشگاه شیرین,مغازه ها شیرین هند
-Indian Restaurants,Irani Cafe,Irani Cafes,ایرانی کافه,ایرانی کافه
-Indian Restaurants,Jain Restaurant,Jain Restaurants,رستوران جین,رستوران جین
-Indian Restaurants,Karnataka Restaurant,Karnataka Restaurants,رستوران کارناتاکا,رستوران کارناتاکا
-Indian Restaurants,Kerala Restaurant,Kerala Restaurants,رستوران کرالا,رستوران کرالا
-Indian Restaurants,Maharashtrian Restaurant,Maharashtrian Restaurants,رستوران Maharashtrian,رستوران Maharashtrian
-Indian Restaurants,Mughlai Restaurant,Mughlai Restaurants,رستوران Mughlai,رستوران Mughlai
-Indian Restaurants,Multicuisine Indian Restaurant,Multicuisine Indian Restaurants,رستوران Multicuisine هند,رستوران Multicuisine هند
-Indian Restaurants,North Indian Restaurant,North Indian Restaurants,شمال هند رستوران,رستوران شمال هند
-Indian Restaurants,Northeast Indian Restaurant,Northeast Indian Restaurants,شمال شرقی رستوران هندی,رستوران شمال شرقی هند
-Indian Restaurants,Parsi Restaurant,Parsi Restaurants,رستوران پارسی,رستوران پارسی
-Indian Restaurants,Punjabi Restaurant,Punjabi Restaurants,رستوران پنجابی,رستوران پنجابی
-Indian Restaurants,Rajasthani Restaurant,Rajasthani Restaurants,رستوران راجستانی,رستوران راجستانی
-Indian Restaurants,South Indian Restaurant,South Indian Restaurants,جنوبی رستوران هندی,رستوران در جنوب هند
-Indian Restaurants,Udupi Restaurant,Udupi Restaurants,رستوران Udupi,رستوران Udupi
-Food,Irish Pub,Irish Pubs,میخانه ایرلندی,بارها ایرلندی
-Food,Italian Restaurant,Italian Restaurants,رستوران ایتالیایی,رستوران ایتالیایی
-Italian Restaurants,Abruzzo Restaurant,Abruzzo Restaurants,رستوران آبروزو,رستوران آبروزو
-Italian Restaurants,Agriturismo,Agriturismos,AGRITURISMO,Agriturismos
-Italian Restaurants,Aosta Restaurant,Aosta Restaurants,رستوران سالینی,رستوران سالینی
-Italian Restaurants,Basilicata Restaurant,Basilicata Restaurants,رستوران باسیلیکاتا,رستوران باسیلیکاتا
-Italian Restaurants,Calabria Restaurant,Calabria Restaurants,رستوران کالابریا,رستوران کالابریا
-Italian Restaurants,Campanian Restaurant,Campanian Restaurants,رستوران کامپانین,رستوران کامپانین
-Italian Restaurants,Emilia Restaurant,Emilia Restaurants,رستوران امیلیا,امیلیا رستوران
-Italian Restaurants,Friuli Restaurant,Friuli Restaurants,رستوران فریولی,رستوران فریولی
-Italian Restaurants,Ligurian Restaurant,Ligurian Restaurants,رستوران لیگوریان,رستوران لیگوریان
-Italian Restaurants,Lombard Restaurant,Lombard Restaurants,رستوران لومپارد,لومپارد رستوران
-Italian Restaurants,Malga,Malgas,Malga,Malgas
-Italian Restaurants,Marche Restaurant,Marche Restaurants,رستوران مارکه,مارکه رستوران
-Italian Restaurants,Molise Restaurant,Molise Restaurants,رستوران مولیز,رستوران مولیز
-Italian Restaurants,Piadineria,Piadinerias,Piadineria,Piadinerias
-Italian Restaurants,Piedmontese Restaurant,Piedmontese Restaurants,رستوران Piedmontese,رستوران Piedmontese
-Italian Restaurants,Puglia Restaurant,Puglia Restaurants,رستوران Puglia را,Puglia را رستوران
-Italian Restaurants,Rifugio di Montagna,Rifugio di Montagnas,Rifugio دی از Montagna,Rifugio دی Montagnas
-Italian Restaurants,Romagna Restaurant,Romagna Restaurants,رستوران رومانیا,رستوران رومانیا
-Italian Restaurants,Roman Restaurant,Roman Restaurants,رستوران روم,رستوران روم
-Italian Restaurants,Sardinian Restaurant,Sardinian Restaurants,رستوران ساردنی,رستوران ساردنی
-Italian Restaurants,Sicilian Restaurant,Sicilian Restaurants,رستوران سیسیلی,رستوران سیسیلی
-Italian Restaurants,South Tyrolean Restaurant,South Tyrolean Restaurants,جنوبی رستوران تیرولی,رستوران جنوبی تیرولی
-Italian Restaurants,Trattoria/Osteria,Trattorias/Osterias,TRATTORIA / در Osteria,Trattorias / Osterias
-Italian Restaurants,Trentino Restaurant,Trentino Restaurants,رستوران ترنتینو,رستوران ترنتینو
-Italian Restaurants,Tuscan Restaurant,Tuscan Restaurants,رستوران توسکانی,رستوران اهل توسکانی
-Italian Restaurants,Umbrian Restaurant,Umbrian Restaurants,رستوران Umbrian,رستوران Umbrian
-Italian Restaurants,Veneto Restaurant,Veneto Restaurants,رستوران ونتو,رستوران ونتو
-Food,Jewish Restaurant,Jewish Restaurants,رستوران یهودی,رستوران یهودی
-Jewish Restaurants,Kosher Restaurant,Kosher Restaurants,رستوران کوشر,رستوران حلال
-Food,Juice Bar,Juice Bars,نوار آب,میله آب
-Food,Latin American Restaurant,Latin American Restaurants,رستوران آمریکای لاتین,رستوران آمریکای لاتین
-Latin American Restaurants,Arepa Restaurant,Arepa Restaurants,رستوران Arepa,رستوران Arepa
-Latin American Restaurants,Cuban Restaurant,Cuban Restaurants,رستوران کوبایی,رستورانهای کوبایی
-Latin American Restaurants,Empanada Restaurant,Empanada Restaurants,رستوران امپانادا,رستوران امپانادا
-Food,Mac & Cheese Joint,Mac & Cheese Joints,مک و پنیر مشترک,مک و پنیر اتصالات
-Food,Mediterranean Restaurant,Mediterranean Restaurants,رستوران مدیترانه ای,رستوران های مدیترانه ای
-Mediterranean Restaurants,Moroccan Restaurant,Moroccan Restaurants,رستوران مراکشی,رستوران مراکشی
-Food,Mexican Restaurant,Mexican Restaurants,رستوران مکزیکی,رستوران های مکزیکی
-Mexican Restaurants,Burrito Place,Burrito Places,بوریتو محل,بوریتو اماکن
-Mexican Restaurants,Taco Place,Taco Places,تاکو محل,تاکو اماکن
-Mexican Restaurants,Tex-Mex Restaurant,Tex-Mex Restaurants,تکس مکس رستوران,رستورانهای تگزاسی- مکزیکی
-Food,Middle Eastern Restaurant,Middle Eastern Restaurants,رستوران خاور میانه,رستوران های خاورمیانه
-Middle Eastern Restaurants,Israeli Restaurant,Israeli Restaurants,رستوران اسرائیلی,رستوران اسرائیل
-Middle Eastern Restaurants,Persian Restaurant,Persian Restaurants,رستوران فارسی,رستوران فارسی
-Food,Modern European Restaurant,Modern European Restaurants,رستوران اروپایی مدرن,رستوران مدرن اروپایی
-Food,Molecular Gastronomy Restaurant,Molecular Gastronomy Restaurants,مولکولی رستوران سلیقه در غذا,مولکولی سلیقه در غذا رستوران
-Food,Pakistani Restaurant,Pakistani Restaurants,رستوران پاکستانی,رستوران پاکستان
-Food,Pet Café,Pet Cafés,کافه حیوان خانگی,کافه حیوان خانگی
-Food,Pizza Place,Pizza Places,پیتزافروشی,پیتزا اماکن
-Food,Polish Restaurant,Polish Restaurants,رستوران لهستانی,رستوران لهستانی
-Food,Portuguese Restaurant,Portuguese Restaurants,رستوران پرتغالی,پرتغالی رستوران
-Food,Poutine Place,Poutine Places,Poutine محل,Poutine اماکن
-Food,Restaurant,Restaurants,رستوران,رستوران ها
-Food,Russian Restaurant,Russian Restaurants,رستوران روسی,رستورانهای روسی
-Russian Restaurants,Blini House,Blini Houses,Blini خانه,Blini خانه
-Russian Restaurants,Pelmeni House,Pelmeni Houses,راویولی خانه,خانه راویولی
-Food,Salad Place,Salad Places,سالاد محل,سالاد اماکن
-Food,Sandwich Place,Sandwich Places,ساندویچ محل,ساندویچ اماکن
-Food,Scandinavian Restaurant,Scandinavian Restaurants,رستوران اسکاندیناوی,رستوران اسکاندیناوی
-Food,Seafood Restaurant,Seafood Restaurants,رستوران غذاهای دریایی,رستورانهای غذاهای دریایی
-Food,Slovak Restaurant,Slovak Restaurants,رستوران اسلواکی,رستوران اسلواکی
-Food,Snack Place,Snack Places,محل اسنک,اسنک اماکن
-Food,Soup Place,Soup Places,سوپ محل,سوپ اماکن
-Food,South American Restaurant,South American Restaurants,رستوران آمریکای جنوبی,رستورانهای آمریکای جنوبی
-South American Restaurants,Argentinian Restaurant,Argentinian Restaurants,رستوران آرژانتینی,رستوران آرژانتینی
-South American Restaurants,Peruvian Restaurant,Peruvian Restaurants,رستوران پرو,رستورانهای پرویی
-South American Restaurants,Venezuelan Restaurant,Venezuelan Restaurants,رستوران ونزوئلا,رستوران ونزوئلا
-Food,Southern / Soul Food Restaurant,Southern / Soul Food Restaurants,جنوبی / سیاهپوستان رستوران مواد غذایی,جنوبی / سیاهپوستان Food رستوران ها
-Food,Spanish Restaurant,Spanish Restaurants,رستوران اسپانیایی,رستوران اسپانیایی
-Spanish Restaurants,Paella Restaurant,Paella Restaurants,رستوران پائلا,رستوران پائلا
-Spanish Restaurants,Tapas Restaurant,Tapas Restaurants,رستوران های تاپاس,رستوران های تاپاس
-Food,Sri Lankan Restaurant,Sri Lankan Restaurants,رستوران سریلانکایی,رستوران سریلانکا
-Food,Steakhouse,Steakhouses,رستوران استیک,استیک فروشی
-Food,Swiss Restaurant,Swiss Restaurants,رستوران سوئیسی,رستوران سوئیس
-Food,Tea Room,Tea Rooms,اتاق چای,اتاق چای
-Food,Theme Restaurant,Theme Restaurants,رستوران تم,رستوران موضوع
-Food,Turkish Restaurant,Turkish Restaurants,رستوران ترکیه,رستورانهای ترکی
-Turkish Restaurants,Borek Place,Borek Places,Borek محل,Borek اماکن
-Turkish Restaurants,Cigkofte Place,Cigkofte Places,Cigkofte محل,Cigkofte اماکن
-Turkish Restaurants,Doner Restaurant,Doner Restaurants,رستوران فرد دهنده,فرد دهنده رستوران
-Turkish Restaurants,Gozleme Place,Gozleme Places,Gozleme محل,Gozleme اماکن
-Turkish Restaurants,Kebab Restaurant,Kebab Restaurants,رستوران کباب,رستوران کباب
-Turkish Restaurants,Kofte Place,Kofte Places,کوفته محل,کوفته اماکن
-Turkish Restaurants,Kokoreç Restaurant,Kokoreç Restaurants,رستوران Kokoreç,رستوران Kokoreç
-Turkish Restaurants,Kumpir Restaurant,Kumpir Restaurants,رستوران Kumpir,رستوران Kumpir
-Turkish Restaurants,Kumru Restaurant,Kumru Restaurants,رستوران Kumru,رستوران Kumru
-Turkish Restaurants,Manti Place,Manti Places,محل مانتی، یوتا,مانتی، یوتا اماکن
-Turkish Restaurants,Meyhane,Meyhanes,Meyhane,Meyhanes
-Turkish Restaurants,Pide Place,Pide Places,Pide محل,Pide اماکن
-Turkish Restaurants,Tantuni Restaurant,Tantuni Restaurants,رستوران Tantuni,رستوران Tantuni
-Turkish Restaurants,Turkish Coffeehouse,Turkish Coffeehouses,قهوه ترکی استانبولی,قهوه خانه ترکیه
-Turkish Restaurants,Turkish Home Cooking Restaurant,Turkish Home Cooking Restaurants,ترکیه صفحه اصلی آشپزی رستوران,ترکیه رستوران خانه پخت و پز
-Food,Ukrainian Restaurant,Ukrainian Restaurants,رستوران اوکراین,رستوران اوکراین
-Ukrainian Restaurants,Varenyky restaurant,Varenyky Restaurants,رستوران Varenyky,رستوران Varenyky
-Ukrainian Restaurants,West-Ukrainian Restaurant,West-Ukrainian Restaurants,غرب اوکراین رستوران,رستوران غرب اوکراین
-Food,Vegetarian / Vegan Restaurant,Vegetarian / Vegan Restaurants,گیاهی / رستوران گیاهی,گیاهی / رستوران گیاهی
-Food,Wings Joint,Wings Joints,بال مشترک,بال اتصالات
-,Nightlife Spot,Nightlife Spots,شب زنده داری نقطه,لکه های شب زنده داری
-Nightlife Spots,Bar,Bars,بار,میله
-Bars,Beach Bar,Beach Bars,ساحل نوار,میله ساحل
-Bars,Beer Bar,Beer Bars,نوار آبجو,میله آبجو
-Bars,Beer Garden,Beer Gardens,باغ آبجو,باغ آبجو
-Bars,Champagne Bar,Champagne Bars,آبمیوه های گاز دار نوار,میله آبمیوه های گاز دار
-Bars,Cocktail Bar,Cocktail Bars,نوار کوکتل,کافه کوکتل
-Bars,Dive Bar,Dive Bars,شیرجه نوار,میله شیرجه
-Bars,Gay Bar,Gay Bars,نوار گی,میله های همجنسگرا
-Bars,Hookah Bar,Hookah Bars,قلیان نوار,میله قلیان
-Bars,Hotel Bar,Hotel Bars,هتل نوار,میله هتل
-Bars,Karaoke Bar,Karaoke Bars,کارائوکه نوار,میله های کارائوکه
-Bars,Pub,Pubs,میخانه,بارها
-Bars,Sake Bar,Sake Bars,نوار خاطر,میله خاطر
-Bars,Sports Bar,Sports Bars,نوار ورزش,ورزش میله
-Bars,Tiki Bar,Tiki Bars,ماورا نوار,میله ماورا
-Bars,Whisky Bar,Whisky Bars,ویسکی نوار,میله ویسکی
-Bars,Wine Bar,Wine Bars,نوار شراب,کافه ها شراب
-Nightlife Spots,Brewery,Breweries,ابجوسازی,ماشین منگنه
-Nightlife Spots,Lounge,Lounges,سالن,اتاقهای
-Nightlife Spots,Night Market,Night Markets,بازار شب,بازار شب
-Nightlife Spots,Nightclub,Nightclubs,کلوپ شبانه,کلاب شبانه
-Nightlife Spots,Other Nightlife,Other Nightlife,دیگر تفریحات شبانه,دیگر تفریحات شبانه
-Nightlife Spots,Speakeasy,Speakeasies,محل فروش مشروبات الکلی قاچاق,Speakeasies
-Nightlife Spots,Strip Club,Strip Clubs,نوار باشگاه,باشگاه نوار
-,Outdoors & Recreation,Outdoors & Recreation,خارج از منزل و تفریح,خارج از منزل و تفریح
-Outdoors & Recreation,Athletics & Sports,Athletics & Sports,دو و میدانی و ورزش,دو و میدانی و ورزش
-Athletics & Sports,Badminton Court,Badminton Courts,زمین بدمینتون,بدمینتون
-Athletics & Sports,Baseball Field,Baseball Fields,زمین بیس بال,بیس بال زمینه
-Athletics & Sports,Basketball Court,Basketball Courts,زمین بسکتبال,بسکتبال
-Athletics & Sports,Bowling Green,Bowling Greens,چمن مخصوص بازی با گوی چوبی,بولینگ سبزها
-Athletics & Sports,Curling Ice,Curling Ices,پیچش یا حلقه زنی یخ,پیچش یا حلقه زنی یخ
-Athletics & Sports,Golf Course,Golf Courses,زمین گلف,زمین های گلف
-Athletics & Sports,Gym / Fitness Center,Gyms or Fitness Centers,بدنسازی / مرکز تناسب اندام,ورزشگاه و یا مراکز تناسب اندام
-Gyms or Fitness Centers,Boxing Gym,Boxing Gyms,سالن بوکس,دستگاه بوکس
-Gyms or Fitness Centers,Climbing Gym,Climbing Gyms,صعود باشگاه,صعود دستگاه
-Gyms or Fitness Centers,Cycle Studio,Cycle Studios,استودیو چرخه,استودیو چرخه
-Gyms or Fitness Centers,Gym Pool,Gym Pools,بدنسازی استخر,بدنسازی استخر
-Gyms or Fitness Centers,Gymnastics Gym,Gymnastics Gyms,ژیمناستیک بدنسازی,ژیمناستیک دستگاه
-Gyms or Fitness Centers,Gym,Gyms,سالن ورزش,سالن های ورزشی
-Gyms or Fitness Centers,Martial Arts Dojo,Martial Arts Dojos,هنرهای رزمی باشگاه,هنرهای رزمی جوس
-Gyms or Fitness Centers,Track,Tracks,مسیر,آهنگ های
-Gyms or Fitness Centers,Yoga Studio,Yoga Studios,یوگا,استودیو یوگا
-Athletics & Sports,Hockey Field,Hockey Fields,هاکی درست,زمینه های هاکی
-Athletics & Sports,Hockey Rink,Hockey Rinks,هاکی یخ بازی کردن,هاکی پیستهای
-Athletics & Sports,Paintball Field,Paintball Fields,پینت بال درست,زمینه های پینت بال
-Athletics & Sports,Rugby Pitch,Rugby Pitches,راگبی پیچ,رزین راگبی
-Athletics & Sports,Skate Park,Skate Parks,پارک اسکیت,اسکیت پارک
-Athletics & Sports,Skating Rink,Skating Rinks,سرسره,غلطک نورد
-Athletics & Sports,Soccer Field,Soccer Fields,زمین فوتبال,فوتبال
+Asian Restaurants,Mongolian Restaurant,Mongolian Restaurants,رستوران مغولی,رستوران های مغولی
+Asian Restaurants,Korean Restaurant,Korean Restaurants,رستوران کره ای,رستوران های کره ای
+Asian Restaurants,Chinese Restaurant,Chinese Restaurants,رستوران چینی,رستوران های چینی
+Asian Restaurants,Japanese Restaurant,Japanese Restaurants,رستوران ژاپنی,رستوران های ژاپنی
+Athletics & Sports,Rugby Pitch,Rugby Pitches,زمین راگبی,زمین های راگبی
+Athletics & Sports,Paintball Field,Paintball Fields,زمین پینت بال,زمین های پینت بال
+Athletics & Sports,Skating Rink,Skating Rinks,پیست اسکیت,پیستهای اسکیت
+Athletics & Sports,Soccer Field,Soccer Fields,زمین فوتبال,زمینهای فوتبال
+Athletics & Sports,Squash Court,Squash Courts,زمین بازی اسکواش,سالنهای اسکواش
+Athletics & Sports,Tennis Court,Tennis Courts,زمین تنیس,زمینهای تنیس
+Athletics & Sports,Volleyball Court,Volleyball Courts,زمین والیبال,زمینهای والیبال
+Athletics & Sports,Hockey Rink,Hockey Rinks,پیست هاکی,هاکی پیستهای
 Athletics & Sports,Sports Club,Sports Clubs,باشگاه ورزشی,باشگاه های ورزشی
-Athletics & Sports,Squash Court,Squash Courts,زمین بازی اسکواش,سالن اسکواش
-Athletics & Sports,Tennis Court,Tennis Courts,زمین تنیس,زمین تنیس
-Athletics & Sports,Volleyball Court,Volleyball Courts,زمین والیبال,والیبال
-Outdoors & Recreation,Bath House,Bath Houses,خانه حمام,خانه های حمام
-Outdoors & Recreation,Bathing Area,Bathing Areas,منطقه حمام کردن,نقشه صومستس
-Outdoors & Recreation,Bay,Bays,سرخ مایل به قرمز,راه آهن بستر
+Athletics & Sports,Golf Course,Golf Courses,زمین گلف,زمین های گلف
+Athletics & Sports,Curling Ice,Curling Ices,کرلینگ,کرلینگ
+Athletics & Sports,Basketball Court,Basketball Courts,زمین بسکتبال,زمینهای بسکتبال
+Athletics & Sports,Baseball Field,Baseball Fields,زمین بیس بال,زمین های بیس بال
+Athletics & Sports,Bowling Green,Bowling Greens,سالن بولینگ,سالنهای بولینگ
+Athletics & Sports,Badminton Court,Badminton Courts,زمین بدمینتون,بدمینتون
+Athletics & Sports,Hockey Field,Hockey Fields,زمین هاکی,زمینهای هاکی
+Athletics & Sports,Skate Park,Skate Parks,پارک اسکیت,پارکهای اسکیت
+Beaches,Surf Spot,Surf Spots,محل موج سواری,محلهای موج سواری
+Bus Stops,Bus Line,Bus Lines,خط اتوبوس,خطوط اتوبوس
+Clothing Stores,Accessories Store,Accessories Stores,فروشگاه لوازم جانبی,فروشگاه های لوازم جانبی
+Clothing Stores,Boutique,Boutiques,بوتیک,بوتیکها
+Clothing Stores,Kids Store,Kids Stores,فروشکاه کودکان,فروشکاه های کودکان
+Clothing Stores,Lingerie Store,Lingerie Stores,فروشگاه لباس زیر زنانه,فروشگاه های لباس زیر زنانه
+Clothing Stores,Men's Store,Men's Stores,فروشگاه مردانه,فروشگاه های مردانه
+Clothing Stores,Women's Store,Women's Stores,فروشگاه زنانه,فروشگاه های زنانه
+Clothing Stores,Shoe Store,Shoe Stores,کفش فروشی,فروشگاه های کفش
+College Academic Buildings,College Technology Building,College Technology Buildings,دانشکده فناوری,دانشکده های فناوری
+College Academic Buildings,College Science Building,College Science Buildings,دانشکده علوم,دانشکده های علوم
+College Academic Buildings,College Math Building,College Math Buildings,دانشکده ریاضی,دانشکده های ریاضی
+College Academic Buildings,College History Building,College History Buildings,دانشکده تاریخ,ساختمانهای کالج تاریخ
+College Academic Buildings,College Engineering Building,College Engineering Buildings,دانشکده مهندسی,دانشکده های مهندسی
+College Academic Buildings,College Communications Building,College Communications Buildings,دانشکده ارتباطات,دانشکده های ارتباطات
+College Academic Buildings,College Arts Building,College Arts Buildings,دانشکده هنر,دانشکده های هنر
+College Stadiums,College Basketball Court,College Basketball Courts,زمین بسکتبال دانشگاه,زمین های بسکتبال دانشگاه
+College Stadiums,College Baseball Diamond,College Baseball Diamonds,زمین بیسبال دانشگاه,زمینهای بیسبال دانشگاه
+College Stadiums,College Track,College Tracks,زمین دو دانشگاه,زمینهای دو دانشگاه
+College Stadiums,College Tennis Court,College Tennis Courts,زمین تنیس دانشگاه,زمینهای تنیس دانشگاه
+College Stadiums,College Hockey Rink,College Hockey Rinks,زمین هاکی دانشگاه,زمینهای هاکی دانشگاه
+College Stadiums,College Soccer Field,College Soccer Fields,زمین فوتبال دانشگاه,زمین های فوتبال دانشگاه
+College Stadiums,College Cricket Pitch,College Cricket Pitches,زمین کریکت دانشگاه,زمین های کریکت دانشگاه
+Colleges & Universities,Community College,Community Colleges,دانشگاه ارتباطات,دانشکده های ارتباطات
+Colleges & Universities,Fraternity House,Fraternity Houses,خوابگاه برادران,خوابگاه های برادران
+Colleges & Universities,Sorority House,Sororities Houses,خوابگاه خواهران,خوابگاه های خواهران
+Colleges & Universities,Law School,Law Schools,دانشکده حقوق,دانشگاه های حقوق
+Colleges & Universities,Medical School,Medical Schools,دانشکده پزشکی,دانشکده های پزشکی
+Colleges & Universities,Student Center,Student Centers,مرکز دانشجویی,مراکز دانشجویی
+Colleges & Universities,Trade School,Trade Schools,مدرسه تجارت,مدارس تجارت
+Colleges & Universities,University,Universities,دانشگاه,دانشگاه ها
+Colleges & Universities,School,Schools,مدرسه,مدارس
+Colleges & Universities,College Classroom,College Classrooms,کلاس دانشگاه,کلاس های دانشگاه
+Colleges & Universities,College Cafeteria,College Cafeterias,غذاخوری دانشگاه,غذاخوریهای دانشگاه
+Colleges & Universities,College Bookstore,College Bookstores,کتابفروشی دانشگاه,کتاب فروشیهای دانشگاه
+Colleges & Universities,College Auditorium,College Auditoriums,سالن اجتماعات دانشگاه,سالن های اجتماعات دانشگاه
+Colleges & Universities,College Administrative Building,College Administrative Buildings,دانشکده اداری,دانشکده های اداری
+Colleges & Universities,College Academic Building,College Academic Buildings,ساختمان دانشکده,ساختمان دانشکده ها
+Colleges & Universities,College Theater,College Theaters,تئاتر دانشگاه,تئاتر های دانشگاه
+Colleges & Universities,College Stadium,College Stadiums,ورزشگاه دانشگاه,استادیوم های دانشگاه
+Colleges & Universities,College Residence Hall,College Residence Halls,تالار اقامت دانشگاه,تالارهای اقامت دانشگاه
+Colleges & Universities,College Rec Center,College Rec Centers,مرکز ضبط دانشگاه,مراکز ضبط دانشگاه
+Colleges & Universities,College Quad,College Quads,حیاط دانشگاه,حیاط های دانشگاه
+Colleges & Universities,College Gym,College Gyms,باشگاه دانشگاه,باشگاه های دانشگاه
+Colleges & Universities,College Lab,College Labs,آزمایشگاه دانشگاه,آزمایشگاه های دانشگاه
+Colleges & Universities,College Library,College Libraries,کتابخانه دانشگاه,کتابخانه های دانشگاه
+Dessert Shops,Cupcake Shop,Cupcake Shops,فروشگاه کاپ کیک,کاپ کیک فروشی
+Dessert Shops,Ice Cream Shop,Ice Cream Shops,بستنی فروشی,مغازه های بستنی
+Dessert Shops,Frozen Yogurt,Frozen Yogurt,ماست بستنی,ماست بستنی
+Events,Conference,Conferences,کنفرانس,همایش ها
+Events,Festival,Festivals,جشنواره,جشنواره ها
+Events,Street Fair,Street Fairs,نمایشگاه خیابان,نمایشگاه خیابانی
+Events,Other Event,Other Events,دیگر رویداد,سایر رویدادها
+Events,Stoop Sale,Stoop Sales,بازار روز,بازارهای روز
+Events,Music Festival,Music Festivals,جشنواره موسیقی,جشنواره های موسیقی
+Food & Drink Shops,Butcher,Butchers,قصاب,قصابان
+Food & Drink Shops,Cheese Shop,Cheese Shops,فروشگاه پنیر,مغازه های پنیر
+Food & Drink Shops,Fish Market,Fish Markets,ماهی فروشی,بازارهای ماهی
+Food & Drink Shops,Supermarket,Supermarkets,سوپر مارکت,سوپر مارکت ها
+Food & Drink Shops,Grocery Store,Grocery Stores,خواربار فروشی,فروشگاه های مواد غذایی
+Food & Drink Shops,Health Food Store,Health Food Stores,فروشگاه غذاهای سالم,فروشگاه های غذاهای سالم
+Food & Drink Shops,Organic Grocery,Organic Groceries,مواد غذایی ارگانیک,مواد غذایی ارگانیک
+Food & Drink Shops,Food Service,Food Services,سرویس غذا,خدمات غذایی
+Foods,Foriegn Restaurant,Foriegn Restaurants,رستوران فرنگی,رستورانهای فرنگی
+Foods,Asian Restaurant,Asian Restaurants,رستوران آسیایی,رستوران های آسیایی
+Foods,Bakery,Bakeries,نانوایی,نانواییها
+Foods,Pastelaria,Pastelarias,قنادی,قنادی ها
+Foods,Breakfast Spot,Breakfast Spots,محل صبحانه,محل های صبحانه
+Foods,Buffet,Buffets,بوفه,بوفه ها
+Foods,Burger Joint,Burger Joints,برگر,برگر فروشیها
+Foods,Cafeteria,Cafeterias,کافه تریا,سالن های غذاخوری
+Foods,Café,Cafés,کافه,کافه  ها
+Foods,Caucasian Restaurant,Caucasian Restaurants,رستوران قفقازی,رستورانهای قفقازی
+Foods,Coffee Shop,Coffee Shops,کافی شاپ,قهوه خانه ها
+Foods,Dessert Shop,Dessert Shops,فروشگاه دسر,دسر فروشیها
+Foods,Donut Shop,Donut Shops,مغازه دونات,مغازه های دونات
+Foods,Falafel Restaurant,Falafel Restaurants,رستوران فلافل,رستورانهای فلافل
+Foods,Fast Food Restaurant,Fast Food Restaurants,رستوران فست فود,رستوران های فست فود
+Foods,Food Court,Food Courts,فود کورت,فود کورتها
+Foods,French Restaurant,French Restaurants,رستوران فرانسوی,رستورانهای فرانسوی
+Foods,Fried Chicken Joint,Fried Chicken Joints,مرغ سوخاری,مرغ سوخاری
+Foods,Greek Restaurant,Greek Restaurants,رستوران یونانی,رستورانهای یونانی
+Foods,Halal Restaurant,Halal Restaurants,رستوران حلال,رستوران های حلال
+Foods,Indian Restaurant,Indian Restaurants,رستوران هندی,رستوران های هندی
+Foods,Italian Restaurant,Italian Restaurants,رستوران ایتالیایی,رستورانهای ایتالیایی
+Foods,Juice Bar,Juice Bars,آبمیوه فروشی,آبمیوه فروشیها
+Foods,Latin American Restaurant,Latin American Restaurants,رستوران آمریکای لاتین,رستورانهای آمریکای لاتین
+Foods,Mexican Restaurant,Mexican Restaurants,رستوران مکزیکی,رستوران های مکزیکی
+Foods,Persian Restaurant,Persian Restaurants,رستوران ایرانی,رستورانهای ایرانی
+Foods,Pizza Place,Pizza Places,پیتزافروشی,پیتزا فروشیها
+Foods,Restaurant,Restaurants,رستوران,رستوران ها
+Foods,Salad Place,Salad Places,سالاد بار,سالاد بارها
+Foods,Sandwich Place,Sandwich Places,ساندویچ فروشی,ساندویچ فروشیها
+Foods,Seafood Restaurant,Seafood Restaurants,رستوران غذاهای دریایی,رستورانهای غذاهای دریایی
+Foods,Steakhouse,Steakhouses,رستوران استیک,استیک فروشیها
+Foods,Tea Room,Tea Rooms,چای خانه,چای خانه ها
+Foods,Turkish Restaurant,Turkish Restaurants,رستوران ترکی,رستورانهای ترکی
+Foods,Vegetarian / Vegan Restaurant,Vegetarian / Vegan Restaurants,رستوران گیاهی,رستورانهای گیاهی
+Foods,Hookah Bar,Hookah Bars,قلیان,قلیان
+Furniture / Home Stores,Lighting Store,Lighting Stores,فروشگاه روشنایی,فروشگاه های روشنایی
+Government Buildings,Police Station,Police Stations,ایستگاه پلیس,ایستگاه های پلیس
+Government Buildings,Monument / Landmark,Monuments / Landmarks,بنای تاریخی,بناهای تاریخی
+Government Buildings,Fire Station,Fire Stations,ایستگاه آتشنشانی,ایستگاه های آتش نشانی
+Government Buildings,Embassy / Consulate,Embassies / Consulates,سفارت / کنسولگری,سفارتخانه ها / کنسولگریها
+Government Buildings,Courthouse,Courthouses,دادگاه,دادگاه ها
+Greek Restaurants,Patsa Restaurant,Patsa Restaurants,رستوران پاستا,رستورانهای پاستا
+Hotels,Motel,Motels,متل,متلها
+Hotels,Resort,Resorts,استراحتگاه,استراحتگاه
+Hotels,Hostel,Hostels,مهمانخانه,مهمانخانه
+Indian Restaurants,Iranian Cafe,Iranian Cafes,کافه ایرانی,کافه های ایرانی
+Japanese Restaurants,Sushi Restaurant,Sushi Restaurants,رستوران سوشی,سوشی
+Medical Centers,Dentist's Office,Dentist's Offices,مطب دندانپزشکی,مطب های دندانپزشکی
+Medical Centers,Doctor's Office,Doctor's Offices,مطب دکتر,مطب دکتر
+Medical Centers,Emergency Room,Emergency Rooms,اورژانس,مراکز اورژانس
+Medical Centers,Eye Doctor,Eye Doctors,چشم پزشک,چشم پزشکان
+Medical Centers,Chiropractor,Chiropractors,فیزیوتراپ,کایروپراکتیک
+Medical Centers,Acupuncturist,Acupuncturists,طب سوزنی,متخصصان طب سوزنی
+Medical Centers,Hospital,Hospitals,بیمارستان,بیمارستانها
+Medical Centers,Veterinarian,Veterinarians,دام پزشک,دامپزشکان
+Medical Centers,Urgent Care Center,Urgent Care Centers,مرکز مراقبت های فوری,مراکز مراقبت های فوری
+Medical Centers,Rehab Center,Rehab Centers,مرکز توانبخشی,مراکز ترک
+Medical Centers,Laboratory,Laboratories,آزمایشگاه,آزمایشگاهها
+Medical Centers,Maternity Clinic,Maternity Clinics,کلینیک زنان و زایمان,کلینیک های زنان و زایمان
+Movie Theaters,Multiplex,Multiplexes,پردیس سینمایی,پردیس سینمایی
+Museums,History Museum,History Museums,موزه تاریخی,موزه  های تاریخی
+Museums,Art Museum,Art Museums,موزه هنر,موزه های هنری
+Museums,Science Museum,Science Museums,موزه علمی,موزه های علمی
+Outdoors & Recreation,Athletics & Sports,Athletics & Sports,ورزش و قهرمانی,ورزش و قهرمانی
+Outdoors & Recreation,Pool,Pools,استخر,استخرها
+Outdoors & Recreation,Bath House,Bath Houses,حمام عمومی,حمامهای عمومی
+Outdoors & Recreation,Bay,Bays,ساحل,سواحل
 Outdoors & Recreation,Beach,Beaches,ساحل دریا,سواحل
-Beaches,Nudist Beach,Nudist Beaches,ساحل طرفدار برهنگی,سواحل برهنگی گرای
-Beaches,Surf Spot,Surf Spots,گشت و گذار نقطه,نقاط گشت و گذار
-Outdoors & Recreation,Bike Trail,Bike Trails,نوین گراش,مسیرهای دوچرخه
-Outdoors & Recreation,Botanical Garden,Botanical Gardens,باغ گیاهشناسی,باغ گیاه شناسی
+Outdoors & Recreation,Bike Trail,Bike Trails,مسیر دوچرخه,مسیرهای دوچرخه
+Outdoors & Recreation,Botanical Garden,Botanical Gardens,باغ گیاهشناسی,باغهای گیاه شناسی
 Outdoors & Recreation,Bridge,Bridges,پل,پل ها
-Outdoors & Recreation,Campground,Campgrounds,اردوگاه,اردو
-Outdoors & Recreation,Canal Lock,Canal Locks,کانال قفل,قفل کانال
-Outdoors & Recreation,Canal,Canals,کاریز,کانال
-Outdoors & Recreation,Castle,Castles,قلعه,قلعه
+Outdoors & Recreation,Campground,Campgrounds,اردوگاه,اردوگاهها
+Outdoors & Recreation,Castle,Castles,قلعه,قلعهها
 Outdoors & Recreation,Cave,Caves,غار,غارها
 Outdoors & Recreation,Cemetery,Cemeteries,قبرستان,گورستان ها
-Outdoors & Recreation,Dive Spot,Dive Spots,شیرجه نقطه,نقاط غواصی
-Outdoors & Recreation,Dog Run,Dog Runs,سگ اجرا,سگ اجرا می شود
+Outdoors & Recreation,Dive Spot,Dive Spots,محل غواصی,نقاط غواصی
+Outdoors & Recreation,Dog Run,Dog Runs,محل گردش سگ,محل های گردش سک
 Outdoors & Recreation,Farm,Farms,مزرعه,مزارع
-Outdoors & Recreation,Field,Fields,رشته,زمینه های
-Outdoors & Recreation,Fishing Spot,Fishing Spots,نقطه ماهیگیری,لکه های ماهیگیری
-Outdoors & Recreation,Forest,Forests,جنگل,جنگل
-Outdoors & Recreation,Fountain,Fountains,آبنما,چشمه
-Outdoors & Recreation,Garden,Gardens,باغ,باغ
-Outdoors & Recreation,Gun Range,Gun Ranges,تفنگ محدوده,محدوده تفنگ
+Outdoors & Recreation,Field,Fields,زمین,زمینها
+Outdoors & Recreation,Fishing Spot,Fishing Spots,محل ماهیگیری,محل های ماهیگیری
+Outdoors & Recreation,Forest,Forests,جنگل,جنگلها
+Outdoors & Recreation,Waterfront,Waterfronts,آبنما,آبنما
+Outdoors & Recreation,Garden,Gardens,باغ,باغها
 Outdoors & Recreation,Harbor / Marina,Harbors / Marinas,بندر / مارینا,بنادر / اسکله
 Outdoors & Recreation,Hot Spring,Hot Springs,چشمه اب گرم,چشمه های آب گرم
 Outdoors & Recreation,Island,Islands,جزیره,جزایر
@@ -501,346 +207,199 @@ Outdoors & Recreation,Lake,Lakes,دریاچه,دریاچه ها
 Outdoors & Recreation,Lighthouse,Lighthouses,فانوس دریایی,فانوس های دریایی
 Outdoors & Recreation,Mountain,Mountains,کوه,کوه ها
 Outdoors & Recreation,National Park,National Parks,پارک ملی,پارک های ملی
-Outdoors & Recreation,Nature Preserve,Nature Preserves,طبیعت حفاظت شده,طبیعت را حفظ
-Outdoors & Recreation,Other Great Outdoors,Other Great Outdoors,خارج از منزل بزرگ,خارج از منزل بزرگ
+Outdoors & Recreation,Nature Preserve,Nature Preserves,مناطق حفاظت شده,مناطق حفاظت شده
+Outdoors & Recreation,Other Great Outdoors,Other Great Outdoors,دیگر مکانهای دیدنی,سایر مکانهای دیدنی
 Outdoors & Recreation,Palace,Palaces,قصر,کاخ
 Outdoors & Recreation,Park,Parks,پارک,پارک ها
-Outdoors & Recreation,Pedestrian Plaza,Pedestrian Plazas,عابر پیاده پلازا,میادین عابر پیاده
 Outdoors & Recreation,Playground,Playgrounds,زمین بازی,زمین های بازی
 Outdoors & Recreation,Plaza,Plazas,میدان,میادین
-Outdoors & Recreation,Pool,Pools,استخر,استخر
-Outdoors & Recreation,Rafting,Rafting Spots,قایق سواری در,لکه های خروشان
-Outdoors & Recreation,Recreation Center,Recreation Centers,مرکز تفریح ​​و سرگرمی,تفریح ​​و سرگرمی
-Outdoors & Recreation,Reservoir,Reservoirs,مخزن,مخازن
+Outdoors & Recreation,Rafting,Rafting Spots,قایق سواری,محلهای قایق سواری
+Outdoors & Recreation,Recreation Center,Recreation Centers,مرکز تفریح ​​و سرگرمی,مراکز تفریح ​​و سرگرمی
 Outdoors & Recreation,River,Rivers,رودخانه,رودخانه ها
-Outdoors & Recreation,Rock Climbing Spot,Rock Climbing Spots,نقطه صخره نوردی,لکه های صخره نوردی
-Outdoors & Recreation,Scenic Lookout,Scenic Lookouts,مواظب خوش منظره و زیبا,چشم اندازها خوش منظره و زیبا
-Outdoors & Recreation,Sculpture Garden,Sculpture Gardens,مجسمه سازی باغ،,باغ مجسمه سازی
-Outdoors & Recreation,Ski Area,Ski Areas,منطقه اسکی,مناطق اسکی
-Ski Areas,Apres Ski Bar,Apres Ski Bars,Apres اسکی نوار,میله Apres اسکی
-Ski Areas,Ski Chairlift,Ski Chairlifts,اسکی شمشک,تله کابین اسکی
-Ski Areas,Ski Chalet,Ski Chalets,اسکی ویلا,کلبه های ییلاقی اسکی
-Ski Areas,Ski Lodge,Ski Lodges,اسکی الج,شامل غرفه های اسکی
-Ski Areas,Ski Trail,Ski Trails,اسکی نوین,مسیرهای اسکی
-Outdoors & Recreation,Stables,Stables,اصطبل,اصطبل
-Outdoors & Recreation,States & Municipalities,States & Municipalities,ایالات و شهرداری ها,ایالات و شهرداری ها
-States & Municipalities,City,Cities,شهرستان,شهرستانها
-States & Municipalities,County,Counties,شهرستان,شهرستان
-States & Municipalities,Country,Countries,کشور,کشورها
-States & Municipalities,Neighborhood,Neighborhoods,همسایگی,محله
-States & Municipalities,State,States,دولت,ایالت ها
-States & Municipalities,Town,Towns,شهر,شهرهای
-States & Municipalities,Village,Villages,دهکده,روستاها
-Outdoors & Recreation,Summer Camp,Summer Camps,اردوگاه تابستانی,اردوهای تابستانی
-Outdoors & Recreation,Trail,Trails,دنباله,مسیرهای پیاده روی
-Outdoors & Recreation,Tree,Trees,درخت,درختان
+Outdoors & Recreation,Rock Climbing Spot,Rock Climbing Spots,نقطه صخره نوردی,نقاط صخره نوردی
+Outdoors & Recreation,Scenic Lookout,Scenic Lookouts,چشم اندازها خوش منظره و زیبا,چشم اندازها خوش منظره و زیبا
+Outdoors & Recreation,Ski Area,Ski Areas,پیست اسکی,پیست های اسکی
+Outdoors & Recreation,Stables,Stables,اصطبل,اصطبلها
+Outdoors & Recreation,States & Municipalities,States & Municipalities,شهرداری,شهرداری ها
+Outdoors & Recreation,Summer Camp,Summer Camps,اردوگاه تابستانی,اردوگاههای تابستانی
 Outdoors & Recreation,Vineyard,Vineyards,تاکستان,باغ های انگور
-Outdoors & Recreation,Volcano,Volcanoes,آتشفشان,آتشفشان
-Outdoors & Recreation,Waterfall,Waterfalls,ابشار,آبشارهای
-Outdoors & Recreation,Waterfront,Waterfronts,اسکله,آبنما
-Outdoors & Recreation,Well,Wells,خوب,چاه
-,Professional & Other Places,Professional & Other Places,اماکن حرفه ای و دیگر,اماکن حرفه ای و دیگر
-Professional & Other Places,Animal Shelter,Animal Shelters,پناهگاه حیوانات,پناهگاه های حیوانات
-Professional & Other Places,Auditorium,Auditoriums,تالار کنفرانس,سالن
-Professional & Other Places,Ballroom,Ballrooms,سالن رقص,سالنهای رقص
-Professional & Other Places,Building,Buildings,ساختمان,ساختمان
-Professional & Other Places,Business Center,Business Centers,مرکز تجاری,مراکز کسب و کار
-Professional & Other Places,Club House,Club Houses,باشگاه خانه,خانه های باشگاه
-Professional & Other Places,Community Center,Community Centers,مرکز ارتباطات,مراکز اجتماعی
-Professional & Other Places,Convention Center,Convention Centers,مرکز کنوانسیون,مراکز کنوانسیون
-Convention Centers,Meeting Room,Meeting Rooms,اتاق ملاقات,اتاق های ملاقات
-Professional & Other Places,Cultural Center,Cultural Centers,مرکز فرهنگی,مراکز فرهنگی
-Professional & Other Places,Distillery,Distilleries,کارخانه یا محل تقطیر,مشروب
-Professional & Other Places,Distribution Center,Distribution Centers,مرکز توزیع,مراکز توزیع
-Professional & Other Places,Event Space,Event Spaces,فضای رویداد,فضای رویداد
-Event Spaces,Outdoor Event Space,Outdoor Event Spaces,در فضای باز فضای رویداد,فضای رویداد در فضای باز
-Professional & Other Places,Factory,Factories,کارخانه,کارخانه
-Professional & Other Places,Fair,Fairs,نمایشگاه,نمایشگاه ها
-Professional & Other Places,Funeral Home,Funeral Homes,مراسم تشییع جنازه صفحه اصلی,خانه مراسم تشییع جنازه
-Professional & Other Places,Government Building,Government Buildings,ساختمان دولتی,ساختمان های دولتی
-Government Buildings,Capitol Building,Capitol Buildings,ساختمان کنگره,کاپیتول ساختمان
-Government Buildings,City Hall,City Halls,سالن شهر,شهرستان سالن
-Government Buildings,Courthouse,Courthouses,دادگاه,دادگاه
-Government Buildings,Embassy / Consulate,Embassies / Consulates,سفارت / کنسولگری,سفارتخانه ها / کنسولگری
-Government Buildings,Fire Station,Fire Stations,ایستگاه آتشنشانی,ایستگاه آتش نشانی
-Government Buildings,Monument / Landmark,Monuments / Landmarks,بنای تاریخی / برجسته,حفاظت / نشانه
-Government Buildings,Police Station,Police Stations,ایستگاه پلیس,ایستگاه های پلیس
-Government Buildings,Town Hall,Town Halls,شهرداری,سالن های شهر
-Professional & Other Places,Industrial Estate,Industrial Estates,منطقه صنعتی,شهرکهای صنعتی
-Professional & Other Places,Library,Libraries,کتابخانه,کتابخانه
-Professional & Other Places,Medical Center,Medical Centers,مرکز پزشکی,مراکز درمانی
-Medical Centers,Acupuncturist,Acupuncturists,طب سوزنی,متخصصان طب سوزنی
-Medical Centers,Alternative Healer,Alternative Healers,شفا دهنده جایگزین,درمانگر جایگزین
-Medical Centers,Chiropractor,Chiropractors,فیزیوتراپ,کایروپراکتیک
-Medical Centers,Dentist's Office,Dentist's Offices,دفتر دندانپزشک,دفاتر دندانپزشک
-Medical Centers,Doctor's Office,Doctor's Offices,مطب دکتر,دفاتر دکتر
-Medical Centers,Emergency Room,Emergency Rooms,اورژانس,اتاق اورژانس
-Medical Centers,Eye Doctor,Eye Doctors,چشم پزشک,چشم پزشکان
-Medical Centers,Hospital,Hospitals,بیمارستان,بیمارستان
-Medical Centers,Laboratory,Laboratories,آزمایشگاه,آزمایشگاه
-Medical Centers,Maternity Clinic,Maternity Clinics,کلینیک زنان و زایمان,زایمان
-Medical Centers,Mental Health Office,Mental Health Offices,دفتر سلامت روان,روان دفاتر بهداشت
-Medical Centers,Rehab Center,Rehab Centers,مرکز توانبخشی,مراکز ترک
-Medical Centers,Urgent Care Center,Urgent Care Centers,مرکز مراقبت های فوری,مراکز مراقبت های فوری
-Medical Centers,Veterinarian,Veterinarians,دام پزشک,دامپزشکان
-Professional & Other Places,Military Base,Military Bases,پایگاه نظامی,ایجاد پایگاه های نظامی
-Professional & Other Places,Non-Profit,Non-Profits,غیر انتفاعی,غیر انتفاعی
-Professional & Other Places,Office,Offices,دفتر,دفاتر
-Offices,Advertising Agency,Advertising Agencies,آژانس تبلیغاتی,آژانس های تبلیغاتی
-Offices,Campaign Office,Campaign Offices,دفتر مبارزات انتخاباتی,دفاتر کمپین
-Offices,Conference Room,Conference Rooms,اتاق کنفرانس,اتاق کنفرانس
-Offices,Corporate Amenity,Corporate Amenities,ملایمت شرکت,امکانات شرکت
-Offices,Corporate Cafeteria,Corporate Cafeterias,کافه تریا شرکت,سالن های غذاخوری شرکت
-Offices,Corporate Coffee Shop,Corporate Coffee Shops,شرکت شاپ,مغازه ها قهوه شرکت
-Offices,Coworking Space,Coworking Spaces,فضای همکاری,فضای coworking
-Offices,Tech Startup,Tech Startups,فناوری راه اندازی,راه اندازی تکنولوژی
-Professional & Other Places,Parking,Parking,پارکینگ,پارکینگ
-Professional & Other Places,Post Office,Post Offices,اداره پست,دفاتر پست
-Professional & Other Places,Prison,Prisons,زندان,زندان
-Professional & Other Places,Radio Station,Radio Stations,ایستگاه رادیویی,ایستگاه رادیویی
-Professional & Other Places,Recruiting Agency,Recruiting Agencies,آژانس استخدام,آژانس های استخدام
-Professional & Other Places,School,Schools,مدرسه,مدارس
+Outdoors & Recreation,Volcano,Volcanoes,آتشفشان,آتشفشانها
+Outdoors & Recreation,Waterfall,Waterfalls,ابشار,آبشارها
+Performing Arts Venues,Theater,Theaters,تئاتر,تئاترها
+Residences,Residential Building (Apartment / Condo),Residential Buildings (Apartments / Condos),هتل آپارتمان,هتل آپارتمان
 Schools,Adult Education Center,Adult Education Centers,مرکز آموزش بزرگسالان,مراکز آموزش بزرگسالان
-Schools,Circus School,Circus Schools,مدرسه سیرک,سیرک مدارس
 Schools,Driving School,Driving Schools,آموزشگاه رانندگی,آموزشگاه های رانندگی
-Schools,Elementary School,Elementary Schools,دبستان,مدرسه ابتدایی
-Schools,Flight School,Flight Schools,مدرسه پرواز,مدارس پرواز
-Schools,High School,High Schools,دبیرستان,دبیرستان
-Schools,Language School,Language Schools,مدرسه زبان,زبان
-Schools,Middle School,Middle Schools,دبیرستان,مدارس راهنمایی
+Schools,Elementary School,Elementary Schools,دبستان,مدارس ابتدایی
+Schools,High School,High Schools,دبیرستان,دبیرستانها
+Schools,Language School,Language Schools,مدرسه زبان,مدارس زبان
+Schools,Swim School,Swim Schools,مدرسه شنا,مدارس شنا
 Schools,Music School,Music Schools,آموزشگاه موسیقی,مدارس موسیقی
-Schools,Nursery School,Nursery Schools,مدرسه پرستاری,پرستاری دانشکده های
-Schools,Preschool,Preschools,پیش دبستانی,کودکستان
+Schools,Preschool,Preschools,پیش دبستانی,کودکستانها
 Schools,Private School,Private Schools,مدرسه خصوصی,مدارس خصوصی
 Schools,Religious School,Religious Schools,مدرسه مذهبی,مدارس مذهبی
-Schools,Swim School,Swim Schools,مدرسه شنا,شنا مدارس
-Professional & Other Places,Social Club,Social Clubs,باشگاه اجتماعی,باشگاه های اجتماعی
-Professional & Other Places,Spiritual Center,Spiritual Centers,مرکز معنوی,مراکز معنوی
-Spiritual Centers,Buddhist Temple,Buddhist Temples,معبد بودایی,معابد بودایی
-Spiritual Centers,Church,Churches,کلیسا,کلیساها
-Spiritual Centers,Confucian Temple,Confucian Temples,معبد کنفوسیوس,معابد کنفوسیوسی
-Spiritual Centers,Hindu Temple,Hindu Temples,معبد هندو,هندو معابد
-Spiritual Centers,Monastery,Monasteries,صومعه,صومعه
-Spiritual Centers,Mosque,Mosques,مسجد,مساجد
-Spiritual Centers,Prayer Room,Prayer Rooms,نمازخانه,نمازخانه
-Spiritual Centers,Shrine,Shrines,زیارتگاه,زیارتگاه
-Spiritual Centers,Synagogue,Synagogues,کنیسه,کنیسه
-Spiritual Centers,Temple,Temples,معبد,معابد
-Spiritual Centers,Terreiro,Terreiros,Terreiro,Terreiros
-Professional & Other Places,TV Station,TV Stations,ایستگاه تلویزیونی,ایستگاه های تلویزیون
-Professional & Other Places,Voting Booth,Voting Booths,صندوق رای گیری,رای گیری
-Professional & Other Places,Warehouse,Warehouses,انبار,ساختمان و ذخیره سازی
-Professional & Other Places,Wedding Hall,Wedding Halls,سالن عروسی,سالن های عروسی
-Professional & Other Places,Winery,Wineries,کارخانه شراب سازی,از wineries
-,Residence,Residences,محل اقامت,خوابگاه
-Residences,Assisted Living,Assisted Living,افراد ناتوان,افراد ناتوان
-Residences,Home (private),Homes (private),صفحه اصلی (خصوصی),خانه (خصوصی)
-Residences,Housing Development,Housing Developments,توسعه مسکن,تحولات مسکن
-Residences,Residential Building (Apartment / Condo),Residential Buildings (Apartments / Condos),ساختمان مسکونی (آپارتمان / کاندو),ساختمان های مسکونی (آپارتمان / آپارتمانهای)
-Residences,Trailer Park,Trailer Parks,پارک تریلر,پارک تریلر
-,Shop & Service,Shops & Services,فروشگاه و خدمات,مغازه ها و خدمات
-Shops & Services,ATM,ATMs,دستگاه خودپرداز,دستگاههای خودپرداز
-Shops & Services,Adult Boutique,Adult Boutiques,بوتیک بزرگسالان,بوتیک بزرگسالان
-Shops & Services,Antique Shop,Antique Shops,مغازه عتیقه فروشی,مغازه های عتیقه فروشی
-Shops & Services,Arts & Crafts Store,Arts & Crafts Stores,هنر و صنایع دستی فروشگاه,هنر و صنایع دستی فروشگاه
-Shops & Services,Astrologer,Astrologers,ستاره شناس,ستاره شناسان
-Shops & Services,Auto Garage,Auto Garages,خودرو گاراژ,گاراژ خودرو
-Shops & Services,Auto Workshop,Auto Workshops,کارگاه خودرو,کارگاه های آموزشی خودرو
-Shops & Services,Automotive Shop,Automotive Shops,خودرو فروشگاه,مغازه خودرو
-Shops & Services,Baby Store,Baby Stores,فروشگاه کودک,فروشگاه کودک
-Shops & Services,Bank,Banks,بانک,بانک ها
-Shops & Services,Batik Shop,Batik Shops,طراحی روی پارچه فروشگاه,طراحی روی پارچه مغازه ها
-Shops & Services,Betting Shop,Betting Shops,شرط بندی فروشگاه,شرط بندی مغازه ها
-Shops & Services,Big Box Store,Big Box Stores,بزرگ جعبه فروشگاه,فروشگاه های بزرگ جعبه
-Shops & Services,Bike Shop,Bike Shops,فروشگاه دوچرخه,مغازه های دوچرخه
-Shops & Services,Board Shop,Board Shops,فروشگاه انجمن,مغازه ها هیئت مدیره
-Shops & Services,Bookstore,Bookstores,کتابفروشی,کتاب فروشی ها
-Shops & Services,Bridal Shop,Bridal Shops,فروشگاه لباس عروس,فروشگاههای لباس عروس
-Shops & Services,Business Service,Business Services,خدمات کسب و کار,خدمات شغلی
-Shops & Services,Camera Store,Camera Stores,فروشگاه دوربین,فروشگاه دوربین
-Shops & Services,Candy Store,Candy Stores,مغازه آبنبات فروشی,فروشگاه آب نبات
-Shops & Services,Car Dealership,Car Dealerships,نمایندگی خودرو,نمایندگی های مجاز خودرو
-Shops & Services,Car Wash,Car Washes,کارواش,کارواش
-Shops & Services,Carpet Store,Carpet Stores,فروشگاه فرش,فروشگاه فرش
-Shops & Services,Check Cashing Service,Check Cashing Services,نقد کردن چک خدمات,نقد کردن چک خدمات
-Shops & Services,Chocolate Shop,Chocolate Shops,فروشگاه شکلات,مغازه شکلات
-Shops & Services,Clothing Store,Clothing Stores,فروشگاه پوشاک,فروشگاه های پوشاک
-Clothing Stores,Accessories Store,Accessories Stores,فروشگاه لوازم جانبی,لوازم جانبی فروشگاه
-Clothing Stores,Boutique,Boutiques,بوتیک,بوتیک
-Clothing Stores,Kids Store,Kids Stores,کودکان و نوجوانان فروشگاه,کودکان و نوجوانان فروشگاه
-Clothing Stores,Lingerie Store,Lingerie Stores,فروشگاه لباس زیر زنانه,فروشگاه لباس زیر زنانه
-Clothing Stores,Men's Store,Men's Stores,فروشگاه مردانه,فروشگاه مردانه
-Clothing Stores,Shoe Store,Shoe Stores,کفش فروشی,فروشگاه کفش
-Clothing Stores,Women's Store,Women's Stores,فروشگاه زنانه,فروشگاه زنانه
-Shops & Services,Comic Shop,Comic Shops,فروشگاه کمیک,مغازه ها طنز
-Shops & Services,Construction & Landscaping,Construction & Landscaping,ساخت و ساز و محوطه,ساخت و ساز و محوطه
-Shops & Services,Convenience Store,Convenience Stores,فروشگاه,فروشگاه رفاه
-Shops & Services,Cosmetics Shop,Cosmetics Shops,آرایشی و بهداشتی فروشگاه,مغازه آرایشی و بهداشتی
-Shops & Services,Costume Shop,Costume Shops,صحنه و لباس فروشگاه,مغازه لباس
-Shops & Services,Credit Union,Credit Unions,اتحادیه های اعتباری,اتحادیه های اعتباری
-Shops & Services,Daycare,Daycares,مهد کودک,امانت دادن
-Shops & Services,Department Store,Department Stores,فروشگاه,فروشگاه های
-Shops & Services,Design Studio,Design Studios,استودیوی طراحی,استودیو طراحی
-Shops & Services,Discount Store,Discount Stores,فروشگاه تخفیف,فروشگاه تخفیف
-Shops & Services,Dive Shop,Dive Shops,فروشگاه لوازم غواصی,مغازه ها شیرجه
-Shops & Services,Drugstore / Pharmacy,Drugstores / Pharmacies,داروخانه / داروسازی,داروخانه ها / داروخانه
-Shops & Services,Dry Cleaner,Dry Cleaners,خشکشویی,خشکشویی ها
-Shops & Services,EV Charging Station,EV Charging Stations,EV ایستگاه شارژ,EV ایستگاه های شارژ
-Shops & Services,Electronics Store,Electronics Stores,فروشگاه لوازم الکترونیکی,فروشگاه های قطعات الکترونیکی
-Shops & Services,Entertainment Service,Entertainment Services,خدمات سرگرمی,خدمات سرگرمی
-Shops & Services,Event Service,Event Services,خدمات رویداد,خدمات رویداد
-Shops & Services,Fabric Shop,Fabric Shops,فروشگاه پارچه,مغازه پارچه
-Shops & Services,Film Studio,Film Studios,استودیو فیلم,استودیوهای فیلم
-Shops & Services,Financial or Legal Service,Financial or Legal Services,خدمات مالی و یا حقوقی,خدمات مالی و حقوقی
-Shops & Services,Fireworks Store,Fireworks Stores,آتش بازی فروشگاه,فروشگاه آتش بازی
-Shops & Services,Fishing Store,Fishing Stores,فروشگاه ماهیگیری,فروشگاه ماهیگیری
-Shops & Services,Flea Market,Flea Markets,بازار مخصوص فروش اشیاء ارزان قیمت یا دست دوم,بازار کک
-Shops & Services,Floating Market,Floating Markets,بازار شناور,شناور بازار
-Shops & Services,Flower Shop,Flower Shops,گل فروشی,مغازه های گل
-Shops & Services,Food & Drink Shop,Food & Drink Shops,غذا و نوشیدنی فروشگاه,غذا و نوشیدنی فروشگاه
-Food & Drink Shops,Beer Store,Beer Stores,فروشگاه آبجو,آبجو
-Food & Drink Shops,Butcher,Butchers,قصاب,قصابان
-Food & Drink Shops,Cheese Shop,Cheese Shops,فروشگاه پنیر,مغازه پنیر
-Food & Drink Shops,Farmers Market,Farmers Markets,بازار کشاورزان,بازارهای کشاورزان
-Food & Drink Shops,Fish Market,Fish Markets,ماهی فروشی,بازار ماهی
-Food & Drink Shops,Food Service,Food Services,سرویس غذا,خدمات غذایی
-Food & Drink Shops,Gourmet Shop,Gourmet Shops,لذیذ فروشگاه,مغازه ها لذیذ
-Food & Drink Shops,Grocery Store,Grocery Stores,خواربار فروشی,فروشگاه های مواد غذایی
-Food & Drink Shops,Health Food Store,Health Food Stores,فروشگاه غذاهای سالم,فروشگاه بهداشت مواد غذایی
-Food & Drink Shops,Liquor Store,Liquor Stores,مغازه مشروب فروشی,فروشگاه ها مشروب
-Food & Drink Shops,Organic Grocery,Organic Groceries,مواد غذایی آلی,مواد غذایی آلی
-Food & Drink Shops,Sausage Shop,Sausage Shops,پرس سوسیس سرخ کرده فروشگاه,مغازه ها پرس سوسیس سرخ کرده
-Food & Drink Shops,Street Food Gathering,Street Food Gatherings,خیابان مواد غذایی جمع آوری,خیابان مواد غذایی تجمعات
-Food & Drink Shops,Supermarket,Supermarkets,سوپر مارکت,سوپر مارکت ها
-Food & Drink Shops,Wine Shop,Wine Shops,فروشگاه شراب,مغازه های شراب
-Shops & Services,Frame Store,Frame Stores,فروشگاه قاب,فروشگاه قاب
-Shops & Services,Fruit & Vegetable Store,Fruit & Vegetable Stores,سبزیجات، میوه ها فروشگاه,سبزیجات، میوه ها فروشگاه
-Shops & Services,Furniture / Home Store,Furniture / Home Stores,مبلمان / صفحه اصلی فروشگاه,مبلمان / فروشگاه صفحه اصلی
-Furniture / Home Stores,Lighting Store,Lighting Stores,فروشگاه روشنایی,فروشگاه روشنایی
-Shops & Services,Gaming Cafe,Gaming Cafes,بازی کافه,بازی کافه
-Shops & Services,Garden Center,Garden Centers,مرکز باغ,مراکز باغ
-Shops & Services,Gas Station,Gas Stations,پمپ بنزین,ایستگاه های گاز
-Shops & Services,Gift Shop,Gift Shops,مغازه کادو فروشی,مغازه ها هدیه
-Shops & Services,Gun Shop,Gun Shops,تفنگ فروشگاه,تفنگ مغازه ها
-Shops & Services,Hardware Store,Hardware Stores,فروشگاه سخت افزار,فروشگاه سخت افزار
-Shops & Services,Health & Beauty Service,Health & Beauty Services,لوازم بهداشتی و آرایشی خدمات,لوازم بهداشتی و آرایشی خدمات
-Shops & Services,Herbs & Spices Store,Herbs & Spices Stores,گیاهان داروئی و ادویه جات ترشی جات فروشگاه,گیاهان داروئی و ادویه جات ترشی جات فروشگاه
-Shops & Services,Hobby Shop,Hobby Shops,فروشگاه های لوازم سرگرمی,مغازه ها سرگرمی
-Shops & Services,Home Service,Home Services & Repairs,خدمات صفحه اصلی,صفحه اصلی خدمات و تعمیرات
-Shops & Services,Hunting Supply,Hunting Supplies,شکار تامین,شکار تامین
-Shops & Services,IT Services,IT Services,خدمات IT,خدمات IT
-Shops & Services,Internet Cafe,Internet Cafes,کافی نت,کافه های اینترنتی
-Shops & Services,Jewelry Store,Jewelry Stores,جواهر فروشی,فروشگاه طلا و جواهر
-Shops & Services,Knitting Store,Knitting Stores,فروشگاه بافندگی,فروشگاه بافندگی
-Shops & Services,Laundromat,Laundromats,ماشین لباسشویی خود کار,لباسشویی
-Shops & Services,Laundry Service,Laundry Services,سرویش خشک شویی,خدمات لباس های شسته شده
-Shops & Services,Lawyer,Lawyers,وکیل,وکلا
-Shops & Services,Leather Goods Store,Leather Goods Stores,فروشگاه کالاهای چرمی,چرم محصولات فروشگاه
-Shops & Services,Locksmith,Locksmiths,قفل ساز,کلیدسازی
-Shops & Services,Lottery Retailer,Lottery Retailers,خرده فروش قرعه کشی,خرده فروشان قرعه کشی
-Shops & Services,Luggage Store,Luggage Stores,چمدان فروشگاه,فروشگاه چمدان
-Shops & Services,Marijuana Dispensary,Marijuana Dispensaries,ماری جوانا داروخانه,درمانگاه ماری جوانا
-Shops & Services,Market,Markets,بازار,بازار
-Shops & Services,Massage Studio,Massage Studios,استودیو ماساژ,استودیو ماساژ
-Shops & Services,Mattress Store,Mattress Stores,فروشگاه تشک,فروشگاه های تشک
-Shops & Services,Miscellaneous Shop,Miscellaneous Shops,فروشگاه دیگر,مغازه ها دیگر
-Shops & Services,Mobile Phone Shop,Mobile Phone Shops,فروشگاه تلفن همراه,فروشگاه موبایل تلفن
-Shops & Services,Mobility Store,Mobility Stores,فروشگاه تحرک,فروشگاه تحرک
-Shops & Services,Motorcycle Shop,Motorcycle Shops,فروشگاه موتور سیکلت,فروش موتورسیکلت
-Shops & Services,Music Store,Music Stores,فروشگاه موسیقی,فروشگاه های موسیقی
-Shops & Services,Nail Salon,Nail Salons,سالن ناخن,سالن ناخن
-Shops & Services,Newsstand,Newsstands,دکه روزنامه فروشی,دکه های روزنامه فروشی
-Shops & Services,Optical Shop,Optical Shops,فروشگاه نوری,مغازه نوری
-Shops & Services,Other Repair Shop,Other Repair Shops,دیگر تعمیرگاه,دیگر تعمیرگاه
-Shops & Services,Outdoor Supply Store,Outdoor Supply Stores,در فضای باز فروشگاه عرضه,در فضای باز تامین فروشگاه
-Shops & Services,Outlet Store,Outlet Stores,فروشگاه خروجی,فروشگاه های خروجی
-Shops & Services,Paper / Office Supplies Store,Paper / Office Supplies Stores,مقاله / بانکها و ادارات فروشگاه,لوازم کاغذ / دفتر فروشگاه
-Shops & Services,Pawn Shop,Pawn Shops,پیاده فروشگاه,گروفروشی
-Shops & Services,Perfume Shop,Perfume Shops,عطر خرید,مغازه عطر
-Shops & Services,Pet Service,Pet Services,خدمات حیوان خانگی,خدمات Pet
-Shops & Services,Pet Store,Pet Stores,فروشگاه حیوان خانگی,فروشگاه های حیوانات خانگی
-Shops & Services,Photography Lab,Photography Labs,آزمایشگاه عکاسی,آزمایشگاه عکاسی
-Shops & Services,Photography Studio,Photography Studios,استودیو عکاسی,استودیو عکاسی
-Shops & Services,Piercing Parlor,Piercing Parlors,پر سر و صدا سالن,پر سر و صدا اتاقهای پذیرایی
-Shops & Services,Pop-Up Shop,Pop-Up Shops,پاپ آپ فروشگاه,POP-UP مغازه ها
-Shops & Services,Print Shop,Print Shops,فروشگاه چاپ,چاپخانه
-Shops & Services,Real Estate Office,Real Estate Offices,دفتر املاک و مستغلات,دفاتر املاک و مستغلات
-Shops & Services,Record Shop,Record Shops,ضبط فروشگاه,مغازه ضبط
-Shops & Services,Recording Studio,Recording Studios,استودیوی ضبط,استودیو ضبط
-Shops & Services,Recycling Facility,Recycling Facilities,مرکز بازیافت,امکانات بازیافت
-Shops & Services,Rental Service,Rental Services,خدمات اجاره,خدمات اجاره
-Shops & Services,Salon / Barbershop,Salons / Barbershops,سالن / آرایشگاه,سالن / آرایشگاه
-Shops & Services,Shipping Store,Shipping Stores,فروشگاه حمل و نقل,فروشگاه حمل و نقل
-Shops & Services,Shoe Repair,Shoe Repair Shops,تعمیر کفش,مغازه تعمیرات کفش
+Schools,Middle School,Middle Schools,راهنمایی,مدارس راهنمایی
+Shops & Services,Shipping Store,Shipping Stores,حمل و نقل,حمل و نقل
+Shops & Services,Shoe Repair,Shoe Repair Shops,تعمیر کفش,مغازه های تعمیرات کفش
 Shops & Services,Shopping Mall,Shopping Malls,مرکز خرید,مراکز خرید
-Shops & Services,Ski Shop,Ski Shops,فروشگاه اسکی,مغازه ها اسکی
-Shops & Services,Smoke Shop,Smoke Shops,دود فروشگاه,مغازه ها دود
-Shops & Services,Smoothie Shop,Smoothie Shops,اسموتی فروشگاه,مغازه ها اسموتی
+Shops & Services,Ski Shop,Ski Shops,فروشگاه اسکی,مغازه های اسکی
 Shops & Services,Souvenir Shop,Souvenir Shops,فروشگاه سوغاتی,مغازه های سوغات
-Shops & Services,Spa,Spas,آبگرم,چشمه های معدنی
-Shops & Services,Sporting Goods Shop,Sporting Goods Shops,فروشگاه کالاهای ورزشی,لوازم ورزشی فروشگاه
-Shops & Services,Stationery Store,Stationery Stores,فروشگاه لوازم التحریر,فروشگاه لوازم التحریر
+Shops & Services,Spa,Spas,سالن ماساژ,سالن های ماساژ
+Shops & Services,Sporting Goods Shop,Sporting Goods Shops,فروشگاه کالاهای ورزشی,فروشگاه های کالاهای ورزشی
+Shops & Services,Stationery Store,Stationery Stores,فروشگاه لوازم التحریر,فروشگاه های لوازم التحریر
 Shops & Services,Storage Facility,Storage Facilities,تجهیزات ذخیره سازی,تجهیزات ذخیره سازی
-Shops & Services,Tailor Shop,Tailor Shops,فروشگاه خیاط,مغازه خیاط
+Shops & Services,Tailor Shop,Tailor Shops,فروشگاه خیاط,مغازه های خیاطی
 Shops & Services,Tanning Salon,Tanning Salons,سالن برنزه,سالن های برنزه
-Shops & Services,Tattoo Parlor,Tattoo Parlors,تاتو سالن,سرو خال کوبی
-Shops & Services,Thrift / Vintage Store,Thrift / Vintage Stores,صرفه جویی / فروشگاه گفتگوی,صرفه جویی / فروشگاه گفتگوی
+Shops & Services,Tattoo Parlor,Tattoo Parlors,سالن تاتو,سالنهای تاتو
 Shops & Services,Toy / Game Store,Toy / Game Stores,اسباب بازی / فروشگاه بازی,اسباب بازی / فروشگاه بازی
 Shops & Services,Travel Agency,Travel Agencies,آژانس مسافرتی,آژانس های مسافرتی
-Shops & Services,Used Bookstore,Used Bookstores,مورد استفاده کتابفروشی,کتاب فروشی های مورد استفاده
-Shops & Services,Vape Store,Vape Stores,به Vape فروشگاه,فروشگاه به Vape
-Shops & Services,Video Game Store,Video Game Stores,فروشگاه بازیهای ویدئویی,فروشگاه بازی های ویدئویی
+Shops & Services,Used Bookstore,Used Bookstores,فروش کتاب دست دوم,فروشگاههای کتاب دست دوم
+Shops & Services,Video Game Store,Video Game Stores,فروشگاه بازیهای ویدئویی,فروشگاه های بازی های ویدئویی
 Shops & Services,Video Store,Video Stores,فروشگاه ویدئو,فروشگاه های ویدیو
-Shops & Services,Warehouse Store,Warehouse Stores,فروشگاه انبار,فروشگاه انبار
-Shops & Services,Watch Shop,Watch Shops,سازمان دیده بان فروشگاه,مغازه ها ساعت
-,Travel & Transport,Travel & Transport,سفر و حمل و نقل,سفر و حمل و نقل
-Travel & Transport,Airport,Airports,فرودگاه,فرودگاه
-Airports,Airport Food Court,Airport Food Courts,دادگاه مواد غذایی فرودگاه,فرودگاه دادگاه های مواد غذایی
-Airports,Airport Gate,Airport Gates,گیت فرودگاه,فرودگاه گیتس
-Airports,Airport Lounge,Airport Lounges,فرودگاه ها,فرودگاه اتاقهای
-Airports,Airport Service,Airport Services,خدمات فرودگاه,خدمات فرودگاه
-Airports,Airport Terminal,Airport Terminals,ترمینال فرودگاه,ترمینال های فرودگاه
-Airports,Airport Tram,Airport Trams,فرودگاه تراموا,تراموا فرودگاه
-Airports,Plane,Planes,سطح,هواپیماها
-Travel & Transport,Bike Rental / Bike Share,Bike Rentals / Bike Shares,دوچرخه اجاره / دوچرخه اشتراک گذاری,سهام اجاره دوچرخه / دوچرخه
-Travel & Transport,Boat or Ferry,Boats or Ferries,قایق یا کشتی,قایق یا کشتی
-Travel & Transport,Border Crossing,Border Crossings,عبور از مرز,گذرگاه های مرزی
-Travel & Transport,Bus Station,Bus Stations,ایستگاه اتوبوس,ایستگاه های اتوبوس
-Bus Stations,Bus Line,Bus Lines,خط اتوبوس,خطوط اتوبوس
+Shops & Services,Watch Shop,Watch Shops,ساعت فروشی,ساعت فروشی ها
+Shops & Services,Smoke Shop,Smoke Shops,سیگار فروشی,سیگار فروشی
+Shops & Services,Fair,Fairs,نمایشگاه,نمایشگاه ها
+Shops & Services,Camera Store,Camera Stores,فروشگاه دوربین,فروشگاه های دوربین
+Shops & Services,Candy Store,Candy Stores,مغازه شکلات فروشی,شکلات فروشی ها
+Shops & Services,Car Dealership,Car Dealerships,نمایندگی خودرو,نمایندگی های مجاز خودرو
+Shops & Services,Car Wash,Car Washes,کارواش,کارواشها
+Shops & Services,Carpet Store,Carpet Stores,فروشگاه فرش,فرش فروشی ها
+Shops & Services,Chocolate Shop,Chocolate Shops,فروشگاه شکلات,مغازه های شکلات
+Shops & Services,Clothing Store,Clothing Stores,فروشگاه پوشاک,فروشگاه های پوشاک
+Shops & Services,Construction & Landscaping,Construction & Landscaping,ساخت و ساز و محوطه,ساخت و ساز و محوطه
+Shops & Services,Cosmetics Shop,Cosmetics Shops,مغازه آرایشی و بهداشتی,مغازه های آرایشی و بهداشتی
+Shops & Services,Daycare,Daycares,مهد کودک,مهد کودکها
+Shops & Services,Department Store,Department Stores,فروشگاه بزرگ,فروشگاه های بزرگ
+Shops & Services,Design Studio,Design Studios,استودیوی طراحی,استودیوهای طراحی
+Shops & Services,Dive Shop,Dive Shops,فروشگاه لوازم غواصی,فروشگاه های لوازم غواصی
+Shops & Services,Drugstore / Pharmacy,Drugstores / Pharmacies,داروخانه / داروسازی,داروخانه ها
+Shops & Services,Dry Cleaner,Dry Cleaners,خشکشویی / نظافت,خشکشویی ها
+Shops & Services,Electronics Store,Electronics Stores,فروشگاه لوازم الکترونیکی,فروشگاه های قطعات الکترونیکی
+Shops & Services,Fabric Shop,Fabric Shops,فروشگاه پارچه,مغازه های پارچه
+Shops & Services,Film Studio,Film Studios,استودیو فیلم,استودیوهای فیلم
+Shops & Services,Fishing Store,Fishing Stores,فروشگاه ماهیگیری,فروشگاه های ماهیگیری
+Shops & Services,Flower Shop,Flower Shops,گل فروشی,گل فروشی ها
+Shops & Services,Food & Drink Shop,Food & Drink Shops,فروشگاه غذا و نوشیدنی,فروشگاه های غذا و نوشیدنی
+Shops & Services,Frame Store,Frame Stores,فروشگاه قاب,فروشگاه های قاب
+Shops & Services,Fruit & Vegetable Store,Fruit & Vegetable Stores,فروشگاه سبزیجات، میوه ها,فروشگاه های سبزیجات، میوه ها
+Shops & Services,Furniture / Home Store,Furniture / Home Stores,فروشگاه مبلمان / خانه,فروشگاه های مبلمان / خانه
+Shops & Services,Gaming Cafe,Gaming Cafes,کافه بازی,کافه های بازی
+Shops & Services,Gas Station,Gas Stations,پمپ بنزین,ایستگاه های گاز
+Shops & Services,Gift Shop,Gift Shops,مغازه کادو فروشی,مغازه ها هدیه فروشی
+Shops & Services,Gun Shop,Gun Shops,فروشگاه تفنگ,فروشگاه های تفنگ
+Shops & Services,Hardware Store,Hardware Stores,فروشگاه سخت افزار,فروشگاه های سخت افزار
+Shops & Services,Health & Beauty Service,Health & Beauty Services,خدمات لوازم بهداشتی و آرایشی,خدمات لوازم بهداشتی و آرایشی
+Shops & Services,Herbs & Spices Store,Herbs & Spices Stores,عطاری,عطاری ها
+Shops & Services,Home Service,Home Services & Repairs,خدمات تعمیر خانه,خدمات تعمیر خانه
+Shops & Services,Hunting Supply,Hunting Supplies,وسایل شکار,وسایل شکار
+Shops & Services,IT Services,IT Services,خدمات IT,خدمات IT
+Shops & Services,Internet Cafe,Internet Cafes,کافی نت,کافه های اینترنتی
+Shops & Services,Jewelry Store,Jewelry Stores,جواهر فروشی,فروشگاه های طلا و جواهر
+Shops & Services,Knitting Store,Knitting Stores,فروشگاه بافندگی,فروشگاه های بافندگی
+Shops & Services,Laundry Service,Laundry Services,سرویس خشک شویی,سرویس خشک شویی
+Shops & Services,Lawyer,Lawyers,وکیل,وکلا
+Shops & Services,Leather Goods Store,Leather Goods Stores,فروشگاه کالاهای چرمی,فروشگاه های کالاهای چرمی
+Shops & Services,Locksmith,Locksmiths,قفل ساز,کلیدسازیها
+Shops & Services,Luggage Store,Luggage Stores,فروشگاه چمدان,فروشگاه های چمدان
+Shops & Services,Market,Markets,بازار,بازارها
+Shops & Services,Massage Studio,Massage Studios,استودیو ماساژ,استودیو های ماساژ
+Shops & Services,Mattress Store,Mattress Stores,فروشگاه تشک,فروشگاه های تشک
+Shops & Services,Miscellaneous Shop,Miscellaneous Shops,سایر فروشگاه ها,سایر فروشگاه ها
+Shops & Services,Mobile Phone Shop,Mobile Phone Shops,فروشگاه تلفن همراه,فروشگاه های تلفن همراه
+Shops & Services,Motorcycle Shop,Motorcycle Shops,فروشگاه موتور سیکلت,فروشگاه های موتورسیکلت
+Shops & Services,Music Store,Music Stores,فروشگاه موسیقی,فروشگاه های موسیقی
+Shops & Services,Nail Salon,Nail Salons,سالن ناخن,سالنهای ناخن
+Shops & Services,Newsstand,Newsstands,دکه روزنامه فروشی,دکه های روزنامه فروشی
+Shops & Services,Optical Shop,Optical Shops,فروشگاه عینک,عینک فروشی ها
+Shops & Services,Outlet Store,Outlet Stores,فروشگاه حراجی,فروشگاه های حراجی
+Shops & Services,Paper / Office Supplies Store,Paper / Office Supplies Stores,فروشگاه لوازم کاغذ / دفتر,فروشگاه های لوازم کاغذ / دفتر
+Shops & Services,Perfume Shop,Perfume Shops,مغازه عطر,مغازه های عطر
+Shops & Services,Pet Service,Pet Services,خدمات حیوان خانگی,خدمات حیوان خانگی
+Shops & Services,Pet Store,Pet Stores,فروشگاه حیوان خانگی,فروشگاه های حیوانات خانگی
+Shops & Services,Photography Lab,Photography Labs,لابراتوار عکاسی,لابراتوارهای عکاسی
+Shops & Services,Photography Studio,Photography Studios,استودیو عکاسی,استودیو های عکاسی
+Shops & Services,Print Shop,Print Shops,چاپ,چاپخانه ها
+Shops & Services,Real Estate Office,Real Estate Offices,دفتر املاک و مستغلات,دفاتر املاک و مستغلات
+Shops & Services,Recording Studio,Recording Studios,استودیوی ضبط,استودیو های ضبط
+Shops & Services,Recycling Facility,Recycling Facilities,مرکز بازیافت,مراکز بازیافت
+Shops & Services,Salon / Barbershop,Salons / Barbershops,سالن / آرایشگاه,سالن / آرایشگاه
+Shops & Services,Animal Shelter,Animal Shelters,پناهگاه حیوانات,پناهگاه های حیوانات
+Shops & Services,Auditorium,Auditoriums,سالن کنفرانس,سالنهای کنفرانس
+Shops & Services,Ballroom,Ballrooms,سالن رقص,سالنهای رقص
+Shops & Services,Building,Buildings,ساختمان,ساختمانها
+Shops & Services,Business Center,Business Centers,مرکز تجاری,مراکز کسب و کار
+Shops & Services,Cultural Center,Cultural Centers,مرکز فرهنگی,مراکز فرهنگی
+Shops & Services,Distribution Center,Distribution Centers,مرکز توزیع,مراکز توزیع
+Shops & Services,Factory,Factories,کارخانه,کارخانه ها
+Shops & Services,Government Building,Government Buildings,ساختمان دولتی,ساختمان های دولتی
+Shops & Services,Industrial Estate,Industrial Estates,شهرک صنعتی,شهرکهای صنعتی
+Shops & Services,Library,Libraries,کتابخانه,کتابخانه ها
+Shops & Services,Medical Center,Medical Centers,مرکز پزشکی,مراکز درمانی
+Shops & Services,Military Base,Military Bases,پایگاه نظامی,پایگاه های نظامی
+Shops & Services,Advertising Agency,Advertising Agencies,آژانس تبلیغاتی,آژانس های تبلیغاتی
+Shops & Services,Campaign Office,Campaign Offices,دفتر مبارزات انتخاباتی,دفاتر کمپین
+Shops & Services,Parking,Parkings,پارکینگ,پارکینگها
+Shops & Services,Post Office,Post Offices,اداره پست,دفاتر پست
+Shops & Services,Prison,Prisons,زندان,زندانها
+Shops & Services,Radio Station,Radio Stations,ایستگاه رادیویی,ایستگاه های رادیویی
+Shops & Services,Church,Churches,کلیسا,کلیساها
+Shops & Services,Monastery,Monasteries,صومعه,صومعه ها
+Shops & Services,Mosque,Mosques,مسجد,مساجد
+Shops & Services,Prayer Room,Prayer Rooms,نمازخانه,نمازخانه ها
+Shops & Services,Shrine,Shrines,زیارتگاه,زیارتگاه ها
+Shops & Services,TV Station,TV Stations,ایستگاه تلویزیونی,ایستگاه های تلویزیون
+Shops & Services,Warehouse,Warehouses,انبار,ساختمان و ذخیره سازی
+Shops & Services,Wedding Hall,Wedding Halls,سالن عروسی,سالن های عروسی
+Shops & Services,ATM,ATMs,دستگاه خودپرداز,دستگاههای خودپرداز
+Shops & Services,Adult Boutique,Adult Boutiques,بوتیک بزرگسالان,بوتیک های بزرگسالان
+Shops & Services,Antique Shop,Antique Shops,مغازه عتیقه فروشی,مغازه های عتیقه فروشی
+Shops & Services,Arts & Crafts Store,Arts & Crafts Stores,هنر و صنایع دستی فروشگاه,هنر و صنایع دستی فروشگاهها
+Shops & Services,Astrologer,Astrologers,ستاره شناس,ستاره شناسان
+Shops & Services,Auto Garage,Auto Garages,تعمیرگاه خودرو,تعمیرگاه خودرو
+Shops & Services,Automotive Shop,Automotive Shops,نمایشگاه خودرو,نمایشگاه خودرو
+Shops & Services,Baby Store,Baby Stores,فروشگاه کودک,فروشگاه های کودک
+Shops & Services,Bank,Banks,بانک,بانک ها
+Shops & Services,Bike Shop,Bike Shops,فروشگاه دوچرخه,دوچرخه فروشی ها
+Shops & Services,Bookstore,Bookstores,کتابفروشی,کتاب فروشی ها
+Shops & Services,Bridal Shop,Bridal Shops,فروشگاه لباس عروس,فروشگاههای لباس عروس
+Ski Areas,Ski Chairlift,Ski Chairlifts,تله کابین اسکی,تله کابینهای اسکی
+Sports Clubs,Yoga Studio,Yoga Studios,استودیو یوگا,استودیوهای یوگا
+Sports Clubs,Track,Tracks,زمین دو,زمینهای دو
+Sports Clubs,Martial Arts Dojo,Martial Arts Dojos,مرکز هنرهای رزمی,مراکز هنرهای رزمی
+Sports Clubs,Gym,Gyms,سالن ورزش,سالن های ورزشی
+Sports Clubs,Gymnastics Gym,Gymnastics Gyms,باشگاه ژیمناستیک,باشگاههای ژیمناستیک
+Sports Clubs,Climbing Gym,Climbing Gyms,باشگاه کوهنوردی,باشگاههای کوهنوردی
+Sports Clubs,Boxing Gym,Boxing Gyms,سالن بوکس,سالنهای بوکس
+Stadiums,Tennis Stadium,Track Stadiums,ورزشگاه دو و میدانی,ورزشگاه های دو و میدانی
+Stadiums,Tennis Stadium,Tennis Stadiums,استادیوم تنیس,استادیوم های تنیس
+Stadiums,Soccer Stadium,Soccer Stadiums,ورزشگاه فوتبال,استادیوم های فوتبال
+Stadiums,Rugby Stadium,Rugby Stadiums,ورزشگاه راگبی,ورزشگاه های راگبی
+Stadiums,Football Stadium,Football Stadiums,استادیوم فوتبال آمریکایی,استادیومهای فوتبال آمریکایی
+Stadiums,Cricket Ground,Cricket Grounds,زمین کریکت,زمینهای کریکت
+Stadiums,Baseball Stadium,Baseball Stadiums,ورزشگاه بیس بال,استادیوم های بیسبال
+Stadiums,Basketball Stadium,Basketball Stadiums,ورزشگاه بسکتبال,استادیوم های بسکتبال
+States & Municipalities,City,Cities,شهرستان,شهرستانها
+States & Municipalities,Country,Countries,کشور,کشورها
+States & Municipalities,Neighborhood,Neighborhoods,محله,محله ها
+States & Municipalities,State,States,استان,استان ها
+States & Municipalities,Town,Towns,شهر,شهرها
+States & Municipalities,Village,Villages,دهکده,روستاها
+Travel & Transport,Airport,Airports,فرودگاه,فرودگاه ها
 Travel & Transport,Bus Stop,Bus Stops,ایستگاه اتوبوس,ایستگاه های اتوبوس
-Travel & Transport,Cable Car,Cable Cars,ماشین کابل,اتومبیل کابل
-Travel & Transport,Cruise,Cruises,کشتی تفریحی,گشت
-Travel & Transport,General Travel,General Travel,عمومی سفر,عمومی سفر
-Travel & Transport,Heliport,Heliports,فرودگاه هلیکوپتر,هلبرتس
+Travel & Transport,Residence,Residences,محل اقامت,اقامت گاه ها
+Travel & Transport,Cruise,Cruises,سفر دریایی,سفرهای دریایی
+Travel & Transport,General Travel,General Travel,سفر,خدمات عمومی سفر
 Travel & Transport,Hotel,Hotels,هتل,هتل ها
-Hotels,Bed & Breakfast,Bed & Breakfasts,تختخواب و صبحانه,تختخواب و صبحانه
-Hotels,Boarding House,Boarding Houses,شبانه روزی خانه,خانه های شبانه روزی
-Hotels,Hostel,Hostels,هتل,خوابگاه
-Hotels,Hotel Pool,Hotel Pools,هتل استخر,هتل استخر
-Hotels,Motel,Motels,متل,متل
-Hotels,Resort,Resorts,رفت و آمد مکرر,استراحتگاه
-Hotels,Roof Deck,Roof Decks,سقف عرشه,عرشه سقف
-Hotels,Vacation Rental,Vacation Rentals,اجاره تعطیلات,اجاره تعطیلات
-Travel & Transport,Intersection,Intersections,تقاطع,تقاطع
-Travel & Transport,Light Rail Station,Light Rail Stations,ایستگاه راه آهن نور,نور ایستگاه های راه آهن
 Travel & Transport,Metro Station,Metro Stations,ایستگاه مترو,ایستگاه های مترو
-Travel & Transport,Moving Target,Moving Targets,هدف حرکت,هدف متحرک
-Travel & Transport,Pier,Piers,اسکله,فرود هواپیما
+Travel & Transport,Pier,Piers,اسکله,اسکله ها
 Travel & Transport,Port,Ports,بندر,بنادر
-Travel & Transport,RV Park,RV Parks,RV پارک,RV پارک
-Travel & Transport,Rental Car Location,Rental Car Locations,اجاره خودرو محل سکونت,محل اجاره اتومبیل
+Travel & Transport,Rental Car Location,Rental Car Locations,محل اجاره اتومبیل,محلهای اجاره اتومبیل
 Travel & Transport,Rest Area,Rest Areas,محل استراحت,محل های استراحت
 Travel & Transport,Road,Roads,جاده,جاده ها
-Travel & Transport,Street,Streets,خیابان,خیابان
-Travel & Transport,Taxi Stand,Taxi Stands,ایستگاه تاکسی,غرفه تاکسی
-Travel & Transport,Taxi,Taxis,تاکسی,تاکسی
-Travel & Transport,Toll Booth,Toll Booths,غرفه تلفات,غرفه تلفات
-Travel & Transport,Toll Plaza,Toll Plazas,تلفن پلازا,plazas تلفن
+Travel & Transport,Street,Streets,خیابان,خیابانها
+Travel & Transport,Taxi Stand,Taxi Stands,ایستگاه تاکسی,ایستگاه تاکسی
+Travel & Transport,Taxi,Taxis,تاکسی,تاکسیها
 Travel & Transport,Tourist Information Center,Tourist Information Centers,مرکز اطلاعات گردشگری,مراکز اطلاعات توریستی
 Travel & Transport,Train Station,Train Stations,ایستگاه قطار,ایستگاه های قطار
-Train Stations,Platform,Platforms,سکو,سیستم عامل
-Train Stations,Train,Trains,قطار,قطار
-Travel & Transport,Tram Station,Tram Stations,ایستگاه تراموای,ایستگاه تراموا
-Travel & Transport,Transportation Service,Transportation Services,خدمات حمل و نقل,خدمات حمل و نقل
-Travel & Transport,Travel Lounge,Travel Lounges,سفر ها,سفر اتاقهای
-Travel & Transport,Tunnel,Tunnels,تونل,تونل
+Travel & Transport,Transportation Service,Transportation Services,خدمت حمل و نقل,خدمات حمل و نقل
+Turkish Restaurants,Kebab Restaurant,Kebab Restaurants,کبابی,کبابی ها
+Turkish Restaurants,Doner Restaurant,Doner Restaurants,دونر فروشی,دونر فروشی
