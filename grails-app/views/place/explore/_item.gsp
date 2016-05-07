@@ -11,7 +11,7 @@
             <place:aggregateRatingFlag place="${place}"/>
 
             <div class="contactInfo">
-                <g:if test="${place?.phone}">
+                <g:if test="${place?.address}">
                     <div class="address">
                         ${place?.address}
                     </div>

@@ -12,7 +12,7 @@ Country Dance Club,arts_entertainment/performingarts_dancestudio_
 Disc Golf,arts_entertainment/default_
 Exhibit,arts_entertainment/default_
 General Entertainment,arts_entertainment/default_
-Go Kart Track,arts_entertainment/racetrack_
+karting,arts_entertainment/racetrack_
 Historic Site,arts_entertainment/historicsite_
 Laser Tag,arts_entertainment/default_
 Memorial Site,arts_entertainment/historicsite_
@@ -114,6 +114,7 @@ Afghan Restaurant,food/afghan_
 African Restaurant,food/african_
 Ethiopian Restaurant,food/ethiopian_
 American Restaurant,food/default_
+Foriegn Restaurant,food/default_
 New American Restaurant,food/newamerican_
 Asian Restaurant,food/asian_
 Burmese Restaurant,food/asian_
@@ -224,7 +225,8 @@ Bubble Tea Shop,food/bubble_
 Buffet,food/default_
 Burger Joint,food/burger_
 Cafeteria,education/cafeteria_
-Café,food/cafe_
+CafÃ©,food/cafe_
+Iranian Cafe,food/cafe_
 Cajun / Creole Restaurant,food/cajun_
 Caribbean Restaurant,food/caribbean_
 Caucasian Restaurant,food/caucasian_
@@ -365,7 +367,7 @@ Persian Restaurant,food/middleeastern_
 Modern European Restaurant,food/default_
 Molecular Gastronomy Restaurant,food/moleculargastronomy_
 Pakistani Restaurant,food/default_
-Pet Café,parks_outdoors/dogrun_
+Pet Cafï¿½,parks_outdoors/dogrun_
 Pizza Place,food/pizza_
 Polish Restaurant,food/default_
 Portuguese Restaurant,food/portuguese_
@@ -401,7 +403,7 @@ Doner Restaurant,food/turkish_
 Gozleme Place,food/turkish_
 Kebab Restaurant,food/middleeastern_
 Kofte Place,food/turkish_
-Kokoreç Restaurant,food/turkish_
+Kokoreï¿½ Restaurant,food/turkish_
 Kumpir Restaurant,food/turkish_
 Kumru Restaurant,food/turkish_
 Manti Place,food/turkish_

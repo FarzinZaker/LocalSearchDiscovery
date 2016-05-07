@@ -36,7 +36,7 @@ class CategoryService {
             category.name = line[3].trim()
             category.pluralName = line[4].trim()
             category.englishPluralName = line[2].trim()
-            category.parent = Category.findByEnglishPluralName(line[0].trim())?:Category.findByEnglishName(line[0].trim())
+            category.parent = Category.findByEnglishPluralName(line[0].trim()) ?: Category.findByEnglishName(line[0].trim())
             category.save(flush: true)
         }
     }
@@ -46,7 +46,7 @@ class CategoryService {
         lines.each {
             def line = it.split(',')
             def englishName = line[0].trim()
-            def category = Category.findByEnglishName(englishName)
+            def category = Category.findByEnglishName(englishName) ?: Category.findByEnglishPluralName(englishName)
             if (category) {
                 category.iconPath = line[1].trim()
                 category.save(flush: true)
