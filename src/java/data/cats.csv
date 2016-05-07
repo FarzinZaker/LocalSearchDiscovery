@@ -84,16 +84,16 @@ Colleges & Universities,Medical School,Medical Schools,دانشکده پزشکی
 Colleges & Universities,Student Center,Student Centers,مرکز دانشجویی,مراکز دانشجویی
 Colleges & Universities,Trade School,Trade Schools,مدرسه تجارت,مدارس تجارت
 Colleges & Universities,University,Universities,دانشگاه,دانشگاه ها
-Colleges & Universities,School,Schools,مدرسه,مدارس
+Colleges & Universities,School,Schools,مدرسه / آموزشگاه,مدارس / آموزشگاه ها
 Colleges & Universities,College Classroom,College Classrooms,کلاس دانشگاه,کلاس های دانشگاه
 Colleges & Universities,College Cafeteria,College Cafeterias,غذاخوری دانشگاه,غذاخوریهای دانشگاه
 Colleges & Universities,College Bookstore,College Bookstores,کتابفروشی دانشگاه,کتاب فروشیهای دانشگاه
 Colleges & Universities,College Auditorium,College Auditoriums,سالن اجتماعات دانشگاه,سالن های اجتماعات دانشگاه
-Colleges & Universities,College Administrative Building,College Administrative Buildings,دانشکده اداری,دانشکده های اداری
+Colleges & Universities,College Administrative Building,College Administrative Buildings,ساختمان اداری دانشگاه,ساختمانهای اداری دانشگاه
 Colleges & Universities,College Academic Building,College Academic Buildings,ساختمان دانشکده,ساختمان دانشکده ها
 Colleges & Universities,College Theater,College Theaters,تئاتر دانشگاه,تئاتر های دانشگاه
 Colleges & Universities,College Stadium,College Stadiums,ورزشگاه دانشگاه,استادیوم های دانشگاه
-Colleges & Universities,College Residence Hall,College Residence Halls,تالار اقامت دانشگاه,تالارهای اقامت دانشگاه
+Colleges & Universities,College Residence Hall,College Residence Halls,اقامتگاه دانشگاه,اقامتگاه های دانشگاه
 Colleges & Universities,College Rec Center,College Rec Centers,مرکز ضبط دانشگاه,مراکز ضبط دانشگاه
 Colleges & Universities,College Quad,College Quads,حیاط دانشگاه,حیاط های دانشگاه
 Colleges & Universities,College Gym,College Gyms,باشگاه دانشگاه,باشگاه های دانشگاه
@@ -142,7 +142,7 @@ Foods,Juice Bar,Juice Bars,آبمیوه فروشی,آبمیوه فروشیها
 Foods,Latin American Restaurant,Latin American Restaurants,رستوران آمریکای لاتین,رستورانهای آمریکای لاتین
 Foods,Mexican Restaurant,Mexican Restaurants,رستوران مکزیکی,رستوران های مکزیکی
 Foods,Persian Restaurant,Persian Restaurants,رستوران ایرانی,رستورانهای ایرانی
-Foods,Pizza Place,Pizza Places,پیتزافروشی,پیتزا فروشیها
+Foods,Pizza Place,Pizza Places,پیتزا فروشی,پیتزا فروشیها
 Foods,Restaurant,Restaurants,رستوران,رستوران ها
 Foods,Salad Place,Salad Places,سالاد بار,سالاد بارها
 Foods,Sandwich Place,Sandwich Places,ساندویچ فروشی,ساندویچ فروشیها
@@ -152,8 +152,8 @@ Foods,Tea Room,Tea Rooms,چای خانه,چای خانه ها
 Foods,Turkish Restaurant,Turkish Restaurants,رستوران ترکی,رستورانهای ترکی
 Foods,Vegetarian / Vegan Restaurant,Vegetarian / Vegan Restaurants,رستوران گیاهی,رستورانهای گیاهی
 Foods,Hookah Bar,Hookah Bars,قلیان,قلیان
-Furniture / Home Stores,Lighting Store,Lighting Stores,فروشگاه روشنایی,فروشگاه های روشنایی
-Government Buildings,Police Station,Police Stations,ایستگاه پلیس,ایستگاه های پلیس
+Furniture / Home Stores,Lighting Store,Lighting Stores,فروشگاه روشنایی / لوستر,فروشگاه های روشنایی / لوستر
+Government Buildings,Police Station,Police Stations,پلیس,پلیس
 Government Buildings,Monument / Landmark,Monuments / Landmarks,بنای تاریخی,بناهای تاریخی
 Government Buildings,Fire Station,Fire Stations,ایستگاه آتشنشانی,ایستگاه های آتش نشانی
 Government Buildings,Embassy / Consulate,Embassies / Consulates,سفارت / کنسولگری,سفارتخانه ها / کنسولگریها
@@ -171,7 +171,7 @@ Medical Centers,Eye Doctor,Eye Doctors,چشم پزشک,چشم پزشکان
 Medical Centers,Chiropractor,Chiropractors,فیزیوتراپ,کایروپراکتیک
 Medical Centers,Acupuncturist,Acupuncturists,طب سوزنی,متخصصان طب سوزنی
 Medical Centers,Hospital,Hospitals,بیمارستان,بیمارستانها
-Medical Centers,Veterinarian,Veterinarians,دام پزشک,دامپزشکان
+Medical Centers,Veterinarian,Veterinarians,دامپزشک,دامپزشکان
 Medical Centers,Urgent Care Center,Urgent Care Centers,مرکز مراقبت های فوری,مراکز مراقبت های فوری
 Medical Centers,Rehab Center,Rehab Centers,مرکز توانبخشی,مراکز ترک
 Medical Centers,Laboratory,Laboratories,آزمایشگاه,آزمایشگاهها
@@ -200,7 +200,7 @@ Outdoors & Recreation,Fishing Spot,Fishing Spots,محل ماهیگیری,محل 
 Outdoors & Recreation,Forest,Forests,جنگل,جنگلها
 Outdoors & Recreation,Waterfront,Waterfronts,آبنما,آبنما
 Outdoors & Recreation,Garden,Gardens,باغ,باغها
-Outdoors & Recreation,Harbor / Marina,Harbors / Marinas,بندر / مارینا,بنادر / اسکله
+Outdoors & Recreation,Harbor / Marina,Harbors / Marinas,بندر / اسکله,بنادر / اسکله
 Outdoors & Recreation,Hot Spring,Hot Springs,چشمه اب گرم,چشمه های آب گرم
 Outdoors & Recreation,Island,Islands,جزیره,جزایر
 Outdoors & Recreation,Lake,Lakes,دریاچه,دریاچه ها
@@ -224,7 +224,7 @@ Outdoors & Recreation,States & Municipalities,States & Municipalities,شهردا
 Outdoors & Recreation,Summer Camp,Summer Camps,اردوگاه تابستانی,اردوگاههای تابستانی
 Outdoors & Recreation,Vineyard,Vineyards,تاکستان,باغ های انگور
 Outdoors & Recreation,Volcano,Volcanoes,آتشفشان,آتشفشانها
-Outdoors & Recreation,Waterfall,Waterfalls,ابشار,آبشارها
+Outdoors & Recreation,Waterfall,Waterfalls,آبشار,آبشارها
 Performing Arts Venues,Theater,Theaters,تئاتر,تئاترها
 Residences,Residential Building (Apartment / Condo),Residential Buildings (Apartments / Condos),هتل آپارتمان,هتل آپارتمان
 Schools,Adult Education Center,Adult Education Centers,مرکز آموزش بزرگسالان,مراکز آموزش بزرگسالان
@@ -247,14 +247,14 @@ Shops & Services,Spa,Spas,سالن ماساژ,سالن های ماساژ
 Shops & Services,Sporting Goods Shop,Sporting Goods Shops,فروشگاه کالاهای ورزشی,فروشگاه های کالاهای ورزشی
 Shops & Services,Stationery Store,Stationery Stores,فروشگاه لوازم التحریر,فروشگاه های لوازم التحریر
 Shops & Services,Storage Facility,Storage Facilities,تجهیزات ذخیره سازی,تجهیزات ذخیره سازی
-Shops & Services,Tailor Shop,Tailor Shops,فروشگاه خیاط,مغازه های خیاطی
+Shops & Services,Tailor Shop,Tailor Shops,خیاطی,مغازه های خیاطی
 Shops & Services,Tanning Salon,Tanning Salons,سالن برنزه,سالن های برنزه
 Shops & Services,Tattoo Parlor,Tattoo Parlors,سالن تاتو,سالنهای تاتو
 Shops & Services,Toy / Game Store,Toy / Game Stores,اسباب بازی / فروشگاه بازی,اسباب بازی / فروشگاه بازی
 Shops & Services,Travel Agency,Travel Agencies,آژانس مسافرتی,آژانس های مسافرتی
 Shops & Services,Used Bookstore,Used Bookstores,فروش کتاب دست دوم,فروشگاههای کتاب دست دوم
 Shops & Services,Video Game Store,Video Game Stores,فروشگاه بازیهای ویدئویی,فروشگاه های بازی های ویدئویی
-Shops & Services,Video Store,Video Stores,فروشگاه ویدئو,فروشگاه های ویدیو
+Shops & Services,Video Store,Video Stores,ویدئو کلوپ,ویدئو کلوپ
 Shops & Services,Watch Shop,Watch Shops,ساعت فروشی,ساعت فروشی ها
 Shops & Services,Smoke Shop,Smoke Shops,سیگار فروشی,سیگار فروشی
 Shops & Services,Fair,Fairs,نمایشگاه,نمایشگاه ها
@@ -265,7 +265,7 @@ Shops & Services,Car Wash,Car Washes,کارواش,کارواشها
 Shops & Services,Carpet Store,Carpet Stores,فروشگاه فرش,فرش فروشی ها
 Shops & Services,Chocolate Shop,Chocolate Shops,فروشگاه شکلات,مغازه های شکلات
 Shops & Services,Clothing Store,Clothing Stores,فروشگاه پوشاک,فروشگاه های پوشاک
-Shops & Services,Construction & Landscaping,Construction & Landscaping,ساخت و ساز و محوطه,ساخت و ساز و محوطه
+Shops & Services,Construction & Landscaping,Construction & Landscaping,ساخت و ساز و لوازم ساختمانی,ساخت و ساز و لوازم ساختمانی
 Shops & Services,Cosmetics Shop,Cosmetics Shops,مغازه آرایشی و بهداشتی,مغازه های آرایشی و بهداشتی
 Shops & Services,Daycare,Daycares,مهد کودک,مهد کودکها
 Shops & Services,Department Store,Department Stores,فروشگاه بزرگ,فروشگاه های بزرگ
@@ -274,13 +274,13 @@ Shops & Services,Dive Shop,Dive Shops,فروشگاه لوازم غواصی,فر�
 Shops & Services,Drugstore / Pharmacy,Drugstores / Pharmacies,داروخانه / داروسازی,داروخانه ها
 Shops & Services,Dry Cleaner,Dry Cleaners,خشکشویی / نظافت,خشکشویی ها
 Shops & Services,Electronics Store,Electronics Stores,فروشگاه لوازم الکترونیکی,فروشگاه های قطعات الکترونیکی
-Shops & Services,Fabric Shop,Fabric Shops,فروشگاه پارچه,مغازه های پارچه
+Shops & Services,Fabric Shop,Fabric Shops,فروشگاه پارچه / پرده,مغازه های پارچه / پرده
 Shops & Services,Film Studio,Film Studios,استودیو فیلم,استودیوهای فیلم
 Shops & Services,Fishing Store,Fishing Stores,فروشگاه ماهیگیری,فروشگاه های ماهیگیری
 Shops & Services,Flower Shop,Flower Shops,گل فروشی,گل فروشی ها
 Shops & Services,Food & Drink Shop,Food & Drink Shops,فروشگاه غذا و نوشیدنی,فروشگاه های غذا و نوشیدنی
 Shops & Services,Frame Store,Frame Stores,فروشگاه قاب,فروشگاه های قاب
-Shops & Services,Fruit & Vegetable Store,Fruit & Vegetable Stores,فروشگاه سبزیجات، میوه ها,فروشگاه های سبزیجات، میوه ها
+Shops & Services,Fruit & Vegetable Store,Fruit & Vegetable Stores,میوه و تره بار,میوه و تره بار
 Shops & Services,Furniture / Home Store,Furniture / Home Stores,فروشگاه مبلمان / خانه,فروشگاه های مبلمان / خانه
 Shops & Services,Gaming Cafe,Gaming Cafes,کافه بازی,کافه های بازی
 Shops & Services,Gas Station,Gas Stations,پمپ بنزین,ایستگاه های گاز
@@ -303,7 +303,7 @@ Shops & Services,Luggage Store,Luggage Stores,فروشگاه چمدان,فروش
 Shops & Services,Market,Markets,بازار,بازارها
 Shops & Services,Massage Studio,Massage Studios,استودیو ماساژ,استودیو های ماساژ
 Shops & Services,Mattress Store,Mattress Stores,فروشگاه تشک,فروشگاه های تشک
-Shops & Services,Miscellaneous Shop,Miscellaneous Shops,سایر فروشگاه ها,سایر فروشگاه ها
+Shops & Services,Miscellaneous Shop,Miscellaneous Shops,سایر فروشگاه ها / خدمات,سایر فروشگاه ها / خدمات
 Shops & Services,Mobile Phone Shop,Mobile Phone Shops,فروشگاه تلفن همراه,فروشگاه های تلفن همراه
 Shops & Services,Motorcycle Shop,Motorcycle Shops,فروشگاه موتور سیکلت,فروشگاه های موتورسیکلت
 Shops & Services,Music Store,Music Stores,فروشگاه موسیقی,فروشگاه های موسیقی
@@ -345,9 +345,9 @@ Shops & Services,Church,Churches,کلیسا,کلیساها
 Shops & Services,Monastery,Monasteries,صومعه,صومعه ها
 Shops & Services,Mosque,Mosques,مسجد,مساجد
 Shops & Services,Prayer Room,Prayer Rooms,نمازخانه,نمازخانه ها
-Shops & Services,Shrine,Shrines,زیارتگاه,زیارتگاه ها
+Shops & Services,Shrine,Shrines,اماکن مذهبی,اماکن مذهبی
 Shops & Services,TV Station,TV Stations,ایستگاه تلویزیونی,ایستگاه های تلویزیون
-Shops & Services,Warehouse,Warehouses,انبار,ساختمان و ذخیره سازی
+Shops & Services,Warehouse,Warehouses,انبار,انبار
 Shops & Services,Wedding Hall,Wedding Halls,سالن عروسی,سالن های عروسی
 Shops & Services,ATM,ATMs,دستگاه خودپرداز,دستگاههای خودپرداز
 Shops & Services,Adult Boutique,Adult Boutiques,بوتیک بزرگسالان,بوتیک های بزرگسالان
@@ -373,7 +373,7 @@ Stadiums,Tennis Stadium,Track Stadiums,ورزشگاه دو و میدانی,ور�
 Stadiums,Tennis Stadium,Tennis Stadiums,استادیوم تنیس,استادیوم های تنیس
 Stadiums,Soccer Stadium,Soccer Stadiums,ورزشگاه فوتبال,استادیوم های فوتبال
 Stadiums,Rugby Stadium,Rugby Stadiums,ورزشگاه راگبی,ورزشگاه های راگبی
-Stadiums,Football Stadium,Football Stadiums,استادیوم فوتبال آمریکایی,استادیومهای فوتبال آمریکایی
+Stadiums,Football Stadium,Football Stadiums,استادیوم فوتبال,استادیومهای فوتبال
 Stadiums,Cricket Ground,Cricket Grounds,زمین کریکت,زمینهای کریکت
 Stadiums,Baseball Stadium,Baseball Stadiums,ورزشگاه بیس بال,استادیوم های بیسبال
 Stadiums,Basketball Stadium,Basketball Stadiums,ورزشگاه بسکتبال,استادیوم های بسکتبال
