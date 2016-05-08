@@ -2,6 +2,7 @@ package agahisaz
 
 
 import fi.joensuu.joyds1.calendar.JalaliCalendar
+import org.ocpsoft.prettytime.PrettyTime
 
 class FormatTagLib {
     static defaultEncodeAs = [taglib: 'none']
@@ -21,6 +22,11 @@ class FormatTagLib {
             if (!(attrs.timeOnly && Boolean.parseBoolean(attrs.timeOnly?.toString())))
                 out << String.format("%04d/%02d/%02d", jc.getYear(), jc.getMonth(), jc.getDay())
         }
+    }
+
+    def prettyDate = { attrs, body ->
+        if (attrs.date)
+            out << new PrettyTime(new Locale('fa')).format(attrs.date as Date)
     }
 
     def html = { attrs, body ->

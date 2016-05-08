@@ -25,13 +25,14 @@
             source = source || this.getAttribute("data-src");
             var image = this;
             if (source) {
-                $.ajax({
-                    url: source
-                }).done(function (response) {
-                    image.setAttribute("src", response);
-                    if (typeof callback === "function") callback.call(image);
-                }).error(function () {
-                });
+                image.setAttribute("src", source);
+                //$.ajax({
+                //    url: source
+                //}).done(function (response) {
+                //    image.setAttribute("src", response);
+                //    if (typeof callback === "function") callback.call(image);
+                //}).error(function () {
+                //});
             }
         });
 

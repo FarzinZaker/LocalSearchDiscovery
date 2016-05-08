@@ -41,9 +41,9 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: white;
-    padding-top:9px;
-    padding-bottom:9px;
-    padding-right:10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 10px;
     &:hover, &:focus {
       color: white;
     }
@@ -94,8 +94,8 @@ body {
         margin-right: 10px;
         margin-top: 7px;
         cursor: pointer;
-        &:hover{
-          color:#5C9DC0;
+        &:hover {
+          color: #5C9DC0;
 
         }
       }
@@ -1324,6 +1324,9 @@ a {
 }
 
 .tipsSections .addTipsSection .addTipBlock .addTipArea {
+  .help-block {
+    margin-top: 10px;
+  }
 }
 
 .addItemArea .input-holder {
@@ -1490,7 +1493,7 @@ body .greenButton, body a.greenButton {
       color: #3186AD;
       cursor: pointer;
       background: url('../images/icons/remove.png') center right no-repeat;
-      padding-right:20px;
+      padding-right: 20px;
       &:hover {
         color: #EE5921;
       }
@@ -1500,9 +1503,168 @@ body .greenButton, body a.greenButton {
   }
 }
 
-.addItemArea textarea:focus {
+.addItemArea textarea.selected {
   height: 90px;
   padding-bottom: 17px;
+}
+
+#container .venueDetail .wideColumn .tipsSections .tipsListSection .tipsSectionBody #tipsContainer ul#tipsList li.tip, #modalDialogBox.richDownloadModal .content li.tip {
+  border-bottom: 1px solid #efeff4;
+  margin: 0 -5px 10px 0;
+  overflow: hidden;
+  padding: 0 5px 10px 0;
+  position: relative;
+}
+
+ul#tipsList {
+  list-style: outside none none;
+  margin: 10px -15px 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  li.tip {
+    border-bottom: 1px solid #efeff4;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #efeff4;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+
+    &:hover{
+      .flagTipLink{
+        display: inline-block !important;
+      }
+    }
+
+    .authorImage {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+      .avatar {
+        border-radius: 3px;
+      }
+    }
+    .tipPhoto {
+      cursor: pointer;
+      float: left;
+      border-radius: 4px;
+      box-shadow: none;
+      margin-right:10px;
+    }
+
+    .tipContents {
+      display: block;
+      margin-right: 45px;
+      margin-top: -35px;
+      position: relative;
+      vertical-align: top;
+      text-align: justify;
+      p {
+        margin: 0;
+      }
+      .tipInfo {
+        margin-bottom: 5px;
+        color: #959b9e;
+        font-size: 13px;
+        a {
+          color: #959b9e;
+        }
+      }
+      .actionButtons {
+        //clear: both;
+        color: #aeb4b6;
+        list-style: outside none none;
+        overflow: hidden;
+        white-space: nowrap;
+        .likeButtonContainer {
+          color: #aeb4b6;
+          float: none;
+          font-size: 13px;
+          line-height: 16px;
+          margin-left: 15px;
+          padding: 1px 14px 0 0;
+          position: relative;
+          cursor: pointer;
+          .like {
+            color: #959b9e;
+            .link {
+              color: #aeb4b6;
+              text-decoration: none;
+              .icon {
+                background: rgba(0, 0, 0, 0) url("../images/activitystream-sprite.png") no-repeat scroll 0 -16px;
+                bottom: 1px;
+                color: #959b9e;
+                height: 16px;
+                position: absolute;
+                right: 0;
+                top: auto;
+                width: 16px;
+              }
+              .label {
+                color: #959b9e;
+                font-weight: normal;
+                font-size: 12px;
+                span {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+          &:hover {
+            .like .link {
+              .icon {
+                background-position: 0 -32px;
+              }
+              .label {
+                color: #484848;
+              }
+            }
+          }
+          &.selected {
+            .like .link {
+              .icon {
+                background-position: -0px -48px;
+              }
+              .label {
+                color: #484848;
+              }
+            }
+          }
+        }
+        .flagTipLink {
+          display: none;
+          color: #aeb4b6;
+          float: none;
+          font-size: 12px;
+          line-height: 16px;
+          margin-left: 15px;
+          padding: 1px 18px 0 0;
+          position: relative;
+          cursor: pointer;
+          .icon {
+            background: rgba(0, 0, 0, 0) url("../images/activitystream-sprite.png") no-repeat scroll -240px -16px;
+            bottom: 1px;
+            color: #959b9e;
+            height: 16px;
+            position: absolute;
+            right: 0;
+            top: auto;
+            width: 16px;
+          }
+          &:hover {
+            color: #484848;
+            .icon {
+              background-position: -240px -32px;
+            }
+          }
+          &.selected {
+            .icon {
+              background-position: -240px -48px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 

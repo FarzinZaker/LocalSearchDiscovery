@@ -18,13 +18,14 @@
     </bootstrap:modalFooter>
 </bootstrap:modal>
 
-<div class="addTipsSection">
+<form class="addTipsSection" id="tipForm">
+    <input type="hidden" name="id" value="${place?.id}"/>
     <img width="16" height="10" class="addTipCarat" alt="" src="${resource(dir: 'images', file: 'icon-tipcarat.png')}"/>
 
     <div class="addTipBlock">
         <div class="addItemArea addTipArea">
             <span class="input-holder">
-                <textarea rows="4" tabindex="1" class="formStyle"
+                <textarea rows="4" tabindex="1" class="formStyle" name="body" data-validation="required"
                           placeholder="${message(code: 'tip.placeHolder')}"></textarea>
             </span>
             <span class="charCount"></span>
@@ -39,21 +40,17 @@
         </div>
         <a class="userImage" href="${createLink(controller: 'user', action: 'profile')}">
             <img width="32" height="32" original-title="${authorName}" class="avatar blankAvatar " alt="${authorName}"
-                 data-src="${createLink(controller: 'image', params: [type: 'profile'])}">
+                 data-src="${createLink(controller: 'image', action: 'profile', params: [size: 32])}">
         </a>
 
         <div class="buttonArea">
-            <button tabindex="2" class="shareTipButton greenButton btn btn-primary"><g:message
-                    code="tip.publish"/></button>
-        </div>
-
-        <div id="tipLink">
-            <input type="text" value="" maxlength="255" class="formStyle">
+            <input type="button" tabindex="2" class="shareTipButton greenButton btn btn-primary" id="submitTip"
+                   value="${message(code: 'tip.publish')}"/>
         </div>
 
         <div class="photoPreview"></div>
     </div>
-</div>
+</form>
 
 <g:javascript>
 
@@ -101,7 +98,7 @@
             }).then(function (resp) {
                 var newImage = $('<img/>');
                 newImage.attr('src', resp);
-                var newImageSrc = $('<input type="hidden"/>');
+                var newImageSrc = $('<input type="hidden" name="image"/>');
                 newImageSrc.val(resp);
                 var newImageRemoveButton = $('<span/>');
                 newImageRemoveButton.html('${message(code: "tip.image.remove")}');
@@ -113,7 +110,7 @@
                 newImageContainer.append(newImage);
                 newImageContainer.append(newImageSrc);
                 newImageContainer.append(newImageRemoveButton);
-                $('.photoPreview').append(newImageContainer);
+                $('.photoPreview').append(newImageContainer).slideDown(500);
             });
         });
     }
@@ -135,6 +132,28 @@
         });
         });
 
+        $('.addItemArea textarea').focus(function(){
+            $(this).addClass('selected');
+        });
         addTipSetupCroppie();
+
+        $('#submitTip').click(function(){
+            var form = $('#tipForm');
+            if(form.isValid()){
+                $.ajax({
+                    url: '${createLink(controller: 'tip', action: 'save')}',
+                    type: 'POST',
+                    data: form.serialize(),
+                    error: function () {
+                    },
+                    success: function (res) {
+                        $('.photoPreview').slideUp(500, function(){
+                            $(this).html('');
+                        });
+                        $('.addItemArea textarea').val('').removeClass('selected');
+                    }
+                });
+            }
+        });
     });
 </g:javascript>

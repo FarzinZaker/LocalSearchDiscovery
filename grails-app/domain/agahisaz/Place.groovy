@@ -17,7 +17,7 @@ class Place {
     List tags
     User creator
     EditSuggestion editSuggestion
-    List comments
+    List tips
     List rates
     Double averageRate
     Integer ratesCount

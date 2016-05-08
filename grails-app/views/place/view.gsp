@@ -62,6 +62,10 @@
             <div class="tipsSections" style="position: relative;">
                 <place:addTip/>
             </div>
+
+            <ul id="tipsList" class="whitePanel">
+                <place:tipList place="${place}"/>
+            </ul>
         </div>
 
         <div class="col-sm-4 spaceFromTop">

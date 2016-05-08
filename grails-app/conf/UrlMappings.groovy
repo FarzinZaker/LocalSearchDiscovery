@@ -9,7 +9,6 @@ class UrlMappings {
 //        "/search/$id"(controller: 'place', action: 'explore')
 
         "/$controller/$action\\.json" {}
-        "/image/$type?/$id?"(controller: "image", action: "index")
         "/$controller/$action?/$id?/$name?" {
             constraints {
                 // apply constraints here

@@ -80,5 +80,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 
         compile ":mail:1.0.6"
+
+        compile ":pretty-time:2.1.3.Final-1.0.1"
     }
 }

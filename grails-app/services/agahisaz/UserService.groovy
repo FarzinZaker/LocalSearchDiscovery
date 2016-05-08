@@ -9,6 +9,7 @@ class UserService implements InitializingBean {
     def messageSource
     def springSecurityService
     def mailService
+    def imageService
     def gspTagLibraryLookup  // being automatically injected by spring
     def g
 
@@ -106,8 +107,12 @@ class UserService implements InitializingBean {
         if (countRegistered > 0) {
             return [error: message('user.exists'), field: mobile ? 'mobile' : 'email']
         }
-        if (profileImage)
-            user['profileImage'] = profileImage
+        if (profileImage) {
+            Image.findAllByTypeAndOwnerId('profile', user?.id?.toString()).each {
+                it.delete(flush: true)
+            }
+            imageService.saveImage(profileImage, 'profile', user?.id?.toString())
+        }
         user['mobile'] = mobile
         user['email'] = email
         user['firstName'] = firstName
@@ -121,11 +126,5 @@ class UserService implements InitializingBean {
 
     def findUser(String username) {
         return mongoService.query('user', [$or: [[mobile: username], [email: username], [username: username]]]).find()
-    }
-
-    def getProfileImage(def id = null) {
-        if (!id)
-            id = springSecurityService.currentUser.id
-        return mongoService.query('user', [_id: id as Integer], [profileImage: 1])?.find()?.profileImage
     }
 }

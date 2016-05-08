@@ -1,5 +1,5 @@
 <g:form controller="user" action="saveBasicInfo">
-    <bootstrap:cropie name="profileImage" cssClass="profileImage text-center" src="${createLink(controller: 'image', params:[type:'profile'])}"/>
+    <bootstrap:cropie name="profileImage" cssClass="profileImage text-center" src="${createLink(controller: 'image', action: 'profile', params: [size:200])}"/>
 
     <g:if test="${flash.error}">
         <div class="alert alert-danger">

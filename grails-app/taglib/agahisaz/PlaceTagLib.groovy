@@ -70,4 +70,12 @@ class PlaceTagLib {
         if (user)
             out << render(template: '/place/tip/add', model: [authorName: "${user?.firstName} ${user?.lastName}"])
     }
+
+    def tipList = { attrs, body ->
+        def place = attrs.place as Place
+        def tipList = place.tips?.sort { -(it.date?.time ?: 0) }
+        tipList?.each {
+            out << render(template: '/place/tip/item', model: [tip: it, image: Image.findByTypeAndOwnerIdAndSize('tip', it?.id, 100)])
+        }
+    }
 }
