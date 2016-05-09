@@ -149,8 +149,12 @@
                     success: function (res) {
                         $('.photoPreview').slideUp(500, function(){
                             $(this).html('');
+                            var item = $(res);
+                            $('#tipsList').prepend(item);
+                            item.css('max-height', '500px');
                         });
                         $('.addItemArea textarea').val('').removeClass('selected');
+
                     }
                 });
             }

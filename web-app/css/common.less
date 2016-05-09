@@ -1529,6 +1529,12 @@ ul#tipsList {
     margin: 0 0 10px;
     padding: 0 0 10px;
 
+    transition: max-height 1s ease-out;
+
+    &.slideDown{
+      max-height: 0;
+    }
+
     &:hover{
       .flagTipLink{
         display: inline-block !important;
@@ -1619,7 +1625,7 @@ ul#tipsList {
               }
             }
           }
-          &.selected {
+          &.active {
             .like .link {
               .icon {
                 background-position: -0px -48px;
@@ -1637,7 +1643,7 @@ ul#tipsList {
           font-size: 12px;
           line-height: 16px;
           margin-left: 15px;
-          padding: 1px 18px 0 0;
+          padding: 1px 20px 0 0;
           position: relative;
           cursor: pointer;
           .icon {
@@ -1656,7 +1662,8 @@ ul#tipsList {
               background-position: -240px -32px;
             }
           }
-          &.selected {
+          &.active {
+            color:#484848 !important;
             .icon {
               background-position: -240px -48px;
             }
@@ -1664,6 +1671,21 @@ ul#tipsList {
         }
       }
     }
+  }
+}
+
+.tipsSectionHeader{
+  border-bottom: 1px solid #efeff4;
+  color: #484848;
+  margin: -5px -15px 15px;
+  overflow: hidden;
+  padding: 0 20px 10px;
+  h3.tipCount{
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+    line-height: 23px;
+    padding: 5px 0;
   }
 }
 

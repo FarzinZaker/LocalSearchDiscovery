@@ -41,6 +41,10 @@ class TipController {
             imageService.saveImage(image, 'tip', tip.id)
         }
 
-        render 1
+        render(template: '/place/tip/item', model: [
+                placeId  : place?.id,
+                tip      : tip,
+                image    : Image.findByTypeAndOwnerIdAndSize('tip', tip?.id, 100),
+                slideDown: true])
     }
 }

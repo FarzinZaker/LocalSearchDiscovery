@@ -74,8 +74,19 @@ class PlaceTagLib {
     def tipList = { attrs, body ->
         def place = attrs.place as Place
         def tipList = place.tips?.sort { -(it.date?.time ?: 0) }
-        tipList?.each {
-            out << render(template: '/place/tip/item', model: [tip: it, image: Image.findByTypeAndOwnerIdAndSize('tip', it?.id, 100)])
-        }
+        out << render(template: '/place/tip/listHeader', model: [tipsCount: tipList?.size() ?: 0])
+        def userId = springSecurityService.currentUser?.id
+        if (tipList?.size())
+            tipList?.each {
+                out << render(template: '/place/tip/item', model: [
+                        placeId        : place?.id,
+                        tip            : it,
+                        alreadyLiked   : it.likes?.contains(userId),
+                        alreadyReported: it.reports?.contains(userId),
+                        image          : Image.findByTypeAndOwnerIdAndSize('tip', it?.id, 100),
+                        lazyLoadImages : true])
+            }
+        else
+            out << render(template: '/place/tip/empty')
     }
 }
