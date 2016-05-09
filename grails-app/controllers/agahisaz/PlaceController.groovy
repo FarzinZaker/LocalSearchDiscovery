@@ -11,6 +11,7 @@ class PlaceController {
 
     def springSecurityService
     def mongoService
+    def imageService
 
     @Secured([Roles.AUTHENTICATED])
     def add() {}
@@ -41,21 +42,29 @@ class PlaceController {
     }
 
     def importJson() {
-        def place = new Place()
-        place.name = params.name?.trim()
+        def cat = Category.findByName(params.category?.trim()?.toString())
+        def address = params.address && params.address?.trim() != '' ? params.address?.trim() : null
+        def city = params.city
+        def name = params.name?.trim()
+        def place = Place.findByNameAndCityAndCategoryAndAddress(name, city, cat, address) ?: new Place()
+        place.name = name
         place.province = params.province
-        place.city = params.city
-        place.address = params.address && params.address?.trim() != '' ? params.address?.trim() : null
+        place.city = city
+        place.address = address
         place.phone = params.phone && params.phone?.trim() != '' ? params.phone?.trim() : null
         place.postalCode = params.postalCode && params.postalCode?.trim() != '' ? params.postalCode?.trim() : null
         place.location = params.location?.toString()?.split(',')?.collect { it.toDouble() }
-        place.category = Category.findByName(params.category?.trim()?.toString())
+        place.category = cat
         place.creator = User.list(max: 0)?.find()
         place.tags = new ArrayList()
         params.tags?.trim()?.split(',')?.each { String tagName ->
             place.tags.add(tagName.trim())
         }
+
         if (place.save(flush: true)) {
+            if (params.logo) {
+                imageService.saveImage(params.logo, 'placeLogo', place.id.toString())
+            }
             render 1
         } else {
             render(place.errors as JSON)
