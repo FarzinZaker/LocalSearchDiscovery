@@ -71,7 +71,7 @@
                 anchorXUnits: 'pixels',
                 anchorYUnits: 'pixels',
                 opacity: 1,
-                src: '${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.getIconFile('32')}")}'
+                src: '${createLink(controller: 'image', action: 'category', params: [id: place?.categoryId, size:32])}'
             }))
         });
         var iconLayer = new ol.layer.Vector({

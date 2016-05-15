@@ -47,7 +47,7 @@
                 </div>
                 <ul class="exploreList">
                     <g:each in="${places}" var="place" status="index">
-                        <g:render template="explore/item" model="${[place: place, index: index]}"/>
+                        <place:exploreItem place="${place}" index="${index}"/>
                     </g:each>
                 </ul>
             </div>

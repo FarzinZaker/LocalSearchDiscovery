@@ -1,7 +1,7 @@
 <div class="tipsSectionHeader">
     <h3 class="tipCount">
         <g:if test="${tipsCount}">
-            <g:message code="place.tip.count" args="${[tipsCount]}"/>
+            <span class="counter">${tipsCount}</span> <g:message code="place.tip.count"/>
         </g:if>
         <g:else>
             <g:message code="place.tip.empty"/>

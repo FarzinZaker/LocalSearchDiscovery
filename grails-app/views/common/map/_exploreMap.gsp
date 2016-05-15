@@ -85,7 +85,7 @@
             id: '${place?._id}',
             name: '${place?.name}',
             address: '${place?.address?.replace('\n', ' ')}',
-            icon: '${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.getIconFile('44')}")}'
+            icon: '${createLink(controller: 'image', action: 'placeSearch', params: [id:place?._id, size:32])}'
         });
         pinFeatures.push(pinFeature);
         </g:each>

@@ -33,7 +33,9 @@ class Place {
     }
 
     static mapping = {
-        location geoIndex:true
-        index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
+        location geoIndex: true
+//        index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
+        compoundIndex province: 1, city: 1, category: 1
+        tags index: true
     }
 }

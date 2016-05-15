@@ -7,7 +7,7 @@ class TagController {
     def mongoService
 
     def search() {
-        def tags = mongoService.query('tag',[name:[$regex:".*${params.id}.*"]]).findAll()
+        def tags = mongoService.getCollection('tag').find([name:[$regex:".*${params.id}.*"]]).findAll()
         render(tags.collect { [name: it.name] } as JSON)
     }
 }
