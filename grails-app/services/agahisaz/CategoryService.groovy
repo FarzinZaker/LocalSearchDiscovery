@@ -26,7 +26,7 @@ class CategoryService {
 
     def importFromFile() {
         def lines = CategoryService.classLoader.getResource('data/cats.csv').readLines('UTF-8')
-        lines.remove(0)
+//        lines.remove(0)
         lines.each {
             def line = StringHelper.normalize(it).split(',')
             def englishName = line[1].trim()
@@ -37,6 +37,9 @@ class CategoryService {
             category.pluralName = line[4].trim()
             category.englishPluralName = line[2].trim()
             category.parent = Category.findByEnglishPluralName(line[0].trim()) ?: Category.findByEnglishName(line[0].trim())
+            if(!category.parent){
+                println ''
+            }
             category.save(flush: true)
         }
     }
