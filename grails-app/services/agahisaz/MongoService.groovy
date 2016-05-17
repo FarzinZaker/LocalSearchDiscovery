@@ -14,15 +14,15 @@ class MongoService {
         db.getCollection(collectionName)
     }
 
-    def query(String collectionName, Map criteria, projection = null) {
-        db.getCollection(collectionName).find(criteria, projection)
-    }
-
-    def count(String collectionName, criteria) {
-        db.getCollection(collectionName).count(criteria)
-    }
-
-    def createIndex(String collectionName, String name, Map fields, Map weights) {
-        db.getCollection(collectionName).createIndex(fields, [weights: weights, name: name])
-    }
+//    def query(String collectionName, Map criteria, projection = null) {
+//        db.getCollection(collectionName).find(criteria, projection)
+//    }
+//
+//    def count(String collectionName, criteria) {
+//        db.getCollection(collectionName).count(criteria)
+//    }
+//
+//    def createIndex(String collectionName, String name, Map fields, Map weights) {
+//        db.getCollection(collectionName).createIndex(fields, [weights: weights, name: name])
+//    }
 }

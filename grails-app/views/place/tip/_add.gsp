@@ -149,8 +149,21 @@
                     success: function (res) {
                         $('.photoPreview').slideUp(500, function(){
                             $(this).html('');
+                            var item = $(res);
+                            var list = $('#tipsList');
+                            var counter = 0;
+                            if(list.find('.tipCount .counter').length)
+                                counter = parseInt(list.find('.tipCount .counter').text());
+                            list.find('.tipCount').html(
+                                '<span class="counter">' +
+                                ++counter +
+                                '</span> <g:message code="place.tip.count"/>');
+                            list.find('.noTipText').remove();
+                            list.find('.tipItems').prepend(item);
+                            item.css('max-height', '500px');
                         });
                         $('.addItemArea textarea').val('').removeClass('selected');
+
                     }
                 });
             }

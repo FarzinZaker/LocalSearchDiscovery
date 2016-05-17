@@ -19,7 +19,7 @@
             <div class="whitePanel spaceFromTop placeInfoSection">
                 <div class="alert alert-info softHidden" id="placeMessage"></div>
                 <span class="categoryIcon">
-                    <img src="${resource(dir: "images/categories/${place?.category?.iconDirectory}", file: "${place?.category?.getIconFile("88")}")}"/>
+                    <img src="${createLink(controller: 'image', action: 'placeLogo', params: [id: place?.id, size: 88])}"/>
                 </span>
 
                 <div class="placeBaseInfo">
@@ -28,6 +28,9 @@
                     <div>${place?.category?.name} - ${place?.city}</div>
 
                     <div>${place?.address}</div>
+
+                    <g:render template="tags"
+                              model="${[tags: place?.tags, province: place?.province, city: place?.city]}"/>
 
                     <div>
                         <input type="button" class="btn btn-link"
@@ -56,6 +59,7 @@
                 <div class="placeActions" id="actionBar">
                     <place:rate place="${place}"/>
                 </div>
+
                 <div class="clearfix"></div>
             </div>
 
@@ -70,6 +74,11 @@
 
         <div class="col-sm-4 spaceFromTop">
             <map:locationViewer place="${place}" height="300"/>
+            <div class="similarList">
+                <g:each in="${similarPlaces}" var="similarPlace">
+                    <place:similarItem place="${similarPlace}"/>
+                </g:each>
+            </div>
         </div>
     </div>
 </div>

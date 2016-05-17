@@ -1,6 +1,6 @@
 package agahisaz
 
-class ReportController {
+class LikeController {
 
     def springSecurityService
 
@@ -8,9 +8,9 @@ class ReportController {
         def place = Place.get(params.placeId)
         def tip = place?.tips?.find{it.id == params.tipId}
         if(tip){
-            if(!tip.reports)
-                tip.reports = []
-            tip.reports << springSecurityService.currentUser?.id
+            if(!tip.likes)
+                tip.likes = []
+            tip.likes << springSecurityService.currentUser?.id
             place.save(flush:true)
             render 1
         }

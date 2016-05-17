@@ -25,7 +25,7 @@ class UserService implements InitializingBean {
     }
 
     def register(String mobile, String email, String firstName, String lastName, Boolean male) {
-        def countRegistered = mongoService.count('user', [$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]])
+        def countRegistered = mongoService.getCollection('user').count([$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]])
         if (countRegistered) {
             return [error: message('register.already-registered'), field: mobile ? 'mobile' : 'email']
         }
@@ -103,7 +103,7 @@ class UserService implements InitializingBean {
 
     def updateBasicInfo(String profileImage, String mobile, String email, String firstName, String lastName, Boolean male) {
         def user = springSecurityService.currentUser as User
-        def countRegistered = mongoService.count('user', [$and: [[$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]], ['_id': [$ne: user.id]]]])
+        def countRegistered = mongoService.getCollection('user').count([$and: [[$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]], ['_id': [$ne: user.id]]]])
         if (countRegistered > 0) {
             return [error: message('user.exists'), field: mobile ? 'mobile' : 'email']
         }
@@ -125,6 +125,6 @@ class UserService implements InitializingBean {
     }
 
     def findUser(String username) {
-        return mongoService.query('user', [$or: [[mobile: username], [email: username], [username: username]]]).find()
+        return mongoService.getCollection('user').find([$or: [[mobile: username], [email: username], [username: username]]]).find()
     }
 }

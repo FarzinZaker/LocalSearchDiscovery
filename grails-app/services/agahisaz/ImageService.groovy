@@ -21,7 +21,7 @@ class ImageService {
         image.content = content
         image.save(flush: true)
 
-        [32, 44, 64, 88, 100, 150, 200].each {
+        [32, 44, 64, 88, 100, 120, 150, 200].each {
             image = new agahisaz.Image()
             image.ownerId = ownerId
             image.type = type

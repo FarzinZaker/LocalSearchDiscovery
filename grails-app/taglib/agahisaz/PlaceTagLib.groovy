@@ -19,12 +19,8 @@ class PlaceTagLib {
 
     def searchBox = { attrs, body ->
         def query = request.getAttribute('query')?.toString()
-        def queryIconPath = request.getAttribute('queryIcon')?.toString()
-        def queryIcon
-        if (queryIconPath?.contains('/'))
-            queryIcon = resource(dir: 'images/categories/' + queryIconPath?.split('/')?.first(), file: queryIconPath?.split('/')?.last() + '32.png')
-        else
-            queryIcon = resource(dir: 'images/categories/', file: 'no-image.png')
+        def queryCategory = request.getAttribute('queryCategory')?.toString()
+        def queryIcon = createLink(controller: 'image', action: 'category', id: queryCategory)
         out << render(template: '/layouts/common/searchBox', model: [province: params.province, city: params.city, query: query, queryIcon: queryIcon])
     }
 
@@ -62,7 +58,7 @@ class PlaceTagLib {
             else
                 description = 'mixed'
         }
-        out << render(template: '/place/aggregateRatingFlag', model: [rate: place?.averageRate, description: description])
+        out << render(template: '/place/aggregateRatingFlag', model: [rate: place?.averageRate, description: description, cssClass: attrs.cssClass])
     }
 
     def addTip = { attrs, body ->
@@ -74,8 +70,32 @@ class PlaceTagLib {
     def tipList = { attrs, body ->
         def place = attrs.place as Place
         def tipList = place.tips?.sort { -(it.date?.time ?: 0) }
-        tipList?.each {
-            out << render(template: '/place/tip/item', model: [tip: it, image: Image.findByTypeAndOwnerIdAndSize('tip', it?.id, 100)])
-        }
+        out << render(template: '/place/tip/listHeader', model: [tipsCount: tipList?.size() ?: 0])
+        def userId = springSecurityService.currentUser?.id
+        out << "<div class='tipItems'>"
+        if (tipList?.size())
+            tipList?.each {
+                out << render(template: '/place/tip/item', model: [
+                        placeId        : place?.id,
+                        tip            : it,
+                        alreadyLiked   : it.likes?.contains(userId),
+                        alreadyReported: it.reports?.contains(userId),
+                        image          : Image.findByTypeAndOwnerIdAndSize('tip', it?.id, 100),
+                        lazyLoadImages : true])
+            }
+        else
+            out << render(template: '/place/tip/empty')
+        out << "</div>"
+    }
+
+    def exploreItem = { attrs, body ->
+        def place = attrs.place
+        def tip = place?.tips?.last()?.body
+        out << render(template: '/place/explore/item', model: [place: place, index: attrs.index, tip: tip])
+    }
+
+    def similarItem = { attrs, body ->
+        def place = attrs.place
+        out << render(template: '/place/item', model: [place: place])
     }
 }

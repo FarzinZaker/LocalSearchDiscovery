@@ -1,14 +1,15 @@
-<li data-id="${place?._id}">
-    <span class="number">${index + 1}.</span>
-
+<li data-id="${place?.id}">
     <div class="body">
-        <a class="name" target="_blank"
-           href="${createLink(controller: 'place', action: 'view', id: place?._id, params: [name: place?.name])}">
-            ${place?.name}
-        </a>
+        <img class="categoryIcon"
+             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?.id, size: 88])}"/>
 
-        <div>
-            <place:aggregateRatingFlag place="${place}"/>
+        <div class="details">
+
+            <place:aggregateRatingFlag place="${place}" cssClass="badge"/>
+            <a class="name" target="_blank"
+               href="${createLink(controller: 'place', action: 'view', id: place?.id, params: [name: place?.name])}">
+                ${place?.name}
+            </a>
 
             <div class="contactInfo">
                 <g:if test="${place?.address}">
@@ -22,7 +23,6 @@
                         ${place?.phone}
                     </div>
                 </g:if>
-                <div class="clearfix"></div>
                 <a class="category"
                    href="${createLink(controller: 'place', action: 'explore', params: [category: place?.category?.name])}">
                     %{--<span class="glyphicon glyphicon-folder-open"></span>--}%
@@ -35,7 +35,7 @@
                     <g:if test="${tip}">
                         <li class="insight">
                             ${tip}
-                            <img src="${resource(dir:'images/icons', file: 'tip.png')}"/>
+                            <img src="${resource(dir: 'images/icons', file: 'tip.png')}"/>
                         </li>
                     </g:if>
                 </ul>
@@ -43,9 +43,6 @@
         </div>
 
     </div>
-
-    <img class="categoryIcon"
-         src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?._id, size: 88])}"/>
 
     <div class="clearfix"></div>
 </li>

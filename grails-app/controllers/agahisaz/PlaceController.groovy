@@ -13,6 +13,7 @@ class PlaceController {
     def springSecurityService
     def mongoService
     def imageService
+    def placeService
 
     @Secured([Roles.AUTHENTICATED])
     def add() {}
@@ -84,7 +85,7 @@ class PlaceController {
 
     def view() {
         def place = Place.get(params.id)
-        [place: place]
+        [place: place, similarPlaces: placeService.similarPlaces(place)]
     }
 
     def suggestEdit() {
@@ -135,12 +136,13 @@ class PlaceController {
         request.setAttribute("query", queryString)
         def category = Category.findByName(queryString)
         if (category) {
-            request.setAttribute("queryIcon", category.iconPath)
+            request.setAttribute("queryCategory", category?.id)
             queryString = ''
             query << [category: [$in: CategoryCache.findCategory(category.id).childIdList + [category.id]]]
         }
+
         if (queryString != '') {
-            request.setAttribute("queryIcon", "no-image.png")
+            request.setAttribute("queryCategory", "0")
             //search using geoWithin
             query << [$text: [$search: params.id]]
             projection = [score: [$meta: "textScore"]]
@@ -168,6 +170,6 @@ class PlaceController {
                 }
             }
         }
-        [places: mongoService.query("place", query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = Category.get(place.category) } ?: []]
+        [places: mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []]
     }
 }
