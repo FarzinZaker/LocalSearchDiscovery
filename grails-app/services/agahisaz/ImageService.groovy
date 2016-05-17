@@ -1,6 +1,7 @@
 package agahisaz
 
 import org.apache.commons.codec.binary.Base64
+import org.bson.types.Binary
 
 import javax.imageio.ImageIO
 import java.awt.Image
@@ -14,29 +15,31 @@ class ImageService {
 
     def saveImage(byte[] content, String type, String ownerId) {
 
-        def image = new agahisaz.Image()
-        image.ownerId = ownerId
-        image.type = type
-        image.size = 0
-        image.content = content
-        image.save(flush: true)
-
+//        def image = new agahisaz.Image()
+//        image.ownerId = ownerId
+//        image.type = type
+//        image.size = 0
+//        image.content = content
+//        image.save(flush: true)
+        def image
         [32, 44, 64, 88, 100, 120, 150, 200].each {
-            image = new agahisaz.Image()
-            image.ownerId = ownerId
-            image.type = type
-            image.size = it
-            image.content = scaleImage(content, it, it)
-            if(image.content)
+            def bytes = scaleImage(content, it, it)
+            if (bytes) {
+                image = new agahisaz.Image()
+                image.ownerId = ownerId
+                image.type = type
+                image.size = it
+                image.bytes = new Binary(bytes)
                 image.save(flush: true)
-        }
+            }
+            }
     }
 
 
     def scaleImage(byte[] content, int width, int height) {
 
         BufferedImage sourceImage = ImageIO.read(new ByteArrayInputStream(content))
-        if(sourceImage) {
+        if (sourceImage) {
             def w = sourceImage.width
             def h = sourceImage.height
 

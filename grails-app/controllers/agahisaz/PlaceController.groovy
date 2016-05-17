@@ -68,6 +68,7 @@ class PlaceController {
         place.tags = new ArrayList()
         new String(new BASE64Decoder().decodeBuffer(params.tags), 'UTF8')?.trim()?.split(',')?.each { String tagName ->
             place.tags.add(tagName.trim())
+            Tag.findByName(tagName.trim())?:new Tag(name:tagName.trim()).save(flush: true)
         }
 
         if (place.save(flush: true)) {
