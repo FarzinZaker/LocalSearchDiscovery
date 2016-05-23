@@ -6,6 +6,7 @@ import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
 import security.Roles
 import cache.CategoryCache
+import sun.misc.BASE64Decoder
 import utils.RandomGenerator
 
 import java.util.concurrent.atomic.AtomicInteger
@@ -44,10 +45,17 @@ class PlaceController {
             redirect(action: 'add')
         }
     }
+    static def cur = System.currentTimeMillis()
+    static def count = 0
 
     def importJson() {
+        if (count < 0)
+            count = 0
+        count++
+
+        def cc = System.currentTimeMillis()
         def cat = Category.findByName(params.category?.trim()?.toString())
-        def address = params.address && params.address?.trim() != '' ? params.address?.trim() : null
+        def address = params.address ? new String(new BASE64Decoder().decodeBuffer(params.address?.trim()), 'UTF8')?.trim() : null
         def city = params.city
         def name = params.name?.trim()
         def place = Place.findByNameAndCityAndCategoryAndAddress(name, city, cat, address) ?: new Place()
@@ -61,8 +69,9 @@ class PlaceController {
         place.category = cat
         place.creator = User.list(max: 0)?.find()
         place.tags = new ArrayList()
-        params.tags?.trim()?.split(',')?.each { String tagName ->
+        new String(new BASE64Decoder().decodeBuffer(params.tags), 'UTF8')?.trim()?.split(',')?.each { String tagName ->
             place.tags.add(tagName.trim())
+            Tag.findByName(tagName.trim())?:new Tag(name:tagName.trim()).save(flush: true)
         }
 
         if (place.save(flush: true)) {
@@ -73,6 +82,9 @@ class PlaceController {
         } else {
             render(place.errors as JSON)
         }
+        println((System.currentTimeMillis() - cur) + ' ' + count + ' ' + (System.currentTimeMillis() - cc))
+        cur = System.currentTimeMillis()
+        count--
     }
 
     def view() {
