@@ -14,8 +14,8 @@
     function showFeatureOnMap(id) {
         var features = pinLayer.getSource().getFeatures();
         var feature = null;
-        var i = 0;
-        while (i++ < features.length && !feature)
+        var i = -1;
+        while (++i < features.length && !feature)
             if (features[i].get('id') == id)
                 feature = features[i];
         if (feature) {
@@ -84,7 +84,7 @@
             index: '${i + 1}',
             id: '${place?._id}',
             name: '${place?.name}',
-            address: '${place?.address?.replace('\n', ' ')}',
+            address: '${place?.address?.replace("\n", "")?.replace("\r", "")}',
             icon: '${createLink(controller: 'image', action: 'placeSearch', params: [id:place?._id, size:32])}'
         });
         pinFeatures.push(pinFeature);
@@ -235,11 +235,11 @@
         if (left < 20) {
             left = pixel[0] - 21;
             tip.addClass('left');
-        } else if(left + tipWidth + 20 > mapWidth) {
+        } else if (left + tipWidth + 20 > mapWidth) {
             left = pixel[0] - tipWidth + 21;
             tip.addClass('right');
         }
-        if(top < 20) {
+        if (top < 20) {
             top = pixel[1] + 8;
             tip.addClass('bottom');
         }

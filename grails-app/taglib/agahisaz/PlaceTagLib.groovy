@@ -1,11 +1,13 @@
 package agahisaz
 
+import cache.CategoryCache
 import com.mongodb.DBObject
 import com.pars.agahisaz.User
 
 class PlaceTagLib {
 
     def springSecurityService
+    def mongoService
 
     static namespace = "place"
 
@@ -97,5 +99,53 @@ class PlaceTagLib {
     def similarItem = { attrs, body ->
         def place = attrs.place
         out << render(template: '/place/item', model: [place: place])
+    }
+
+    def addTagToSearchLink = { attrs, body ->
+        def tags = params.tags?.split('[|]')?.toList() ?: []
+        tags.add(attrs.tag)
+        def paramList = params.clone()
+        paramList.remove('tags')
+        paramList += [tags: tags?.join('|')]
+        out << createLink(controller: 'place', action: 'explore', params: paramList)
+    }
+
+    def removeTagToSearchLink = { attrs, body ->
+        def tags = params.tags?.split('[|]')?.toList() ?: []
+        tags.remove(attrs.tag)
+        def paramList = params.clone()
+        paramList.remove('tags')
+        if (tags?.size())
+            paramList += [tags: tags?.join('|')]
+        out << createLink(controller: 'place', action: 'explore', params: paramList)
+    }
+
+    def topCategories = { attrs, body ->
+        out << "<ul class='topCategories'>"
+//        mongoService.getCollection('place').aggregate(
+//                [$group: [
+//                        _id  : '$category',
+//                        count: [$sum: 1]
+//                ]
+//                ],
+//                [$sort: [count: -1]],
+//                [$limit: 40]
+//        ).results()?.each { category ->
+//            def categoryName = CategoryCache.findCategory(category._id)?.name
+//            out << "<li><a href='${createLink(controller: 'place', action: 'explore', id: categoryName)}'>${categoryName}</a></li>"
+//        }
+//        CategoryCache.rootCategories?.each { category ->
+//            out << "<li><a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>${category?.name}</a></li>"
+//        }
+        Category.findAllByParentIsNull()?.each { category ->
+            out << """<li>
+                <a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>
+                    <img src='${createLink(controller: 'image', action: 'category', params: [id: category.id, size:attrs.iconSize])}'/>
+                    <span class='text'>${category?.name}</span>
+                    <span class='clearfix'></span>
+                </a>
+            </li>"""
+        }
+        out << "</ul>"
     }
 }

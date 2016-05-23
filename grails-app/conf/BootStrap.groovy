@@ -25,6 +25,7 @@ class BootStrap {
             u = new User(username: 'admin', password: 'admin', enabled: true, superuserLevel: 10).save()
             UserRole.create(u, r, true)
         } else if (u.superuserLevel == null) {
+
             u.superuserLevel = 10
             u.save(flush: true)
         }

@@ -41,7 +41,7 @@ class BootstrapTagLib {
 
         out << """
 
-        <div class="container silverPanel ${attrs.cssClass}">
+        <div class="silverPanel ${attrs.cssClass}">
             <div class="row">
                 <div class="col-xs-9">
                     <div class="tab-content tab-content-left whitePanel">
@@ -90,7 +90,7 @@ class BootstrapTagLib {
 
         out << """
 
-        <div class="container silverPanel helpedPanel ${attrs.cssClass}">
+        <div class="silverPanel helpedPanel ${attrs.cssClass}">
             <div class="row">
                 <div class="col-xs-9">
                     <div class="whitePanel">

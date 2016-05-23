@@ -22,6 +22,10 @@ class Place {
     Double averageRate
     Integer ratesCount
 
+    //report fields
+    String reportType
+    String reportComment
+
     static constraints = {
         name blank: false
         address nullable: true
@@ -30,6 +34,9 @@ class Place {
         editSuggestion nullable: true
         averageRate nullable: true
         ratesCount nullable: true
+
+        reportType nullable: true
+        reportComment nullable: true
     }
 
     static mapping = {

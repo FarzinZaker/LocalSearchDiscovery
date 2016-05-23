@@ -6,7 +6,10 @@
         <select id="searchLocation" class="form-control no-caret"
                 placeholder="${message(code: 'search.location.placeHolder')}">
         </select>
-        <span class="glyphicon glyphicon-search" id="btnSearch"></span>
+        <span class="searchButton" id="btnSearch">
+            <span class="glyphicon glyphicon-search"></span>
+            <span class="label"><g:message code="search.button"/></span>
+        </span>
     </div>
 </div>
 
@@ -41,14 +44,14 @@
             selectOnTab:true,
             sortField:'name',
             options: [
-            <g:if test="${query}">
-                {name: '${query}', icon: '${queryIcon}'}
-            </g:if>
-            ],
-            load: function (query, callback) {
-                if (!query.length) return callback();
-                $.ajax({
-                    url: '${createLink(controller: 'category', action: 'search')}/' + encodeURIComponent(query),
+    <g:if test="${query}">
+        {name: '${query}', icon: '${queryIcon}'}
+    </g:if>
+    ],
+    load: function (query, callback) {
+        if (!query.length) return callback();
+        $.ajax({
+            url: '${createLink(controller: 'category', action: 'search')}/' + encodeURIComponent(query),
                     type: 'GET',
                     error: function () {
                         callback();
@@ -61,7 +64,7 @@
             render: {
                 option: function(item, escape) {
                     return '<div>' +
-'<img class="icon" src="' + item.icon +'" />'+
+'<img class="icon" src="' + item.icon +'"/>'+
 '<span class="text">' + item.name + '</span>' +
 '</div>';
                 }
@@ -73,14 +76,14 @@
             searchField: ['name'],
             create: false,
             options: [
-            <g:if test="${city && province}">
-                {name: '${province} - ${city}', cityName: '${city}'}
-            </g:if>
-            ],
-            load: function (query, callback) {
-                if (!query.length) return callback();
-                $.ajax({
-                    url: '${createLink(controller: 'city', action: 'search')}/' + encodeURIComponent(query),
+    <g:if test="${city && province}">
+        {name: '${province} - ${city}', cityName: '${city}'}
+    </g:if>
+    ],
+    load: function (query, callback) {
+        if (!query.length) return callback();
+        $.ajax({
+            url: '${createLink(controller: 'city', action: 'search')}/' + encodeURIComponent(query),
                     type: 'GET',
                     error: function () {
                         callback();
@@ -96,14 +99,14 @@
                 }
             }
         });
-         <g:if test="${query}">
-             searchQuery[0].selectize.setValue('${query}');
-         </g:if>
-         <g:if test="${city && province}">
-             searchLocation[0].selectize.setValue('${province} - ${city}');
-         </g:if>
-        $('#btnSearch').click(function(){
-            search();
-        });
+    <g:if test="${query}">
+        searchQuery[0].selectize.setValue('${query}');
+    </g:if>
+    <g:if test="${city && province}">
+        searchLocation[0].selectize.setValue('${province} - ${city}');
+    </g:if>
+    $('#btnSearch').click(function(){
+        search();
     });
+});
 </g:javascript>

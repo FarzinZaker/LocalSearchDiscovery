@@ -9,4 +9,8 @@ class Image {
 
     static constraints = {
     }
+
+    static mapping = {
+        compoundIndex type: 1, ownerId: 1, size: 1
+    }
 }

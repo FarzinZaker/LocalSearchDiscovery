@@ -16,18 +16,18 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
-            <div class="whitePanel spaceFromTop placeInfoSection">
+            <div class="whitePanel spaceFromTop placeInfoSection" itemtype="http://schema.org/LocalBusiness" itemscope="">
                 <div class="alert alert-info softHidden" id="placeMessage"></div>
-                <span class="categoryIcon">
-                    <img src="${createLink(controller: 'image', action: 'placeLogo', params: [id: place?.id, size: 88])}"/>
+                <span class="categoryIcon" itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
+                    <img src="${createLink(controller: 'image', action: 'placeLogo', params: [id: place?.id, size: 88])}" itemprop="contentUrl"/>
                 </span>
 
                 <div class="placeBaseInfo">
-                    <h1>${place?.name}</h1>
+                    <h1 itemprop="name">${place?.name}</h1>
 
-                    <div>${place?.category?.name} - ${place?.city}</div>
+                    <div><span itemprop="additionalType">${place?.category?.name}</span> - <span itemprop="location" >${place?.city}</span></div>
 
-                    <div>${place?.address}</div>
+                    <div itemprop="address">${place?.address}</div>
 
                     <g:render template="tags"
                               model="${[tags: place?.tags, province: place?.province, city: place?.city]}"/>

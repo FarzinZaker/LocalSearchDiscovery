@@ -5,6 +5,7 @@
 </head>
 
 <body>
+<div class="container">
 <div id='login'>
     <div class='floatingPanel'>
         <h2><g:message code="user.forgetPassword.title"/></h2>
@@ -39,6 +40,7 @@
             </div>
         </form>
     </div>
+</div>
 </div>
 <script type='text/javascript'>
     <!--

@@ -10,7 +10,6 @@
             </div>
 
             <div class="col-sm-7">
-                <place:searchBox/>
             </div>
 
             <div class="col-sm-3">
@@ -63,10 +62,9 @@
 
 <div class="tagBar skipHeader">
     <div class="container">
-        <place:topCategories iconSize="32"/>
-        <sec:ifLoggedIn>
-            <place:waitingEditSuggestions/>
-        </sec:ifLoggedIn>
+        %{--<sec:ifLoggedIn>--}%
+            %{--<place:waitingEditSuggestions/>--}%
+        %{--</sec:ifLoggedIn>--}%
 
     </div>
 </div>

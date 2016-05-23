@@ -1,7 +1,7 @@
 <g:if test="${value}">
     <span class="phoneNumber" id="${id}">
         <img src="${resource(dir: 'images/icons', file: 'phone.png')}"/>
-        <span class="ltr">
+        <span class="ltr" itemprop="telephone">
             ${value}
         </span>
     </span>

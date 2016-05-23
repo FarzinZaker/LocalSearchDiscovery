@@ -6,6 +6,9 @@ import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
 import security.Roles
 import cache.CategoryCache
+import utils.RandomGenerator
+
+import java.util.concurrent.atomic.AtomicInteger
 
 class PlaceController {
 
@@ -74,7 +77,11 @@ class PlaceController {
 
     def view() {
         def place = Place.get(params.id)
-        [place: place, similarPlaces: placeService.similarPlaces(place)]
+        def model = [place: place, similarPlaces: placeService.similarPlaces(place)]
+        if(place.reportType)
+            render(view: 'deleted', model: model)
+        else
+            render(view: 'view', model: model)
     }
 
     def suggestEdit() {
@@ -105,6 +112,10 @@ class PlaceController {
         params.tags?.trim()?.split(',')?.each { String tagName ->
             editSuggestion.tags.add(tagName.trim())
         }
+        if(params.reportReason){
+            editSuggestion.reportType = params.reportReason
+            editSuggestion.reportComment = params.additionalInfo
+        }
         if (editSuggestion.save(flush: true)) {
             render 1
         } else {
@@ -115,6 +126,10 @@ class PlaceController {
     def explore() {
         def sort = [:]
         def query = [:]
+        def aggregateQuery
+        def tags
+        if (params.tags)
+            tags = params.tags?.split('[|]')?.toList() ?: []
         def projection = null
         if (params.province && params.city)
             query << [province: params.province]
@@ -127,8 +142,10 @@ class PlaceController {
         if (category) {
             request.setAttribute("queryCategory", category?.id)
             queryString = ''
-            query << [category: [$in: CategoryCache.findCategory(category.id).childIdList + [category.id]]]
+            query << [category: [$in: CategoryCache.findCategory(category.id)?.childIdList ?: [] + [category.id]]]
         }
+        if (tags)
+            query << [tags: [$all: tags]]
 
         if (queryString != '') {
             request.setAttribute("queryCategory", "0")
@@ -144,8 +161,10 @@ class PlaceController {
                     query << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
                 }
             }
+            aggregateQuery = query.clone()
         } else {
             //search using geoNear
+            aggregateQuery = query.clone()
             if (params.near) {
                 def nearParams = params.near?.toString()?.split(',')
                 if (nearParams.size() == 2) {
@@ -156,9 +175,83 @@ class PlaceController {
                             $maxDistance: 0.03D
                     ]
                     ]
+                    aggregateQuery << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
                 }
             }
         }
-        [places: mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []]
+
+        def places = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        def newTags = []
+        if (places?.size()) {
+            if (tags?.size())
+                newTags = mongoService.getCollection("place").aggregate([$match: aggregateQuery], [$unwind: '$tags'], [$match: [tags: [$nin: tags]]], [$group: [_id: '$tags', count: [$sum: 1]]], [$sort: ['count': -1]], [$limit: 10])?.results()
+            else
+                newTags = mongoService.getCollection("place").aggregate([$match: aggregateQuery], [$unwind: '$tags'], [$group: [_id: '$tags', count: [$sum: 1]]], [$sort: ['count': -1]], [$limit: 10])?.results()
+        }
+        [places: places, tags: newTags, currentTags: tags]
+    }
+
+
+    private static final AtomicInteger editSuggestionSequence = new AtomicInteger(0)
+
+    def reviewEditSuggestion() {
+        def collection = mongoService.getCollection('editSuggestion')
+        def max = (collection.count() - 1) as Integer
+        def skip = editSuggestionSequence.getAndIncrement()
+        if (skip > max) {
+            synchronized (editSuggestionSequence) {
+                skip = editSuggestionSequence.get()
+                if (skip > max) {
+                    editSuggestionSequence.set(1)
+                    skip = 0
+                }
+            }
+        }
+        def editSuggestion = collection.find().skip(skip as Integer).find()
+        if (editSuggestion) {
+            editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
+            def place = Place.get(editSuggestion.place)
+            place.categoryInfo = CategoryCache.findCategory(place.categoryId)
+            [place: place, editSuggestion: editSuggestion]
+        }
+        else
+            render view: '/place/reviewEditSuggestionEnded'
+
+    }
+
+    def acceptEdit() {
+
+        def editSuggestion = EditSuggestion.get(params.editSuggestion)
+        def place = Place.get(params.place)
+        place."${params.field}" = editSuggestion."${params.field}"
+        place.save(flush: true)
+
+        def next = 0
+        if (!editSuggestion.hasChange(params.field)) {
+            next = 1
+            editSuggestion.delete()
+        }
+        render([
+                message: g.render(template: '/common/score', model: [score: 3]),
+                next   : next
+        ] as JSON)
+    }
+
+    def rejectEdit() {
+
+        def editSuggestion = EditSuggestion.get(params.editSuggestion)
+        def place = Place.get(params.place)
+        editSuggestion."${params.field}" = place."${params.field}"
+        place.save(flush: true)
+
+        def next = 0
+        if (!editSuggestion.hasChange(params.field)) {
+            next = 1
+            editSuggestion.delete()
+        }
+        render([
+                message: g.render(template: '/common/score', model: [score: 3]),
+                next   : next
+        ] as JSON)
     }
 }
