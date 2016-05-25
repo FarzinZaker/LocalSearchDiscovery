@@ -60,10 +60,10 @@ class BootStrap {
             u.save(flush: true)
         }
 
-//        categoryService.importFromFile()
-//        categoryService.importIconsFromFile()
-//        cityService.importFromFile()
-//        tagService.importFromFile()
+        categoryService.importFromFile()
+        categoryService.importIconsFromFile()
+        cityService.importFromFile()
+        tagService.importFromFile()
     }
     def destroy = {
     }
