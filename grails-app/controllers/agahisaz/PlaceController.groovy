@@ -7,7 +7,6 @@ import grails.plugins.springsecurity.Secured
 import security.Roles
 import cache.CategoryCache
 import sun.misc.BASE64Decoder
-import utils.RandomGenerator
 
 import java.util.concurrent.atomic.AtomicInteger
 

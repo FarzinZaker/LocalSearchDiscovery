@@ -54,5 +54,12 @@ environments {
                validationQuery="SELECT 1"
             }
         }
+        grails {
+            mongo {
+                host = "172.16.24.33"
+                username = "root"
+                password = ""
+            }
+        }
     }
 }
