@@ -56,7 +56,7 @@ environments {
         }
         grails {
             mongo {
-                host = "172.16.24.33"
+                host = "192.168.64.3"
                 username = "root"
                 password = ""
             }
