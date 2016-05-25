@@ -18,6 +18,7 @@
 <body>
 <g:render template="/layouts/common/header"/>
 <g:layoutBody/>
+<g:render template="/layouts/common/footer"/>
 <sec:ifNotLoggedIn>
     <g:render template="/user/register"/>
     <g:render template="/user/registerLogin"/>

@@ -82,7 +82,7 @@ class PlaceController {
         } else {
             render(place.errors as JSON)
         }
-        println((System.currentTimeMillis() - cur) + ' ' + count + ' ' + (System.currentTimeMillis() - cc))
+//        println((System.currentTimeMillis() - cur) + ' ' + count + ' ' + (System.currentTimeMillis() - cc))
         cur = System.currentTimeMillis()
         count--
     }

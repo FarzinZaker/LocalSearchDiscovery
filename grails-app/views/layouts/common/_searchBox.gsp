@@ -42,6 +42,8 @@
             create: true,
             createOnBlur:true,
             selectOnTab:true,
+            openOnFocus: true,
+            closeAfterSelect: true,
             sortField:'name',
             options: [
     <g:if test="${query}">
@@ -75,6 +77,10 @@
             labelField: 'name',
             searchField: ['name'],
             create: false,
+            selectOnTab:true,
+            openOnFocus: true,
+            closeAfterSelect: true,
+            sortField: 'name',
             options: [
     <g:if test="${city && province}">
         {name: '${province} - ${city}', cityName: '${city}'}
@@ -107,6 +113,10 @@
     </g:if>
     $('#btnSearch').click(function(){
         search();
+    });
+    $('.navbar .selectize-input').keyup(function(e){
+        if(e.keyCode == 13)
+            search();
     });
 });
 </g:javascript>

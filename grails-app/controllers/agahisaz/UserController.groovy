@@ -1,5 +1,6 @@
 package agahisaz
 
+import cache.CategoryCache
 import com.pars.agahisaz.User
 import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
@@ -8,6 +9,7 @@ import security.Roles
 class UserController {
     def userService
     def springSecurityService
+    def mongoService
 
     def register() {
         if (!params.captcha || !params.captcha.isNumber() || session['registerCaptcha'] != params.captcha as int)
@@ -65,11 +67,23 @@ class UserController {
 
     @Secured([Roles.AUTHENTICATED])
     def saveBasicInfo() {
-        def res = userService.updateBasicInfo(params.profileImage, params.mobile, params.email, params.firstName, params.lastName, params.male ? true : false)
+        def res = userService.updateBasicInfo(params.profileImage, params.mobile, params.email, params.firstName, params.lastName, params.male ? true : false, params.province, params.city, params.bio)
         if (res.error) {
             flash.error = res.error
         }
         redirect(action: 'profile')
 
+    }
+
+    def info() {
+        def user = User.get(params.id)
+        def tips = mongoService.getCollection('place').aggregate(
+                [$match: ['tips.userId': user?.id]],
+                [$unwind: '$tips'],
+                [$match: ['tips.userId': user?.id]]
+        ).results().each{
+            it.category = CategoryCache.findCategory(it.category)
+        }
+        [user: user, tips: tips]
     }
 }

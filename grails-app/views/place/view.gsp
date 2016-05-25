@@ -16,27 +16,32 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
-            <div class="whitePanel spaceFromTop placeInfoSection" itemtype="http://schema.org/LocalBusiness" itemscope="">
+            <div class="whitePanel spaceFromTop placeInfoSection" itemtype="http://schema.org/LocalBusiness"
+                 itemscope="">
                 <div class="alert alert-info softHidden" id="placeMessage"></div>
                 <span class="categoryIcon" itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
-                    <img src="${createLink(controller: 'image', action: 'placeLogo', params: [id: place?.id, size: 88])}" itemprop="contentUrl"/>
+                    <img src="${createLink(controller: 'image', action: 'placeLogo', params: [id: place?.id, size: 88])}"
+                         itemprop="contentUrl"/>
                 </span>
 
                 <div class="placeBaseInfo">
                     <h1 itemprop="name">${place?.name}</h1>
 
-                    <div><span itemprop="additionalType">${place?.category?.name}</span> - <span itemprop="location" >${place?.city}</span></div>
+                    <div><span itemprop="additionalType">${place?.category?.name}</span> - <span
+                            itemprop="location">${place?.city}</span></div>
 
                     <div itemprop="address">${place?.address}</div>
 
                     <g:render template="tags"
                               model="${[tags: place?.tags, province: place?.province, city: place?.city]}"/>
 
-                    <div>
-                        <input type="button" class="btn btn-link"
-                               value="${message(code: 'plage.suggestEdit.button')}" data-toggle="modal"
-                               data-target="#suggestEditModal"/>
-                    </div>
+                    <sec:ifLoggedIn>
+                        <div>
+                            <input type="button" class="btn btn-link"
+                                   value="${message(code: 'plage.suggestEdit.button')}" data-toggle="modal"
+                                   data-target="#suggestEditModal"/>
+                        </div>
+                    </sec:ifLoggedIn>
                 </div>
 
                 <div class="clearfix"></div>

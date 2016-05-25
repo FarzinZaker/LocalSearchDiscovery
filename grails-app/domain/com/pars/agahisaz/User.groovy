@@ -29,4 +29,8 @@ class User {
     void encodePassword() {
         password = springSecurityService.encodePassword(password)
     }
+
+    public transient String getFullName(){
+        "${this.firstName} ${this.lastName}"
+    }
 }

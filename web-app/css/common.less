@@ -36,7 +36,9 @@ body {
 
 .navbar-green {
   background-color: #ffffff;
-  height: 57px;
+  height: 59px;
+  border-bottom:3px solid #3186AD;
+  margin-bottom:0;
 
   .navbar-brand {
     font-size: 28px;
@@ -55,7 +57,7 @@ body {
     border-style: solid;
     margin-right: 5px;
     padding: 4px 15px 7px;
-    margin-top: 11px;
+    margin-top: 10px;
     border-radius: 4px;
   }
 
@@ -130,11 +132,11 @@ body {
 }
 
 .skipHeader {
-  margin-top: 57px;
+  margin-top: 59px;
   & + .container, & + .container-fluid, & + .errorPage {
-    padding-top: 96px;
-    &.padding-top-15{
-      padding-top: 111px;
+    padding-top: 93px;
+    &.padding-top-15 {
+      padding-top: 108px;
     }
   }
 }
@@ -142,8 +144,8 @@ body {
 .tagBar {
   background: #3186AD;
   color: white;
-  padding: 7px 10px;
-  height: 39px;
+  height: 36px;
+  padding: 4px 10px 7px;
   position: absolute;
   width: 100%;
   z-index: 1000;
@@ -478,6 +480,7 @@ h2 {
   position: relative;
   width: 440px;
   z-index: 2;
+  margin-bottom: 50px;
   h2 {
     margin-bottom: 20px;
   }
@@ -2246,6 +2249,328 @@ body {
   color: #ee5921;
 }
 
+.userInfo {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .userPic {
+    display: inline-block;
+    margin-right: 20px;
+    img {
+      border-radius: 3px;
+      cursor: pointer;
+      height: 130px;
+      width: 130px;
+    }
+  }
+  .userStats {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-right: 10px;
+    .userStatsTitle {
+      margin-bottom: 10px;
+      .name {
+        display: inline-block;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .iconLink {
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        top: 4px;
+        vertical-align: bottom;
+      }
+    }
+  }
+  .userStatsInfo {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: right;
+    vertical-align: top;
+    padding-left: 20px;
+    float: left;
+    .stats {
+      display: inline-block;
+      list-style: outside none none;
+      margin: 0;
+      text-align: center;
+      li {
+        display: inline;
+        margin-left: -4px;
+        &:first-of-type {
+          span {
+            border-right-width: 0;
+          }
+        }
+        span {
+          border-right: 1px solid rgba(199, 205, 207, 0.3);
+          color: #aeb4b6;
+          cursor: pointer;
+          display: inline-block;
+          min-width: 66px;
+          padding: 10px 12px;
+          font-size: 16px;
+          strong {
+            color: #4e595d;
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.userTips {
+  display: block;
+  margin-top: 15px;
+  .userTipsHeader {
+    height: 46px;
+    margin-bottom: 10px;
+    position: relative;
+    .sectionHeader {
+      color: #4e595d;
+      display: inline-block;
+      font-size: 21px;
+      margin-top: 15px;
+    }
+    .seeAll {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 0;
+      padding: 23px 16px;
+      position: absolute;
+      left: 0;
+    }
+  }
+  .tipCard {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #c7cdcf;
+    display: block;
+    //height: 470px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    .tipPhoto {
+      background-color: #EAEFF9;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      height: 170px;
+      position: relative;
+      .tipSubPhoto {
+        float: left;
+        height: 170px;
+        width: 113px;
+      }
+      .tipHeader {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        .saveButton {
+          display: inline-block;
+          .buttonLeft {
+            background-image: url("../images/action-sprite.png");
+            background-position: -9px -8px;
+            content: "";
+            display: block;
+            height: 17px;
+            left: 10px;
+            position: absolute;
+            top: 6px;
+            width: 18px;
+            img {
+              display: none;
+            }
+          }
+          .buttonRight {
+            background: #efeff4 none repeat scroll 0 0;
+            border-radius: 0 3px 3px 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #4e595d;
+            display: inline-block;
+            float: left;
+            font: 14px/28px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+            height: 30px;
+            letter-spacing: 0;
+            text-align: center;
+            text-shadow: none;
+            text-transform: none;
+            border-color: rgba(0, 0, 0, 0.05);
+            border-style: solid solid solid none;
+            border-width: 1px 1px 1px medium;
+            padding: 0 10px 0 5px;
+            .label {
+              display: inline;
+            }
+          }
+          .likeButton {
+            display: inline-block;
+            .iconButton {
+              overflow: visible;
+              .buttonLeft {
+                box-sizing: border-box;
+                color: #4e595d;
+                float: left;
+                font: 14px/28px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+                letter-spacing: 0;
+                padding: 0 6px;
+                text-align: center;
+                text-shadow: none;
+                text-transform: none;
+                background: #efeff4 none repeat scroll 0 0;
+                border: 0 none;
+                box-shadow: none;
+                border-radius: 3px 0 0 3px;
+                padding-right: 0;
+                background-image: url("../images/activitystream-sprite.png");
+                background-position: -25px 0;
+                content: "";
+                display: block;
+                height: 17px;
+                left: 8px;
+                position: absolute;
+                top: 6px;
+                width: 18px;
+                img {
+                  display: none;
+                }
+              }
+              .buttonRight {
+                border-radius: 0 3px 3px 0;
+                color: #4e595d;
+                font-size: 14px;
+                font-weight: 500;
+                padding-left: 7px;
+                text-shadow: none;
+                text-transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tipContent {
+      font-size: 17px;
+      font-weight: 300;
+      height: 153px;
+      line-height: 26px;
+      padding: 20px;
+      word-wrap: break-word;
+    }
+    .tipUser {
+      border-bottom: 1px solid #efeff4;
+      color: #c7cdcf;
+      font-size: 13px;
+      height: 40px;
+      padding: 0 20px;
+      vertical-align: middle;
+      .avatar {
+        border-radius: 3px;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+    .tipUserName {
+      display: inline-block;
+      margin-top: -1px;
+      max-width: 128px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      white-space: nowrap;
+      .tipDate {
+        color: #c7cdcf;
+      }
+    }
+    .tipVenue {
+      padding: 10px 20px;
+      .tipVenueDetails {
+        color: #959b9e;
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .tipVenueInfo {
+          color: #2d5be3;
+          font-size: 16px;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .tipCategory {
+          display: inline-block;
+          padding-top: 5px;
+        }
+      }
+      .venueScore {
+        color: #fff;
+        cursor: default;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 20px;
+        margin-top: 6px;
+        vertical-align: top;
+        float: left;
+        margin-left: 0;
+        span {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+#sidebarFooter {
+  background: white;
+  color: #b2b2b2;
+  font-size: 13px;
+  //font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom:20px;
+  border-bottom:1px solid #CFD4D6;
+  border-top:1px solid #EFEFF4;
+  img {
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: outside none none;
+    margin: 0 0 5px;
+    padding: 0 5px;
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      .link {
+        color: #aeb4b6;
+        padding: 0 2px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+  }
+}
 
 
 

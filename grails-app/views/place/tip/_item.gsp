@@ -1,6 +1,6 @@
 <li data-id="${tip.id}" class="tip tipWithLogging ${slideDown ? 'slideDown' : ''}">
     <div class="authorImage">
-        <a href="#">
+        <a href="${createLink(controller: 'user', action: 'info', id: tip.userId)}">
             <img width="32" height="32" title="${tip.fullName}" class="avatar " alt="${tip.fullName}"
             ${lazyLoadImages ? 'data-src' : 'src'}="${createLink(controller: 'image', action: 'profile', id: tip.userId, params: [size: 32])}">
         </a>
@@ -10,7 +10,7 @@
         <g:if test="${image}">
             <img width="100" height="100" alt="" photo-id="${image?.id}"
             ${lazyLoadImages ? 'data-src' : 'src'}="${createLink(controller: 'image', action: 'get', id: image?.id)}"
-                 class="tipPhoto">
+                 class="tipPhoto"/>
         </g:if>
         <p class="tipText">${tip.body}</p>
 

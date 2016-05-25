@@ -4,6 +4,27 @@
 
 $(document).ready(function () {
     $("img").unveil();
+
+    $(document).scroll(function () {
+        if ($(document).scrollTop() > 0) {
+            $('.tagBar').stop().slideUp();
+            $('.skipHeader + .container, .skipHeader .container-fluid, .skipHeader .errorPage').stop().animate({
+                'padding-top': '60px'
+            });
+            $('.skipHeader + .container.padding-top-15, .skipHeader .container-fluid.padding-top-15, .skipHeader .errorPage.padding-top-15').stop().animate({
+                'padding-top': '75px'
+            });
+        }
+        else {
+            $('.tagBar').stop().slideDown();
+            $('.skipHeader + .container, .skipHeader .container-fluid, .skipHeader .errorPage').stop().animate({
+                'padding-top': '96px'
+            });
+            $('.skipHeader + .container.padding-top-15, .skipHeader .container-fluid.padding-top-15, .skipHeader .errorPage.padding-top-15').stop().animate({
+                'padding-top': '111px'
+            });
+        }
+    });
 });
 
 var serverError = {};

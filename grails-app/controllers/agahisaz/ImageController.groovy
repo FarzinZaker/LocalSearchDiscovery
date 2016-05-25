@@ -65,6 +65,24 @@ class ImageController {
         renderImage(content)
     }
 
+    def tip() {
+        def place
+        def content = Image.findByTypeAndOwnerIdAndSize('tip', params.id, params.size ?: 0)?.bytes?.data
+        if (!content)
+            content = Image.findByTypeAndOwnerIdAndSize('placeLogo', params.placeId, params.size ?: 0)?.bytes?.data
+        if (!content) {
+            place = Place.get(params.placeId)
+            def tipIds = place?.tips?.collect { it.id }
+            if (tipIds && tipIds?.size())
+                content = Image.findByTypeAndOwnerIdInListAndSize('tip', tipIds, params.size ?: 0)?.bytes?.data
+        }
+        if (!content)
+            content = ImageController.classLoader.getResourceAsStream("images/categories/${place?.category?.iconPath}88.png")?.bytes
+        if (!content)
+            content = ImageController.classLoader.getResourceAsStream("images/no-image.png")?.bytes
+        renderImage(content)
+    }
+
     private void renderImage(image) {
         if (image && image?.size()) {
             def seconds = 3600 * 24

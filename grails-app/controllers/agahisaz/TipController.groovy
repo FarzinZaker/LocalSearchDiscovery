@@ -8,7 +8,7 @@ class TipController {
     def imageService
 
     def save() {
-        println(params?.id)
+//        println(params?.id)
         def user = springSecurityService.currentUser as User
         if (!user) {
             render 0;

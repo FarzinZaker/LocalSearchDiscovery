@@ -101,7 +101,7 @@ class UserService implements InitializingBean {
         }
     }
 
-    def updateBasicInfo(String profileImage, String mobile, String email, String firstName, String lastName, Boolean male) {
+    def updateBasicInfo(String profileImage, String mobile, String email, String firstName, String lastName, Boolean male, String province, String city, String bio) {
         def user = springSecurityService.currentUser as User
         def countRegistered = mongoService.getCollection('user').count([$and: [[$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]], ['_id': [$ne: user.id]]]])
         if (countRegistered > 0) {
@@ -118,6 +118,9 @@ class UserService implements InitializingBean {
         user['firstName'] = firstName
         user['lastName'] = lastName
         user['gender'] = male ? 'male' : 'female'
+        user['province'] = province
+        user['city'] = city
+        user['bio'] = bio
         if (!user.save()) {
             return [error: user.errors.allErrors.collect { message(it.code) }, field: mobile ? 'mobile' : 'email']
         }

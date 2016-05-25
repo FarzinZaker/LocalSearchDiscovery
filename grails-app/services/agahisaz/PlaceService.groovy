@@ -31,7 +31,7 @@ class PlaceService {
                 [$sort: [count: -1]],
                 [$limit: 5]
         ).results()
-        println(new Date().time - time)
+//        println(new Date().time - time)
         list.collect { it._id }.each {
             it.category = CategoryCache.findCategory(it.category)
         }

@@ -81,7 +81,7 @@
 <g:javascript>
     function resizeExploreLayout() {
         var navbarHeight = $('.navbar-fixed-top').height() + $('.tagBar').height() + 21;
-        navbarHeight = 96;
+        navbarHeight = 93;
         //console.log(navbarHeight);
         //console.log($(window).height());
         $('#placeList').height($(window).height() - navbarHeight);

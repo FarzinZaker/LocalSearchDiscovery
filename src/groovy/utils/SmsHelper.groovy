@@ -28,7 +28,7 @@ class SmsHelper {
         }
         catch (Exception x) {
             result = "ERROR SMS: ${x.message}"
-            println result
+//            println result
         }
         return result
     }
