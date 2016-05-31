@@ -58,12 +58,16 @@
 
         <g:if test="${!center && visitorLocation}">
         //show visitor position
-        if (navigator.geolocation) {
+
+        if(visitorLocation)
+            map_explore.setView(new ol.View({
+                center: ol.proj.transform([visitorLocation.longitude, visitorLocation.latitude], 'EPSG:4326', 'EPSG:3857'),
+                zoom: 11
+            }));
+        else if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
                 map_explore.setView(new ol.View({
-                    center: ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'),
+                    center: ol.proj.transform([position.coords.longitude, position.coords.latitude], 'EPSG:4326', 'EPSG:3857'),
                     zoom: 11
                 }));
             });

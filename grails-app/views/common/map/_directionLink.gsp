@@ -8,7 +8,10 @@
 <g:javascript>
 
     $(document).ready(function () {
-        if (navigator.geolocation) {
+
+        if(visitorLocation)
+            $('#directionLink_${place?.id}').attr('href', "http://maps.google.com/maps?daddr=${place?.location[0]},${place?.location[1]}&saddr=" + visitorLocation.latitude + "," + visitorLocation.longitude);
+        else if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 $('#directionLink_${place?.id}').attr('href', "http://maps.google.com/maps?daddr=${place?.location[0]},${place?.location[1]}&saddr=" + position.coords.latitude + "," + position.coords.longitude);
             });

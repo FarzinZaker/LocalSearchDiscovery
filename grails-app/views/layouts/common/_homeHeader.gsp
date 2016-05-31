@@ -1,4 +1,4 @@
-<nav class="navbar navbar-green navbar-fixed-top">
+<nav class="navbar navbar-green navbar-fixed-top navbar-home">
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
@@ -60,11 +60,11 @@
     </div>
 </nav>
 
-<div class="tagBar skipHeader">
-    <div class="container">
+%{--<div class="tagBar skipHeader noHeight">--}%
+    %{--<div class="container">--}%
         %{--<sec:ifLoggedIn>--}%
             %{--<place:waitingEditSuggestions/>--}%
         %{--</sec:ifLoggedIn>--}%
 
-    </div>
-</div>
+    %{--</div>--}%
+%{--</div>--}%

@@ -1,6 +1,11 @@
 /**
  * Created by Farzin on 4/13/2016.
  */
+var visitorLocation = null;
+if (navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(function (position) {
+        visitorLocation = position.coords;
+    });
 
 $(document).ready(function () {
     $("img").unveil();

@@ -2,6 +2,7 @@ package agahisaz
 
 import cache.CategoryCache
 import com.mongodb.DBObject
+import com.mongodb.util.JSON
 import com.pars.agahisaz.User
 
 class PlaceTagLib {
@@ -140,12 +141,34 @@ class PlaceTagLib {
         Category.findAllByParentIsNull()?.each { category ->
             out << """<li>
                 <a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>
-                    <img src='${createLink(controller: 'image', action: 'category', params: [id: category.id, size:attrs.iconSize])}'/>
+                    <img src='${
+                createLink(controller: 'image', action: 'category', params: [id: category.id, size: attrs.iconSize])
+            }'/>
                     <span class='text'>${category?.name}</span>
                     <span class='clearfix'></span>
                 </a>
             </li>"""
         }
         out << "</ul>"
+    }
+
+    def topPlaces = { attrs, body ->
+        def places = mongoService.getCollection('place').aggregate(
+                [$sort: [averageRate: -1, ratesCount: -1]],
+                [$limit: 20]
+        ).results()
+        places.each {
+            it.category = CategoryCache.findCategory(it.category)
+            out << render(template: '/place/placeCard', model: [place: it])
+        }
+    }
+
+    def topCities = {attrs, body ->
+        def cities = mongoService.getCollection('place').aggregate(
+                [$group: [_id: '$city', province: [$first: '$province'], count: [$sum: 1]]],
+                [$sort: ['count': -1]],
+                [$limit: 40]
+        )?.results()
+        out << render(template: '/layouts/common/cityGrid', model: [cities: cities])
     }
 }

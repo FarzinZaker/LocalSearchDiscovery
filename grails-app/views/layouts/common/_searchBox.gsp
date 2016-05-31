@@ -19,12 +19,16 @@
         var url = '${createLink(controller: 'place', action: 'explore')}/';
         url += $('#searchQuery').val();
         var city = $('#searchLocation').val();
-        if(city.contains('-')){
+        if(city.indexOf('-') != -1){
             var location = city.split(' - ');
             url += '?province=' + location[0];
             url += '&city=' + location[1];
             window.location.href = url;
         }
+        else if(visitorLocation){
+                url += '?near=' + visitorLocation.latitude + ',' + visitorLocation.longitude;
+                window.location.href = url;
+            }
         else if (navigator.geolocation)
             navigator.geolocation.getCurrentPosition(function (position) {
                 url += '?near=' + position.coords.latitude + ',' + position.coords.longitude;
