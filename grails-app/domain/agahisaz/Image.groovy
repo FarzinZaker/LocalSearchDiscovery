@@ -4,6 +4,8 @@ import org.bson.types.Binary
 
 class Image {
 
+    static mapWith = "mongo"
+
     String ownerId
     String type
     Integer size

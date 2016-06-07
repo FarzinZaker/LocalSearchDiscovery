@@ -1,3 +1,4 @@
+import agahisaz.Action
 import agahisaz.Image
 import com.pars.agahisaz.Role
 import com.pars.agahisaz.User
@@ -58,6 +59,27 @@ class BootStrap {
 
             u.superuserLevel = 10
             u.save(flush: true)
+        }
+
+        [
+                [Action.BROWSE, 0],
+                [Action.ADD_TIP, 2],
+                [Action.LIKE_TIP, 1],
+                [Action.TIP_REPORT_ACCEPTED, 2],
+                [Action.TIP_REPORT_REJECTED, -3],
+                [Action.ADD_PLACE, 5],
+                [Action.RATE_PLACE, 2],
+                [Action.EDIT_ACCEPTED, 3],
+                [Action.EDIT_REJECTED, -5],
+                [Action.ACCEPT_EDIT, 2],
+                [Action.REJECT_EDIT, 2],
+                [Action.LOGIN, 0]
+        ].each {
+            def action = Action.findByName(it[0] as String)
+            if(!action)
+                action = new Action(name: it[0])
+            action.grantScore = it[1] as Integer
+            action.save(flush: true)
         }
 
 //        categoryService.importFromFile()

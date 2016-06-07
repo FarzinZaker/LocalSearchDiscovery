@@ -52,6 +52,15 @@ grails.project.dependency.resolution = {
         compile 'org.jsoup:jsoup:1.8.1'
         compile 'wsdl4j:wsdl4j:1.6.2'
 
+        runtime('org.hibernate:hibernate-core:3.6.7.Final') {
+            exclude group:'commons-logging', name:'commons-logging'
+            exclude group:'commons-collections', name:'commons-collections'
+            exclude group:'org.slf4j', name:'slf4j-api'
+            exclude group:'xml-apis', name:'xml-apis'
+            exclude group:'dom4j', name:'dom4j'
+            exclude group:'antlr', name:'antlr'
+        }
+
     }
 
     plugins {
@@ -82,5 +91,8 @@ grails.project.dependency.resolution = {
         compile ":mail:1.0.6"
 
         compile ":pretty-time:2.1.3.Final-1.0.1"
+        compile "org.grails.plugins:browser-detection:0.4.3"
+
+        compile ":quartz:0.4.1"
     }
 }

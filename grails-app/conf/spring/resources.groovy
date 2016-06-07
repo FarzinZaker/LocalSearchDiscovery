@@ -7,6 +7,9 @@ import security.LoginEvent
 
 // Place your Spring DSL code here
 beans = {
+
+    sessionBinderListener(NopSessionBinderJobListener) { }
+
     userDetailsService(AgahisazUserDetailsService) {
         grailsApplication = ref('grailsApplication')
     }

@@ -2592,7 +2592,11 @@ body {
   }
   .panel-header{
     margin-bottom:5px;
+    hr{
+      border-color:#96C950;
+    }
     h1, h2, h3, h4, h5, h6{
+      color:#96C950;
       background-color: #153242;
     }
   }
@@ -2600,15 +2604,31 @@ body {
   a.btn{
 
     transition: all 0.4s ease-in-out 0s;
-    border:1px solid #3186AD;
-    color:#3186AD;
     text-align: center;
+    border:1px solid #ffffff;
+    color:white;
     display: block;
     padding:10px 15px 10px 15px;
     border-radius: 4px;
+    margin-top:25px;
     &:hover{
-      border-color:#ffffff;
-      color:white;
+      border-color:#EE5921;
+      color:#EE5921;
+    }
+  }
+
+  .enamad{
+    transition: all 0.4s ease-in-out 0s;
+    margin-top:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 4px;
+    background-color:white;
+    float:left;
+    opacity: 0.8;
+    cursor:pointer;
+    &:hover{
+      opacity: 1;
     }
   }
 }
@@ -2658,6 +2678,7 @@ body {
       position: absolute;
       top: 133px;
       left: 5px;
+      direction: ltr;
     }
   }
 }

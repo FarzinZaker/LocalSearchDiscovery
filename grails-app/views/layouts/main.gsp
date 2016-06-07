@@ -27,6 +27,7 @@
 <g:javascript>
     $.validate();
 </g:javascript>
+<common:recordBrowse/>
 <r:layoutResources/>
 </body>
 </html>

@@ -32,6 +32,8 @@
                     <place:topCities/>
                 </div>
                 <div class="col-sm-3">
+                    <img class="enamad" src="${resource(dir:'/images', file: 'enamad.png')}"/>
+                    <div class="clearfix"></div>
                     <a href="${createLink(controller: 'place', action: 'add')}" class="btn">
                         <i class="glyphicon glyphicon-plus"></i>
                         <g:message code="footer.addPlace"/>

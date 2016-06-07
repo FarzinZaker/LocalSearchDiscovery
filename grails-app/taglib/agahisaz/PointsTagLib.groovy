@@ -10,21 +10,22 @@ class PointsTagLib {
 
     def topUsers = { attrs, body ->
         def users = mongoService.getCollection('user').aggregate(
-                [$sort: [score: -1]],
+                [$sort: [totalScore: -1]],
                 [$limit: 6]
         ).results()
         users.each {
-            out << render(template: '/points/userCard', model: [user: it])
+            out << render(template: '/points/userCard', model: [user: it, score:it.totalScore])
         }
     }
 
     def weekTopUsers = { attrs, body ->
         def users = mongoService.getCollection('user').aggregate(
-                [$sort: [score: -1]],
+                [$sort: [weekScore: -1]],
                 [$limit: 6]
         ).results()
         users.each {
-            out << render(template: '/points/userCard', model: [user: it])
+            out << render(template: '/points/userCard', model: [user: it, score:it.weekScore])
         }
+
     }
 }

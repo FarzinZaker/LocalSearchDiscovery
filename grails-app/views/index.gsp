@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="owl-carousel user-carousel owl-theme">
-                    <points:topUsers/>
+                    <points:weekTopUsers/>
                 </div>
             </div>
         </div>
