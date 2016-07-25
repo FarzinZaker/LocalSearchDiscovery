@@ -17,6 +17,21 @@
 
 <div class="contentOnMapBG">
 
+    <sec:ifNotLoggedIn>
+        <div class="container oldUsersNotification">
+            <div class="row">
+                <div class="col-sm-12">
+                    <g:message code="oldUsers.notification.part1"/>
+                    <a href="${createLink(controller: 'user', action: 'forgetPassword')}" class="btn btn-transparent">
+                        <g:message code="user.forgetPassword.title"/>
+                    </a>
+                    <g:message code="oldUsers.notification.part2"/>
+                </div>
+            </div>
+        </div>
+
+    </sec:ifNotLoggedIn>
+
     <div class="searchBoxContainer">
         <div class="searchBox">
             <place:searchBox/>
@@ -25,53 +40,59 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 text-center">
-                <a class="mobile-download-button">
-                    <img src="${resource(dir: 'images/icons', file: 'icon-apple.png')}"/>
-                    <span class="title">
-                        <span><g:message code="application.downloadFrom"/></span>
-                        <b>APP STORE</b>
-                    </span>
-                    <span class="clearfix"></span>
-                </a>
-            </div>
+    <sec:ifLoggedIn>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 text-center">
+                    <a class="mobile-download-button">
+                        <img src="${resource(dir: 'images/icons', file: 'icon-apple.png')}"/>
+                        <span class="title">
+                            <span><g:message code="application.downloadFrom"/></span>
+                            <b>APP STORE</b>
+                            <i><g:message code="soon"/></i>
+                        </span>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
 
-            <div class="col-sm-3 text-center">
-                <a class="mobile-download-button">
-                    <img src="${resource(dir: 'images/icons', file: 'icon-android.png')}"/>
-                    <span class="title">
-                        <span><g:message code="application.downloadFrom"/></span>
-                        <b>ANDROID MARKET</b>
-                    </span>
-                    <span class="clearfix"></span>
-                </a>
-            </div>
+                <div class="col-sm-3 text-center">
+                    <a class="mobile-download-button">
+                        <img src="${resource(dir: 'images/icons', file: 'icon-android.png')}"/>
+                        <span class="title">
+                            <span><g:message code="application.downloadFrom"/></span>
+                            <b>ANDROID MARKET</b>
+                            <i><g:message code="soon"/></i>
+                        </span>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
 
-            <div class="col-sm-3 text-center">
-                <a class="mobile-download-button">
-                    <img src="${resource(dir: 'images/icons', file: 'icon-bazar.png')}"/>
-                    <span class="title">
-                        <span><g:message code="application.downloadFrom"/></span>
-                        <b>CAFE BAZAAR</b>
-                    </span>
-                    <span class="clearfix"></span>
-                </a>
-            </div>
+                <div class="col-sm-3 text-center">
+                    <a class="mobile-download-button">
+                        <img src="${resource(dir: 'images/icons', file: 'icon-bazar.png')}"/>
+                        <span class="title">
+                            <span><g:message code="application.downloadFrom"/></span>
+                            <b>CAFE BAZAAR</b>
+                            <i><g:message code="soon"/></i>
+                        </span>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
 
-            <div class="col-sm-3 text-center">
-                <a class="mobile-download-button">
-                    <img src="${resource(dir: 'images/icons', file: 'icon-windows.png')}"/>
-                    <span class="title">
-                        <span><g:message code="application.downloadFrom"/></span>
-                        <b>WINDOWS PHONE</b>
-                    </span>
-                    <span class="clearfix"></span>
-                </a>
+                <div class="col-sm-3 text-center">
+                    <a class="mobile-download-button">
+                        <img src="${resource(dir: 'images/icons', file: 'icon-windows.png')}"/>
+                        <span class="title">
+                            <span><g:message code="application.downloadFrom"/></span>
+                            <b>WINDOWS PHONE</b>
+                            <i><g:message code="soon"/></i>
+                        </span>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </sec:ifLoggedIn>
 
     <div class="container-fluid">
         <div class="row">

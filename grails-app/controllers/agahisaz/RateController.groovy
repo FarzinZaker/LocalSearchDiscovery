@@ -5,6 +5,7 @@ import com.pars.agahisaz.User
 class RateController {
 
     def springSecurityService
+    def actionService
 
     def save() {
         def user = springSecurityService.currentUser as User
@@ -24,6 +25,9 @@ class RateController {
         place.ratesCount = place?.rates?.size()
         place.averageRate = place.rates.sum {rate -> rate.value as Double} / place.ratesCount
         place.save(flush: true)
+
+        actionService.doAction(Action.RATE_PLACE)
+
         render 1
     }
 }

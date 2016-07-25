@@ -10,30 +10,28 @@ class ActionService {
     def springSecurityService
     def mongoService
 
-    def doAction(String actionName) {
-        applyAction(createActionInstance(actionName))
+    def doAction(String actionName, User user = null) {
+        applyAction(createActionInstance(actionName, user))
     }
 
     private void applyAction(ActionInstance actionInstance) {
         if (actionInstance) {
 //            Thread.start {
-                actionInstance?.save()
-                def score = actionInstance?.action?.grantScore
-                if (score != 0)
-                    mongoService.getCollection('user').update(
-                            [_id: actionInstance?.userId],
-                            [$inc: [
-                                    'totalScore': score,
-                                    'weekScore' : score
-                            ]]
-                    )
+            actionInstance?.save()
+            def score = actionInstance?.action?.grantScore
+            if (score != 0)
+                mongoService.getCollection('user').update(
+                        [_id: actionInstance?.userId],
+                        [$inc: [
+                                'totalScore': score,
+                                'weekScore' : score
+                        ]]
+                )
 //            }
         }
     }
 
-    private ActionInstance createActionInstance(String actionName) {
-        if (!springSecurityService.loggedIn)
-            return null
+    private ActionInstance createActionInstance(String actionName, User user) {
 
         def action = Action.findByName(actionName)
         if (!action)
@@ -46,18 +44,20 @@ class ActionService {
 
         actionInstance.action = action
         actionInstance.date = new Date()
-        actionInstance.user = springSecurityService.currentUser as User
-        actionInstance.ipAddress = request.getHeader("X-Forwarded-For") ?: request.getHeader("Client-IP") ?: request.getRemoteAddr()
+        actionInstance.user = user ?: springSecurityService.currentUser as User
         actionInstance.appController = params.controller
         actionInstance.appAction = params.action
         params.remove('controller')
         params.remove('action')
         actionInstance.params = params
-        actionInstance.browserData = [
-                operatingSystem: userAgentIdentService.getOperatingSystem(),
-                browserName    : userAgentIdentService.getBrowserName(),
-                browserVersion : userAgentIdentService.getBrowserVersion()
-        ]
+        if (!user) {
+            actionInstance.ipAddress = request.getHeader("X-Forwarded-For") ?: request.getHeader("Client-IP") ?: request.getRemoteAddr()
+            actionInstance.browserData = [
+                    operatingSystem: userAgentIdentService.getOperatingSystem(),
+                    browserName    : userAgentIdentService.getBrowserName(),
+                    browserVersion : userAgentIdentService.getBrowserVersion()
+            ]
+        }
         actionInstance
     }
 

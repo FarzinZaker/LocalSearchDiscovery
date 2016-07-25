@@ -18,6 +18,10 @@ class CityService {
         }.sort { it.name }
     }
 
+    def findProvinceByCity(String city) {
+        allData.find { it.cities.any { it.name == city } }
+    }
+
     def importFromFile() {
         def lines = CategoryService.classLoader.getResource('data/cities.csv').readLines('UTF-8')
         lines.remove(0)

@@ -14,6 +14,8 @@ class Action {
     public static final String LIKE_TIP = "likeTip"
     public static final String TIP_REPORT_ACCEPTED = "tipReportAccepted"
     public static final String TIP_REPORT_REJECTED = "tipReportRejected"
+    public static final String ACCEPT_TIP_REPORT = "acceptTipReport"
+    public static final String REJECT_TIP_REPORT = "rejectTipReport"
     public static final String ADD_PLACE = "addPlace"
     public static final String RATE_PLACE = "ratePlace"
     public static final String EDIT_ACCEPTED = "editAccepted"

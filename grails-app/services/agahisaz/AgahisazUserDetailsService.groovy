@@ -11,6 +11,7 @@ import org.codehaus.groovy.grails.web.util.WebUtils
 
 class AgahisazUserDetailsService extends GormUserDetailsService {
 
+    @Override
     UserDetails loadUserByUsername(String username, boolean loadRoles) throws UsernameNotFoundException {
         def request = WebUtils.retrieveGrailsWebRequest().getCurrentRequest()
         def session = request.session

@@ -33,6 +33,9 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/cache-1.0.1/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/cache-1.0.1/grails-app/taglib" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/hibernate-2.2.3">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/hibernate-2.2.3/grails-app/i18n" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/jquery-1.11.1">
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/jquery-1.11.1/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/Agahisaz/plugins/jquery-1.11.1/grails-app/services" isTestSource="false" />

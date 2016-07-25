@@ -6,6 +6,7 @@ class TipController {
 
     def springSecurityService
     def imageService
+    def actionService
 
     def save() {
 //        println(params?.id)
@@ -40,6 +41,8 @@ class TipController {
         imageList.each { String image ->
             imageService.saveImage(image, 'tip', tip.id)
         }
+
+        actionService.doAction(Action.ADD_TIP)
 
         render(template: '/place/tip/item', model: [
                 placeId  : place?.id,

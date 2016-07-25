@@ -72,7 +72,7 @@ class PlaceTagLib {
 
     def tipList = { attrs, body ->
         def place = attrs.place as Place
-        def tipList = place.tips?.sort { -(it.date?.time ?: 0) }
+        def tipList = place.tips?.findAll { !it.removed }?.sort { -(it.date?.time ?: 0) }
         out << render(template: '/place/tip/listHeader', model: [tipsCount: tipList?.size() ?: 0])
         def userId = springSecurityService.currentUser?.id
         out << "<div class='tipItems'>"
@@ -163,11 +163,11 @@ class PlaceTagLib {
         }
     }
 
-    def topCities = {attrs, body ->
+    def topCities = { attrs, body ->
         def cities = mongoService.getCollection('place').aggregate(
                 [$group: [_id: '$city', province: [$first: '$province'], count: [$sum: 1]]],
                 [$sort: ['count': -1]],
-                [$limit: 40]
+                [$limit: 15]
         )?.results()
         out << render(template: '/layouts/common/cityGrid', model: [cities: cities])
     }

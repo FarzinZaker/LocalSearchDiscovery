@@ -1,5 +1,7 @@
 package agahisaz
 
+import agahisaz.old.OldAdvertisement
+import agahisaz.old.OldUser
 import com.pars.agahisaz.User
 import org.springframework.beans.factory.InitializingBean
 import utils.SmsHelper
@@ -24,7 +26,7 @@ class UserService implements InitializingBean {
         assert g
     }
 
-    def register(String mobile, String email, String firstName, String lastName, Boolean male) {
+    def register(String mobile, String email, String firstName, String lastName, Boolean male, Boolean oldUser = false) {
         def countRegistered = mongoService.getCollection('user').count([$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]])
         if (countRegistered) {
             return [error: message('register.already-registered'), field: mobile ? 'mobile' : 'email']
@@ -38,20 +40,24 @@ class UserService implements InitializingBean {
         user['gender'] = male ? 'male' : 'female'
         user['changedPassword'] = false
         user.encodePassword()
-        if (!user.save()) {
+        if (oldUser)
+            user['remainingOldAds'] = OldAdvertisement.countByUserIdAndApproved(oldUser?.id as Integer, true)
+        if (!user.save(flush: true)) {
             return [error: user.errors.allErrors.collect { message(it.code) }, field: mobile ? 'mobile' : 'email']
         }
-        if (mobile) {
-            SmsHelper.sendSms(mobile, message('register.sms', [password.toString()]))
-        }
-        if (email) {
-            mailService.sendMail {
-                to email
-                subject message('register.email')
-                html(view: "/messageTemplates/email_template",
-                        model: [message: g.render(template: '/messageTemplates/mail/register', model: [user: user, password: password]).toString(),
-                                source : 'registration',
-                                email  : email])
+        if (!oldUser) {
+            if (mobile) {
+                SmsHelper.sendSms(mobile, message('register.sms', [password.toString()]))
+            }
+            if (email) {
+                mailService.sendMail {
+                    to email
+                    subject message('register.email')
+                    html(view: "/messageTemplates/email_template",
+                            model: [message: g.render(template: '/messageTemplates/mail/register', model: [user: user, password: password]).toString(),
+                                    source : 'registration',
+                                    email  : email])
+                }
             }
         }
         return [success: true]
@@ -59,8 +65,13 @@ class UserService implements InitializingBean {
 
     def resetPassword(String username) {
         def user = User.findByEmailOrMobileOrUsername(username, username, username)
-        if (!user)
-            return message('user.resetPassword.error.noSuchUser')
+        if (!user) {
+            def oldUser = OldUser.findByEmailOrMobileNumber(username, username)
+            if (!oldUser || !register(oldUser.mobileNumber ?: '', oldUser.email, oldUser.fullName, '', true, true)?.success)
+                return message('user.resetPassword.error.noSuchUser')
+            else
+                user = User.findByEmailOrMobileOrUsername(username, username, username)
+        }
 
         def password = (Math.random() * 900000 + 100000) as int
         user.password = password

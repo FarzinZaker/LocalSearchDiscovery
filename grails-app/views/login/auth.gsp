@@ -16,6 +16,13 @@
             <g:if test='${flash.info}'>
                 <div class='alert alert-info'>${flash.info}</div>
             </g:if>
+            <div class='alert alert-warning'>
+                <g:message code="oldUsers.notification.part1"/>
+                <a href="${createLink(controller: 'user', action: 'forgetPassword')}">
+                    <g:message code="user.forgetPassword.title"/>
+                </a>
+            <g:message code="oldUsers.notification.part2"/>
+            </div>
 
             <form action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
                 <div class="row">

@@ -31,6 +31,15 @@ environments {
                 databaseName = "agahisaz"
             }
         }
+        dataSource{
+            pooled = true
+            driverClassName = "net.sourceforge.jtds.jdbc.Driver"
+            url = "jdbc:jtds:sqlserver://82.99.217.217:1433;DatabaseName=agahisaz"
+            username = "sa"
+            password = "Salam123"
+//            dbCreate = "update" // one of 'create', 'create-drop','update'
+            logSql = false
+        }
     }
     test {
         dataSource {
@@ -46,6 +55,15 @@ environments {
                 password = ""
                 databaseName = "agahisaz"
             }
+        }
+        dataSource{
+            pooled = true
+            driverClassName = "net.sourceforge.jtds.jdbc.Driver"
+            url = "jdbc:jtds:sqlserver://82.99.217.217:1433;DatabaseName=agahisaz"
+            username = "sa"
+            password = "Salam123"
+//            dbCreate = "update" // one of 'create', 'create-drop','update'
+            logSql = false
         }
     }
 }

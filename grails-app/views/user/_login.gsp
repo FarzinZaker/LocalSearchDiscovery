@@ -8,7 +8,20 @@
     <p class="text-center subtitle">
         <g:message code="user.login.description"/>
     </p>
-    <form action='${request.contextPath}${ org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils.securityConfig.apf.filterProcessesUrl}' method='POST' id='loginFormModal' autocomplete='off'>
+
+    <div class='alert alert-warning text-center'>
+        <g:message code="oldUsers.notification.part1"/>
+        <a href="${createLink(controller: 'user', action: 'forgetPassword')}">
+            <g:message code="user.forgetPassword.title"/>
+        </a>
+        <g:message code="oldUsers.notification.part2"/>
+    </div>
+
+    <form action='${request.contextPath}${ SpringSecurityUtils.securityConfig.apf.filterProcessesUrl}' method='POST' id='loginFormModal' autocomplete='off'>
+        <input type="hidden" name="spring-security-redirect" id="spring-security-redirect"/>
+        <g:javascript>
+            document.getElementById('spring-security-redirect').value = encodeURI(window.location.href);
+        </g:javascript>
         <div class="row">
             <div class="col-sm-12">
                 <div class="input-group">

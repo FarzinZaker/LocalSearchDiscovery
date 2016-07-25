@@ -18,6 +18,7 @@ class Place {
     User creator
     EditSuggestion editSuggestion
     List tips
+    List reportedTips
     List rates
     Double averageRate
     Integer ratesCount
@@ -25,6 +26,9 @@ class Place {
     //report fields
     String reportType
     String reportComment
+
+    Date dateCreated
+    Date lastUpdated
 
     static constraints = {
         name blank: false
@@ -37,6 +41,9 @@ class Place {
 
         reportType nullable: true
         reportComment nullable: true
+
+        dateCreated nullable: true
+        lastUpdated nullable: true
     }
 
     static mapping = {
@@ -44,5 +51,10 @@ class Place {
 //        index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
         compoundIndex province: 1, city: 1, category: 1
         tags index: true
+    }
+
+    def beforeUpdate() {
+        if(!dateCreated)
+            dateCreated = new Date()
     }
 }

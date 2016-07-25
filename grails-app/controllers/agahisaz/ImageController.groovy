@@ -38,8 +38,10 @@ class ImageController {
         if (!content) {
             def tipIds = Place.get(params.id)?.tips?.collect { it.id }
             if (tipIds && tipIds?.size())
-                content = Image.findByTypeAndOwnerIdInListAndSize('tip', tipIds, params.size ?: 0)?.bytes?.data
+                content = Image.findByTypeAndOwnerIdInListAndSize('tip', tipIds, params.size ?: 200)?.bytes?.data
         }
+        if(!content && params.mobile)
+            content = ImageController.classLoader.getResourceAsStream("images/mobile-no-image.jpg")?.bytes
         if (!content)
             content = ImageController.classLoader.getResourceAsStream("images/categories/${Place.get(params.id)?.category?.iconPath}${params.size ?: 88}.png")?.bytes
         if (!content)

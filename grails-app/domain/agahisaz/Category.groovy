@@ -16,6 +16,10 @@ class Category {
 
     static transients = ['parentIdList', 'childIdList']
 
+    static mapping = {
+//        index name: 'text'
+    }
+
     static constraints = {
         name blank: false
         pluralName blank: false

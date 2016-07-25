@@ -16,27 +16,17 @@ class PlaceController {
     def mongoService
     def imageService
     def placeService
+    def actionService
 
     @Secured([Roles.AUTHENTICATED])
     def add() {}
 
     @Secured([Roles.AUTHENTICATED])
     def save() {
-        def place = new Place()
-        place.name = params.name.trim()
-        place.province = params.province
-        place.city = params.city
-        place.address = params.address && params.address?.trim() != '' ? params.address?.trim() : null
-        place.phone = params.phone && params.phone?.trim() != '' ? params.phone?.trim() : null
-        place.postalCode = params.postalCode && params.postalCode?.trim() != '' ? params.postalCode?.trim() : null
-        place.location = params.location.toString().split(',').collect { it.toDouble() }
-        place.category = Category.findByName(params.category3?.toString() ?: params.category2?.toString())
-        place.creator = springSecurityService.currentUser as User
-        place.tags = new ArrayList()
-        params.tags?.trim()?.split(',')?.each { String tagName ->
-            place.tags.add(tagName.trim())
-        }
-        if (place.save(flush: true)) {
+        def place = placeService.save(params)
+        if (place) {
+            actionService.doAction(Action.ADD_PLACE)
+
             flash.message = message(code: 'place.save.success')
             redirect(action: 'view', id: place.id, params: [name: place.name])
         } else {
@@ -70,7 +60,7 @@ class PlaceController {
         place.tags = new ArrayList()
         new String(new BASE64Decoder().decodeBuffer(params.tags), 'UTF8')?.trim()?.split(',')?.each { String tagName ->
             place.tags.add(tagName.trim())
-            Tag.findByName(tagName.trim())?:new Tag(name:tagName.trim()).save(flush: true)
+            Tag.findByName(tagName.trim()) ?: new Tag(name: tagName.trim()).save(flush: true)
         }
 
         if (place.save(flush: true)) {
@@ -89,18 +79,20 @@ class PlaceController {
     def view() {
         def place = Place.get(params.id)
         def model = [place: place, similarPlaces: placeService.similarPlaces(place)]
-        if(place.reportType)
+        if (place.reportType)
             render(view: 'deleted', model: model)
         else
             render(view: 'view', model: model)
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def suggestEdit() {
         def place = Place.get(params.id)
         def editSuggestion = EditSuggestion.findByPlace(place)
         [place: editSuggestion ?: place, placeId: place?.id]
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def saveEditSuggestion() {
 
         def place = Place.get(params.placeId as Long)
@@ -123,7 +115,7 @@ class PlaceController {
         params.tags?.trim()?.split(',')?.each { String tagName ->
             editSuggestion.tags.add(tagName.trim())
         }
-        if(params.reportReason){
+        if (params.reportReason) {
             editSuggestion.reportType = params.reportReason
             editSuggestion.reportComment = params.additionalInfo
         }
@@ -147,7 +139,7 @@ class PlaceController {
         if (params.city)
             query << [city: params.city]
 
-        def queryString = params.id?.toString()?.trim() ?: ''
+        def queryString = params.id?.toString()?.replace('-', ' ')?.trim() ?: ''
         request.setAttribute("query", queryString)
         def category = Category.findByName(queryString)
         if (category) {
@@ -224,17 +216,28 @@ class PlaceController {
             def place = Place.get(editSuggestion.place)
             place.categoryInfo = CategoryCache.findCategory(place.categoryId)
             [place: place, editSuggestion: editSuggestion]
+        } else {
+            def reportedPlace = mongoService.getCollection('place').aggregate(
+                    [$match: ['reportedTips': [$ne: null, $not: [$size: 0]]]],
+                    [$unwind: '$tips'],
+                    [$match: ['tips.reports': [$ne: null]]]
+            ).results()?.find()
+            if (reportedPlace) {
+                render view: '/place/reviewTipReport', model: [place: reportedPlace, users: User.findAllByIdInList(reportedPlace?.tips?.reports ?: [])]
+            } else
+                render view: '/place/reviewEditSuggestionEnded'
         }
-        else
-            render view: '/place/reviewEditSuggestionEnded'
 
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def acceptEdit() {
 
         def editSuggestion = EditSuggestion.get(params.editSuggestion)
         def place = Place.get(params.place)
         place."${params.field}" = editSuggestion."${params.field}"
+        if (params.field == 'city')
+            place.province = editSuggestion.province
         place.save(flush: true)
 
         def next = 0
@@ -242,17 +245,22 @@ class PlaceController {
             next = 1
             editSuggestion.delete()
         }
+        actionService.doAction(Action.ACCEPT_EDIT)
+        actionService.doAction(Action.EDIT_ACCEPTED, editSuggestion.creator)
         render([
                 message: g.render(template: '/common/score', model: [score: 3]),
                 next   : next
         ] as JSON)
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def rejectEdit() {
 
         def editSuggestion = EditSuggestion.get(params.editSuggestion)
         def place = Place.get(params.place)
         editSuggestion."${params.field}" = place."${params.field}"
+        if (params.field == 'city')
+            editSuggestion.province = place.province
         place.save(flush: true)
 
         def next = 0
@@ -260,9 +268,55 @@ class PlaceController {
             next = 1
             editSuggestion.delete()
         }
+        actionService.doAction(Action.REJECT_EDIT)
+        actionService.doAction(Action.EDIT_REJECTED, editSuggestion.creator)
         render([
                 message: g.render(template: '/common/score', model: [score: 3]),
                 next   : next
         ] as JSON)
+    }
+
+    @Secured([Roles.AUTHENTICATED])
+    def acceptTipReport() {
+        def place = Place.get(params.id)
+        def userIds = []
+        place.tips.each { tip ->
+            if (tip.id == params.tip) {
+                tip.removed = true
+                userIds = tip.reports
+                tip.reports = null
+                place.reportedTips.remove(tip.id)
+            }
+        }
+        place.save(flush: true)
+
+        actionService.doAction(Action.ACCEPT_TIP_REPORT)
+        userIds.each { userId ->
+            actionService.doAction(Action.TIP_REPORT_ACCEPTED, User.get(userId))
+        }
+
+        redirect(action: 'reviewEditSuggestion')
+    }
+
+    @Secured([Roles.AUTHENTICATED])
+    def rejectTipReport() {
+        def place = Place.get(params.id)
+        def userIds = []
+        place.tips.each { tip ->
+            if (tip.id == params.tip) {
+                tip.removed = false
+                userIds = tip.reports
+                tip.reports = null
+                place.reportedTips.remove(tip.id)
+            }
+        }
+        place.save(flush: true)
+
+        actionService.doAction(Action.REJECT_TIP_REPORT)
+        userIds.each { userId ->
+            actionService.doAction(Action.TIP_REPORT_REJECTED, User.get(userId))
+        }
+
+        redirect(action: 'reviewEditSuggestion')
     }
 }

@@ -52,20 +52,22 @@ grails.project.dependency.resolution = {
         compile 'org.jsoup:jsoup:1.8.1'
         compile 'wsdl4j:wsdl4j:1.6.2'
 
-        runtime('org.hibernate:hibernate-core:3.6.7.Final') {
-            exclude group:'commons-logging', name:'commons-logging'
-            exclude group:'commons-collections', name:'commons-collections'
-            exclude group:'org.slf4j', name:'slf4j-api'
-            exclude group:'xml-apis', name:'xml-apis'
-            exclude group:'dom4j', name:'dom4j'
-            exclude group:'antlr', name:'antlr'
-        }
+//        runtime('org.hibernate:hibernate-core:3.6.7.Final') {
+//            exclude group:'commons-logging', name:'commons-logging'
+//            exclude group:'commons-collections', name:'commons-collections'
+//            exclude group:'org.slf4j', name:'slf4j-api'
+//            exclude group:'xml-apis', name:'xml-apis'
+//            exclude group:'dom4j', name:'dom4j'
+//            exclude group:'antlr', name:'antlr'
+//        }
+        runtime 'net.sourceforge.jtds:jtds:1.2.6'
+
 
     }
 
     plugins {
         compile ':mongodb:1.3.3'
-//        runtime ":hibernate:$grailsVersion"
+        runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.11.1"
         runtime ":resources:1.2"
         compile ":lesscss-resources:1.3.3"

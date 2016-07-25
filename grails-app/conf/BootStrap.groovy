@@ -67,6 +67,8 @@ class BootStrap {
                 [Action.LIKE_TIP, 1],
                 [Action.TIP_REPORT_ACCEPTED, 2],
                 [Action.TIP_REPORT_REJECTED, -3],
+                [Action.ACCEPT_TIP_REPORT, 1],
+                [Action.REJECT_TIP_REPORT, 1],
                 [Action.ADD_PLACE, 5],
                 [Action.RATE_PLACE, 2],
                 [Action.EDIT_ACCEPTED, 3],

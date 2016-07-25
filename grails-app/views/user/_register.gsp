@@ -8,6 +8,15 @@
         <g:message code="user.register.description"/>
     </p>
 
+    <div class='alert alert-warning text-center'>
+        <g:message code="oldUsers.notification.part1"/>
+        <a href="${createLink(controller: 'user', action: 'forgetPassword')}">
+            <g:message code="user.forgetPassword.title"/>
+        </a><br/>
+        <g:message code="oldUsers.notification.part2"/>
+    </div>
+
+
     <form id="registerForm" autocomplete="off">
         <div class="container-fluid">
             <div class="row">

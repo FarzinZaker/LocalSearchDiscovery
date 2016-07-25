@@ -6,7 +6,7 @@
 
         <span class="city">${user?.province} ${user?.city}</span>
 
-        <span class="score">${score ?: 0}</span>
+        <span class="score">${Math.round(score ?: 0)}</span>
     </div>
 
     <div class="clearfix"></div>

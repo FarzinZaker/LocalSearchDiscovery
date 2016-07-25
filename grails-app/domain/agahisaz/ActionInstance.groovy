@@ -17,5 +17,7 @@ class ActionInstance {
     static constraints = {
         appController nullable: true
         appAction nullable: true
+        ipAddress nullable: true
+        browserData nullable: true
     }
 }
