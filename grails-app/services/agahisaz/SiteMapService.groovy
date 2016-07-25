@@ -29,7 +29,6 @@ class SiteMapService {
     private List<String> refreshPlaces() {
 
         def sitemaps = new HashSet<String>()
-        def g = new ApplicationTagLib()
         def totalCount = Place.countByReportTypeIsNull()
         def skip = 0;
         while (skip < totalCount) {
@@ -59,7 +58,6 @@ class SiteMapService {
     private List<String> refreshCategories() {
 
         def sitemaps = new HashSet<String>()
-        def g = new ApplicationTagLib()
         def totalCount = Category.count()
         def skip = 0;
         while (skip < totalCount) {
@@ -88,7 +86,6 @@ class SiteMapService {
     private List<String> refreshTags() {
 
         def sitemaps = new HashSet<String>()
-        def g = new ApplicationTagLib()
         def totalCount = Tag.count()
         def skip = 0;
         while (skip < totalCount) {
@@ -117,7 +114,6 @@ class SiteMapService {
     private List<String> refreshLocations() {
 
         def sitemaps = new HashSet<String>()
-        def g = new ApplicationTagLib()
         def totalCount = Province.count()
         def skip = 0;
         while (skip < totalCount) {
