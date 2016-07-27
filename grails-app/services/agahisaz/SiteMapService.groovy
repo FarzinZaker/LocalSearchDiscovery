@@ -3,7 +3,8 @@ package agahisaz
 import grails.util.Environment
 
 import java.text.DecimalFormat
-import org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib
+import org.codehaus.groovy.grails.web.context.ServletContextHolder as SCH
+
 
 class SiteMapService {
 
@@ -14,7 +15,7 @@ class SiteMapService {
     private static pageSize = 1000
     private static fileSize = 20000
 
-    private static String filesPath = Environment.isDevelopmentMode() ? 'web-app/sitemaps/' : 'sitemaps/'
+    private static String filesPath = SCH.servletContext.getRealPath("") + File.separator +"sitemaps"
 
     private static String DAILY = 'daily'
     private static String WEEKLY = 'weekly'
@@ -22,6 +23,7 @@ class SiteMapService {
     private static String YEARLY = 'yearly'
 
     def refresh() {
+
         def list = refreshPlaces() +
                 refreshCategories() +
                 refreshTags() +
