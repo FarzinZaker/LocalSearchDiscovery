@@ -20,10 +20,40 @@ class SiteMapService {
     private static String YEARLY = 'yearly'
 
     def refresh() {
-        refreshPlaces()
-        refreshCategories()
-        refreshTags()
-        refreshLocations()
+        def list = refreshPlaces() +
+                refreshCategories() +
+                refreshTags() +
+                refreshLocations()
+        createIndex(list?.toList())
+    }
+
+    private static void createIndex(List<String> list) {
+
+        def tempFileName = "${filesPath}index.xml.tmp"
+        def tempFile = new File(tempFileName)
+        if (tempFile.exists()) {
+            tempFile.delete()
+            tempFile = new File(tempFileName)
+        }
+        tempFile.createNewFile()
+        tempFile.append("""<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+""", 'UTF-8')
+        list.each {item ->
+            tempFile.append("""\t<sitemap>
+        <loc>${item}</loc>
+        <lastmod>${prepareDate(new Date())}</lastmod>
+    </sitemap>
+""")
+        }
+        tempFile.append("</sitemapindex>")
+
+
+        def fileName = "${filesPath}index.xml"
+        def file = new File(fileName)
+        if (file.exists())
+            file.delete()
+        tempFile.renameTo(fileName)
     }
 
     private List<String> refreshPlaces() {
