@@ -1,5 +1,7 @@
 package agahisaz
 
+import grails.util.Environment
+
 import java.text.DecimalFormat
 import org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib
 
@@ -12,7 +14,7 @@ class SiteMapService {
     private static pageSize = 1000
     private static fileSize = 20000
 
-    private static String filesPath = 'web-app/sitemaps/'
+    private static String filesPath = Environment.isDevelopmentMode() ? 'web-app/sitemaps/' : 'sitemaps/'
 
     private static String DAILY = 'daily'
     private static String WEEKLY = 'weekly'
