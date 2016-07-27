@@ -22,8 +22,6 @@ class SiteMapService {
     private static String YEARLY = 'yearly'
 
     def refresh() {
-
-        println filesPath
         def list = refreshPlaces() +
                 refreshCategories() +
                 refreshTags() +
