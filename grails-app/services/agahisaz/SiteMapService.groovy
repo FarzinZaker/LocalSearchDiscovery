@@ -15,7 +15,7 @@ class SiteMapService {
     private static pageSize = 1000
     private static fileSize = 20000
 
-    private static String filesPath = SCH.servletContext.getRealPath("") + File.separator +"sitemaps"
+    private static String filesPath = SCH.servletContext.getRealPath("") + File.separator + "sitemaps" + File.separator
 
     private static String DAILY = 'daily'
     private static String WEEKLY = 'weekly'
@@ -24,6 +24,7 @@ class SiteMapService {
 
     def refresh() {
 
+        println filesPath
         def list = refreshPlaces() +
                 refreshCategories() +
                 refreshTags() +
@@ -32,7 +33,6 @@ class SiteMapService {
     }
 
     private static void createIndex(List<String> list) {
-
         def tempFileName = "${filesPath}index.xml.tmp"
         def tempFile = new File(tempFileName)
         if (tempFile.exists()) {
@@ -43,7 +43,7 @@ class SiteMapService {
         tempFile.append("""<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 """, 'UTF-8')
-        list.each {item ->
+        list.each { item ->
             tempFile.append("""\t<sitemap>
         <loc>${item}</loc>
         <lastmod>${prepareDate(new Date())}</lastmod>
