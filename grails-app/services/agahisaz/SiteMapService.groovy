@@ -225,6 +225,6 @@ class SiteMapService {
         if (file.exists())
             file.delete()
         tempFile.renameTo(fileName)
-        "${rootUrl}/sitemaps/${type}-${(skip / fileSize).toInteger() + 1}.xml"
+        "http://${rootUrl}/sitemaps/${type}-${(skip / fileSize).toInteger() + 1}.xml"
     }
 }
