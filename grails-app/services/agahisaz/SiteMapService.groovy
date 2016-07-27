@@ -12,7 +12,7 @@ class SiteMapService {
     private static pageSize = 1000
     private static fileSize = 20000
 
-    private static String filesPath = 'web-app/sitemap/'
+    private static String filesPath = 'web-app/sitemaps/'
 
     private static String DAILY = 'daily'
     private static String WEEKLY = 'weekly'
