@@ -62,12 +62,20 @@ grails.hibernate.cache.queries = false
 grails.serverURL = "http://localhost:8585"
 environments {
     development {
+
+        sitemap.path = 'D:\\sitemaps\\'
+        sitemap.rootUrl = 'localhost:8585'
+
         grails.app.context = "/"
         grails.logging.jul.usebridge = true
         grails.resources.processing.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
     }
     production {
+
+        sitemap.path = '/home/agahisaz/sitemaps/'
+        sitemap.rootUrl = 'www.4tablo.ir:8090'
+
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
         grails.resources.processing.enabled = true

@@ -9,6 +9,9 @@ class UrlMappings {
         "/location/$i1/$city"(controller: 'place', action: 'explore')
         "/search/$id"(controller: 'place', action: 'explore')
 
+        "/sitemap/index"(controller: 'sitemap', action: 'index')
+        "/sitemap/$type/$id"(controller: 'sitemap', action: 'view')
+
         "/$controller/$action\\.json" {}
         "/$controller/$action?/$id?/$name?" {
             constraints {

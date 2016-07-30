@@ -8,28 +8,33 @@ import java.text.DecimalFormat
 class SiteMapService {
 
     def mongoService
+    def grailsApplication
 
-    private static rootUrl = 'www.4tablo.ir:8090'
+    private rootUrl
 
-    private static pageSize = 1000
-    private static fileSize = 20000
+    private pageSize = 1000
+    private fileSize = 20000
 
-    private static String filesPath = (Environment.isDevelopmentMode() ? '' : '/home/agahisaz/tomcat/webapps/ROOT/') + "sitemaps" + File.separator
+    private String filesPath
 
-    private static String DAILY = 'daily'
-    private static String WEEKLY = 'weekly'
-    private static String MONTHLY = 'monthly'
-    private static String YEARLY = 'yearly'
+    private String DAILY = 'daily'
+    private String WEEKLY = 'weekly'
+    private String MONTHLY = 'monthly'
+    private String YEARLY = 'yearly'
 
     def refresh() {
-        def list = refreshPlaces() +
+        filesPath = grailsApplication.config.sitemap.path
+        rootUrl = grailsApplication.config.sitemap.rootUrl
+
+        def list =
+                refreshPlaces() +
                 refreshCategories() +
                 refreshTags() +
                 refreshLocations()
         createIndex(list?.toList())
     }
 
-    private static void createIndex(List<String> list) {
+    private void createIndex(List<String> list) {
         def tempFileName = "${filesPath}index.xml.tmp"
         def tempFile = new File(tempFileName)
         if (tempFile.exists()) {
@@ -171,7 +176,7 @@ class SiteMapService {
         sitemaps?.toList()?.sort()
     }
 
-    private static String getUrl(String location, Date lastModifyDate, String changeFrequency, Float priority) {
+    private String getUrl(String location, Date lastModifyDate, String changeFrequency, Float priority) {
         """\t<url>
         <loc>${location}</loc>
         <lastmod>${prepareDate(lastModifyDate)}</lastmod>
@@ -180,21 +185,21 @@ class SiteMapService {
     </url>"""
     }
 
-    private static String prepareDate(Date date) {
+    private String prepareDate(Date date) {
         def calendar = Calendar.getInstance()
         calendar.setTime(date)
         "${new DecimalFormat("0000").format(calendar.get(Calendar.YEAR))}-${new DecimalFormat("00").format(calendar.get(Calendar.MONTH) + 1)}-${new DecimalFormat("00").format(calendar.get(Calendar.DAY_OF_MONTH))}"
     }
 
-    private static String getTempFilePath(String type, Integer skip) {
+    private String getTempFilePath(String type, Integer skip) {
         "${filesPath}${type}-${(skip / fileSize).toInteger() + 1}.xml.tmp"
     }
 
-    private static String getFilePath(String type, Integer skip) {
+    private String getFilePath(String type, Integer skip) {
         "${filesPath}${type}-${(skip / fileSize).toInteger() + 1}.xml"
     }
 
-    private static boolean createTempFile(String type, Integer skip) {
+    private boolean createTempFile(String type, Integer skip) {
         if (skip % fileSize)
             return false
         def fileName = getTempFilePath(type, skip)
@@ -210,13 +215,13 @@ class SiteMapService {
         true
     }
 
-    private static void appendToTempFile(String type, Integer skip, String url) {
+    private void appendToTempFile(String type, Integer skip, String url) {
         def fileName = getTempFilePath(type, skip)
         def file = new File(fileName)
         file.append(url + '\r\n', 'UTF-8')
     }
 
-    private static String replaceOriginalFile(String type, Integer skip) {
+    private String replaceOriginalFile(String type, Integer skip) {
         def tempFileName = getTempFilePath(type, skip)
         def tempFile = new File(tempFileName)
         tempFile.append("</urlset>\r\n", 'UTF-8')
@@ -225,6 +230,6 @@ class SiteMapService {
         if (file.exists())
             file.delete()
         tempFile.renameTo(fileName)
-        "http://${rootUrl}/sitemaps/${type}-${(skip / fileSize).toInteger() + 1}.xml"
+        "http://${rootUrl}/sitemap/${type}/${(skip / fileSize).toInteger() + 1}"
     }
 }
