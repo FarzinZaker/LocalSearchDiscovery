@@ -13,7 +13,7 @@
 
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label for="mobile">
                 <span class="glyphicon glyphicon-phone"></span>
                 <g:message code="user.mobile.label"/>
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label for="email">
                 <span class="glyphicon glyphicon-envelope"></span>
                 <g:message code="user.email.label"/>
@@ -39,7 +39,7 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
             <label for="firstName">
                 <span class="glyphicon glyphicon-user"></span>
                 <g:message code="user.firstName.label"/>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-8">
             <label for="firstName">&nbsp;
             </label>
 
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <label for="lastName">
                 <span class="glyphicon glyphicon-user"></span>
                 <g:message code="user.lastName.label"/>
@@ -79,7 +79,7 @@
 
 
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label for="bio">
                 <span class="glyphicon glyphicon-info-sign"></span>
                 <g:message code="user.bio.label"/>

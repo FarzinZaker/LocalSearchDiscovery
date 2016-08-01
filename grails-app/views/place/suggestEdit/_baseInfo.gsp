@@ -1,7 +1,7 @@
 <div class="row">
-    <div class="col-sm-7">
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <label for="name">
                     <span class="glyphicon glyphicon-home"></span>
                     <g:message code="place.name.label"/>
@@ -19,7 +19,7 @@
                   model="${[title: message(code: 'place.category.label'), category: place?.category]}"/>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label for="phone">
                     <span class="glyphicon glyphicon-phone-alt"></span>
                     <g:message code="place.phone.label"/>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label for="postalCode">
                     <span class="glyphicon glyphicon-barcode"></span>
                     <g:message code="place.postalCode.label"/>
@@ -46,7 +46,7 @@
         <g:render template="/common/cityPicker" model="${[province: place?.province, city: place?.city]}"/>
     </div>
 
-    <div class="col-sm-5">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <map:locationPicker
                 name="location"
                 height="285"
@@ -56,7 +56,7 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="address">
             <span class="glyphicon glyphicon-road"></span>
             <g:message code="place.address.label"/>

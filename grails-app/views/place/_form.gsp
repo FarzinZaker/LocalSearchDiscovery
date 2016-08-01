@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="name">
             <span class="glyphicon glyphicon-home"></span>
             <g:message code="place.name.label"/>
@@ -18,7 +18,7 @@
     }
 </g:javascript>
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="address">
             <span class="glyphicon glyphicon-road"></span>
             <g:message code="place.address.label"/>
@@ -31,7 +31,7 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <map:locationPicker
                 name="location"
                 visitorLocation="1"
@@ -41,7 +41,7 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <label for="phone">
             <span class="glyphicon glyphicon-phone-alt"></span>
             <g:message code="place.phone.label"/>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <label for="postalCode">
             <span class="glyphicon glyphicon-barcode"></span>
             <g:message code="place.postalCode.label"/>

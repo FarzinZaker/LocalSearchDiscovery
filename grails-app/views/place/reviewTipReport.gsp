@@ -15,14 +15,14 @@
 <body>
 <div class="container padding-top-15">
     <div class="free-toolbar row">
-        <div class="col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h1><g:message code="tipReport.review"/> ${place?.name}</h1>
             <input type="button" class="btn btn-warning btn-skip" value="${message(code: 'skip')}"/>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-12 tipReportReviewPane">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tipReportReviewPane">
             <ul id="tipsList">
                 <g:render template="tip/item" model="${[
                         placeId       : place?._id,
@@ -45,7 +45,7 @@
     </div>
 
     <div class="free-toolbar row">
-        <div class="col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="float-right">
                 <a class="btn btn-accept" href="${createLink(controller: 'place', action: 'acceptTipReport', params: [id:place?._id, tip: place?.tips?.id])}"><g:message code="accept"/></a>
                 <a class="btn btn-reject" href="${createLink(controller: 'place', action: 'rejectTipReport', params: [id:place?._id, tip: place?.tips?.id])}"><g:message code="reject"/></a>

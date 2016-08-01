@@ -12,6 +12,7 @@ body {
 
 * {
   outline: none !important;
+  //transition: all 0.4s ease-in-out 0s;
 }
 
 .inline-block {
@@ -19,7 +20,8 @@ body {
 }
 
 .block {
-  display: block;
+  display: block !important;
+  width: 100% !important;
 }
 
 .table-row {
@@ -36,9 +38,10 @@ body {
 
 .navbar-green {
   background-color: #ffffff;
-  height: 59px;
+  //height: 59px;
   border-bottom: 3px solid #96c950;
   margin-bottom: 0;
+  padding-bottom: 5px;
 
   &.navbar-home {
     border-bottom-width: 0;
@@ -72,50 +75,203 @@ body {
     margin-left: 20px;
   }
 
-  .navbar-form {
-    display: inline-block;
-    .input-group {
-      background: none;
-      width: auto;
-      margin: 0;
-      .selectize-control {
-        background: #FAFAFA;
+  //.navbar-form {
+  //  display: inline-block;
+  .row {
+    background: none;
+    //width: auto;
+    //margin: 0;
+
+    &[role=search] {
+    }
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11,
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11,
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    //.col-md-12, .col-sm-12, .col-lg-12, .col-xs-12 {
+    //  padding: 0 !important;
+    //  .selectize-control {
+    //    padding-right: 0;
+    //    padding-left: 0;
+    //  }
+    //}
+    .selectize-control {
+      background: #FAFAFA;
+      box-shadow: none;
+      //width: 180px;
+      display: block;
+      //margin-left: 7px;
+      padding: 10px;
+      line-height: 20px;
+      height: 40px;
+      border-radius: 0;
+      margin-top: 9px;
+      //border: 3px solid #b0d77c !important;
+      .selectize-input {
         box-shadow: none;
-        width: 180px;
-        margin-left: 7px;
-        padding: 10px;
-        line-height: 20px;
-        height: 40px;
-        border-radius: 0;
-        //border: 3px solid #b0d77c !important;
-        .selectize-input {
-          input {
-            margin-top: -3px !important;
-          }
-        }
-      }
-
-      .searchButton {
-        .glyphicon-search {
-          color: #96C950;
-          display: block;
-          float: left;
-          font-size: 24px;
-          font-weight: bold;
-          margin-right: 10px;
-          margin-top: 7px;
-          cursor: pointer;
-          &:hover {
-            color: #5C9DC0;
-
-          }
-        }
-
-        .label {
-          display: none !important;
+        background: none;
+        input {
+          margin-top: -3px !important;
         }
       }
     }
+
+    .searchButton {
+      display: block;
+      float: right;
+      margin-top: 9px;
+      .glyphicon-search {
+        color: #96C950;
+        display: block;
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 10px;
+        margin-top: 7px;
+        cursor: pointer;
+        &:hover {
+          color: #5C9DC0;
+
+        }
+      }
+
+      .label {
+        display: none !important;
+      }
+    }
+  }
+  //}
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-left {
+      text-align: center !important;
+      .btn {
+        margin-right: 5px !important;
+        margin-left: 5px !important;
+      }
+    }
+
+    .navbar-header {
+      float: none !important;
+      text-align: center !important;
+      margin: 0 !important;
+      padding-top: 12px !important;
+      margin-bottom: 10px !important;
+      .navbar-brand {
+        float: none !important;
+        padding-top: 9px;
+        & > img {
+          display: inline-block;
+        }
+      }
+    }
+    &.navbar-fixed-top {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      bottom: auto !important;
+      right: auto !important;
+    }
+
+    &.navbar-green {
+      .row {
+        margin-left: -5px;
+        margin-right: -5px;
+        .searchButton {
+          display: block !important;
+          background: #96C950 !important;
+          padding: 5px 5px !important;
+          height: 40px !important;
+          cursor: pointer !important;
+          float: none;
+          margin-bottom: 15px;
+          //text-align: center;
+          .glyphicon {
+            color: white !important;
+            font-size: 18px !important;
+            display: inline-block !important;
+            float: none !important;
+            margin-left: 7px !important;
+            margin-top: 0 !important;
+            vertical-align: middle;
+          }
+          .label {
+            font-weight: normal !important;
+            font-size: 14px !important;
+            padding: 0 !important;
+            display: inline-block !important;
+            float: none !important;
+            //margin-top: -3px !important;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .contentOnMapBG {
+    margin: 0 !important;
+  }
+
+  .skipHeader {
+    margin-top: 0 !important;
+  }
+
+  .tagBar {
+    position: static !important;
+    height: auto !important;
+    display: block !important;
+    padding-bottom: 6px !important;
+
+    & + .container {
+      padding-top: 0 !important;
+    }
+  }
+
+  .alert-bottom {
+    right: 20px !important;
+    width: auto !important;
+
+    .float-left {
+      float: none !important;
+    }
+  }
+
+  .h1, h1 {
+    font-size: 24px;
+  }
+
+  .categoryIcon img {
+    width: 48px !important;
+  }
+
+  .placeInfoSection .placeBaseInfo {
+    margin-right: 60px !important;
+  }
+
+  .silverPanel {
+    margin-right: -15px !important;
+    margin-left:-30px !important;
+    .whitePanel {
+      margin-left:0 !important;
+      margin-right: -15px !important;
+    }
+
+    .helpPanel {
+      padding-left:30px !important;
+      padding-right:15px !important;
+    }
+  }
+
+  .floatingPanel{
+    margin:0 !important;
+    border-width: 0 !important;
+    box-shadow: none !important;
   }
 }
 
@@ -149,34 +305,49 @@ body {
 }
 
 .skipHeader {
-  margin-top: 59px;
+  margin-top: 60px;
   & + .container, & + .container-fluid, & + .errorPage {
-    padding-top: 93px;
+    padding-top: 97px;
     &.padding-top-15 {
       padding-top: 108px;
     }
   }
 }
 
+.full-height{
+  height:100%;
+}
+
 .tagBar {
   background: #3186ad;
   color: white;
-  height: 38px;
-  padding: 6px 10px;
+  padding: 0 10px 6px;
   position: absolute;
   width: 100%;
   z-index: 1000;
-  ul {
-    float: right;
-    margin: 0;
-    max-width: 100%;
-    overflow: hidden;
+  ul{
     padding: 0;
+    margin:0;
+    height:31px;
+  }
+  .row, ul {
+    //float: right;
+    //margin: 0;
+    //max-width: 100%;
+    overflow: hidden;
+    //padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    li {
+    li{
       display: inline-block;
-      margin-left: 8px;
+    }
+    div, li {
+      list-style: none;
+      //display: inline-block;
+      //margin-left: 8px;
+      padding-top: 6px;
+      padding-right: 5px;
+      padding-left: 5px;
       a {
         display: block;
         background-color: #5C9DC0;
@@ -199,9 +370,11 @@ body {
         }
         .text {
           display: block;
-          float: left;
+          //float: left;
           padding-left: 10px;
           padding-right: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &.hasCounter {
@@ -292,6 +465,8 @@ ul.currentTags {
 
 .toggle {
   border-radius: 0;
+  width: auto !important;
+  display: block !important;
   * {
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -299,7 +474,7 @@ ul.currentTags {
   &.btn {
     border-width: 1px;
     min-height: 40px;
-    min-width: 66px;
+    //min-width: 66px;
     padding-right: 10px;
     padding-left: 10px;
     &.btn-female {
@@ -314,16 +489,21 @@ ul.currentTags {
     border-width: 1px;
     color: white;
     line-height: 25px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    &.toggle-handle {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
     &.btn-female {
       background: #dc248c;
-      padding-left: 24px;
+      padding-left: 14px !important;
     }
 
     &.btn-male {
       background: #325cc5;
-      padding-right: 24px;
+      padding-right: 14px !important;
     }
   }
 }
@@ -382,7 +562,7 @@ a {
 .modal-body {
   .panel-group {
     transition: max-height 1s ease-out;
-    max-height: 134px;
+    max-height: 1200px !important;
     overflow: hidden;
   }
   .loading {
@@ -495,7 +675,7 @@ h2 {
   overflow: hidden;
   padding: 20px;
   position: relative;
-  width: 440px;
+  //width: 440px;
   z-index: 2;
   margin-bottom: 50px;
   h2 {
@@ -558,7 +738,11 @@ label {
 
 .btn-toolbar {
   padding-bottom: 15px;
-  text-align: right;
+  text-align: center;
+}
+
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group{
+  float:none;
 }
 
 .float-left {
@@ -711,9 +895,7 @@ label {
   .whitePanel {
   }
   .helpPanel {
-    padding: 15px;
-    padding-right: 30px;
-    padding-top: 40px;
+    padding: 30px 15px 15px;
     h4 {
       font-size: 16px;
       color: #5C9DC0;
@@ -856,11 +1038,11 @@ a {
 .removePane {
   .removeOptions {
     margin: 0 auto;
-    width: 720px;
+    //width: 720px;
     .introText {
       text-align: center;
-      width: 300px;
-      margin: auto;
+      //width: 300px;
+      //margin: auto;
       .validatedHiddenFieldContainer {
         margin-top: 20px;
       }
@@ -870,20 +1052,23 @@ a {
       .removeReasonButton {
         border-radius: 3px;
         cursor: pointer;
-        float: right;
-        margin: 5px;
-        padding: 5px;
+        //float: right;
+        //margin: 5px;
+        //padding: 5px;
         text-align: center;
         .label {
-          width: 100px;
+          text-align: center;
           color: black;
           font-weight: normal;
+          display: block;
+          margin-bottom:15px;
         }
         .image {
           background: #5C9DC0 url("../images/flag-sprites.png") no-repeat scroll 0 0;
           border-radius: 3px;
           height: 100px;
           width: 100px;
+          display: inline-block;
         }
 
         &.selected {
@@ -1082,6 +1267,7 @@ a {
         .address {
           font-size: 14px;
           color: #484848;
+          text-align: justify;
         }
         .phone {
           font-size: 14px;
@@ -1096,11 +1282,16 @@ a {
         }
       }
     }
-    .categoryIcon {
+    .image {
       float: left;
       //width: 15%;
       margin: 0 2% 0 3%;
       margin-top: 10px;
+      max-width:15%;
+      display: block;
+      .categoryIcon {
+        max-width: 100%;
+      }
     }
 
     .glyphicon {
@@ -2021,99 +2212,86 @@ body {
   position: relative;
 }
 
-.mapBGContainer {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  .mapBG {
-    background: url('../images/map-bg.jpg') no-repeat;
-    background-size: cover;
-    height: 500px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .mapBGWrapper {
-    //background-color: rgba(234, 239, 249, 0.6);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
 .contentOnMapBG {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  background: url('../images/map-bg.jpg') no-repeat;
+  background-size: cover;
+  //height: 450px;
+  margin-top: 60px;
 
   .searchBoxContainer {
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     margin: auto;
-    margin-top: 110px;
+    margin-top: 50px;
     margin-bottom: 30px;
-    width: 740px;
     border-radius: 4px;
     .searchBox {
       background: rgba(234, 239, 249, 0.9);
-      padding: 20px;
+      padding-top: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 15px;
+      //padding: 20px;
       //border: 3px solid white;
-
-      .navbar-form {
-        padding: 0;
+      .row {
         margin: 0;
-        .input-group {
-          background: transparent;
-          margin-bottom: 0;
-          .selectize-dropdown {
-            background: transparent !important;
-            border-width: 0 !important;
-            padding-top: 0 !important;
-            margin-top: 14px !important;
-            .selectize-dropdown-content {
-              background: white !important;
-              border-radius: 4px !important;
-              padding: 0 !important;
-            }
-          }
-          .form-control {
-            background: white;
-            height: 50px;
-            border-radius: 4px;
-            width: 308px;
-            margin-left: 10px;
-            padding-top: 15px;
-          }
-          #searchLocation + .form-control {
-            width: 230px;
-          }
-          .searchButton {
-            display: inline-block;
-            background: #96C950;
-            border-radius: 4px;
-            padding: 5px 20px;
-            height: 50px;
-            cursor: pointer;
-            .glyphicon {
-              color: white;
-              font-size: 18px;
-              display: block;
-              float: right;
-              margin-left: 7px;
-              margin-top: 10px;
-            }
-            .label {
-              font-weight: normal;
-              font-size: 14px;
-              padding: 0;
-              display: block;
-              float: right;
-              margin-top: 11px;
-            }
-          }
+        .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9,
+        .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+          padding: 5px;
+        }
+      }
+
+      .selectize-input {
+        padding-right: 10px;
+        padding-left: 10px;
+        &.focus {
+          box-shadow: none;
+        }
+      }
+
+      .selectize-dropdown {
+        background: transparent !important;
+        border-width: 0 !important;
+        padding-top: 0 !important;
+        margin-top: 2px !important;
+        margin-left: 0 !important;
+        box-shadow: none !important;
+        .selectize-dropdown-content {
+          background: white !important;
+          border-radius: 4px !important;
+          padding: 0 !important;
+        }
+      }
+      .form-control {
+        background: white;
+        height: 50px;
+        border-radius: 4px;
+        margin-left: 10px;
+        padding-top: 15px;
+        display: block;
+      }
+      .searchButton {
+        display: block;
+        background: #96C950;
+        border-radius: 4px;
+        padding: 5px 20px;
+        height: 50px;
+        cursor: pointer;
+        .glyphicon {
+          color: white;
+          font-size: 18px;
+          display: block;
+          float: right;
+          margin-left: 7px;
+          margin-top: 10px;
+        }
+        .label {
+          font-weight: normal;
+          font-size: 14px;
+          padding: 0;
+          display: block;
+          float: right;
+          margin-top: 11px;
         }
       }
 
@@ -2122,16 +2300,16 @@ body {
         text-align: center;
         margin-top: 30px;
         margin-bottom: 0;
-        li {
+        div {
           list-style: none;
-          display: inline-block;
-          margin-right: 5px;
-          margin-left: 5px;
+          display: block;
+          //margin-right: 5px;
+          //margin-left: 5px;
           vertical-align: top;
           a {
             display: block;
             text-align: center;
-            width: 80px;
+            //width: 80px;
             border-radius: 3px;
             background: rgba(49, 134, 173, 1);
             padding: 10px;
@@ -2310,23 +2488,19 @@ body {
 .userInfo {
   background-color: #fff;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 15px 0;
 
   .userPic {
-    display: inline-block;
-    margin-right: 20px;
+    display: block;
     img {
       border-radius: 3px;
       cursor: pointer;
-      height: 130px;
-      width: 130px;
+      display: block;
+      width: 100%;
     }
   }
   .userStats {
-    display: inline-block;
     vertical-align: top;
-    width: 50%;
-    margin-right: 10px;
     .userStatsTitle {
       margin-bottom: 10px;
       .name {
@@ -2344,12 +2518,8 @@ body {
     }
   }
   .userStatsInfo {
-    display: inline-block;
-    margin-top: 20px;
-    text-align: right;
+    text-align: left;
     vertical-align: top;
-    padding-left: 20px;
-    float: left;
     .stats {
       display: inline-block;
       list-style: outside none none;
@@ -2371,6 +2541,7 @@ body {
           min-width: 66px;
           padding: 10px 12px;
           font-size: 16px;
+          white-space: nowrap;
           strong {
             color: #4e595d;
             display: block;
@@ -2412,7 +2583,7 @@ body {
     box-shadow: 0 1px 0 0 #c7cdcf;
     display: block;
     //height: 470px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     vertical-align: top;
     .tipPhoto {
       background-color: #EAEFF9;
@@ -2746,11 +2917,10 @@ body {
 .mobile-download-button {
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  display: inline-block;
+  display: block;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 10px;
-  width: 215px;
   margin-bottom: 35px;
   text-align: right;
   transition: all 0.4s ease-in-out 0s;
@@ -2815,11 +2985,15 @@ body {
       text-align: justify;
       padding: 5px 10px 2px;
       .name {
-        font-size: 16px;
-        color: #3186AD;
+        color: #3186ad;
         cursor: pointer;
-        text-align: right;
         display: block;
+        font-size: 16px;
+        height: 20px;
+        overflow: hidden;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         &:hover {
           color: #EE5921;
@@ -2909,35 +3083,32 @@ body {
 }
 
 .oldUsersNotification {
-  background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  color: white;
-  font-size: 16px;
-  margin-bottom: -70px;
-  margin-top: 100px;
-  padding: 10px;
-  text-align: center;
-  transition: all 0.4s ease-in-out 0s;
-  &:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .btn-transparent {
-    border-width: 0 !important;
+  padding-top: 30px;
+  div {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: white;
-    background-color: #3186ad;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
     transition: all 0.4s ease-in-out 0s;
     &:hover {
-      background-color: #EE5921;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
-  }
 
-  .col-sm-12 {
-    //background: rgba(234, 239, 249, 0.9) none repeat scroll 0 0
+    .btn-transparent {
+      border-width: 0 !important;
+      border-radius: 4px;
+      color: white;
+      background-color: #3186ad;
+      transition: all 0.4s ease-in-out 0s;
+      &:hover {
+        background-color: #EE5921;
+      }
+    }
   }
 }
 
@@ -2956,34 +3127,26 @@ body {
 .oldAdList {
   padding: 0;
   margin: 0;
-  li {
-    list-style: none;
+  .row {
     border-bottom: 1px solid #dddddd;
+    padding-top: 15px;
+    padding-bottom:15px;
     &:last-of-type {
       border-bottom-width: 0;
     }
     &:hover {
       background: #EAEFF9;
     }
-    padding: 15px;
+    //padding: 15px;
     h4 {
       font-size: 14px;
-      margin-right: 135px;
-      margin-left: 115px;
     }
     .image {
-      float: right;
-      margin-left: 15px;
-      width: 120px;
-      text-align: left;
       img {
-        max-width: 120px;
+        width: 100%;
       }
     }
     .actions {
-      float: left;
-      margin-right: 15px;
-      width: 100px;
       padding-top: 27px;
       a {
         display: block;
@@ -2994,8 +3157,6 @@ body {
     p {
       text-align: justify;
       color: grey;
-      margin-right: 135px;
-      margin-left: 115px;
     }
   }
 }
@@ -3042,7 +3203,7 @@ body {
 }
 
 .addPlace {
-  margin-top: 50px;
+  margin-top: 20px;
   display: inline-block;
   i {
     display: inline-block;

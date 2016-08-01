@@ -122,24 +122,9 @@ class PlaceTagLib {
     }
 
     def topCategories = { attrs, body ->
-        out << "<ul class='topCategories'>"
-//        mongoService.getCollection('place').aggregate(
-//                [$group: [
-//                        _id  : '$category',
-//                        count: [$sum: 1]
-//                ]
-//                ],
-//                [$sort: [count: -1]],
-//                [$limit: 40]
-//        ).results()?.each { category ->
-//            def categoryName = CategoryCache.findCategory(category._id)?.name
-//            out << "<li><a href='${createLink(controller: 'place', action: 'explore', id: categoryName)}'>${categoryName}</a></li>"
-//        }
-//        CategoryCache.rootCategories?.each { category ->
-//            out << "<li><a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>${category?.name}</a></li>"
-//        }
-        Category.findAllByParentIsNull()?.each { category ->
-            out << """<li>
+        out << "<div class='topCategories row'>"
+        Category.findAllByParentIsNull([max:6])?.each { category ->
+            out << """<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                 <a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>
                     <img src='${
                 createLink(controller: 'image', action: 'category', params: [id: category.id, size: attrs.iconSize])
@@ -147,9 +132,9 @@ class PlaceTagLib {
                     <span class='text'>${category?.name}</span>
                     <span class='clearfix'></span>
                 </a>
-            </li>"""
+            </div>"""
         }
-        out << "</ul>"
+        out << "</div>"
     }
 
     def topPlaces = { attrs, body ->
@@ -167,7 +152,7 @@ class PlaceTagLib {
         def cities = mongoService.getCollection('place').aggregate(
                 [$group: [_id: '$city', province: [$first: '$province'], count: [$sum: 1]]],
                 [$sort: ['count': -1]],
-                [$limit: 15]
+                [$limit: 12]
         )?.results()
         out << render(template: '/layouts/common/cityGrid', model: [cities: cities])
     }

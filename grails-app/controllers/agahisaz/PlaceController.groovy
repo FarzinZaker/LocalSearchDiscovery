@@ -19,7 +19,9 @@ class PlaceController {
     def actionService
 
     @Secured([Roles.AUTHENTICATED])
-    def add() {}
+    def add() {
+        [place: [:]]
+    }
 
     @Secured([Roles.AUTHENTICATED])
     def save() {
@@ -36,6 +38,7 @@ class PlaceController {
     }
     static def cur = System.currentTimeMillis()
     static def count = 0
+
     def searchImportJSON() {
         def sort = [:]
         def query = [:]
@@ -97,6 +100,7 @@ class PlaceController {
 
         render(places as JSON)
     }
+
     def importJson() {
         if (count < 0)
             count = 0

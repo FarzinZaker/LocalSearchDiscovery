@@ -15,8 +15,13 @@
 <body>
 <div class="container diff">
     <div class="free-toolbar row">
-        <h1><g:message code="editSuggestion.review"/> ${place?.name}</h1>
-        <input type="button" class="btn btn-warning btn-skip" value="${message(code: 'skip')}"/>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+            <h1><g:message code="editSuggestion.review"/> ${place?.name}</h1>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <input type="button" class="btn btn-warning btn-skip" value="${message(code: 'skip')}"/>
+        </div>
     </div>
 
     <div class="alert alert-info softHidden" id="editSuggestionMessage"><g:message
@@ -25,12 +30,12 @@
         <h2><g:message code="editSuggestion.report.title"/></h2>
 
         <div class="row ${changed ? 'changed' : ''}">
-            <div class="col-sm-10 current">
+            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 current">
                 <b><g:message code="place.report.type.${editSuggestion.reportType}"/></b>:
             ${editSuggestion.reportComment}
             </div>
 
-            <div class="col-sm-2 text-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 text-center">
                 <input type="button" class="btn btn-accept" value="${message(code: 'accept')}" data-place="${place?.id}"
                        data-editSuggestion="${editSuggestion?._id}" data-field="reportType"/>
                 <input type="button" class="btn btn-reject" value="${message(code: 'reject')}" data-place="${place?.id}"

@@ -1,7 +1,7 @@
 <r:require module="maps"/>
 
-<div>
-    <div id="map_explore"></div>
+<div class="full-height">
+    <div id="map_explore" class="full-height"></div>
 
     <div id="mapTip_explore" class="mapTip"></div>
 </div>

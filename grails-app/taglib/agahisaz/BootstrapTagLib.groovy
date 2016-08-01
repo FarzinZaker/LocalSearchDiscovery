@@ -43,16 +43,8 @@ class BootstrapTagLib {
 
         <div class="silverPanel ${attrs.cssClass}">
             <div class="row">
-                <div class="col-xs-9">
-                    <div class="tab-content tab-content-left whitePanel">
-"""
-        pageScope.tabPageContents.each {
-            out << it
-        }
-        out << """
-                    </div>
-                </div>
-                <div class="col-xs-3">
+
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <ul class="nav nav-tabs tabs-left">
 """
         pageScope.tabPageHeaders.each {
@@ -60,6 +52,16 @@ class BootstrapTagLib {
         }
         out << """
                     </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+                    <div class="tab-content tab-content-left whitePanel">
+"""
+        pageScope.tabPageContents.each {
+            out << it
+        }
+        out << """
+                    </div>
                 </div>
 
                 <div class="clearfix"></div>
@@ -92,17 +94,19 @@ class BootstrapTagLib {
 
         <div class="silverPanel helpedPanel ${attrs.cssClass}">
             <div class="row">
-                <div class="col-xs-9">
+
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 helpPanel">
+"""
+        out << pageScope.help
+        out << """
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                     <div class="whitePanel">
 """
         out << body()
         out << """
                     </div>
-                </div>
-                <div class="col-xs-3 helpPanel">
-"""
-        out << pageScope.help
-        out << """
                 </div>
 
                 <div class="clearfix"></div>

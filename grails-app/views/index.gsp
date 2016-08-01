@@ -5,45 +5,45 @@
 </head>
 
 <body>
-<div class="mapBGContainer">
-
-    <div class="mapBGWrapper">
-
-    </div>
-
-    <div class="mapBG">
-    </div>
-</div>
 
 <div class="contentOnMapBG">
 
-    <sec:ifNotLoggedIn>
-        <div class="container oldUsersNotification">
+    <div class="container">
+        <sec:ifNotLoggedIn>
             <div class="row">
-                <div class="col-sm-12">
-                    <g:message code="oldUsers.notification.part1"/>
-                    <a href="${createLink(controller: 'user', action: 'forgetPassword')}" class="btn btn-transparent">
-                        <g:message code="user.forgetPassword.title"/>
-                    </a>
-                    <g:message code="oldUsers.notification.part2"/>
+                <div class="col-sm-12 oldUsersNotification">
+                    <div>
+                        <g:message code="oldUsers.notification.part1"/>
+                        <a href="${createLink(controller: 'user', action: 'forgetPassword')}"
+                           class="btn btn-transparent">
+                            <g:message code="user.forgetPassword.title"/>
+                        </a>
+                        <g:message code="oldUsers.notification.part2"/>
+                    </div>
                 </div>
+            </div>
+        </sec:ifNotLoggedIn>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-1 col-sm-12 col-xs-12">
+            </div>
+
+            <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
+                <div class="searchBoxContainer">
+                    <div class="searchBox">
+                        <place:searchBox/>
+                        <place:topCategories iconSize="44"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-1 col-sm-12 col-xs-12">
             </div>
         </div>
 
-    </sec:ifNotLoggedIn>
-
-    <div class="searchBoxContainer">
-        <div class="searchBox">
-            <place:searchBox/>
-            <place:topCategories iconSize="44"/>
-
-        </div>
-    </div>
-
-    <sec:ifLoggedIn>
-        <div class="container">
+        <sec:ifLoggedIn>
             <div class="row">
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
                     <a class="mobile-download-button">
                         <img src="${resource(dir: 'images/icons', file: 'icon-apple.png')}"/>
                         <span class="title">
@@ -55,7 +55,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
                     <a class="mobile-download-button">
                         <img src="${resource(dir: 'images/icons', file: 'icon-android.png')}"/>
                         <span class="title">
@@ -67,7 +67,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
                     <a class="mobile-download-button">
                         <img src="${resource(dir: 'images/icons', file: 'icon-bazar.png')}"/>
                         <span class="title">
@@ -79,7 +79,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
                     <a class="mobile-download-button">
                         <img src="${resource(dir: 'images/icons', file: 'icon-windows.png')}"/>
                         <span class="title">
@@ -91,62 +91,58 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </sec:ifLoggedIn>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="panel-header">
-                    <hr/>
-
-                    <div class="container-fluid"><h2><g:message code="topPlaces.list"/></h2></div>
-                </div>
-            </div>
-        </div>
+        </sec:ifLoggedIn>
     </div>
 
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="owl-carousel place-carousel owl-theme">
-                    <place:topPlaces/>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-sm-6">
-                <div class="panel-header">
-                    <hr/>
-
-                    <div class="container"><h2><g:message code="topUsers.title"/></h2></div>
-                </div>
-
-                <div class="owl-carousel user-carousel owl-theme">
-                    <points:topUsers/>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="panel-header">
-                    <hr/>
-
-                    <div class="container"><h2><g:message code="weekTopUsers.title"/></h2></div>
-                </div>
-
-                <div class="owl-carousel user-carousel owl-theme">
-                    <points:weekTopUsers/>
-                </div>
-            </div>
-        </div>
-    </div>
-    <g:render template="/layouts/common/footer"/>
 </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="panel-header">
+                <hr/>
+
+                <div class="container-fluid"><h2><g:message code="topPlaces.list"/></h2></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="owl-carousel place-carousel owl-theme">
+                <place:topPlaces/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="panel-header">
+                <hr/>
+
+                <div class="container"><h2><g:message code="topUsers.title"/></h2></div>
+            </div>
+
+            <div class="owl-carousel user-carousel owl-theme">
+                <points:topUsers/>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="panel-header">
+                <hr/>
+
+                <div class="container"><h2><g:message code="weekTopUsers.title"/></h2></div>
+            </div>
+
+            <div class="owl-carousel user-carousel owl-theme">
+                <points:weekTopUsers/>
+            </div>
+        </div>
+    </div>
+</div>
+<g:render template="/layouts/common/footer"/>
 <g:javascript>
     $(document).ready(function () {
         $('.owl-carousel.place-carousel').owlCarousel({
@@ -192,13 +188,22 @@
                 0: {
                     items: 1
                 },
-                670: {
+                330:{
                     items: 2
                 },
-                990: {
+                500: {
                     items: 3
                 },
-                1310: {
+                670: {
+                    items: 4
+                },
+                840: {
+                    items: 5
+                },
+                980: {
+                    items: 3
+                },
+                1350: {
                     items: 4
                 },
                 1630: {

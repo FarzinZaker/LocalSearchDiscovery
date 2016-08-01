@@ -9,7 +9,23 @@
 <html>
 <head>
     <meta name="layout" content="explore"/>
-    <title></title>
+    <title>
+        ${places?.size()}
+        <g:if test="${params.id}">
+            ${params.id}
+        </g:if>
+        <g:else>
+            <g:message code="place"/>
+        </g:else>
+        <g:if test="${params.near || params.city}">
+            <g:message code="place.search.result.hiddenHeading.location"/>
+            ${params.city ?: places?.find()?.city}
+        </g:if>
+        <g:if test="${currentTags}">
+            <g:message code="place.search.result.hiddenHeading.tags"/>
+            ${currentTags?.join(message(code: 'and')?.toString())}
+        </g:if>
+    </title>
 </head>
 
 <body>
@@ -25,9 +41,9 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="byPassHorizontalMargins explorePlaceListContainer" id="placeList" itemscope
+    <div class="row full-height">
+        <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 full-height">
+            <div class="byPassHorizontalMargins explorePlaceListContainer full-height" id="placeList" itemscope
                  itemtype="http://schema.org/ItemList">
                 <div class="searchResultHeader">
                     <g:if test="${places?.size()}">
@@ -70,8 +86,8 @@
             </div>
         </div>
 
-        <div class="col-sm-8">
-            <div class="byPassHorizontalMargins" id="placeListMap">
+        <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 full-height">
+            <div class="byPassHorizontalMargins full-height" id="placeListMap">
                 <map:explore visitorLocation="0" places="${places}"
                              center="${params.near ? params.near?.split(',')?.collect { it?.toDouble() } : null}"/>
             </div>
@@ -80,14 +96,24 @@
 </div>
 <g:javascript>
     function resizeExploreLayout() {
-        var navbarHeight = $('.navbar-fixed-top').height() + $('.tagBar').height() + 21;
-        navbarHeight = 93;
-        //console.log(navbarHeight);
-        //console.log($(window).height());
-        $('#placeList').height($(window).height() - navbarHeight);
-        var mapContainer = $('#map_explore');
-        mapContainer.height($(window).height() - navbarHeight);
-        mapContainer.css('width', '100%');
+        var windowWidth = $(window).width();
+        var container = $('#placeList').parent().parent().parent();
+        if(windowWidth > 768) {
+            container.css('padding-top', '97px');
+            container.height($(window).height() - 97);
+        }
+        else{
+            container.css('padding-top', '0');
+            container.css('height', 'auto');
+        }
+        //var navbarHeight = $('.navbar-fixed-top').height() + $('.tagBar').height() + 21;
+        //navbarHeight = 97;
+        ////console.log(navbarHeight);
+        ////console.log($(window).height());
+        //$('#placeList').height($(window).height() - navbarHeight);
+        //var mapContainer = $('#map_explore');
+        //mapContainer.height($(window).height() - navbarHeight);
+        //mapContainer.css('width', '100%');
         map_explore.updateSize();
         map_explore.getView().fit(extent_explore, map_explore.getSize());
     }

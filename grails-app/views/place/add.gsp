@@ -28,7 +28,27 @@
             <g:render template="form"/>
         </g:form>
         <bootstrap:help>
-            help
+
+            <h4><g:message code="place.add.help.title"/></h4>
+
+            <p><g:message code="place.add.help.description"/></p>
+            <ol>
+                <li>
+                    <g:message code="place.add.help.item1"/>
+                </li>
+                <li>
+                    <g:message code="place.add.help.item2"/>
+                </li>
+                <li>
+                    <g:message code="place.add.help.item3"/>
+                </li>
+                <li>
+                    <g:message code="place.add.help.item4"/>
+                </li>
+                <li>
+                    <g:message code="place.add.help.item5"/>
+                </li>
+            </ol>
         </bootstrap:help>
     </bootstrap:helpedPanel>
 </div>

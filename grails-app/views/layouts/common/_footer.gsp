@@ -28,19 +28,19 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-2 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                     <a href="${createLink(controller: 'place', action: 'add')}" class="addPlace">
                         <i class="icon"></i>
                         <span><g:message code="footer.addPlace"/></span>
                     </a>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <place:topCities/>
                 </div>
-                <div class="col-sm-2 text-center">
-                    <img class="enamad" src="${resource(dir:'/images', file: 'enamad.png')}"/>
-                    <div class="clearfix"></div>
-                </div>
+                %{--<div class="col-sm-2 text-center">--}%
+                    %{--<img class="enamad" src="${resource(dir:'/images', file: 'enamad.png')}"/>--}%
+                    %{--<div class="clearfix"></div>--}%
+                %{--</div>--}%
             </div>
         </div>
     </div>

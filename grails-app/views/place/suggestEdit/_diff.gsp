@@ -7,7 +7,7 @@
 
     <div class="row ${changed ? 'changed' : ''}">
 
-        <div class="col-sm-4 current">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 current">
             <g:if test="${template}">
                 <g:render template="${template}" model="${model(place)}"/>
             </g:if>
@@ -16,13 +16,13 @@
             </g:else>
         </div>
 
-        <div class="col-sm-2 text-center arrow">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center arrow">
             <g:if test="${changed}">
                 <img src="${resource(dir: 'images', file: 'diff-changed.png')}"/>
             </g:if>
         </div>
 
-        <div class="col-sm-4 suggestion">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 suggestion">
             <g:if test="${changed}">
                 <g:if test="${template}">
                     <g:render template="${template}" model="${model(editSuggestion)}"/>
@@ -33,7 +33,7 @@
             </g:if>
         </div>
 
-        <div class="col-sm-2 text-center">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
             <g:if test="${changed}">
                 <input type="button" class="btn btn-accept" value="${message(code: 'accept')}" data-place="${place?.id}" data-editSuggestion="${editSuggestion?._id}" data-field="${fieldName}"/>
                 <input type="button" class="btn btn-reject" value="${message(code: 'reject')}" data-place="${place?.id}" data-editSuggestion="${editSuggestion?._id}" data-field="${fieldName}"/>

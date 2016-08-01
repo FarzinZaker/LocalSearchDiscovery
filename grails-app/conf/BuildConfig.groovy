@@ -96,5 +96,7 @@ grails.project.dependency.resolution = {
         compile "org.grails.plugins:browser-detection:0.4.3"
 
         compile ":quartz:0.4.1"
+
+        compile "org.grails.plugins:canonical:0.1"
     }
 }

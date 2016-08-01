@@ -1,11 +1,17 @@
-<div class="navbar-form" role="search">
-    <div class="input-group">
+<div class="row" role="search">
+    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
         <select id="searchQuery" class="form-control no-caret"
                 placeholder="${message(code: 'search.query.placeHolder')}">
         </select>
+    </div>
+
+    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
         <select id="searchLocation" class="form-control no-caret"
                 placeholder="${message(code: 'search.location.placeHolder')}">
         </select>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
         <span class="searchButton" id="btnSearch">
             <span class="glyphicon glyphicon-search"></span>
             <span class="label"><g:message code="search.button"/></span>

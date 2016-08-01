@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
             <div class="whitePanel spaceFromTop placeInfoSection" itemtype="http://schema.org/LocalBusiness"
                  itemscope="">
                 <div class="alert alert-info softHidden" id="placeMessage"></div>
@@ -54,11 +54,11 @@
 
                 <div class="attrBar row">
                     <div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating"
-                         class="col-sm-6">
+                         class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <place:aggregateRating place="${place}"/>
                     </div>
 
-                    <div class="col-sm-6"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
                 </div>
 
                 <div class="placeActions" id="actionBar">
@@ -77,7 +77,7 @@
             </ul>
         </div>
 
-        <div class="col-sm-4 spaceFromTop">
+        <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 spaceFromTop">
             <map:locationViewer place="${place}" height="300"/>
             <div class="similarList">
                 <g:each in="${similarPlaces}" var="similarPlace">

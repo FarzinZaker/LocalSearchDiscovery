@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <label for="province">
             <span class="glyphicon glyphicon-th-large"></span>
             <g:message code="place.province.label"/>
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <label for="city">
             <span class="glyphicon glyphicon-th"></span>
             <g:message code="place.city.label"/>

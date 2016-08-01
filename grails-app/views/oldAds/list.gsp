@@ -25,8 +25,8 @@
 
         <ul class="oldAdList">
             <g:each in="${ads}" var="ad">
-                <li>
-                    <div class="image">
+                <div class="row">
+                    <div class="image col-lg-2 col-md-2 col-sm-2 col-xs-12">
                         <g:if test="${ad?.pictureUrl1?.contains('Spacer')}">
                             <img src="http://old.agahisaz.com/Images/120/Spacer.gif"/>
                         </g:if>
@@ -35,7 +35,15 @@
                         </g:else>
                     </div>
 
-                    <div class="actions">
+                    <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+                        <h4>${ad.title}</h4>
+
+                        <p>
+                            <old:adBody ad="${ad}"/>
+                        </p>
+                    </div>
+
+                    <div class="actions col-lg-2 col-md-3 col-sm-4 col-xs-12">
                         <a class="btn btn-success" href="${createLink(controller: 'oldAds', action: 'add', id: ad.id)}">
                             <g:message code="oldAds.add.label"/>
                         </a>
@@ -44,14 +52,9 @@
                             <g:message code="default.button.delete.label"/>
                         </a>
                     </div>
-                    <h4>${ad.title}</h4>
-
-                    <p>
-                        <old:adBody ad="${ad}"/>
-                    </p>
 
                     <div class="clearfix"></div>
-                </li>
+                </div>
             </g:each>
         </ul>
 

@@ -23,7 +23,7 @@
             document.getElementById('spring-security-redirect').value = encodeURI(window.location.href);
         </g:javascript>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                     <input name="j_username" class="form-control text-left"
@@ -34,7 +34,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                     <input type="password" name="j_password" class="form-control text-left" onkeypress="loginOnEnter(event)"

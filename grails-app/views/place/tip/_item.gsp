@@ -16,7 +16,7 @@
 
         <div class="tipInfo">
             <span class="userName">
-                <a href="#">${tip.fullName}</a>
+                <a href="${createLink(controller: 'user', action: 'info', id: tip.userId)}">${tip.fullName}</a>
             </span> ·
             <span class="tipDate"><format:prettyDate date="${tip.date}"/></span>
         </div>

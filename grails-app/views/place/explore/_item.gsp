@@ -43,7 +43,7 @@
         </div>
 
     </div>
-    <span  itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
+    <span class="image"  itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
         <img class="categoryIcon" itemprop="contentUrl"
             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?._id, size: 88])}"/>
     </span>

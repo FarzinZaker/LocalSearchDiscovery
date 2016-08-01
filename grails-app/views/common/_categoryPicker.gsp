@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-6 dynamicColumn">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dynamicColumn">
         <label for="category1">
             <span class="glyphicon glyphicon-folder-open"></span>
             ${title}
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6 dynamicColumn">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dynamicColumn">
         <label for="category2">&nbsp;</label>
 
         <div class="input-group">
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="col-sm-4 dynamicColumn hidden">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 dynamicColumn hidden">
         <label for="category3">&nbsp;</label>
 
         <div class="input-group">
@@ -47,7 +47,11 @@
                     return n.name == value
                 });
                 if (selCategories.length) {
-                    category3.parent().parent().addClass('hidden').parent().find('.dynamicColumn').removeClass('col-sm-4').addClass('col-sm-6');
+                    category3.parent().parent().addClass('hidden').parent().find('.dynamicColumn')
+                            .removeClass('col-lg-4')
+                            .removeClass('col-md-4')
+                            .addClass('col-lg-6')
+                            .addClass('col-md-6');
                     category3[0].selectize.clearOptions();
                     selCategory1 = selCategories[0];
                     category2[0].selectize.clearOptions();
@@ -67,10 +71,18 @@
                 });
                 if (selCategories.length) {
                     if (selCategories[0].children.length) {
-                        category3.parent().parent().removeClass('hidden').parent().find('.dynamicColumn').removeClass('col-sm-6').addClass('col-sm-4');
+                        category3.parent().parent().removeClass('hidden').parent().find('.dynamicColumn')
+                                .removeClass('col-lg-6')
+                                .removeClass('col-md-6')
+                                .addClass('col-lg-4')
+                                .addClass('col-md-4');
                     }
                     else {
-                        category3.parent().parent().addClass('hidden').parent().find('.dynamicColumn').removeClass('col-sm-4').addClass('col-sm-6');
+                        category3.parent().parent().addClass('hidden').parent().find('.dynamicColumn')
+                                .removeClass('col-lg-4')
+                                .removeClass('col-md-4')
+                                .addClass('col-lg-6')
+                                .addClass('col-md-6');
                     }
                     selCategory2 = selCategories[0];
                     category3[0].selectize.clearOptions();

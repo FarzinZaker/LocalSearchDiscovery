@@ -20,7 +20,7 @@
     <form id="registerForm" autocomplete="off">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
                         <input type="email" name="email" class="form-control text-left"
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
                         <input type="text" name="mobile" class="form-control  text-left"
@@ -40,41 +40,34 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
                     <input name="male" data-toggle="toggle" data-on="${message(code: 'male')}"
                            data-off="${message(code: 'female')}" data-onstyle="male" data-offstyle="female"
                            type="checkbox">
                 </div>
 
-                <div class="col-sm-10">
-                    <div class="table-row">
-                        <div class="table-cell align-top">
-                            <div class="input-group" style="width:240px">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                <input type="text" name="firstName" class="form-control inline-block"
-                                       data-validation="required"
-                                       placeholder="${message(code: 'firstName')}">
-                            </div>
-                        </div>
+                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" name="firstName" class="form-control inline-block"
+                               data-validation="required"
+                               placeholder="${message(code: 'firstName')}">
+                    </div>
+                </div>
 
-                        <div class="table-cell align-top">
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" name="lastName" class="form-control inline-block"
+                               data-validation="required"
+                               placeholder="${message(code: 'lastName')}">
 
-                            <div class="input-group" style="width:203px;">
-                                <input type="text" name="lastName" class="form-control inline-block"
-                                       data-validation="required"
-                                       placeholder="${message(code: 'lastName')}">
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-
-                <div class="col-sm-12">
-                    <bootstrap:captcha name="captcha" id="registerCaptcha" type="register"/>
-                </div>
+                <bootstrap:captcha name="captcha" id="registerCaptcha" type="register"/>
             </div>
         </div>
     </form>
