@@ -21,7 +21,36 @@
             </h1>
 
             <p>
+                شما کاربران گرامی می توانید از طریق یکی از راه های ارتباطی زیر با ما در تماس باشید و ما را از نظرات، انتقادات و یا پیشنهادات خود آگاه سازید.
+            </p>
 
+            <h2 class="static-inner-heading">
+                نشانی
+            </h2>
+
+            <p>
+                تهران، خیابان شیخ بهایی جنوبی(بلوار آزادگان)، خیابان بیست و یکم شرقی، پلاک 2
+            </p>
+
+            <h2 class="static-inner-heading">
+                تلفن
+            </h2>
+            <p class="ltr text-right">
+                +98 (21) 88 333 285 &nbsp;&nbsp;&nbsp; +98(21)88 354 318
+            </p>
+
+            <h2 class="static-inner-heading">
+                فکس
+            </h2>
+            <p class="ltr text-right">
+                +98 (21) 88 621 544
+            </p>
+
+            <h2 class="static-inner-heading">
+                پست الکترونیک:
+            </h2>
+            <p class="ltr text-right">
+                info <span class="smallText">[at]</span> agahisaz <span class="smallText">[dot]</span> com
             </p>
         </div>
     </div>

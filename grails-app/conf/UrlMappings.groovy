@@ -3,6 +3,7 @@ class UrlMappings {
     static mappings = {
 
         "/advertisement/$i1/$id"(controller: 'place', action: 'explore')
+        "/tag/search/$id"(controller: 'tag', action: 'search')
         "/tag/$i1/$id"(controller: 'place', action: 'explore')
         "/category/search/$id"(controller: 'category', action: 'search')
         "/category/$i1/$id"(controller: 'place', action: 'explore')
@@ -25,6 +26,7 @@ class UrlMappings {
         }
 
         "/"(view: "/index")
-        "500"(view: '/error')
+        "404"(view: '/404')
+        "500"(view: '/500')
     }
 }

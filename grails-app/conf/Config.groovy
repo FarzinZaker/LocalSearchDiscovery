@@ -70,7 +70,7 @@ environments {
         grails.resources.processing.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
 
-        grails.serverURL = "http://localhost:8585"
+        grails.serverURL = "http://192.168.0.155:8585"
     }
     production {
 
