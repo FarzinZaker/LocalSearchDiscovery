@@ -26,7 +26,7 @@ class UserService implements InitializingBean {
         assert g
     }
 
-    def register(String mobile, String email, String firstName, String lastName, Boolean male, Boolean oldUser = false) {
+    def register(String mobile, String email, String firstName, String lastName, Boolean male, Boolean oldUser = false, Long oldUserId = null) {
         def countRegistered = mongoService.getCollection('user').count([$or: [[mobile: mobile ?: '-'], [email: email ?: '-']]])
         if (countRegistered) {
             return [error: message('register.already-registered'), field: mobile ? 'mobile' : 'email']
@@ -41,7 +41,7 @@ class UserService implements InitializingBean {
         user['changedPassword'] = false
         user.encodePassword()
         if (oldUser)
-            user['remainingOldAds'] = OldAdvertisement.countByUserIdAndApproved(oldUser?.id as Integer, true)
+            user['remainingOldAds'] = OldAdvertisement.countByUserIdAndApproved(oldUserId as Integer, true)
         if (!user.save(flush: true)) {
             return [error: user.errors.allErrors.collect { message(it.code) }, field: mobile ? 'mobile' : 'email']
         }
@@ -67,7 +67,7 @@ class UserService implements InitializingBean {
         def user = User.findByEmailOrMobileOrUsername(username, username, username)
         if (!user) {
             def oldUser = OldUser.findByEmailOrMobileNumber(username, username)
-            if (!oldUser || !register(oldUser.mobileNumber ?: '', oldUser.email, oldUser.fullName, '', true, true)?.success)
+            if (!oldUser || !register(oldUser.mobileNumber ?: '', oldUser.email, oldUser.fullName, '', true, true, oldUser?.id)?.success)
                 return message('user.resetPassword.error.noSuchUser')
             else
                 user = User.findByEmailOrMobileOrUsername(username, username, username)
