@@ -75,7 +75,7 @@ environments {
     production {
 
         sitemap.path = '/home/agahisaz/sitemaps/'
-        sitemap.rootUrl = 'www.4tablo.ir:8090'
+        sitemap.rootUrl = 'www.agahisaz.com'
 
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
@@ -83,7 +83,7 @@ environments {
         grails.plugin.console.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
 
-        grails.serverURL = "http://www.4tablo.ir:8090"
+        grails.serverURL = "http://www.agahisaz.com"
     }
 }
 //environments {
