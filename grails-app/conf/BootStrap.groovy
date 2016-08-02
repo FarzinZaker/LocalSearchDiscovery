@@ -53,7 +53,9 @@ class BootStrap {
         r = Role.findByAuthority(Roles.ADMIN) ?: new Role(authority: Roles.ADMIN).save(flush: true)
         def u = User.findByUsername('admin')
         if (!u) {
-            u = new User(username: 'admin', password: 'admin', enabled: true, superuserLevel: 10).save()
+            u = new User(username: 'admin', password: 'agah!#(%', enabled: true, superuserLevel: 10)
+            u.encodePassword()
+            u.save()
             UserRole.create(u, r, true)
         } else if (u.superuserLevel == null) {
 
@@ -78,7 +80,7 @@ class BootStrap {
                 [Action.LOGIN, 0]
         ].each {
             def action = Action.findByName(it[0] as String)
-            if(!action)
+            if (!action)
                 action = new Action(name: it[0])
             action.grantScore = it[1] as Integer
             action.save(flush: true)
