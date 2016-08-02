@@ -9,6 +9,7 @@ class UrlMappings {
         "/category/$i1/$id"(controller: 'place', action: 'explore')
         "/location/$i1/$city"(controller: 'place', action: 'explore')
         "/search/$id"(controller: 'place', action: 'explore')
+        "/search_$id"(controller: 'place', action: 'explore')
 
         "/sitemap/index"(controller: 'sitemap', action: 'index')
         "/sitemap/$type/$id"(controller: 'sitemap', action: 'view')
