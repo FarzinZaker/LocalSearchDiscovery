@@ -23,6 +23,8 @@ class Place {
     Double averageRate
     Integer ratesCount
 
+    Boolean approved = false
+
     //report fields
     String reportType
     String reportComment
@@ -38,6 +40,8 @@ class Place {
         editSuggestion nullable: true
         averageRate nullable: true
         ratesCount nullable: true
+
+        approved nullable: true
 
         reportType nullable: true
         reportComment nullable: true

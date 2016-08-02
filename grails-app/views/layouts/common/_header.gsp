@@ -25,9 +25,6 @@
 <div class="tagBar skipHeader">
     <div class="container">
         <place:topCategories iconSize="32"/>
-        <sec:ifLoggedIn>
-            <place:waitingEditSuggestions/>
-        </sec:ifLoggedIn>
 
     </div>
 </div>

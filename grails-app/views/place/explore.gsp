@@ -33,10 +33,6 @@
 <div class="tagBar skipHeader">
     <div class="container-fluid">
         <g:render template="explore/tags" model="${[tags: tags]}"/>
-        <sec:ifLoggedIn>
-            <place:waitingEditSuggestions/>
-        </sec:ifLoggedIn>
-
     </div>
 </div>
 

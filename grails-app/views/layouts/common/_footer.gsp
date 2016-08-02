@@ -3,22 +3,28 @@
         <div class="container">
             <ul class="notrans">
                 <li>
-                    <a href="#"><g:message code="footer.about"/></a>
+                    <a href="${createLink(controller: 'info', action: 'about')}"><g:message code="footer.about"/></a>
                 </li>
                 <li>
-                    <a href="#"><g:message code="footer.blog"/></a>
+                    <a href="http://blog.agahisaz.com"><g:message code="footer.blog"/></a>
                 </li>
                 <li>
-                    <a href="#"><g:message code="footer.help"/></a>
+                    <a href="${createLink(controller: 'info', action: 'help')}"><g:message code="footer.help"/></a>
                 </li>
                 <li>
-                    <a href="#"><g:message code="footer.cookies"/></a>
+                    <a href="${createLink(controller: 'info', action: 'oldUsersHelp')}"><g:message code="footer.oldUsersHelp"/></a>
                 </li>
                 <li>
-                    <a href="#"><g:message code="footer.privacy"/></a>
+                    <a href="${createLink(controller: 'info', action: 'cookie')}"><g:message code="footer.cookies"/></a>
                 </li>
                 <li>
-                    <a href="#"><g:message code="footer.terms"/></a>
+                    <a href="${createLink(controller: 'info', action: 'privacy')}"><g:message code="footer.privacy"/></a>
+                </li>
+                <li>
+                    <a href="${createLink(controller: 'info', action: 'terms')}"><g:message code="footer.terms"/></a>
+                </li>
+                <li>
+                    <a href="${createLink(controller: 'info', action: 'contact')}"><g:message code="footer.contact"/></a>
                 </li>
             </ul>
         </div>

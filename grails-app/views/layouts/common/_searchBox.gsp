@@ -35,13 +35,15 @@
                 url += '?near=' + visitorLocation.latitude + ',' + visitorLocation.longitude;
                 window.location.href = url;
             }
-        else if (navigator.geolocation)
-            navigator.geolocation.getCurrentPosition(function (position) {
-                url += '?near=' + position.coords.latitude + ',' + position.coords.longitude;
-                window.location.href = url;
-            });
-        else
+        //else if (navigator.geolocation)
+        //    navigator.geolocation.getCurrentPosition(function (position) {
+        //        url += '?near=' + position.coords.latitude + ',' + position.coords.longitude;
+        //        window.location.href = url;
+        //    });
+        else {
+            url += '?province=${URLEncoder.encode('تهران', 'UTF-8')}&city=${URLEncoder.encode('تهران', 'UTF-8')}'
             window.location.href = url;
+        }
     }
 
     $(document).ready(function(){
