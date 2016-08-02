@@ -54,6 +54,8 @@ class BootStrap {
         def u = User.findByUsername('admin')
         if (!u) {
             u = new User(username: 'admin', password: 'agah!#(%', enabled: true, superuserLevel: 10)
+            u['email'] = 'info@agahisaz.com'
+            u['mobile'] = '09122110811'
             u.encodePassword()
             u.save()
             UserRole.create(u, r, true)
