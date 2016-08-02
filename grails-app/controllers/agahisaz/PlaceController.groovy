@@ -383,4 +383,26 @@ class PlaceController {
 
         redirect(action: 'reviewEditSuggestion')
     }
+
+    private static final AtomicInteger reviewSequence = new AtomicInteger(0)
+
+    def review() {
+        def collection = mongoService.getCollection('place')
+        def max = (collection.count([approved: false]) - 1) as Integer
+        def skip = editSuggestionSequence.getAndIncrement()
+        if (skip > max) {
+            synchronized (editSuggestionSequence) {
+                skip = editSuggestionSequence.get()
+                if (skip > max) {
+                    editSuggestionSequence.set(1)
+                    skip = 0
+                }
+            }
+        }
+        def place = collection.find([approved: false]).skip(skip as Integer).find()
+        if (place) {
+            redirect(action: 'view', id: place?._id)
+        } else
+            render view: '/place/reviewEditSuggestionEnded'
+    }
 }

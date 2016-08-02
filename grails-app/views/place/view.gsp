@@ -27,6 +27,13 @@
                 <div class="placeBaseInfo">
                     <h1 itemprop="name">${place?.name}</h1>
 
+                    <g:if test="${!place?.approved}">
+                        <div class="notApprovedFlag">
+                            <i class="glyphicon glyphicon-alert"></i>
+                            <span><g:message code="place.notApproved.label"/></span>
+                        </div>
+                    </g:if>
+
                     <div><span itemprop="additionalType">${place?.category?.name}</span> - <span
                             itemprop="location">${place?.city}</span></div>
 

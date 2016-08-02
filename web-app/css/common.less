@@ -252,6 +252,7 @@ body {
 
   .placeInfoSection .placeBaseInfo {
     margin-right: 60px !important;
+    position: relative;
   }
 
   .silverPanel {
@@ -968,6 +969,7 @@ a {
     margin-right: 100px;
     h1 {
       margin-bottom: 0;
+      margin-left:80px;
     }
   }
   .linkBar {
@@ -3114,10 +3116,17 @@ body {
 }
 
 .dropdown-menu {
-  .label {
-    float: right;
-    margin-top: 2px;
-    font-weight: normal;
+  & > li {
+    & > a {
+      padding-right:10px;
+      padding-left:10px;
+      .label {
+        float: right;
+        margin-top: 2px;
+        font-weight: normal;
+        margin-left: 3px;
+      }
+    }
   }
 }
 
@@ -3248,9 +3257,9 @@ p {
   text-align: justify;
 }
 
-.errorLogo{
+.errorLogo {
   display: inline-block;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .errorCode {
@@ -3260,13 +3269,39 @@ p {
   display: block;
 }
 
-.smallText{
-  font-size:10px;
+.smallText {
+  font-size: 10px;
 }
 
-.help-image{
-  border:2px solid #DDDDDD;
+.help-image {
+  border: 2px solid #DDDDDD;
   max-width: 95%;
-  margin-top:15px;
-  margin-bottom:15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.notApprovedFlag{
+  color:white;
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:0;
+  cursor: default;
+  i{
+    display: block;
+    text-align: center;
+    font-size:32px;
+    padding-top:7px;
+    color: #EE5921;
+  }
+  span{
+    margin-top:5px;
+    font-size:16px;
+    display: block;
+    text-align: center;
+    background: #EE5921;
+    padding: 3px 15px;
+    padding-top:2px;
+    border-radius: 3px;
+  }
 }

@@ -13,9 +13,17 @@ class PlaceTagLib {
 
     def waitingEditSuggestions = { attrs, body ->
         if ((springSecurityService.currentUser as User).superuserLevel > 0) {
-            def editSuggestionsCount = EditSuggestion.count()
+            def placesCount = EditSuggestion.count()
+            if (placesCount > 0)
+                out << render(template: '/common/place/waitingEditSuggestions', model: [editSuggestionsCount: placesCount])
+        }
+    }
+
+    def waitingPlaces = { attrs, body ->
+        if ((springSecurityService.currentUser as User).superuserLevel > 0) {
+            def editSuggestionsCount = mongoService.getCollection('place').count([approved: false])
             if (editSuggestionsCount > 0)
-                out << render(template: '/common/place/waitingEditSuggestions', model: [editSuggestionsCount: editSuggestionsCount])
+                out << render(template: '/common/place/waitingPlaces', model: [placesCount: editSuggestionsCount])
         }
     }
 

@@ -29,6 +29,7 @@
                 </g:link>
             </li>
             <old:adsMenu/>
+            <place:waitingPlaces/>
             <place:waitingEditSuggestions/>
             <li role="separator" class="divider"></li>
             <li>

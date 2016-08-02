@@ -75,8 +75,6 @@
         </div>
     </div>
 
-    <g:render template="/common/cityPicker" model="${[province: user?.province, city: user?.city]}"/>
-
 
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -90,6 +88,8 @@
             </div>
         </div>
     </div>
+
+    <g:render template="/common/cityPicker" model="${[province: user?.province, city: user?.city]}"/>
 
     <div class="btn-toolbar">
         <input class="btn btn-primary" type="submit" value="${message(code: 'user.profile.button')}"/>
