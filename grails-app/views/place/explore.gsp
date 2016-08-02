@@ -10,21 +10,14 @@
 <head>
     <meta name="layout" content="explore"/>
     <title>
-        ${places?.size()}
-        <g:if test="${params.id}">
-            ${params.id}
+        <g:if test="${request["query"]}">
+            <g:message code="place.search.result.title"
+                       args="${[request["query"], params.city ?: message(code: 'search.location.nearMe')]}"/>
         </g:if>
         <g:else>
-            <g:message code="place"/>
+            <g:message code="place.search.result.noQueryTitle"
+                       args="${[params.city ?: message(code: 'search.location.nearMe')]}"/>
         </g:else>
-        <g:if test="${params.near || params.city}">
-            <g:message code="place.search.result.hiddenHeading.location"/>
-            ${params.city ?: places?.find()?.city}
-        </g:if>
-        <g:if test="${currentTags}">
-            <g:message code="place.search.result.hiddenHeading.tags"/>
-            ${currentTags?.join(message(code: 'and')?.toString())}
-        </g:if>
     </title>
 </head>
 
