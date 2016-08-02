@@ -52,11 +52,14 @@ class ActionService {
         actionInstance.params = params
         if (!user) {
             actionInstance.ipAddress = request.getHeader("X-Forwarded-For") ?: request.getHeader("Client-IP") ?: request.getRemoteAddr()
-            actionInstance.browserData = [
-                    operatingSystem: userAgentIdentService.getOperatingSystem(),
-                    browserName    : userAgentIdentService.getBrowserName(),
-                    browserVersion : userAgentIdentService.getBrowserVersion()
-            ]
+            try {
+                actionInstance.browserData = [
+                        operatingSystem: userAgentIdentService.getOperatingSystem(),
+                        browserName    : userAgentIdentService.getBrowserName(),
+                        browserVersion : userAgentIdentService.getBrowserVersion()
+                ]
+            } catch (x) {
+            }
         }
         actionInstance
     }
