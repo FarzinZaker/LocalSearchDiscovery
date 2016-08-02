@@ -10,7 +10,7 @@
 </sec:ifNotLoggedIn>
 <sec:ifLoggedIn>
     <div class="btn-group">
-        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+        <button type="button" class="btn btn-warning dropdown-toggle navbar-btn" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-user"></span>
             <security:userFullName/>
