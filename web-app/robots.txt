@@ -1,11 +1,15 @@
 User-agent: Googlebot
-Disallow:
+Disallow: 
 User-agent: googlebot-image
-Disallow:
+Disallow: 
 User-agent: googlebot-mobile
-Disallow:
+Disallow: 
+User-agent: MSNBot
+Disallow: 
 User-agent: Slurp
-Disallow:
+Disallow: 
+User-agent: yahoo-mmcrawler
+Disallow: 
 User-agent: *
 Disallow: /
 Sitemap: http://www.agahisaz.com/sitemap/index
