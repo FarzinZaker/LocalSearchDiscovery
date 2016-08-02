@@ -1,8 +1,7 @@
 package agahisaz
 
 import cache.CategoryCache
-import com.mongodb.DBObject
-import com.mongodb.util.JSON
+import cache.VariableCache
 import com.pars.agahisaz.User
 
 class PlaceTagLib {
@@ -123,7 +122,7 @@ class PlaceTagLib {
 
     def topCategories = { attrs, body ->
         out << "<div class='topCategories row'>"
-        Category.findAllByParentIsNull([max:6])?.each { category ->
+        Category.findAllByParentIsNull([max: 6])?.each { category ->
             out << """<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                 <a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>
                     <img src='${
@@ -149,11 +148,18 @@ class PlaceTagLib {
     }
 
     def topCities = { attrs, body ->
-        def cities = mongoService.getCollection('place').aggregate(
-                [$group: [_id: '$city', province: [$first: '$province'], count: [$sum: 1]]],
-                [$sort: ['count': -1]],
-                [$limit: 12]
-        )?.results()
+        def cities = findTopCities()
         out << render(template: '/layouts/common/cityGrid', model: [cities: cities])
+    }
+
+    private def findTopCities() {
+        if (!VariableCache.topCitiesCache) {
+            VariableCache.topCitiesCache = mongoService.getCollection('place').aggregate(
+                    [$group: [_id: '$city', province: [$first: '$province'], count: [$sum: 1]]],
+                    [$sort: ['count': -1]],
+                    [$limit: 12]
+            )?.results()
+        }
+        VariableCache.topCitiesCache
     }
 }
