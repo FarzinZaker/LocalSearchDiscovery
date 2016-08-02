@@ -59,7 +59,6 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
-grails.serverURL = "http://localhost:8585"
 environments {
     development {
 
@@ -70,6 +69,8 @@ environments {
         grails.logging.jul.usebridge = true
         grails.resources.processing.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
+
+        grails.serverURL = "http://localhost:8585"
     }
     production {
 
@@ -81,6 +82,8 @@ environments {
         grails.resources.processing.enabled = true
         grails.plugin.console.enabled = true
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
+
+        grails.serverURL = "http://www.4tablo.ir:8090"
     }
 }
 //environments {
