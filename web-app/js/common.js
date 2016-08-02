@@ -30,6 +30,14 @@ $(document).ready(function () {
         //    });
         //}
     });
+
+    $('.topCategories a').click(function(e){
+        if(visitorLocation){
+            e.preventDefault();
+            window.location.href = $(this).attr('href') + '?near=' + visitorLocation.latitude + ',' + visitorLocation.longitude;
+            return false;
+        }
+    });
 });
 
 var serverError = {};

@@ -200,16 +200,16 @@
             totalTilesCount++;
         });
 
-        mapLayer.getSource().on("tileloadend", function () {
-            loadedTilesCount++;
-            if (initialLoading && loadedTilesCount == totalTilesCount) {
-                initialLoading = true;
+//        mapLayer.getSource().on("tileloadend", function () {
+//            loadedTilesCount++;
+//            if (initialLoading && loadedTilesCount == totalTilesCount) {
+//                initialLoading = true;
 
                 //add features
                 for (var i = 0; i < pinFeatures.length; i++)
                     vectorSource.addFeature(pinFeatures[i]);
-            }
-        });
+//            }
+//        });
     });
 
     var lastSelectedFeature;
