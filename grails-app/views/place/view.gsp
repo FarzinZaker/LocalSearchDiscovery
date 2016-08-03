@@ -27,7 +27,7 @@
                 <div class="placeBaseInfo">
                     <h1 itemprop="name">${place?.name}</h1>
 
-                    <g:if test="${!place?.approved}">
+                    <g:if test="${place?.approved == false}">
                         <div class="notApprovedFlag">
                             <i class="glyphicon glyphicon-alert"></i>
                             <span><g:message code="place.notApproved.label"/></span>
@@ -74,6 +74,8 @@
 
                 <div class="clearfix"></div>
             </div>
+
+            <place:reviewForm place="${place}"/>
 
             <div class="tipsSections" style="position: relative;">
                 <place:addTip/>

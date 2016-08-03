@@ -25,7 +25,7 @@
         </label>
 
         <div class="input-group">
-            <input name="address" id="address" class="form-control" value="${place?.address}">
+            <input name="address" id="address" class="form-control" value="${place?.address}" data-validation="required">
         </div>
     </div>
 </div>
@@ -48,7 +48,7 @@
         </label>
 
         <div class="input-group">
-            <input name="phone" id="phone" class="form-control text-left" value="${place?.phone}">
+            <input name="phone" id="phone" class="form-control text-left" value="${place?.phone}" data-validation="required">
         </div>
     </div>
 

@@ -143,9 +143,13 @@ class PlaceController {
     def view() {
         def place = Place.get(params.id)
         def model = [place: place, similarPlaces: placeService.similarPlaces(place)]
-        if (place.reportType)
-            render(view: 'deleted', model: model)
-        else
+        if (place.reportType) {
+            def user = springSecurityService.currentUser as User
+            if (user?.superuserLevel > 0)
+                render(view: 'view', model: model)
+            else
+                render(view: 'deleted', model: model)
+        } else
             render(view: 'view', model: model)
     }
 
@@ -403,6 +407,29 @@ class PlaceController {
         if (place) {
             redirect(action: 'view', id: place?._id)
         } else
-            render view: '/place/reviewEditSuggestionEnded'
+            render view: '/place/reviewEnded'
+    }
+
+    def saveReview() {
+        if (params.btn == message(code: 'place.review.next'))
+            return redirect(action: 'review')
+
+        def place = Place.get(params.placeId)
+        place.approved = true
+        if (params.reason != 'nothing')
+            place.reportType = params.reason
+        else
+            place.reportType = null
+        def additionalInfo = params.additionalInfo?.trim()
+        if (additionalInfo && additionalInfo != '')
+            place.reportComment = additionalInfo
+        else
+            place.reportComment = null
+        place.save(flush: true)
+
+        if (params.btn == message(code: 'place.review.saveAndNext'))
+            return redirect(action: 'review')
+        else
+            return redirect(action: 'view', id: params.placeId)
     }
 }

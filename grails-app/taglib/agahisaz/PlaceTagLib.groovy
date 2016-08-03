@@ -34,6 +34,15 @@ class PlaceTagLib {
         out << render(template: '/layouts/common/searchBox', model: [province: params.province, city: params.city, query: query, queryIcon: queryIcon])
     }
 
+    def reviewForm = { attrs, body ->
+        def user = springSecurityService.currentUser as User
+        if (user && user.superuserLevel > 0) {
+            def place = attrs.place as Place
+//            if (!place.approved)
+            out << render(template: '/place/reviewForm', model: [placeId: place?.id, lastReportType: place?.reportType ? message(code: "place.report.type.${place.reportType}") : place.reportComment])
+        }
+    }
+
     def rate = { attrs, body ->
         def user = springSecurityService.currentUser as User
         if (user) {

@@ -969,7 +969,7 @@ a {
     margin-right: 100px;
     h1 {
       margin-bottom: 0;
-      margin-left:90px;
+      margin-left: 90px;
     }
   }
   .linkBar {
@@ -2895,6 +2895,11 @@ body {
     //padding-top: 10px;
     padding: 7px;
     .title {
+      display: block;
+      height: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .city {
       display: block;
@@ -3119,8 +3124,8 @@ body {
 .dropdown-menu {
   & > li {
     & > a {
-      padding-right:10px;
-      padding-left:10px;
+      padding-right: 10px;
+      padding-left: 10px;
       .label {
         float: right;
         margin-top: 2px;
@@ -3281,27 +3286,66 @@ p {
   margin-bottom: 15px;
 }
 
-.notApprovedFlag{
+.notApprovedFlag {
   display: inline-block;
-  position:absolute;
-  top:0;
-  left:10px;
+  position: absolute;
+  top: 0;
+  left: 10px;
   cursor: default;
-  i{
+  i {
     display: block;
     text-align: center;
-    font-size:32px;
-    padding-top:7px;
+    font-size: 32px;
+    padding-top: 7px;
     color: #EE5921;
   }
-  span{
-    margin-top:5px;
-    font-size:16px;
+  span {
+    margin-top: 5px;
+    font-size: 16px;
     display: block;
     text-align: center;
     background: #EAEFF9;
     padding: 3px 15px;
-    padding-top:2px;
+    padding-top: 2px;
     border-radius: 3px;
+  }
+}
+
+.reviewForm {
+  background: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 15px;
+  .selectize-control {
+    padding-right: 15px;
+    .selectize-input {
+      padding-top: 5px !important;
+      input {
+        display: none !important;
+      }
+    }
+  }
+  .btn {
+    display: block !important;
+    margin-top: 15px;
+    width: 100% !important;
+    border-width: 0 !important;
+    &:focus, &.focus {
+      border-width: 0;
+    }
+  }
+
+  .alert{
+    margin-right:15px;
+    margin-left:15px;
+  }
+
+  h3{
+    border-bottom: 1px solid #efeff4;
+    color: #484848;
+    font-size: 16px;
+    margin: -5px 0 15px;
+    overflow: hidden;
+    padding: 0 20px 10px;
   }
 }
