@@ -5,13 +5,18 @@ import com.mongodb.DBObject
 class MongoService {
     private def db_
     def mongo
+    def Map<String, Object> collections = [:]
 
     private def getDb() {
-        db_ = mongo.getDB("agahisaz")
+        if(!db)
+            db_ = mongo.getDB("agahisaz")
+        db_
     }
 
     def getCollection(String collectionName){
-        db.getCollection(collectionName)
+        if(!collections?.containsKey(collectionName))
+           collections.put(collectionName, db.getCollection(collectionName))
+        collections[collectionName]
     }
 
 //    def query(String collectionName, Map criteria, projection = null) {
