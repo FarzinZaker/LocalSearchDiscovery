@@ -8,7 +8,7 @@ class MongoService {
     def Map<String, Object> collections = [:]
 
     private def getDb() {
-        if(!db)
+        if(!db_)
             db_ = mongo.getDB("agahisaz")
         db_
     }
