@@ -1,6 +1,7 @@
 package agahisaz
 
 import cache.CategoryCache
+import com.mongodb.DBCursor
 import grails.converters.JSON
 
 class MobileController {
@@ -73,7 +74,14 @@ class MobileController {
             }
         }
 
-        def places = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        def cursor = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)
+        def places = []
+        try {
+            places = cursor?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        }
+        finally {
+            cursor?.close()
+        }
         def newTags = []
         if (places?.size()) {
             if (tags?.size())

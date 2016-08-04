@@ -139,6 +139,14 @@ class UserService implements InitializingBean {
     }
 
     def findUser(String username) {
-        return mongoService.getCollection('user').find([$or: [[mobile: username], [email: username], [username: username]]]).find()
+        def cursor = mongoService.getCollection('user').find([$or: [[mobile: username], [email: username], [username: username]]])
+        def result = null
+        try {
+            result = cursor?.find()
+        }
+        finally {
+            cursor?.close()
+        }
+        result
     }
 }

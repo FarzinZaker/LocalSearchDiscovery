@@ -96,7 +96,14 @@ class PlaceController {
             }
         }
 
-        def places = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(200)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        def cursor = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(200)
+        def places = []
+        try {
+            places = cursor?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        }
+        finally {
+            cursor?.close()
+        }
 
         render(places as JSON)
     }
@@ -251,7 +258,14 @@ class PlaceController {
             }
         }
 
-        def places = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        def cursor = mongoService.getCollection("place").find(query, projection)?.sort(sort)?.limit(50)
+        def places = []
+        try {
+            places = cursor?.findAll()?.each { place -> place.category = CategoryCache.findCategory(place.category) } ?: []
+        }
+        finally {
+            cursor?.close()
+        }
         def newTags = []
         if (places?.size()) {
             if (tags?.size())
@@ -278,7 +292,14 @@ class PlaceController {
                 }
             }
         }
-        def editSuggestion = collection.find().skip(skip as Integer).find()
+        def cursor = collection.find().skip(skip as Integer)
+        def editSuggestion = null
+        try {
+            editSuggestion = cursor.find()
+        }
+        finally {
+            cursor?.close()
+        }
         if (editSuggestion) {
             editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
             def place = Place.get(editSuggestion.place)
@@ -393,17 +414,25 @@ class PlaceController {
     def review() {
         def collection = mongoService.getCollection('place')
         def max = (collection.count([approved: false]) - 1) as Integer
-        def skip = editSuggestionSequence.getAndIncrement()
+        def skip = reviewSequence.getAndIncrement()
         if (skip > max) {
-            synchronized (editSuggestionSequence) {
-                skip = editSuggestionSequence.get()
+            synchronized (reviewSequence) {
+                skip = reviewSequence.get()
                 if (skip > max) {
-                    editSuggestionSequence.set(1)
+                    reviewSequence.set(1)
                     skip = 0
                 }
             }
         }
-        def place = collection.find([approved: false]).skip(skip as Integer).find()
+
+        def cursor = collection.find([approved: false]).skip(skip as Integer).find()
+        def place = null
+        try {
+            place = cursor.find()
+        }
+        finally {
+            cursor?.close()
+        }
         if (place) {
             redirect(action: 'view', id: place?._id)
         } else

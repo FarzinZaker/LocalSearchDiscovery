@@ -64,7 +64,14 @@ class OldAdsController {
 //        def parentCategory = agahisaz.old.OldCategory.get(category.parentCategoryId)
         def query = StringHelper.normalize((oldCategory.name?.split(' ')?.findAll { it?.size() > 2 })?.join(' ') + tags)
 
-        def category = Category.get(mongoService.getCollection("category").find([$text: [$search: query]])?.limit(1)?.findAll()?.find()?._id)
+        def cursor = mongoService.getCollection("category").find([$text: [$search: query]])?.limit(1)
+        def category = null
+        try {
+            category = Category.get(cursor?.findAll()?.find()?._id)
+        }
+        finally {
+            cursor?.close()
+        }
 
         [
                 place: [
