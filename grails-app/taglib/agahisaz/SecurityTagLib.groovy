@@ -14,4 +14,9 @@ class SecurityTagLib {
         out << user.firstName + " " + user.lastName
     }
 
+    def userId = {attrs, body ->
+        def user = springSecurityService.currentUser as User
+        out << user?.id
+    }
+
 }

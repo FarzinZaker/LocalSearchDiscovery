@@ -19,6 +19,17 @@
         </button>
         <ul class="dropdown-menu">
             <li>
+                <g:link controller="user" action="info">
+                    <g:message code="user.profile.my"/>
+                </g:link>
+            </li>
+            <li>
+                <g:link controller="user" action="mySuggests">
+                    <g:message code="user.profile.mySuggests"/>
+                </g:link>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
                 <g:link controller="user" action="profile">
                     <g:message code="user.profile.menu"/>
                 </g:link>

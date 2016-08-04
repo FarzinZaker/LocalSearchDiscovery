@@ -23,17 +23,35 @@ class PlaceController {
         [place: [:]]
     }
 
+    def edit() {
+        [place: Place.get(params.id)]
+    }
+
     @Secured([Roles.AUTHENTICATED])
     def save() {
-        def place = placeService.save(params)
-        if (place) {
-            actionService.doAction(Action.ADD_PLACE)
+        if(params.id){
+            def place = placeService.edit(params)
+            if (place) {
+                actionService.doAction(Action.EDIT_PLACE)
 
-            flash.message = message(code: 'place.save.success')
-            redirect(action: 'view', id: place.id, params: [name: place.name])
-        } else {
-            flash.error = place.errors
-            redirect(action: 'add')
+                flash.message = message(code: 'place.edit.success')
+                redirect(action: 'view', id: place.id, params: [name: place.name])
+            } else {
+                flash.error = place.errors
+                redirect(action: 'edit', id: params.id)
+            }
+        }
+        else {
+            def place = placeService.save(params)
+            if (place) {
+                actionService.doAction(Action.ADD_PLACE)
+
+                flash.message = message(code: 'place.save.success')
+                redirect(action: 'view', id: place.id, params: [name: place.name])
+            } else {
+                flash.error = place.errors
+                redirect(action: 'add')
+            }
         }
     }
     static def cur = System.currentTimeMillis()
@@ -154,7 +172,13 @@ class PlaceController {
             def user = springSecurityService.currentUser as User
             if (user?.superuserLevel > 0)
                 render(view: 'view', model: model)
-            else
+            else if (place?.creatorId == user?.id) {
+                flash.message = message(code: "place.reported.message", args: [message(code: "place.report.type.${place.reportType}")]) +
+                        '<br/>' +
+                        message(code: 'place.rejected.message.forCreator')
+                model.put('showEditButton', true)
+                render(view: 'view', model: model)
+            } else
                 render(view: 'deleted', model: model)
         } else
             render(view: 'view', model: model)

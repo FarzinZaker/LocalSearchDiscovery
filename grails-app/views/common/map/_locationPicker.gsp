@@ -82,11 +82,11 @@
                 src: '${resource(dir:'images', file: 'pin-select.png')}'
             }))
         });
-        var pinLayer = new ol.layer.Vector({
+        pinLayer_${id} = new ol.layer.Vector({
             source: vectorSource,
             style: iconStyle
         });
-        map_${id}.addLayer(pinLayer);
+        map_${id}.addLayer(pinLayer_${id});
         </g:if>
 
         //show flag

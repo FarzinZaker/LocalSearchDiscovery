@@ -118,6 +118,11 @@ class PlaceTagLib {
         out << render(template: '/place/item', model: [place: place])
     }
 
+    def mySuggestedPlace = { attrs, body ->
+        def place = attrs.place
+        out << render(template: '/place/myPlace', model: [place: place])
+    }
+
     def addTagToSearchLink = { attrs, body ->
         def tags = params.tags?.split('[|]')?.toList() ?: []
         tags.add(attrs.tag)

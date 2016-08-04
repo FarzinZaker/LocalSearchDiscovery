@@ -20,11 +20,13 @@
 
                 <h1 itemprop="name">${place?.name}</h1>
 
-                <div class="alert alert-danger removed">
-                    <g:message code="place.reported.message" args="${[message(code:"place.report.type.${place.reportType}")]}"/>
+                <div class="alert alert-danger">
+                    <g:message code="place.reported.message"
+                               args="${[message(code: "place.report.type.${place.reportType}")]}"/>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

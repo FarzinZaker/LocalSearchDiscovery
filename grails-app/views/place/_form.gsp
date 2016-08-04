@@ -14,7 +14,9 @@
 <g:render template="/common/cityPicker" model="${[province: place?.province, city: place?.city]}"/>
 <g:javascript>
     function showCityOnMap(latitude, longitude) {
+        <g:if test="${!place?.location}">
         moveMap('location', latitude, longitude);
+        </g:if>
     }
 </g:javascript>
 <div class="row">
@@ -25,7 +27,8 @@
         </label>
 
         <div class="input-group">
-            <input name="address" id="address" class="form-control" value="${place?.address}" data-validation="required">
+            <input name="address" id="address" class="form-control" value="${place?.address}"
+                   data-validation="required">
         </div>
     </div>
 </div>
@@ -36,7 +39,8 @@
                 name="location"
                 visitorLocation="1"
                 height="400"
-                validation="required"/>
+                validation="required"
+                center="${place?.location}"/>
     </div>
 </div>
 
@@ -48,7 +52,8 @@
         </label>
 
         <div class="input-group">
-            <input name="phone" id="phone" class="form-control text-left" value="${place?.phone}" data-validation="required">
+            <input name="phone" id="phone" class="form-control text-left" value="${place?.phone}"
+                   data-validation="required">
         </div>
     </div>
 

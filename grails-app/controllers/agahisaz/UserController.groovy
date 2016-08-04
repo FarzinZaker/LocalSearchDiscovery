@@ -76,14 +76,26 @@ class UserController {
     }
 
     def info() {
-        def user = User.get(params.id)
+        def user
+        if (params.id)
+            user = User.get(params.id)
+        else
+            user = springSecurityService.currentUser as User
         def tips = mongoService.getCollection('place').aggregate(
                 [$match: ['tips.userId': user?.id]],
                 [$unwind: '$tips'],
                 [$match: ['tips.userId': user?.id]]
-        ).results().each{
+        ).results().each {
             it.category = CategoryCache.findCategory(it.category)
         }
         [user: user, tips: tips]
+    }
+
+    def mySuggests() {
+        [
+                rejectedPlaces: Place.findAllByCreatorAndApprovedAndReportTypeIsNotNull(springSecurityService.currentUser as User, true),
+                waitingPlaces : Place.findAllByCreatorAndApproved(springSecurityService.currentUser as User, false),
+                approvedPlaces : Place.findAllByCreatorAndApprovedAndReportTypeIsNull(springSecurityService.currentUser as User, true)
+        ]
     }
 }

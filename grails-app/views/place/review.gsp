@@ -38,7 +38,7 @@
                     <sec:ifLoggedIn>
                         <div>
                             <input type="button" class="btn btn-link"
-                                   value="${message(code: 'plage.suggestEdit.button')}" data-toggle="modal"
+                                   value="${message(code: 'place.suggestEdit.button')}" data-toggle="modal"
                                    data-target="#suggestEditModal"/>
                         </div>
                     </sec:ifLoggedIn>

@@ -80,56 +80,64 @@
 
         <div class="tipsContainer">
             <div class="row">
-                <g:each in="${tips}" var="place" status="i">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div data-id="573fa93bcd107d041803e940" class="tipCard">
-                            <div class="tipPhoto"
-                                 style="background-image: url(${createLink(controller: 'image', action: 'tip', params: [id: place?.tips?.id, placeId: place?._id, size: 200])});">
-                                %{--<div style="background-image: url('https://irs1.4sqi.net/img/general/113x170/102146082_nufQ3MxXDwKW6ZMvLx1cKDJnzkbRQ2OzXmqnJWc4R4c.jpg')"--}%
-                                %{--class="tipSubPhoto"></div>--}%
+                <g:if test="${tips?.size()}">
+                    <g:each in="${tips}" var="place" status="i">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div data-id="573fa93bcd107d041803e940" class="tipCard">
+                                <div class="tipPhoto"
+                                     style="background-image: url(${createLink(controller: 'image', action: 'tip', params: [id: place?.tips?.id, placeId: place?._id, size: 200])});">
+                                    %{--<div style="background-image: url('https://irs1.4sqi.net/img/general/113x170/102146082_nufQ3MxXDwKW6ZMvLx1cKDJnzkbRQ2OzXmqnJWc4R4c.jpg')"--}%
+                                    %{--class="tipSubPhoto"></div>--}%
 
-                                %{--<div style="background-image: url('https://irs3.4sqi.net/img/general/113x170/102146082_BNSQ0PqcBb7k6xs4Lh5t3PohtGCXBf6k4XzpTmJhkuw.jpg')"--}%
-                                %{--class="tipSubPhoto"></div>--}%
+                                    %{--<div style="background-image: url('https://irs3.4sqi.net/img/general/113x170/102146082_BNSQ0PqcBb7k6xs4Lh5t3PohtGCXBf6k4XzpTmJhkuw.jpg')"--}%
+                                    %{--class="tipSubPhoto"></div>--}%
 
-                                %{--<div style="background-image: url('https://irs1.4sqi.net/img/general/114x170/26153793_edufeWR3LZCHitYZXMEVIXvAJWGho7QFdG91gpjt0eQ.jpg')"--}%
-                                %{--class="tipSubPhoto"></div>--}%
-                            </div>
-
-                            <div class="tipContent">${place?.tips?.body}</div>
-
-                            <div class="tipUser">
-                                <a href="${createLink(controller: 'user', action: 'info', id: place?.tips?.userId)}">
-                                    <img width="32" height="32"
-                                         data-retina-url="https://irs3.4sqi.net/img/user/64x64/64817910-WWRHOECVMX42HK1M.jpg"
-                                         title="${place?.tips?.fullName}" class="avatar " alt="${place?.tips?.fullName}"
-                                         src="${createLink(controller: 'image', action: 'profile', id: place?.tips?.userId, params: [size: 32])}">
-                                </a>
-                                <span class="tipUserName">
-                                    <a href="${createLink(controller: 'user', action: 'info', id: place?.tips?.userId)}">${place?.tips?.fullName}</a>
-                                </span> ·
-                                <span class="tipDate link">
-                                    <format:prettyDate date="${place?.tips?.date}"/>
-                                </span>
-                            </div>
-
-                            <div class="tipVenue">
-                                <div class="tipVenueDetails">
-                                    <div class="tipVenueInfo">
-                                        <a href="${createLink(controller: 'place', action: 'view', params: [id: place?._id, name: place?.name])}">${place?.name}</a>
-                                    </div>
-
-                                    <span class="category">${place?.category?.name}</span> · ${place?.city}
+                                    %{--<div style="background-image: url('https://irs1.4sqi.net/img/general/114x170/26153793_edufeWR3LZCHitYZXMEVIXvAJWGho7QFdG91gpjt0eQ.jpg')"--}%
+                                    %{--class="tipSubPhoto"></div>--}%
                                 </div>
-                                %{--<span style="background-color: #FFC800;"--}%
-                                %{--title="6.2/10 - People have mixed feelings about this place"--}%
-                                %{--class="venueScore neutral">--}%
-                                %{--<span>6.2</span>--}%
-                                %{--</span>--}%
-                                <place:aggregateRatingFlag place="${place}" cssClass="venueScore neutral"/>
+
+                                <div class="tipContent">${place?.tips?.body}</div>
+
+                                <div class="tipUser">
+                                    <a href="${createLink(controller: 'user', action: 'info', id: place?.tips?.userId)}">
+                                        <img width="32" height="32"
+                                             data-retina-url="https://irs3.4sqi.net/img/user/64x64/64817910-WWRHOECVMX42HK1M.jpg"
+                                             title="${place?.tips?.fullName}" class="avatar "
+                                             alt="${place?.tips?.fullName}"
+                                             src="${createLink(controller: 'image', action: 'profile', id: place?.tips?.userId, params: [size: 32])}">
+                                    </a>
+                                    <span class="tipUserName">
+                                        <a href="${createLink(controller: 'user', action: 'info', id: place?.tips?.userId)}">${place?.tips?.fullName}</a>
+                                    </span> ·
+                                    <span class="tipDate link">
+                                        <format:prettyDate date="${place?.tips?.date}"/>
+                                    </span>
+                                </div>
+
+                                <div class="tipVenue">
+                                    <div class="tipVenueDetails">
+                                        <div class="tipVenueInfo">
+                                            <a href="${createLink(controller: 'place', action: 'view', params: [id: place?._id, name: place?.name])}">${place?.name}</a>
+                                        </div>
+
+                                        <span class="category">${place?.category?.name}</span> · ${place?.city}
+                                    </div>
+                                    %{--<span style="background-color: #FFC800;"--}%
+                                    %{--title="6.2/10 - People have mixed feelings about this place"--}%
+                                    %{--class="venueScore neutral">--}%
+                                    %{--<span>6.2</span>--}%
+                                    %{--</span>--}%
+                                    <place:aggregateRatingFlag place="${place}" cssClass="venueScore neutral"/>
+                                </div>
                             </div>
                         </div>
+                    </g:each>
+                </g:if>
+                <g:else>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <g:message code="list.noItem"/>
                     </div>
-                </g:each>
+                </g:else>
             </div>
         </div>
     </div>

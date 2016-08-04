@@ -16,6 +16,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+            <g:if test="${flash.message}">
+                <div class="alert alert-danger row spaceFromTop">
+                    ${flash.message}
+                </div>
+            </g:if>
             <div class="whitePanel spaceFromTop placeInfoSection" itemtype="http://schema.org/LocalBusiness"
                  itemscope="">
                 <div class="alert alert-info softHidden" id="placeMessage"></div>
@@ -44,9 +49,17 @@
 
                     <sec:ifLoggedIn>
                         <div>
-                            <input type="button" class="btn btn-link"
-                                   value="${message(code: 'plage.suggestEdit.button')}" data-toggle="modal"
-                                   data-target="#suggestEditModal"/>
+                            <g:if test="${showEditButton}">
+                                <a href="${createLink(controller: 'place', action: 'edit', id: place?.id ?: place?._id)}"
+                                   class="btn btn-primary spaceFromTop">
+                                    <g:message code="place.suggestEdit.button"/>
+                                </a>
+                            </g:if>
+                            <g:else>
+                                <input type="button" class="btn btn-link"
+                                       value="${message(code: 'place.suggestEdit.button')}" data-toggle="modal"
+                                       data-target="#suggestEditModal"/>
+                            </g:else>
                         </div>
                     </sec:ifLoggedIn>
                 </div>
@@ -74,8 +87,6 @@
 
                 <div class="clearfix"></div>
             </div>
-
-            <place:reviewForm place="${place}"/>
 
             <div class="tipsSections" style="position: relative;">
                 <place:addTip/>
