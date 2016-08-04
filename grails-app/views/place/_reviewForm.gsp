@@ -1,5 +1,5 @@
 <g:form class="reviewForm row" controller="place" action="saveReview">
-    <h3><g:message code="place.review.title" /></h3>
+    <h3><g:message code="place.review.title"/></h3>
     <g:if test="${lastReportType}">
 
         <div class="alert alert-danger">
@@ -49,3 +49,21 @@
         $('[name=reason]').selectize();
     })
 </script>
+
+<div class="categorySuggestionPanel row">
+    <h3><g:message code="place.review.changeCategory"/></h3>
+    <g:if test="${suggestedCategories?.size()}">
+    <ul>
+        <g:each in="${suggestedCategories?.sort { -it.value }}" var="category">
+            <li>
+                <a href="${createLink(controller: 'place', action: 'changeCategory', id: placeId, params: [category:category?.key?.id])}">${category.key.name} <span>${category.value}</span></a>
+            </li>
+        </g:each>
+    </ul>
+    </g:if>
+    <g:else>
+        <div class="text-center">
+            <g:message code="list.noItem"/>
+        </div>
+    </g:else>
+</div>

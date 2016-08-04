@@ -2207,6 +2207,27 @@ ul#tipsList {
       }
     }
   }
+
+  &.small {
+    li {
+      .body {
+        img.categoryIcon {
+          width: 48px;
+        }
+        .details {
+          margin-right: 64px;
+          a {
+            font-size: 18px;
+          }
+          .contactInfo{
+            .address, .phone {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 body {
@@ -3335,17 +3356,61 @@ p {
     }
   }
 
-  .alert{
-    margin-right:15px;
-    margin-left:15px;
+  .alert {
+    margin-right: 15px;
+    margin-left: 15px;
   }
 
-  h3{
+  h3 {
     border-bottom: 1px solid #efeff4;
     color: #484848;
     font-size: 16px;
     margin: -5px 0 15px;
     overflow: hidden;
     padding: 0 20px 10px;
+  }
+}
+
+.categorySuggestionPanel {
+  background-color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 15px;
+
+  h3 {
+    border-bottom: 1px solid #efeff4;
+    color: #484848;
+    font-size: 16px;
+    margin: -5px 0 15px;
+    overflow: hidden;
+    padding: 0 20px 10px;
+  }
+  ul {
+    padding: 0 15px;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 5px;
+      a {
+        display: inline-block;
+        background: #f4f4f4;
+        padding: 2px 10px 5px;
+        color: black;
+        &:hover {
+          color: #EE5921;
+          span {
+            background: #EE5921;
+          }
+        }
+        span {
+          background: #96c950;
+          color: white;
+          display: inline-block;
+          line-height: 24px;
+          margin: -2px 7px -6px -10px;
+          padding: 2px 10px;
+        }
+      }
+    }
   }
 }

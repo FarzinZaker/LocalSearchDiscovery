@@ -39,7 +39,7 @@ class PlaceTagLib {
         if (user && user.superuserLevel > 0) {
             def place = attrs.place as Place
 //            if (!place.approved)
-            out << render(template: '/place/reviewForm', model: [placeId: place?.id, lastReportType: place?.reportType ? message(code: "place.report.type.${place.reportType}") : place.reportComment])
+            out << render(template: '/place/reviewForm', model: [placeId: place?.id, suggestedCategories: attrs.suggestedCategories, lastReportType: place?.reportType ? message(code: "place.report.type.${place.reportType}") : place.reportComment])
         }
     }
 

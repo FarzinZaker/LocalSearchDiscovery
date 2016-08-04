@@ -302,19 +302,18 @@ class PlaceController {
         }
         if (editSuggestion) {
             def es = EditSuggestion.get(editSuggestion._id)
-            if(es.hasChange()) {
+            if (es.hasChange()) {
                 editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
                 def place = Place.get(editSuggestion.place)
                 place.categoryInfo = CategoryCache.findCategory(place.categoryId)
                 return [place: place, editSuggestion: editSuggestion]
-            }
-            else{
+            } else {
                 es.delete(flush: true)
                 editSuggestion = null
                 return redirect(action: 'reviewEditSuggestion')
             }
         }
-        if(!editSuggestion) {
+        if (!editSuggestion) {
             def reportedPlace = mongoService.getCollection('place').aggregate(
                     [$match: ['reportedTips': [$ne: null, $not: [$size: 0]]]],
                     [$unwind: '$tips'],
@@ -421,29 +420,69 @@ class PlaceController {
     private static final AtomicInteger reviewSequence = new AtomicInteger(0)
 
     def review() {
-        def collection = mongoService.getCollection('place')
-        def max = (collection.count([approved: false]) - 1) as Integer
-        def skip = reviewSequence.getAndIncrement()
-        if (skip > max) {
-            synchronized (reviewSequence) {
-                skip = reviewSequence.get()
-                if (skip > max) {
-                    reviewSequence.set(1)
-                    skip = 0
+        def place = null
+        if (params.id) {
+            place = Place.get(params.id)
+        } else {
+            def collection = mongoService.getCollection('place')
+            def max = (collection.count([approved: false]) - 1) as Integer
+            def skip = reviewSequence.getAndIncrement()
+            if (skip > max) {
+                synchronized (reviewSequence) {
+                    skip = reviewSequence.get()
+                    if (skip > max) {
+                        reviewSequence.set(1)
+                        skip = 0
+                    }
                 }
             }
+
+            def cursor = collection.find([approved: false]).skip(skip as Integer)
+            try {
+                place = cursor.find()
+            }
+            finally {
+                cursor?.close()
+            }
+
+
+            place = Place.get(place._id)
         }
 
-        def cursor = collection.find([approved: false]).skip(skip as Integer)
-        def place = null
-        try {
-            place = cursor.find()
-        }
-        finally {
-            cursor?.close()
-        }
         if (place) {
-            redirect(action: 'view', id: place?._id)
+            def cursor = mongoService.getCollection("place").find([
+                    $text     : [$search: place?.name?.split(' ')?.findAll {
+                        it.size() > 2
+                    }?.join(' ')],
+                    category  : place.category?.id,
+                    _id       : [$ne: place?.id],
+                    approved  : true,
+                    reportType: null
+            ])?.limit(10)
+            def similarPlacesInName = []
+            try {
+                similarPlacesInName = cursor?.findAll()?.each { p -> p.category = CategoryCache.findCategory(p.category) } ?: []
+            }
+            finally {
+                cursor?.close()
+            }
+
+            def similarPlaces = placeService.similarPlacesGlobal(place, 20)
+
+            def categoriesMap = [:]
+            similarPlaces*.category.each {
+                if (categoriesMap.containsKey(it))
+                    categoriesMap[it]++
+                else
+                    categoriesMap.put(it, 1)
+            }
+
+            [
+                    place                : place,
+                    otherPlacesOfThisUser: Place.findAllByCreatorAndApprovedAndReportTypeIsNull(place?.creator, true),
+                    similarPlaces        : similarPlacesInName,
+                    suggestedCategories  : categoriesMap
+            ]
         } else
             render view: '/place/reviewEnded'
     }
@@ -469,5 +508,16 @@ class PlaceController {
             return redirect(action: 'review')
         else
             return redirect(action: 'view', id: params.placeId)
+    }
+
+    def changeCategory() {
+        try {
+            def place = Place.get(params.id)
+            place.category = Category.get(params.category)
+            place.save(flush: true)
+        }
+        finally {
+            redirect(action: 'review', id: params.id)
+        }
     }
 }

@@ -1,13 +1,13 @@
-<li data-id="${place?.id}">
+<li data-id="${place?.id ?: place?._id}">
     <div class="body">
         <img class="categoryIcon"
-             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?.id, size: 88])}"/>
+             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?.id ?: place?._id, size: 88])}"/>
 
         <div class="details">
 
             <place:aggregateRatingFlag place="${place}" cssClass="badge"/>
             <a class="name" target="_blank"
-               href="${createLink(controller: 'place', action: 'view', id: place?.id, params: [name: place?.name])}">
+               href="${createLink(controller: 'place', action: 'view', id: place?.id ?: place?._id, params: [name: place?.name])}">
                 ${place?.name}
             </a>
 
