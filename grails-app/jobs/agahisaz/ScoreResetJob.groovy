@@ -1,5 +1,7 @@
 package agahisaz
 
+import grails.util.Environment
+
 
 class ScoreResetJob {
     def timeout = 5000l // execute job once in 5 seconds
@@ -9,6 +11,10 @@ class ScoreResetJob {
     def mongoService
 
     def execute() {
+
+        if(Environment.isDevelopmentMode())
+            return
+        
         mongoService.getCollection('user').update(
                 [:],
                 [$set: [weekScore: 0]],

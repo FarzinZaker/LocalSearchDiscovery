@@ -48,7 +48,9 @@ class EditSuggestion {
             return true
         if ((this.location[0] != place.location[0] || this.location[1] != place.location[1]) && ignoreField != 'location')
             return true
-        if ((this.tags.any { !place.tags.contains(it) } || place.tags.any {
+        if ((this.tags.findAll { it && it != '' }.any { !place.tags.contains(it) } || place.tags.findAll {
+            it && it != ''
+        }.any {
             !this.tags.contains(it)
         }) && ignoreField != 'tags')
             return true

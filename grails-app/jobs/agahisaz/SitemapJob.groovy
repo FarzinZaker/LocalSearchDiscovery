@@ -1,5 +1,7 @@
 package agahisaz
 
+import grails.util.Environment
+
 
 class SitemapJob {
 
@@ -11,6 +13,10 @@ class SitemapJob {
     def siteMapService
 
     def execute() {
+
+        if(Environment.isDevelopmentMode())
+            return
+
         siteMapService.refresh()
     }
 }

@@ -301,11 +301,20 @@ class PlaceController {
             cursor?.close()
         }
         if (editSuggestion) {
-            editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
-            def place = Place.get(editSuggestion.place)
-            place.categoryInfo = CategoryCache.findCategory(place.categoryId)
-            [place: place, editSuggestion: editSuggestion]
-        } else {
+            def es = EditSuggestion.get(editSuggestion._id)
+            if(es.hasChange()) {
+                editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
+                def place = Place.get(editSuggestion.place)
+                place.categoryInfo = CategoryCache.findCategory(place.categoryId)
+                return [place: place, editSuggestion: editSuggestion]
+            }
+            else{
+                es.delete(flush: true)
+                editSuggestion = null
+                return redirect(action: 'reviewEditSuggestion')
+            }
+        }
+        if(!editSuggestion) {
             def reportedPlace = mongoService.getCollection('place').aggregate(
                     [$match: ['reportedTips': [$ne: null, $not: [$size: 0]]]],
                     [$unwind: '$tips'],
@@ -425,7 +434,7 @@ class PlaceController {
             }
         }
 
-        def cursor = collection.find([approved: false]).skip(skip as Integer).find()
+        def cursor = collection.find([approved: false]).skip(skip as Integer)
         def place = null
         try {
             place = cursor.find()
