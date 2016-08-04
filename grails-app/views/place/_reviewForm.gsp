@@ -15,6 +15,8 @@
             <select name="reason">
                 <option value="nothing"><g:message code="place.report.type.nothing"/></option>
                 <option value="address"><g:message code="place.report.type.address"/></option>
+                <option value="notAPlace"><g:message code="place.report.type.notAPlace"/></option>
+                <option value="wrongPlaceTitle"><g:message code="place.report.type.wrongPlaceTitle"/></option>
                 <option value="closed"><g:message code="place.report.type.closed"/></option>
                 <option value="inappropriate"><g:message code="place.report.type.inappropriate"/></option>
                 <option value="duplicate"><g:message code="place.report.type.duplicate"/></option>
