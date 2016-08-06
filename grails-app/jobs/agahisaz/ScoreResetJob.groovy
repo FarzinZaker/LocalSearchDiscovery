@@ -4,9 +4,10 @@ import grails.util.Environment
 
 
 class ScoreResetJob {
-    def timeout = 5000l // execute job once in 5 seconds
+//    def timeout = 5000l // execute job once in 5 seconds
     def cronExpression = "0 1 0 ? * SAT *"
 //    def cronExpression = "0 0/1 * 1/1 * ? *"
+    def concurrent = false
 
     def mongoService
 

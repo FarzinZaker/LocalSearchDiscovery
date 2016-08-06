@@ -43,6 +43,7 @@ class UserController {
         render view: 'changePassword', model: [skipOldPassword: true]
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def changePassword() {
 
     }
@@ -91,6 +92,7 @@ class UserController {
         [user: user, tips: tips]
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def mySuggests() {
         [
                 rejectedPlaces: Place.findAllByCreatorAndApprovedAndReportTypeIsNotNull(springSecurityService.currentUser as User, true),

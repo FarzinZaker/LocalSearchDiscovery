@@ -4,6 +4,7 @@ package agahisaz
 import com.pars.agahisaz.User
 import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
+import groovy.time.TimeCategory
 import security.Roles
 import cache.CategoryCache
 import sun.misc.BASE64Decoder
@@ -17,6 +18,7 @@ class PlaceController {
     def imageService
     def placeService
     def actionService
+    def delayedMessageService
 
     @Secured([Roles.AUTHENTICATED])
     def add() {
@@ -29,7 +31,7 @@ class PlaceController {
 
     @Secured([Roles.AUTHENTICATED])
     def save() {
-        if(params.id){
+        if (params.id) {
             def place = placeService.edit(params)
             if (place) {
                 actionService.doAction(Action.EDIT_PLACE)
@@ -40,8 +42,7 @@ class PlaceController {
                 flash.error = place.errors
                 redirect(action: 'edit', id: params.id)
             }
-        }
-        else {
+        } else {
             def place = placeService.save(params)
             if (place) {
                 actionService.doAction(Action.ADD_PLACE)
@@ -527,6 +528,14 @@ class PlaceController {
         else
             place.reportComment = null
         place.save(flush: true)
+
+        if (place.reportType) {
+            def sendDate = new Date()
+            use(TimeCategory) {
+                sendDate = sendDate + 2.hours
+            }
+            delayedMessageService.schedule(place?.creator, message(code: 'place.review.reject.message.title')?.toString(), message(code: 'place.review.reject.message.body')?.toString(), 'place.review.reject', sendDate)
+        }
 
         if (params.btn == message(code: 'place.review.saveAndNext'))
             return redirect(action: 'review')
