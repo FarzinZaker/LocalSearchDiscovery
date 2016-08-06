@@ -7,6 +7,6 @@ class CommonTagLib {
     def actionService
 
     def recordBrowse = {attrs, body ->
-        actionService.doAction(Action.BROWSE)
+//        actionService.doAction(Action.BROWSE)
     }
 }
