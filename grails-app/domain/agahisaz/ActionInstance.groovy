@@ -19,5 +19,6 @@ class ActionInstance {
         appAction nullable: true
         ipAddress nullable: true
         browserData nullable: true
+        user nullable: true
     }
 }
