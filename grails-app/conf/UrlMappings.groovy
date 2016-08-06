@@ -22,6 +22,8 @@ class UrlMappings {
         "/sitemap/index"(controller: 'sitemap', action: 'index')
         "/sitemap/$type/$id"(controller: 'sitemap', action: 'view')
 
+        "/image/$action/$id/$size"(controller: 'image')
+
         "/$controller/$action\\.json" {}
         "/$controller/$action?/$id?/$name?" {
             constraints {
