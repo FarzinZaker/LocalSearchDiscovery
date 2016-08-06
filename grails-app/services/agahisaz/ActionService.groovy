@@ -17,7 +17,7 @@ class ActionService {
     private void applyAction(ActionInstance actionInstance) {
         if (actionInstance) {
 //            Thread.start {
-            actionInstance?.save()
+            actionInstance?.save(flush: true)
             def score = actionInstance?.action?.grantScore
             if (score != 0)
                 mongoService.getCollection('user').update(
@@ -50,17 +50,17 @@ class ActionService {
         params.remove('controller')
         params.remove('action')
         actionInstance.params = params
-        if (!user) {
-            actionInstance.ipAddress = request.getHeader("X-Forwarded-For") ?: request.getHeader("Client-IP") ?: request.getRemoteAddr()
-            try {
-                actionInstance.browserData = [
-                        operatingSystem: userAgentIdentService.getOperatingSystem(),
-                        browserName    : userAgentIdentService.getBrowserName(),
-                        browserVersion : userAgentIdentService.getBrowserVersion()
-                ]
-            } catch (x) {
-            }
+//        if (!user) {
+        actionInstance.ipAddress = request.getHeader("X-Forwarded-For") ?: request.getHeader("Client-IP") ?: request.getRemoteAddr()
+        try {
+            actionInstance.browserData = [
+                    operatingSystem: userAgentIdentService.getOperatingSystem(),
+                    browserName    : userAgentIdentService.getBrowserName(),
+                    browserVersion : userAgentIdentService.getBrowserVersion()
+            ]
+        } catch (x) {
         }
+//        }
         actionInstance
     }
 
