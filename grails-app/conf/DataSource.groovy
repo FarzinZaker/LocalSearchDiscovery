@@ -30,9 +30,9 @@ environments {
                 username = "root"
                 password = ""
                 databaseName = "agahisaz"
-                options = {
-                    connectionsPerHost = 20
-                }
+//                options = {
+//                    connectionsPerHost = 20
+//                }
             }
         }
         dataSource{
