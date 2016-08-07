@@ -14,6 +14,7 @@ class UrlMappings {
         "/Category/$i1/$id"(controller: 'place', action: 'explore')
         "/location/$i1/$city"(controller: 'place', action: 'explore')
         "/Location/$i1/$city"(controller: 'place', action: 'explore')
+        "/explore/$id"(controller: 'place', action: 'explore')
         "/search/$id"(controller: 'place', action: 'explore')
         "/Search/$id"(controller: 'place', action: 'explore')
         "/search_$id"(controller: 'place', action: 'explore')
