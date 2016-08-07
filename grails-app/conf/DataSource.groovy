@@ -9,13 +9,13 @@ hibernate {
     cache.use_query_cache = false
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
-grails {
-    mongo {
-        host = "192.168.0.3"
-        username = "root"
-        password = ""
-    }
-}
+//grails {
+//    mongo {
+//        host = "192.168.0.3"
+//        username = "root"
+//        password = ""
+//    }
+//}
 // environment specific settings
 environments {
     development {
@@ -30,6 +30,9 @@ environments {
                 username = "root"
                 password = ""
                 databaseName = "agahisaz"
+                options = {
+                    connectionsPerHost = 20
+                }
             }
         }
         dataSource{
@@ -55,6 +58,9 @@ environments {
                 username = "root"
                 password = ""
                 databaseName = "agahisaz"
+                options = {
+                    connectionsPerHost = 200
+                }
             }
         }
         dataSource{
