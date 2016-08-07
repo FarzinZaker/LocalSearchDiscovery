@@ -58,9 +58,9 @@ environments {
                 username = "root"
                 password = ""
                 databaseName = "agahisaz"
-                options = {
-                    connectionsPerHost = 200
-                }
+//                options = {
+//                    connectionsPerHost = 200
+//                }
             }
         }
         dataSource{
