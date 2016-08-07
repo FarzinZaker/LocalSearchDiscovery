@@ -9,13 +9,13 @@ hibernate {
     cache.use_query_cache = false
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
-//grails {
-//    mongo {
-//        host = "192.168.0.3"
-//        username = "root"
-//        password = ""
-//    }
-//}
+grails {
+    mongo {
+        host = "192.168.0.3"
+        username = "root"
+        password = ""
+    }
+}
 // environment specific settings
 environments {
     development {
