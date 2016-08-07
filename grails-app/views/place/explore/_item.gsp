@@ -24,7 +24,7 @@
                 </g:if>
                 <div class="clearfix"></div>
                 <a class="category"
-                   href="${createLink(controller: 'place', action: 'explore', params: [category: place?.category?.name])}" itemprop="additionalType">
+                   href="${createLink(controller: 'place', action: 'explore', params: [id: place?.category?.name])}" itemprop="additionalType">
                     %{--<span class="glyphicon glyphicon-folder-open"></span>--}%
                     ${place?.category?.name}
                 </a>

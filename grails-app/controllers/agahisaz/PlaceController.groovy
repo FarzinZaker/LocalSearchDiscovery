@@ -471,7 +471,8 @@ class PlaceController {
             }
 
 
-            place = Place.get(place._id)
+            if (place)
+                place = Place.get(place._id)
         }
 
         if (place) {
