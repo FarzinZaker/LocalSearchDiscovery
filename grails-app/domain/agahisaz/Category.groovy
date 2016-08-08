@@ -28,4 +28,9 @@ class Category {
         iconPath nullable: true
         parent nullable: true
     }
+
+    public transient String getSearchString() {
+        "${name},${pluralName},${englishName},${englishPluralName}" +
+                (parent ? ',' + parent?.searchString : '')
+    }
 }

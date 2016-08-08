@@ -1,8 +1,18 @@
 package agahisaz
 
 import com.pars.agahisaz.User
+import search.GeoPoint
 
 class Place {
+
+    static searchable = {
+        only = ['name', 'province', 'city', 'address', 'phone', 'postalCode', 'categoryString', 'tagsString', 'tipsString']
+        geoPoint geoPoint: true, component: true
+        name boost: 10.0
+        categoryString boost: 8.0
+        tagsString boost: 4.0
+        tipsString boost: 2.0
+    }
 
     static mapWith = "mongo"
 
@@ -32,6 +42,9 @@ class Place {
     Date dateCreated
     Date lastUpdated
 
+    Boolean indexed = false
+    Boolean locallyIndexed = false
+
     static constraints = {
         name blank: false
         address nullable: true
@@ -48,6 +61,25 @@ class Place {
 
         dateCreated nullable: true
         lastUpdated nullable: true
+
+        indexed nullable: true
+        locallyIndexed nullable: true
+    }
+
+    public transient GeoPoint getGeoPoint() {
+        new GeoPoint(location?.first() as Double, location?.last() as Double)
+    }
+
+    public transient String getTagsString() {
+        tags?.join(',') ?: ''
+    }
+
+    public transient String getTipsString() {
+        tips?.collect { it?.body }?.join(',') ?: ''
+    }
+
+    public transient String getCategoryString() {
+        category?.searchString ?: ''
     }
 
     static mapping = {
@@ -58,7 +90,10 @@ class Place {
     }
 
     def beforeUpdate() {
-        if(!dateCreated)
+        if (!dateCreated)
             dateCreated = new Date()
+
+        indexed = false
+        locallyIndexed = false
     }
 }
