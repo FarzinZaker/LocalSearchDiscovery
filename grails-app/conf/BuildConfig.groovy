@@ -98,5 +98,8 @@ grails.project.dependency.resolution = {
         compile ":quartz:0.4.1"
 //	compile ":console:1.2"
         compile "org.grails.plugins:canonical:0.1"
+
+        runtime ':elasticsearch:0.1.0'
+
     }
 }
