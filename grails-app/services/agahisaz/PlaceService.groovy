@@ -131,7 +131,10 @@ class PlaceService {
         def tags = []
         if (params.tags)
             tags = params.tags?.split('[|]')?.toList() ?: []
+
         def queryString = params.id?.toString()?.replace('-', ' ')?.trim() ?: null
+        def specialChars = ['-', ')', '(', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '_', '+', '=', '{', '}', '\\', '[', ']', '|', ';', ':', '\'', '"', '?', '/', ',', '.', '<', '>']
+        specialChars.each { queryString = queryString.replace(it, ' ') }
 
         def nearParams = []
         if (params.near) {
