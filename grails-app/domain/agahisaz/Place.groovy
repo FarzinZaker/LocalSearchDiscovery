@@ -7,12 +7,12 @@ import search.GeoPoint
 class Place {
 
     static searchable = {
-        only = ['name', 'province', 'city', 'address', 'phone', 'postalCode', 'tags', 'location','locationString', 'tipsBody', 'category', 'approved', 'reportType']
+        only = ['name', 'province', 'city', 'address', 'phone', 'postalCode', 'tags', 'location','locationString', 'tipsBody', 'category', 'approved', 'reportType', 'averageRate', 'ratesCount']
 //        except = ['creator', 'editSuggestion']
         locationString geoPoint: true//, component: true
         name boost: 10.0
         category component: true
-        tags boost: 3.0
+        tags analyzer:'keyword', boost: 3.0
         tipsBody boost: 1.0
     }
 
@@ -46,6 +46,8 @@ class Place {
 
     Boolean indexed = false
     Boolean locallyIndexed = false
+
+    String distance
 
     static hasMany = [tags: String, tipsBody: String, location: Double]
 
@@ -83,13 +85,16 @@ class Place {
 //        index name: 'text', address: 'text', indexAttributes: [name: 10, address: 1, tags: 5]
         compoundIndex province: 1, city: 1, category: 1
         tags index: true
+        indexed index: true
+        locallyIndexed index: true
     }
 
-    def beforeUpdate() {
+    def afterUpdate() {
         if (!dateCreated)
             dateCreated = new Date()
 
         indexed = false
         locallyIndexed = false
+//        save(flush: true)
     }
 }
