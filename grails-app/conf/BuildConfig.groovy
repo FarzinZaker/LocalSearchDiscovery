@@ -10,7 +10,9 @@ grails.project.source.level = 1.6
 //grails.project.fork = [
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
-
+grails.war.resources = { stagingDir ->
+    delete(file: "${stagingDir}/WEB-INF/lib/groovy-all-2.4.4-indy.jar")
+}
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
