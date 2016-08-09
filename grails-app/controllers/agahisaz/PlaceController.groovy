@@ -245,7 +245,10 @@ class PlaceController {
         if (params.city)
             query << [city: params.city]
 
-        def queryString = params.id?.toString()?.replace('-', ' ')?.trim() ?: ''
+        def specialChars = ['-', ')', '(', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '_', '+', '=', '{', '}', '\\', '[', ']', '|', ';', ':', '\'', '"', '?', '/', ',', '.', '<', '>']
+
+        def queryString = params.id?.toString()?.trim() ?: ''
+        specialChars.each { queryString = queryString.replace(it, ' ') }
         request.setAttribute("query", queryString)
         def category = Category.findByName(queryString)
         if (category) {
