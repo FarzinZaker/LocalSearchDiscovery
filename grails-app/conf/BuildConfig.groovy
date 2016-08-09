@@ -21,7 +21,8 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve false
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -77,7 +78,6 @@ grails.project.dependency.resolution = {
 //        runtime ":cached-resources:1.0"
 //        runtime ":cache-headers:1.0.4"
 
-
 //        compile ":asset-pipeline:1.8.11"
 //        compile ":less-asset-pipeline:1.7.0"
 
@@ -101,7 +101,7 @@ grails.project.dependency.resolution = {
 //	compile ":console:1.2"
         compile "org.grails.plugins:canonical:0.1"
 
-        runtime ':elasticsearch:0.1.0'{
+        runtime(':elasticsearch:0.1.0') {
             exclude "org.codehaus.groovy:groovy-all"
         }
 
