@@ -13,6 +13,8 @@ class SearchIndexJob {
     def mongoService
 
     def execute() {
+        if (Environment.isDevelopmentMode())
+            return
         def places
         places = Place.findAllByIndexedIsNullOrIndexed(false, [max: 500])
         println("[SEARCH INDEX]: ${Place.countByIndexedIsNullOrIndexed(false)} items remaing")

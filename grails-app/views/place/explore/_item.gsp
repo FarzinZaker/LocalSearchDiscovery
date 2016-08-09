@@ -30,6 +30,15 @@
                     %{--<span class="glyphicon glyphicon-folder-open"></span>--}%
                     ${place?.category?.name}
                 </a>
+
+
+                <g:if test="${place?.distance}">
+                    <div class="distance">
+                        <span class="distanceLabel"><g:message code="distance.fromYou"/></span>
+                        <b><g:formatNumber number="${place?.distance}" type="number" maxFractionDigits="2"/></b>
+                        <span class="unit"><g:message code="distance.unit.km"/></span>
+                    </div>
+                </g:if>
             </div>
 
             <div class="insightTexts">
@@ -49,6 +58,6 @@
         <img class="categoryIcon" itemprop="contentUrl"
              src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?.id ?: place?._id, size: 88])}"/>
     </span>
-<div>${place?.distance}</div>
+
     <div class="clearfix"></div>
 </li>
