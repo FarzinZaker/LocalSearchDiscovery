@@ -24,11 +24,15 @@
     function search(){
         var url = '${createLink(controller: 'place', action: 'explore')}/';
         url += $('#searchQuery').val();
-        var city = $('#searchLocation').val();
+        var city = $('#searchLocation').text();
         if(city.indexOf('-') != -1){
             var location = city.split(' - ');
             url += '?province=' + location[0];
             url += '&city=' + location[1];
+            window.location.href = url;
+        }
+        else if(city.trim() != ''){
+            url += '?address=' + city.trim();
             window.location.href = url;
         }
         else if(visitorLocation){
@@ -45,9 +49,10 @@
             window.location.href = url;
         }
     }
-
+    var searchQuery;
+    var searchLocation;
     $(document).ready(function(){
-        var searchQuery = $('#searchQuery').selectize({
+        searchQuery = $('#searchQuery').selectize({
             valueField: 'name',
             labelField: 'name',
             searchField: ['name'],
@@ -57,7 +62,9 @@
             openOnFocus: true,
             closeAfterSelect: true,
             sortField:'name',
+            allowEmptyOption: true,
             options: [
+        {name: '', icon: ''},
     <g:if test="${query}">
         {name: '${query}', icon: '${queryIcon}'}
     </g:if>
@@ -84,18 +91,24 @@
                 }
             }
         });
-        var searchLocation = $('#searchLocation').selectize({
-            valueField: 'name',
+        searchLocation = $('#searchLocation').selectize({
+            valueField: 'cityName',
             labelField: 'name',
             searchField: ['name'],
-            create: false,
+            create: true,
+            createOnBlur:true,
             selectOnTab:true,
             openOnFocus: true,
             closeAfterSelect: true,
             sortField: 'name',
+            allowEmptyOption: true,
             options: [
+        {name: '', cityName: ''},
     <g:if test="${city && province}">
         {name: '${province} - ${city}', cityName: '${city}'}
+    </g:if>
+    <g:if test="${address}">
+        {name: '${address}', cityName: '${address}'}
     </g:if>
     ],
     load: function (query, callback) {
@@ -123,12 +136,18 @@
     <g:if test="${city && province}">
         searchLocation[0].selectize.setValue('${province} - ${city}');
     </g:if>
+    <g:if test="${address}">
+        searchLocation[0].selectize.setValue('${address}');
+    </g:if>
     $('#btnSearch').click(function(){
         search();
     });
     $('.navbar .selectize-input').keyup(function(e){
-        if(e.keyCode == 13)
+        if(e.keyCode == 13){
             search();
+        }
+        else if($(e.target).val()=='')
+            $(e.target).parent().parent().prev('select')[0].selectize.clearOptions();
     });
 });
 </g:javascript>

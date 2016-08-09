@@ -59,6 +59,15 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+
+
+elasticSearch {
+    datastoreImpl = "mongoDatastore"
+    bulkIndexOnStartup = false
+    includeTransients = true
+    elasticSearch.client.mode = 'transport'
+}
+
 environments {
     development {
 
@@ -71,6 +80,10 @@ environments {
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
 
         grails.serverURL = "http://192.168.0.155:8585"
+
+        elasticSearch.client.hosts = [
+                [host: '82.99.217.213', port: 9300]
+        ]
     }
     production {
 
@@ -84,6 +97,11 @@ environments {
 //        grails.resources.mappers.hashandcache.excludes = ['**/*.*']
 
         grails.serverURL = "http://www.agahisaz.com"
+
+
+        elasticSearch.client.hosts = [
+                [host: '192.168.64.3', port: 9300]
+        ]
     }
 }
 //environments {
@@ -147,11 +165,5 @@ telegram {
     bot {
         token = "255362501:AAETVOl6R7H7Xql8n5hlp6rwh_unbYfJ4kk"
     }
-}
-
-elasticSearch {
-    datastoreImpl = "mongoDatastore"
-    bulkIndexOnStartup = false
-    includeTransients = true
 }
 

@@ -31,7 +31,7 @@ class PlaceTagLib {
         def query = request.getAttribute('query')?.toString()
         def queryCategory = request.getAttribute('queryCategory')?.toString()
         def queryIcon = createLink(controller: 'image', action: 'category', id: queryCategory)
-        out << render(template: '/layouts/common/searchBox', model: [province: params.province, city: params.city, query: query, queryIcon: queryIcon])
+        out << render(template: '/layouts/common/searchBox', model: [province: params.province, city: params.city, address: params.address, query: query, queryIcon: queryIcon])
     }
 
     def reviewForm = { attrs, body ->

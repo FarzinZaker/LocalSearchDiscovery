@@ -6,45 +6,32 @@ import grails.util.Environment
 class SearchIndexJob {
 
     def startDelay = 60000
-    def timeout = 5000l
+    def timeout = 1l
     def concurrent = false
 
     def elasticSearchService
     def mongoService
 
     def execute() {
-        def place
-        if (Environment.isDevelopmentMode()) {
-            place = Place.findByLocallyIndexedIsNullOrLocallyIndexed(false)
-            println("[SEARCH INDEX]: ${Place.countByLocallyIndexedIsNullOrLocallyIndexed(false)} items remaing")
-        } else {
-            place = Place.findByIndexedIsNullOrIndexed(false)
-            println("[SEARCH INDEX]: ${Place.countByIndexedIsNullOrIndexed(false)} items remaing")
-        }
+        def places
+        places = Place.findAllByIndexedIsNullOrIndexed(false, [max: 500])
+        println("[SEARCH INDEX]: ${Place.countByIndexedIsNullOrIndexed(false)} items remaing")
 
-        if (place) {
+        if (places?.size()) {
             try {
-                elasticSearchService.index(place)
+                elasticSearchService.index(places)
             }
             catch (ignored) {
-                println("[SEARCH INDEX]: failed to index place : ${place?.id}")
                 ignored?.printStackTrace()
             }
             finally {
-                if (Environment.isDevelopmentMode())
-                    mongoService.getCollection('place').update(
-                            [_id: place?.id],
-                            [$set: [
-                                    'locallyIndexed': true
-                            ]]
-                    )
-                else
-                    mongoService.getCollection('place').update(
-                            [_id: place?.id],
-                            [$set: [
-                                    'indexed': true
-                            ]]
-                    )
+                mongoService.getCollection('place').update(
+                        [_id: [$in: places*.id]],
+                        [$set: [
+                                'indexed': true
+                        ]],
+                        false, true
+                )
             }
         }
     }

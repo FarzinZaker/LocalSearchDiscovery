@@ -59,7 +59,7 @@
         <g:if test="${!center && visitorLocation}">
         //show visitor position
 
-        if(visitorLocation)
+        if (visitorLocation)
             map_explore.setView(new ol.View({
                 center: ol.proj.transform([visitorLocation.longitude, visitorLocation.latitude], 'EPSG:4326', 'EPSG:3857'),
                 zoom: 11
@@ -86,10 +86,10 @@
             location: placeLocation,
             type: 'flag',
             index: '${i + 1}',
-            id: '${place?._id}',
+            id: '${place?.id?:place?._id}',
             name: '${place?.name}',
             address: '${place?.address?.replace("\n", "")?.replace("\r", "")}',
-            icon: '${createLink(controller: 'image', action: 'placeSearch', params: [id:place?._id, size:32])}'
+            icon: '${createLink(controller: 'image', action: 'placeSearch', params: [id:place?.id?:place?._id, size:32])}'
         });
         pinFeatures.push(pinFeature);
         </g:each>
@@ -205,9 +205,9 @@
 //            if (initialLoading && loadedTilesCount == totalTilesCount) {
 //                initialLoading = true;
 
-                //add features
-                for (var i = 0; i < pinFeatures.length; i++)
-                    vectorSource.addFeature(pinFeatures[i]);
+        //add features
+        for (var i = 0; i < pinFeatures.length; i++)
+            vectorSource.addFeature(pinFeatures[i]);
 //            }
 //        });
     });

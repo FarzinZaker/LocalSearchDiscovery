@@ -1,9 +1,10 @@
-<li data-id="${place?._id}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<li data-id="${place?.id ?: place?._id}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <span class="number"><span itemprop="position">${index + 1}</span>.</span>
 
     <div class="body" itemprop="item" itemscope itemtype="http://schema.org/LocalBusiness">
         <a class="name" target="_blank"
-           href="${createLink(controller: 'place', action: 'view', id: place?._id, params: [name: place?.name])}" itemprop="name">
+           href="${createLink(controller: 'place', action: 'view', id: place?.id ?: place?._id, params: [name: place?.name])}"
+           itemprop="name">
             ${place?.name}
         </a>
 
@@ -24,7 +25,8 @@
                 </g:if>
                 <div class="clearfix"></div>
                 <a class="category"
-                   href="${createLink(controller: 'place', action: 'explore', params: [id: place?.category?.name])}" itemprop="additionalType">
+                   href="${createLink(controller: 'place', action: 'explore', params: [id: place?.category?.name])}"
+                   itemprop="additionalType">
                     %{--<span class="glyphicon glyphicon-folder-open"></span>--}%
                     ${place?.category?.name}
                 </a>
@@ -35,7 +37,7 @@
                     <g:if test="${tip}">
                         <li class="insight">
                             ${tip}
-                            <img src="${resource(dir:'images/icons', file: 'tip.png')}"/>
+                            <img src="${resource(dir: 'images/icons', file: 'tip.png')}"/>
                         </li>
                     </g:if>
                 </ul>
@@ -43,9 +45,10 @@
         </div>
 
     </div>
-    <span class="image"  itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
+    <span class="image" itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
         <img class="categoryIcon" itemprop="contentUrl"
-            src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?._id, size: 88])}"/>
+             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?.id ?: place?._id, size: 88])}"/>
     </span>
+<div>${place?.distance}</div>
     <div class="clearfix"></div>
 </li>

@@ -12,11 +12,11 @@
     <title>
         <g:if test="${request["query"]}">
             <g:message code="place.search.result.title"
-                       args="${[request["query"], params.city ?: message(code: 'search.location.nearMe')]}"/>
+                       args="${[request["query"], params.city ?: params.address ?: message(code: 'search.location.nearMe')]}"/>
         </g:if>
         <g:else>
             <g:message code="place.search.result.noQueryTitle"
-                       args="${[params.city ?: message(code: 'search.location.nearMe')]}"/>
+                       args="${[params.city ?: params.address ?: message(code: 'search.location.nearMe')]}"/>
         </g:else>
     </title>
 </head>
@@ -58,11 +58,11 @@
                     </g:if>
                     <g:if test="${request["query"]}">
                         <g:message code="place.search.result.heading"
-                                   args="${[request["query"], params.city ?: message(code: 'search.location.nearMe')]}"/>
+                                   args="${[request["query"], params.city ?: params.address ?: message(code: 'search.location.nearMe')]}"/>
                     </g:if>
                     <g:else>
                         <g:message code="place.search.result.noQueryHeading"
-                                   args="${[params.city ?: message(code: 'search.location.nearMe')]}"/>
+                                   args="${[params.city ?: params.address ?: message(code: 'search.location.nearMe')]}"/>
                     </g:else>
 
                     <g:render template="explore/currentTags" model="${[tags: currentTags]}"/>

@@ -227,6 +227,12 @@ class PlaceController {
     }
 
     def explore() {
+
+        def result = placeService.search(params)
+        request.setAttribute("query", params?.id ?: '')
+        request.setAttribute("queryCategory", Category.findByName(params?.id ?: '')?.id ?: 0)
+        return result
+
         def sort = [:]
         def query = [:]
         def aggregateQuery
@@ -505,7 +511,7 @@ class PlaceController {
 
             [
                     place                : place,
-                    otherPlacesOfThisUser: Place.findAllByCreatorAndApprovedAndReportTypeIsNull(place?.creator, true),
+                    otherPlacesOfThisUser: Place.findAllByCreatorAndApprovedAndReportTypeIsNull(place?.creator, true, [max: 100]),
                     similarPlaces        : similarPlacesInName,
                     suggestedCategories  : categoriesMap
             ]

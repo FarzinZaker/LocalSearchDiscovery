@@ -17,7 +17,7 @@ class MapTagLib {
     }
 
     def explore = { attrs, body ->
-        def places = attrs.places
+        def places = attrs.places?.findAll { it.location }
         def center = attrs.center
         def maxLatitude = places.collect { it.location[0] }.max() ?: 0
         def minLatitude = places.collect { it.location[0] }.min() ?: 0
