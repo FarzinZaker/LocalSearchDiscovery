@@ -2,6 +2,12 @@ package agahisaz
 
 class Category {
 
+    static searchable = {
+        root = false
+        except = ['parent', 'parentIdList', 'childIdList']
+        name boost: 6.0
+    }
+
     static mapWith = "mongo"
 
     String name

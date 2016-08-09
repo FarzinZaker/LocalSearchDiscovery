@@ -152,5 +152,6 @@ telegram {
 elasticSearch {
     datastoreImpl = "mongoDatastore"
     bulkIndexOnStartup = false
+    includeTransients = true
 }
 

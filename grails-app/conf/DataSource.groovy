@@ -25,8 +25,8 @@ environments {
 //        }
         grails {
             mongo {
-                host = "82.99.217.213"
-//                host = "192.168.0.3"
+//                host = "82.99.217.213"
+                host = "192.168.0.3"
                 username = "root"
                 password = ""
                 databaseName = "agahisaz"

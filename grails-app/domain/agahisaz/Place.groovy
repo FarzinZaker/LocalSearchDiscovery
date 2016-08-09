@@ -1,17 +1,19 @@
 package agahisaz
 
 import com.pars.agahisaz.User
+import grails.converters.JSON
 import search.GeoPoint
 
 class Place {
 
     static searchable = {
-        only = ['name', 'province', 'city', 'address', 'phone', 'postalCode', 'categoryString', 'tagsString', 'tipsString']
-        geoPoint geoPoint: true, component: true
+        only = ['name', 'province', 'city', 'address', 'phone', 'postalCode', 'tags', 'location','locationString', 'tipsBody', 'category', 'approved', 'reportType']
+//        except = ['creator', 'editSuggestion']
+        locationString geoPoint: true//, component: true
         name boost: 10.0
-        categoryString boost: 8.0
-        tagsString boost: 4.0
-        tipsString boost: 2.0
+        category component: true
+        tags boost: 3.0
+        tipsBody boost: 1.0
     }
 
     static mapWith = "mongo"
@@ -45,6 +47,8 @@ class Place {
     Boolean indexed = false
     Boolean locallyIndexed = false
 
+    static hasMany = [tags: String, tipsBody: String, location: Double]
+
     static constraints = {
         name blank: false
         address nullable: true
@@ -66,20 +70,12 @@ class Place {
         locallyIndexed nullable: true
     }
 
-    public transient GeoPoint getGeoPoint() {
-        new GeoPoint(location?.first() as Double, location?.last() as Double)
+    public transient String getTipsBody() {
+        tips?.collect { it?.body }
     }
 
-    public transient String getTagsString() {
-        tags?.join(',') ?: ''
-    }
-
-    public transient String getTipsString() {
-        tips?.collect { it?.body }?.join(',') ?: ''
-    }
-
-    public transient String getCategoryString() {
-        category?.searchString ?: ''
+    public transient String getLocationString() {
+        location?.collect { it?.toString() }?.join(',')
     }
 
     static mapping = {
