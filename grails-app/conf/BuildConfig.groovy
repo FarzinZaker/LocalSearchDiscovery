@@ -61,7 +61,7 @@ grails.project.dependency.resolution = {
 //            exclude group:'antlr', name:'antlr'
 //        }
         runtime 'net.sourceforge.jtds:jtds:1.2.6'
-        compile 'org.codehaus.groovy:groovy-all:2.4.4'
+//        compile 'org.codehaus.groovy:groovy-all:2.4.4'
 
     }
 
@@ -99,7 +99,9 @@ grails.project.dependency.resolution = {
 //	compile ":console:1.2"
         compile "org.grails.plugins:canonical:0.1"
 
-        runtime ':elasticsearch:0.1.0'
+        runtime ':elasticsearch:0.1.0'{
+            exclude "org.codehaus.groovy:groovy-all"
+        }
 
     }
 }
