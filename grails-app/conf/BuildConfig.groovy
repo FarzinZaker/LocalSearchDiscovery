@@ -13,6 +13,9 @@ grails.project.source.level = 1.6
 //grails.war.resources = { stagingDir ->
 //    delete(file: "${stagingDir}/WEB-INF/lib/groovy-all-2.4.4-indy.jar")
 //}
+grails.war.resources = { stagingDir ->
+    delete(file: "${stagingDir}/WEB-INF/lib/groovy-all-2.4.4-indy.jar")
+}
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -64,7 +67,7 @@ grails.project.dependency.resolution = {
 //            exclude group:'antlr', name:'antlr'
 //        }
         runtime 'net.sourceforge.jtds:jtds:1.2.6'
-//        compile 'org.codehaus.groovy:groovy-all:2.4.4'
+        compile 'org.codehaus.groovy:groovy-all:2.0.8'
 
     }
 
@@ -101,8 +104,8 @@ grails.project.dependency.resolution = {
 //	compile ":console:1.2"
         compile "org.grails.plugins:canonical:0.1"
 
-        runtime(':elasticsearch:0.1.0') {
-            excludes "org.codehaus.groovy:groovy-all"
+        runtime(':elasticsearch:0.1.0'){
+            exclude group:'org.codehaus.groovy', name:'groovy-all'
         }
 
     }
