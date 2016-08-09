@@ -47,8 +47,6 @@ class Place {
     Boolean indexed = false
     Boolean locallyIndexed = false
 
-    String distance
-
     static hasMany = [tags: String, tipsBody: String, location: Double]
 
     static constraints = {

@@ -6,7 +6,7 @@ import grails.util.Environment
 class SearchIndexJob {
 
     def startDelay = 60000
-    def timeout = 1l
+    def timeout = 5 * 60 * 1000l
     def concurrent = false
 
     def elasticSearchService
