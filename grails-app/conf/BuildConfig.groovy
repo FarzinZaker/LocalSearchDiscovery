@@ -61,7 +61,7 @@ grails.project.dependency.resolution = {
 //            exclude group:'antlr', name:'antlr'
 //        }
         runtime 'net.sourceforge.jtds:jtds:1.2.6'
-
+        compile 'org.codehaus.groovy:groovy-all:2.4.4'
 
     }
 
