@@ -102,7 +102,7 @@ grails.project.dependency.resolution = {
         compile "org.grails.plugins:canonical:0.1"
 
         runtime(':elasticsearch:0.1.0') {
-            exclude "org.codehaus.groovy:groovy-all"
+            excludes "org.codehaus.groovy:groovy-all"
         }
 
     }
