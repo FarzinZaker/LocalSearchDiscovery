@@ -40,7 +40,14 @@ class PlaceService {
                 place.tags.add(tagName.trim())
         }
 
-        return place.save(flush: true)
+        def result = place.save(flush: true)
+
+        if (result)
+            place.tags.each { String tagName ->
+                Tag.findByName(tagName.trim()) ?: new Tag(name: tagName.trim()).save(flush: true)
+            }
+
+        result
     }
 
     def edit(Map params) {
@@ -65,7 +72,14 @@ class PlaceService {
         place.reportType = null
         place.reportComment = null
 
-        return place.save(flush: true)
+        def result = place.save(flush: true)
+
+        if (result)
+            place.tags.each { String tagName ->
+                Tag.findByName(tagName.trim()) ?: new Tag(name: tagName.trim()).save(flush: true)
+            }
+
+        result
     }
 
     def similarPlaces(Place place, Integer itemsCount = 5) {
@@ -133,8 +147,10 @@ class PlaceService {
             tags = params.tags?.split('[|]')?.toList() ?: []
 
         def queryString = params.id?.toString()?.replace('-', ' ')?.trim() ?: null
-        def specialChars = ['-', ')', '(', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '_', '+', '=', '{', '}', '\\', '[', ']', '|', ';', ':', '\'', '"', '?', '/', ',', '.', '<', '>']
-        specialChars.each { queryString = queryString.replace(it, ' ') }
+        if (queryString) {
+            def specialChars = ['-', ')', '(', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '_', '+', '=', '{', '}', '\\', '[', ']', '|', ';', ':', '\'', '"', '?', '/', ',', '.', '<', '>']
+            specialChars.each { queryString = queryString.replace(it, ' ') }
+        }
 
         def nearParams = []
         if (params.near) {

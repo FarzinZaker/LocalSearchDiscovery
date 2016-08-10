@@ -1284,19 +1284,19 @@ a {
           display: block;
           //margin-top: 8px;
         }
-        .distance{
-          .distanceLabel{
-            font-size:11px;
-            color:darkgray;
+        .distance {
+          .distanceLabel {
+            font-size: 11px;
+            color: darkgray;
             display: inline-block;
-            margin-left:6px;
+            margin-left: 6px;
           }
-          .unit{
-            font-size:11px
+          .unit {
+            font-size: 11px
           }
-          b{
+          b {
             font-weight: normal;
-            font-size:11px;
+            font-size: 11px;
             font-family: arial, helvetica, verdana, sans-serif;
           }
         }
@@ -2140,7 +2140,31 @@ ul#tipsList {
         color: white;
       }
     }
+  }
 
+  &.editable {
+    li {
+      a {
+        border-radius:15px 0 0 15px;
+        display: inline-block;
+        float:right;
+        &:hover {
+          background-color: #96C950;
+        }
+        &.deleteButton {
+          border-radius:0 15px 15px 0;
+          font-weight: bold;
+          font-size:11px;
+          padding-top:4px;
+          padding-bottom:2px;
+          padding-right:12px;
+          border-left:1px solid #FAFAFA;
+          &:hover {
+            background: #EE5921;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -3102,7 +3126,7 @@ body {
     h1, h2, h3, h4, h5, h6 {
       background-color: #EE5921;
     }
-    hr{
+    hr {
       border-color: #EE5921;
     }
   }
@@ -3111,7 +3135,7 @@ body {
     h1, h2, h3, h4, h5, h6 {
       background-color: #96C950;
     }
-    hr{
+    hr {
       border-color: #96C950;
     }
   }
@@ -3459,7 +3483,7 @@ p {
   li {
     list-style: none;
     margin-top: 10px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eaeff9;
     &:last-of-type {
@@ -3479,7 +3503,7 @@ p {
       border-radius: 3px;
       padding-left: 10px;
       padding-right: 10px;
-      padding-bottom:10px;
+      padding-bottom: 10px;
       .details {
         margin-right: 100px;
         text-align: justify;
@@ -3489,7 +3513,7 @@ p {
           cursor: pointer;
           text-align: right;
           display: block;
-          padding-top:5px;
+          padding-top: 5px;
           &:hover {
             color: #EE5921;
           }
@@ -3498,8 +3522,8 @@ p {
           .address {
             font-size: 12px;
             color: #484848;
-            line-height:18px;
-            text-align:justify;
+            line-height: 18px;
+            text-align: justify;
           }
           .phone {
             font-size: 12px;
@@ -3513,22 +3537,22 @@ p {
             //margin-top: 8px;
           }
         }
-        .reason{
+        .reason {
           //background: #EAEFF9;
-          padding:10px;
-          padding-top:5px;
-          margin-top:10px;
-          margin-bottom:0;
-          border-radius:3px;
-          b{
+          padding: 10px;
+          padding-top: 5px;
+          margin-top: 10px;
+          margin-bottom: 0;
+          border-radius: 3px;
+          b {
             display: block;
-            color:#EE5921;
-            i{
-              color:#EE5921;
-              margin-left:5px;
+            color: #EE5921;
+            i {
+              color: #EE5921;
+              margin-left: 5px;
             }
           }
-          & + .btn{
+          & + .btn {
             display: block;
             width: 100%;
             cursor: pointer;

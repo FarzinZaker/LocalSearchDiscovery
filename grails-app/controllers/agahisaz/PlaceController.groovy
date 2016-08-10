@@ -477,10 +477,23 @@ class PlaceController {
             return redirect(action: 'view', id: params.placeId)
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def changeCategory() {
         try {
             def place = Place.get(params.id)
             place.category = Category.get(params.category)
+            place.save(flush: true)
+        }
+        finally {
+            redirect(action: 'review', id: params.id)
+        }
+    }
+
+    @Secured([Roles.AUTHENTICATED])
+    def removeTag() {
+        try {
+            def place = Place.get(params.id)
+            place.tags.remove(params.tag)
             place.save(flush: true)
         }
         finally {

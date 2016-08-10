@@ -19,7 +19,8 @@
             valueField: 'name',
             labelField: 'name',
             searchField: 'name',
-            create: false,
+            create: true,
+            createOnBlur:true,
             maxItems: 5,
             dropdownDirection: 'up',
             load: function (query, callback) {

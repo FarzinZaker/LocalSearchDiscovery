@@ -32,7 +32,7 @@
 
                     <div itemprop="address">${place?.address}</div>
 
-                    <g:render template="tags"
+                    <g:render template="editableTags"
                               model="${[tags: place?.tags, province: place?.province, city: place?.city]}"/>
 
                     <sec:ifLoggedIn>
