@@ -1386,7 +1386,7 @@ a {
   padding: 20px 20px 10px;
   font-size: 16px;
   border-bottom: 1px solid #f4f4f4;
-  background: #fafafa;
+  background: white;
   h1 {
     display: none;
   }
@@ -2145,20 +2145,20 @@ ul#tipsList {
   &.editable {
     li {
       a {
-        border-radius:15px 0 0 15px;
+        border-radius: 15px 0 0 15px;
         display: inline-block;
-        float:right;
+        float: right;
         &:hover {
           background-color: #96C950;
         }
         &.deleteButton {
-          border-radius:0 15px 15px 0;
+          border-radius: 0 15px 15px 0;
           font-weight: bold;
-          font-size:11px;
-          padding-top:4px;
-          padding-bottom:2px;
-          padding-right:12px;
-          border-left:1px solid #FAFAFA;
+          font-size: 11px;
+          padding-top: 4px;
+          padding-bottom: 2px;
+          padding-right: 12px;
+          border-left: 1px solid #FAFAFA;
           &:hover {
             background: #EE5921;
           }
@@ -3579,6 +3579,51 @@ p {
 
       .categoryIcon {
         background: #96C950;
+      }
+    }
+  }
+}
+
+.sortSelectionContainer {
+  border-top:1px solid white;
+  border-bottom:1px solid #f4f4f4;
+  padding-left:10px;
+  background: #fafafa;
+  span{
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .btn-group {
+    margin-right:15px;
+    padding-top:5px;
+    padding-bottom:5px;
+    float:left;
+    text-align: left;
+    .btn {
+      font-size:12px;
+      padding: 2px 10px 3px;
+      &.active {
+        background: #96C950;
+        color:white;
+        &:hover {
+          background: #96C950;
+        }
+      }
+      &:hover {
+        background: #EAEFF9;
+      }
+      &:focus {
+        background: #96C950;
+      }
+
+      &:first-child{
+        border-radius: 3px 0 0 3px !important;
+      }
+
+      &:last-child{
+        border-radius: 0 3px 3px 0 !important;
       }
     }
   }

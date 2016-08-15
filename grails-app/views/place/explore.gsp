@@ -67,6 +67,30 @@
 
                     <g:render template="explore/currentTags" model="${[tags: currentTags]}"/>
                 </div>
+
+                <div class="sortSelectionContainer">
+                    <g:set var="searchParams" value="${params?.clone()}"/>
+                    <g:set var="temp" value="${searchParams?.remove('sort')}"/>
+                    <div class="btn-group" data-toggle="buttons">
+                        <a class="btn btn-default ${params.sort != 'distance' ? 'active' : ''}"
+                           href="${createLink(action: 'explore', params: searchParams)}">
+                            <input type="radio" name="options" id="option1"
+                                   autocomplete="off" ${params.sort != 'distance' ? 'checked' : ''}>
+                            <g:message code="place.search.sort.default"/>
+                        </a>
+                        <a class="btn btn-default ${params.sort == 'distance' ? 'active' : ''}"
+                           href="${createLink(action: 'explore', params: searchParams + [sort: 'distance'])}">
+                            <input type="radio" name="options" id="option2"
+                                   autocomplete="off" ${params.sort == 'distance' ? 'checked' : ''}>
+                            <g:message code="place.search.sort.distance"/>
+                        </a>
+                    </div>
+                    <span>
+                        <g:message code="place.search.sort.label"/>
+                    </span>
+
+                    <div class="clearfix"></div>
+                </div>
                 <ul class="exploreList" itemscope itemtype="http://schema.org/ItemList">
                     <g:each in="${places}" var="place" status="index">
                         <place:exploreItem place="${place}" index="${index}"/>
@@ -116,6 +140,11 @@
         }).mouseleave(function () {
             hideFeatureOnMap($(this).attr('data-id'));
         });
+
+        $('.sortSelectionContainer .btn').click(function () {
+            if (!$(this).hasClass('active'))
+                window.location.href = $(this).attr('href');
+        })
     });
 </g:javascript>
 </body>

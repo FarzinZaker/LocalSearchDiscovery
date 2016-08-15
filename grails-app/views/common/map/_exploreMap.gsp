@@ -87,7 +87,7 @@
             type: 'flag',
             index: '${i + 1}',
             id: '${place?.id?:place?._id}',
-            name: '${place?.name}',
+            name: '${place?.name?.replace("\'", "")}',
             address: '${place?.address?.replace("\n", "")?.replace("\r", "")}',
             icon: '${createLink(controller: 'image', action: 'placeSearch', params: [id:place?.id?:place?._id, size:32])}'
         });

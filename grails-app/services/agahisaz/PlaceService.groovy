@@ -7,13 +7,17 @@ import grails.converters.JSON
 import org.apache.commons.collections.Closure
 import org.elasticsearch.action.search.SearchType
 import org.elasticsearch.client.Client
+import org.elasticsearch.common.geo.GeoDistance
 import org.elasticsearch.common.unit.DistanceUnit
 import org.elasticsearch.index.query.QueryBuilders
 import org.elasticsearch.index.query.ScriptQueryBuilder
 import org.elasticsearch.script.Script
 import org.elasticsearch.script.ScriptService
 import org.elasticsearch.search.aggregations.AggregationBuilders
+import org.elasticsearch.search.aggregations.bucket.range.geodistance.GeoDistanceBuilder
 import org.elasticsearch.search.aggregations.bucket.terms.StringTerms
+import org.elasticsearch.search.sort.SortBuilders
+import org.elasticsearch.search.sort.SortOrder
 import org.springframework.web.context.request.RequestContextHolder
 
 import javax.management.Query
@@ -158,14 +162,16 @@ class PlaceService {
 
         def query = QueryBuilders.boolQuery()
         query = query.must(QueryBuilders.termQuery('approved', true))
-        if (queryString)
-            query = query.must(QueryBuilders.queryStringQuery(queryString))
+        queryString?.replace('+', ' ')?.split(' ')?.each {
+            query = query.must(QueryBuilders.queryStringQuery(it))
+        }
         if (params.province && params.city)
             query = query.must(QueryBuilders.termQuery('province', params.province))
         if (params.city)
             query = query.must(QueryBuilders.termQuery('city', params.city))
         if (params.address)
-            query = query.must(QueryBuilders.termQuery('address', params.address))
+            query = query.must(QueryBuilders.matchQuery('address', params.address))
+//            query = query.must(QueryBuilders.termsQuery('address', params.address?.split(' ')?.toList()))
         tags?.each { tag ->
             query = query.must(QueryBuilders.termQuery('tags', tag))
         }
@@ -178,14 +184,20 @@ class PlaceService {
         elasticSearchService.elasticSearchHelper.withElasticSearch { Client client ->
             result = client
                     .prepareSearch()
+                    .setSize(10)
+                    .setMinScore(0.1f)
+//                    .setFrom(100)
                     .setSearchType(SearchType.DFS_QUERY_AND_FETCH)
                     .setQuery(query)
-            if (session['location'])
+            if (session['location']) {
                 result = result.addScriptField('distance', new Script("doc['locationString'].arcDistanceInKm(lat, lon)", ScriptService.ScriptType.INLINE, 'groovy',
                         [
                                 "lat": session['location']?.lat,
                                 "lon": session['location']?.lon
                         ]))
+                if (params.sort == 'distance')
+                    result = result.addSort(SortBuilders.geoDistanceSort('locationString').point(session['location']?.lat as Double, session['location']?.lon as Double))
+            }
             result = result.addFields('name', 'location', 'address', 'phone', 'category.name', 'category.id')
                     .execute()
                     .actionGet()
