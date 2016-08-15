@@ -160,6 +160,7 @@ class PlaceTagLib {
 
     def topPlaces = { attrs, body ->
         def places = mongoService.getCollection('place').aggregate(
+                [$match: [approved: true, reportType: [$exists: false]]],
                 [$sort: [averageRate: -1, ratesCount: -1]],
                 [$limit: 20]
         ).results()

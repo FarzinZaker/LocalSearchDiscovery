@@ -237,6 +237,7 @@ class PlaceController {
 
     private static final AtomicInteger editSuggestionSequence = new AtomicInteger(0)
 
+    @Secured([Roles.AUTHENTICATED])
     def reviewEditSuggestion() {
         def collection = mongoService.getCollection('editSuggestion')
         def max = (collection.count() - 1) as Integer
@@ -260,7 +261,7 @@ class PlaceController {
         }
         if (editSuggestion) {
             def es = EditSuggestion.get(editSuggestion._id)
-            if (es.hasChange()) {
+            if (es.hasChange() || es.reportType) {
                 editSuggestion.categoryInfo = CategoryCache.findCategory(editSuggestion?.category)
                 def place = Place.get(editSuggestion.place)
                 place.categoryInfo = CategoryCache.findCategory(place.categoryId)
@@ -316,7 +317,7 @@ class PlaceController {
         editSuggestion."${params.field}" = place."${params.field}"
         if (params.field == 'city')
             editSuggestion.province = place.province
-        place.save(flush: true)
+        editSuggestion.save(flush: true)
 
         def next = 0
         if (!editSuggestion.hasChange(params.field)) {
@@ -377,6 +378,7 @@ class PlaceController {
 
     private static final AtomicInteger reviewSequence = new AtomicInteger(0)
 
+    @Secured([Roles.AUTHENTICATED])
     def review() {
         def place = null
         if (params.id) {
@@ -438,7 +440,7 @@ class PlaceController {
 
             [
                     place                : place,
-                    otherPlacesOfThisUser: Place.findAllByCreatorAndApprovedAndReportTypeIsNull(place?.creator, true, [max: 100]),
+                    otherPlacesOfThisUser: Place.findAllByCreatorAndApprovedAndReportTypeIsNullAndIdNotEqual(place?.creator, true, place?.id, [max: 100]),
                     similarPlaces        : similarPlacesInName,
                     suggestedCategories  : categoriesMap
             ]
@@ -446,6 +448,7 @@ class PlaceController {
             render view: '/place/reviewEnded'
     }
 
+    @Secured([Roles.AUTHENTICATED])
     def saveReview() {
         if (params.btn == message(code: 'place.review.next'))
             return redirect(action: 'review')
