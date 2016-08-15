@@ -146,9 +146,9 @@ class PlaceTagLib {
         out << "<div class='topCategories row'>"
         Category.findAllByParentIsNull([max: 6])?.each { category ->
             out << """<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <a href='${createLink(controller: 'place', action: 'explore', id: category?.name)}'>
+                <a href='${createLink(controller: 'place', action: 'explore', id: category?.name, params: [near: 1])}'>
                     <img src='${
-                createLink(controller: 'image', action: 'category', params: [id: category.id, size: attrs.iconSize])
+                createLink(controller: 'image', action: 'category', params: [id: category.id, size: attrs.iconSize, near: 1])
             }'/>
                     <span class='text'>${category?.name}</span>
                     <span class='clearfix'></span>

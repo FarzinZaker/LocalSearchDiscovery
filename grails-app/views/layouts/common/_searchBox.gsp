@@ -36,14 +36,9 @@
             window.location.href = url;
         }
         else if(visitorLocation){
-                url += '?near=' + visitorLocation.latitude + ',' + visitorLocation.longitude;
+                url += '?near=1';
                 window.location.href = url;
             }
-        //else if (navigator.geolocation)
-        //    navigator.geolocation.getCurrentPosition(function (position) {
-        //        url += '?near=' + position.coords.latitude + ',' + position.coords.longitude;
-        //        window.location.href = url;
-        //    });
         else {
             url += '?province=${URLEncoder.encode('تهران', 'UTF-8')}&city=${URLEncoder.encode('تهران', 'UTF-8')}'
             window.location.href = url;

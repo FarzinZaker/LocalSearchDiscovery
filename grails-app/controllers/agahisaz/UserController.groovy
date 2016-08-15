@@ -97,7 +97,14 @@ class UserController {
         [
                 rejectedPlaces: Place.findAllByCreatorAndApprovedAndReportTypeIsNotNull(springSecurityService.currentUser as User, true),
                 waitingPlaces : Place.findAllByCreatorAndApproved(springSecurityService.currentUser as User, false),
-                approvedPlaces : Place.findAllByCreatorAndApprovedAndReportTypeIsNull(springSecurityService.currentUser as User, true)
+                approvedPlaces: Place.findAllByCreatorAndApprovedAndReportTypeIsNull(springSecurityService.currentUser as User, true)
         ]
+    }
+
+    def setUserLocation() {
+        def nearParams = params.id?.toString()?.split(',')
+        if (nearParams.size() == 2)
+            session['location'] = [lat: nearParams[0]?.toDouble(), lon: nearParams[1]?.toDouble()]
+        render ''
     }
 }

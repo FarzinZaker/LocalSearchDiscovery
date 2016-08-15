@@ -53,8 +53,8 @@
                                 ${currentTags?.join(message(code: 'and')?.toString())}
                             </g:if>
                         </h1>
-                        <link itemprop="itemListOrder" href="http://schema.org/ItemListOrderAscending" />
-                        <meta itemprop="numberOfItems" content="${places?.size()}" />
+                        <link itemprop="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+                        <meta itemprop="numberOfItems" content="${places?.size()}"/>
                     </g:if>
                     <g:if test="${request["query"]}">
                         <g:message code="place.search.result.heading"
@@ -78,7 +78,7 @@
         <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 full-height">
             <div class="byPassHorizontalMargins full-height" id="placeListMap">
                 <map:explore visitorLocation="0" places="${places}"
-                             center="${params.near ? params.near?.split(',')?.collect { it?.toDouble() } : null}"/>
+                             center="${params.near ? [session['location']?.lat, session['location']?.lon] : null}"/>
             </div>
         </div>
     </div>
@@ -87,11 +87,11 @@
     function resizeExploreLayout() {
         var windowWidth = $(window).width();
         var container = $('#placeList').parent().parent().parent();
-        if(windowWidth > 768) {
+        if (windowWidth > 768) {
             container.css('padding-top', '97px');
             container.height($(window).height() - 97);
         }
-        else{
+        else {
             container.css('padding-top', '0');
             container.css('height', 'auto');
         }

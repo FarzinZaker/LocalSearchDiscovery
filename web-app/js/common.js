@@ -5,6 +5,10 @@ var visitorLocation = null;
 if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(function (position) {
         visitorLocation = position.coords;
+        $.ajax({
+            url: '/user/setUserLocation/' + visitorLocation.latitude + ',' + visitorLocation.longitude,
+            type: 'GET'
+        });
     });
 
 $(document).ready(function () {
@@ -29,14 +33,6 @@ $(document).ready(function () {
         //        'padding-top': '111px'
         //    });
         //}
-    });
-
-    $('.topCategories a').click(function(e){
-        if(visitorLocation){
-            e.preventDefault();
-            window.location.href = $(this).attr('href') + '?near=' + visitorLocation.latitude + ',' + visitorLocation.longitude;
-            return false;
-        }
     });
 });
 

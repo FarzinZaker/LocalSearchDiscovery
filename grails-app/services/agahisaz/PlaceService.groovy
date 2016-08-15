@@ -14,6 +14,7 @@ import org.elasticsearch.script.Script
 import org.elasticsearch.script.ScriptService
 import org.elasticsearch.search.aggregations.AggregationBuilders
 import org.elasticsearch.search.aggregations.bucket.terms.StringTerms
+import org.springframework.web.context.request.RequestContextHolder
 
 import javax.management.Query
 
@@ -142,6 +143,9 @@ class PlaceService {
     }
 
     def search(Map params) {
+
+        def session = RequestContextHolder.currentRequestAttributes().getSession()
+
         def tags = []
         if (params.tags)
             tags = params.tags?.split('[|]')?.toList() ?: []
@@ -150,11 +154,6 @@ class PlaceService {
         if (queryString) {
             def specialChars = ['-', ')', '(', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '_', '+', '=', '{', '}', '\\', '[', ']', '|', ';', ':', '\'', '"', '?', '/', ',', '.', '<', '>']
             specialChars.each { queryString = queryString.replace(it, ' ') }
-        }
-
-        def nearParams = []
-        if (params.near) {
-            nearParams = params.near?.toString()?.split(',')?.collect { it?.toDouble() }?.findAll { it }
         }
 
         def query = QueryBuilders.boolQuery()
@@ -171,8 +170,8 @@ class PlaceService {
             query = query.must(QueryBuilders.termQuery('tags', tag))
         }
         query = query.must(QueryBuilders.missingQuery('reportType'))
-        if (nearParams?.size() == 2)
-            query = query.filter(QueryBuilders.geoDistanceQuery('locationString').distance(5.0, DistanceUnit.KILOMETERS).lat(nearParams?.first() as Double).lon(nearParams?.last() as Double))
+        if (params.near && session['location'])
+            query = query.filter(QueryBuilders.geoDistanceQuery('locationString').distance(5.0, DistanceUnit.KILOMETERS).lat(session['location']?.lat as Double).lon(session['location']?.lon as Double))
 
 
         def result
@@ -181,11 +180,11 @@ class PlaceService {
                     .prepareSearch()
                     .setSearchType(SearchType.DFS_QUERY_AND_FETCH)
                     .setQuery(query)
-            if (nearParams?.size() == 2)
+            if (session['location'])
                 result = result.addScriptField('distance', new Script("doc['locationString'].arcDistanceInKm(lat, lon)", ScriptService.ScriptType.INLINE, 'groovy',
                         [
-                                "lat": nearParams?.first(),
-                                "lon": nearParams?.last()
+                                "lat": session['location']?.lat,
+                                "lon": session['location']?.lon
                         ]))
             result = result.addFields('name', 'location', 'address', 'phone', 'category.name', 'category.id')
                     .execute()

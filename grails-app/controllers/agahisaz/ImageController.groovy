@@ -40,10 +40,10 @@ class ImageController {
             if (tipIds && tipIds?.size())
                 content = Image.findByTypeAndOwnerIdInListAndSize('tip', tipIds, params.size ?: 200)?.bytes?.data
         }
-        if(!content && params.mobile)
+        if (!content && params.mobile)
             content = ImageController.classLoader.getResourceAsStream("images/mobile-no-image.jpg")?.bytes
         if (!content)
-            content = ImageController.classLoader.getResourceAsStream("images/categories/${Place.get(params.id)?.category?.iconPath}${params.size ?: 88}.png")?.bytes
+            content = ImageController.classLoader.getResourceAsStream("images/categories/${Place.get(params.id)?.category?.iconPath}${params?.size && params.size?.toInteger() <= 88 ? params?.size : '88'}.png")?.bytes
         if (!content)
             content = ImageController.classLoader.getResourceAsStream("images/no-image.png")?.bytes
         renderImage(content)

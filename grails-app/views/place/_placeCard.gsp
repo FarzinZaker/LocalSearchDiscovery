@@ -1,7 +1,7 @@
 <div data-id="${place?._id}" class="placeCard">
     <div class="body">
         <img class="categoryIcon"
-             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?._id, size: 88])}"/>
+             src="${createLink(controller: 'image', action: 'placeSearch', params: [id: place?._id, size: 200])}"/>
 
         <place:aggregateRatingFlag place="${place}" cssClass="badge"/>
         <div class="details">

@@ -88,30 +88,20 @@ class PlaceController {
             query << [$text: [$search: params.id]]
             projection = [score: [$meta: "textScore"]]
             sort << ['score': ['$meta': 'textScore']]
-            if (params.near) {
-                def nearParams = params.near?.toString()?.split(',')
-                if (nearParams.size() == 2) {
-                    def latitude = nearParams[0]?.toDouble()
-                    def longitude = nearParams[1]?.toDouble()
-                    query << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
-                }
+            if (params.near && session['location']) {
+                query << [location: [$geoWithin: [$center: [[session['location']?.lat, session['location']?.lon], (params.radius?.toDouble()) ?: 0.03D]]]]
             }
             aggregateQuery = query.clone()
         } else {
             //search using geoNear
             aggregateQuery = query.clone()
-            if (params.near) {
-                def nearParams = params.near?.toString()?.split(',')
-                if (nearParams.size() == 2) {
-                    def latitude = nearParams[0]?.toDouble()
-                    def longitude = nearParams[1]?.toDouble()
-                    query << [location: [
-                            $near       : [latitude, longitude],
-                            $maxDistance: 0.03D
-                    ]
-                    ]
-                    aggregateQuery << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
-                }
+            if (params.near && session['location']) {
+                query << [location: [
+                        $near       : [session['location']?.lat, session['location']?.lon],
+                        $maxDistance: 0.03D
+                ]
+                ]
+                aggregateQuery << [location: [$geoWithin: [$center: [[latitude, longitude], (params.radius?.toDouble()) ?: 0.03D]]]]
             }
         }
 
@@ -185,14 +175,14 @@ class PlaceController {
             render(view: 'view', model: model)
     }
 
-    @Secured([Roles.AUTHENTICATED])
+//    @Secured([Roles.AUTHENTICATED])
     def suggestEdit() {
         def place = Place.get(params.id)
         def editSuggestion = EditSuggestion.findByPlace(place)
         [place: editSuggestion ?: place, placeId: place?.id]
     }
 
-    @Secured([Roles.AUTHENTICATED])
+//    @Secured([Roles.AUTHENTICATED])
     def saveEditSuggestion() {
 
         def place = Place.get(params.placeId as Long)
