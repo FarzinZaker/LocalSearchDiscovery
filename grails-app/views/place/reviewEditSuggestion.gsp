@@ -16,7 +16,7 @@
 <div class="container diff">
     <div class="free-toolbar row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-            <h1><g:message code="editSuggestion.review"/> <a
+            <h1><g:message code="editSuggestion.review"/> <a target="_blank"
                     href="${createLink(controller: 'place', action: 'view', params: [id: place?.id, name: place?.name])}">${place?.name}</a>
             </h1>
         </div>
