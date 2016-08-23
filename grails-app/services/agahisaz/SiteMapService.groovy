@@ -27,10 +27,11 @@ class SiteMapService {
         rootUrl = grailsApplication.config.sitemap.rootUrl
 
         def list =
-                refreshPlaces() +
-                refreshCategories() +
-                refreshTags() +
-                refreshLocations()
+                refreshStatics() +
+                        refreshPlaces() +
+                        refreshCategories() +
+                        refreshTags() +
+                        refreshLocations()
         createIndex(list?.toList())
     }
 
@@ -62,6 +63,30 @@ class SiteMapService {
         tempFile.renameTo(fileName)
     }
 
+    private List<String> refreshStatics() {
+        createTempFile('static', 0)
+        def items = [
+                "http://www.agahisaz.com",
+                "http://www.agahisaz.com/info/about",
+                "http://www.agahisaz.com/info/help",
+                "http://www.agahisaz.com/info/oldUsersHelp",
+                "http://www.agahisaz.com/info/cookie",
+                "http://www.agahisaz.com/info/privacy",
+                "http://www.agahisaz.com/info/terms",
+                "http://www.agahisaz.com/info/contact"
+        ]
+        items.eachWithIndex { item, index ->
+            appendToTempFile('static', 0, getUrl(
+                    item?.toString(),
+                    new Date(),
+                    DAILY,
+                    1.0F
+
+            ))
+        }
+        [replaceOriginalFile('static', 0)]
+    }
+
     private List<String> refreshPlaces() {
 
         def sitemaps = new HashSet<String>()
@@ -79,7 +104,7 @@ class SiteMapService {
                         "http://${rootUrl}/place/view/${item._id}/${URLEncoder.encode(item.name?.toString(), 'UTF-8')}",
                         item.lastUpdated ?: new Date(),
                         DAILY,
-                        1.0F
+                        0.9F
 
                 ))
             }
@@ -107,7 +132,7 @@ class SiteMapService {
                         "http://${rootUrl}/place/explore/${URLEncoder.encode(item.name?.toString(), 'UTF-8')}",
                         item.lastUpdated ?: new Date(),
                         DAILY,
-                        1.0F
+                        0.7F
 
                 ))
             }
@@ -135,7 +160,7 @@ class SiteMapService {
                         "http://${rootUrl}/place/explore/?tags=${URLEncoder.encode(item.name?.toString(), 'UTF-8')}",
                         item.lastUpdated ?: new Date(),
                         DAILY,
-                        1.0F
+                        0.5F
 
                 ))
             }
@@ -164,7 +189,7 @@ class SiteMapService {
                             "http://${rootUrl}/place/explore/?province=${URLEncoder.encode(item.name?.toString(), 'UTF-8')}&amp;city=${URLEncoder.encode(subItem.name?.toString(), 'UTF-8')}",
                             item.lastUpdated ?: new Date(),
                             DAILY,
-                            1.0F
+                            0.3F
                     ))
                 }
             }
