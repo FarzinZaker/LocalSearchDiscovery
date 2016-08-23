@@ -17,7 +17,7 @@
     <div class="free-toolbar row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
             <h1><g:message code="editSuggestion.review"/> <a target="_blank"
-                    href="${createLink(controller: 'place', action: 'view', params: [id: place?.id, name: place?.name])}">${place?.name}</a>
+                                                             href="${createLink(controller: 'place', action: 'view', params: [id: place?.id, name: place?.name])}">${place?.name}</a>
             </h1>
         </div>
 
@@ -46,28 +46,27 @@
             </div>
         </div>
     </g:if>
-    <g:else>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.name }, fieldName: 'name']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.categoryInfo?.name }, fieldName: 'category']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.tags?.join(' , ') }, fieldName: 'tags']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item ->
-                      item.location?.collect {
-                          it?.toString()?.trim()
-                      }?.join(',')
-                  }, template    : '/common/map/locationDiffViewer', model: { item -> [id: item.id, name: item.name, location: item.location] }, fieldName: 'location']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.province + ' - ' + item.city }, fieldName: 'city']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.address }, fieldName: 'address']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.postalCode }, fieldName: 'postalCode']}"/>
-        <g:render template="suggestEdit/diff"
-                  model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.phone }, fieldName: 'phone']}"/>
-    </g:else>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.name }, fieldName: 'name']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.categoryInfo?.name }, fieldName: 'category']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.tags?.join(' , ') }, fieldName: 'tags']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item ->
+                  item.location?.collect {
+                      it?.toString()?.trim()
+                  }?.join(',')
+              }, template    : '/common/map/locationDiffViewer', model: { item -> [id: item.id, name: item.name, location: item.location] }, fieldName: 'location']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.province + ' - ' + item.city }, fieldName: 'city']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.address }, fieldName: 'address']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.postalCode }, fieldName: 'postalCode']}"/>
+    <g:render template="suggestEdit/diff"
+              model="${[place: place, editSuggestion: editSuggestion, field: { item -> item.phone }, fieldName: 'phone']}"/>
+
     <div class="free-toolbar row">
         <input type="button" class="btn btn-warning btn-skip" value="${message(code: 'skip')}"/>
     </div>
